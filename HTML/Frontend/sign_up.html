@@ -12,7 +12,7 @@
 		<!-- Favicon Icon -->
 		<link rel="icon" type="image/png" href="images/logo-1.png">
 		
-		<!-- Stylesheets -->
+		<!-- CSS -->
 		<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 		<link href='vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
 		<link href="css/style.css" rel="stylesheet">
@@ -53,32 +53,19 @@
 											<i class="uil uil-envelope lgn_icon"></i>
 										</div>
 										<div class="form-group pos_rel">
-											<input id="phone[number]" name="phone" type="text" placeholder="Número do Celular" class="form-control lgn_input" required="">
+											<input id="telefone" name="phone" type="tel" placeholder="Número do Celular" class="form-control lgn_input" data-mask="(00) 00000-0000" required="">
 											<i class="uil uil-mobile-android-alt lgn_icon"></i>
 										</div>
 										<div class="form-group pos_rel">
-											<label class="control-label">Confirmar Número</label>
-											<ul class="code-alrt-inputs signup-code-list">
-												<li>
-													<input id="code[1]" name="number" type="text" placeholder="" class="form-control input-md" required="">
-												</li>
-												<li>
-													<input id="code[2]" name="number" type="text" placeholder="" class="form-control input-md" required="">
-												</li>
-												<li>
-													<input id="code[3]" name="number" type="text" placeholder="" class="form-control input-md" required="">
-												</li>
-												<li>
-													<input id="code[4]" name="number" type="text" placeholder="" class="form-control input-md" required="">
-												</li>
-												<li>
-													<a class="chck-btn hover-btn code-btn145"  href="#">Enviar</a>
-												</li>
-											</ul>
-											<a href="#" class="resend-link">Reenviar Código</a>
+											<input id="telefone" name="phone" type="tel" placeholder="CEP" class="form-control lgn_input" data-mask="00000-000" required="">
+											<i class="uil uil-location-point lgn_icon"></i>
 										</div>
 										<div class="form-group pos_rel">
-											<input id="password1" name="password1" type="password" placeholder="Nova Senha" class="form-control lgn_input" required="">
+											<input id="password1" name="password1" type="password" placeholder="Senha" class="form-control lgn_input" required="">
+											<i class="uil uil-padlock lgn_icon"></i>
+										</div>
+										<div class="form-group pos_rel">
+											<input id="passwordconfirmation" name="passwordconfirmation" type="password" placeholder="Confirme sua Senha" class="form-control lgn_input" required="">
 											<i class="uil uil-padlock lgn_icon"></i>
 										</div>
 										<button class="login-btn hover-btn" type="submit">Cadastrar Agora</button>
@@ -108,6 +95,9 @@
 	<script src="js/product.thumbnail.slider.js"></script>
 	<script src="js/offset_overlay.js"></script>
 	<script src="js/night-mode.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+
 	
 	
 </body>
