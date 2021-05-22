@@ -42,7 +42,7 @@
 							</div>
 							<div class="form-dt">
 								<div class="form-inpts checout-address-step">
-									<form>
+									<form id="register-form">
 										<div class="form-title"><h6>Cadastro</h6></div>
 										<div class="form-group pos_rel">
 											<input id="full[name]" name="fullname" type="text" placeholder="Nome Completo" class="form-control lgn_input" required="">
@@ -57,8 +57,8 @@
 											<i class="uil uil-mobile-android-alt lgn_icon"></i>
 										</div>
 										<div class="form-group pos_rel">
-											<input id="telefone" name="phone" type="tel" placeholder="CEP" class="form-control lgn_input" data-mask="00000-000" required="">
-											<i class="uil uil-location-point lgn_icon"></i>
+											<input id="dtnascimento" name="dtnasc" type="tel" placeholder="Data de Nascimento" class="form-control lgn_input" data-mask="00/00/0000" required="">
+											<i class="uil uil-user-circle lgn_icon"></i>
 										</div>
 										<div class="form-group pos_rel">
 											<input id="password1" name="password1" type="password" placeholder="Senha" class="form-control lgn_input" required="">
@@ -68,9 +68,11 @@
 											<input id="passwordconfirmation" name="passwordconfirmation" type="password" placeholder="Confirme sua Senha" class="form-control lgn_input" required="">
 											<i class="uil uil-padlock lgn_icon"></i>
 										</div>
+										<div class="form-group pos_rel"></div>
 										<button class="login-btn hover-btn" type="submit">Cadastrar Agora</button>
 									</form>
 								</div>
+								<p class="error-validation template"></p>
 								<div class="signup-link">
 									<p>Já possui uma conta? <a href="sign_in.html">Entrar Agora</a></p>
 								</div>
@@ -95,9 +97,8 @@
 	<script src="js/product.thumbnail.slider.js"></script>
 	<script src="js/offset_overlay.js"></script>
 	<script src="js/night-mode.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
-
+	<script src="js/validacaocadastro.js"></script>
 	
 	
 </body>
