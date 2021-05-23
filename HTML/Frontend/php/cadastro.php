@@ -6,10 +6,12 @@ include("conexao.php");
 $nome = $_POST ["nome"]; 
 $email = $_POST ["email"]; 
 $tel = $_POST ["telefone"]; 
-$cep = $_POST ["cep"]; 
+$data_nascimento = $_POST ["dtnasc"]; 
+$data_nascimento = implode("-",array_reverse(explode("/",$data_nascimento)));
 $senha = $_POST ["senha"]; 
 $confsenha = $_POST["confsenha"];
  
+echo $data_nascimento;
 
 $query_select = "SELECT telefone FROM cliente WHERE telefone = '$tel'";
 $select = mysqli_query($conexao,$query_select);
@@ -32,8 +34,8 @@ if($logarray == $tel){
     die();
 
 }else{
-    $query = "INSERT INTO cliente ( nome , email , telefone, cep , senha )
-    VALUES ('$nome', '$email', '$tel', '$cep', '$senha')";
+    $query = "INSERT INTO cliente ( nome , email , telefone, data_nascimento , senha )
+    VALUES ('$nome', '$email', '$tel', '$data_nascimento', '$senha')";
 
     $insert = mysqli_query($conexao,$query);
 

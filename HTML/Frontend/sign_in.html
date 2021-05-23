@@ -42,14 +42,14 @@
 							</div>
 							<div class="form-dt">
 								<div class="form-inpts checout-address-step">
-									<form>
+									<form method="POST" action="php/login.php">
 										<div class="form-title"><h6>Entrar</h6></div>
 										<div class="form-group pos_rel">
-											<input id="phone[number]" name="phone" type="tel" placeholder="Digite seu Numero de Celular" class="form-control lgn_input" data-mask="(00) 00000-0000" required="">
+											<input id="phone[number]" name="telefone" type="tel" placeholder="Digite seu Numero de Celular" class="form-control lgn_input" data-mask="(00) 00000-0000" required="">
 											<i class="uil uil-mobile-android-alt lgn_icon"></i>
 										</div>
 										<div class="form-group pos_rel">
-											<input id="password1" name="password1" type="password" placeholder="Digite sua Senha" class="form-control lgn_input" required="">
+											<input id="password1" name="senha" type="password" placeholder="Digite sua Senha" class="form-control lgn_input" required="">
 											<i class="uil uil-padlock lgn_icon"></i>
 										</div>
 										<button class="login-btn hover-btn" type="submit">Entrar Agora</button>

@@ -1,6 +1,12 @@
 ﻿<!DOCTYPE html>
 <html lang="pt_BR>
-
+		<?php
+		session_start();
+		if(!$_SESSION['telefone']) {
+			header('Location: sign_in.html');
+			exit();
+			}
+		?>
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,6 +35,7 @@
 	</head>
 
 <body>
+		
 	<!-- modelo das categorias-->
 	<div id="category_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
         <div class="modal-dialog category-area" role="document">
@@ -408,7 +415,7 @@
 								<a href="dashboard_my_addresses.html" class="item channel_item"><i class="uil uil-location-point icon__1"></i>My Address</a>
 								<a href="offers.html" class="item channel_item"><i class="uil uil-gift icon__1"></i>Offers</a>
 								<a href="faq.html" class="item channel_item"><i class="uil uil-info-circle icon__1"></i>Faq</a>
-								<a href="sign_in.html" class="item channel_item"><i class="uil uil-lock-alt icon__1"></i>Logout</a>
+								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="item channel_item"><i class="uil uil-lock-alt icon__1"></i>Logout</a>
 							</div>
 						</li>
 					</ul>
