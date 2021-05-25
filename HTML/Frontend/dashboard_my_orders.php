@@ -1,6 +1,11 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 
+	<?php
+		include('php/verificar_login.php');
+		include('php/dados_cliente.php');
+	?>
+
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -316,11 +321,11 @@
 		<div class="top-header-group">
 			<div class="top-header">
 				<div class="res_main_logo">
-					<a href="index.html"><img src="images/dark-logo-1.svg" alt=""></a>
+					<a href="index.php"><img src="images/dark-logo-1.svg" alt=""></a>
 				</div>
 				<div class="main_logo" id="logo">
-					<a href="index.html"><img src="images/logo.svg" alt=""></a>
-					<a href="index.html"><img class="logo-inverse" src="images/dark-logo.svg" alt=""></a>
+					<a href="index.php"><img src="images/logo.svg" alt=""></a>
+					<a href="index.php"><img class="logo-inverse" src="images/dark-logo.svg" alt=""></a>
 				</div>
 				<div class="select_location">
 					<div class="ui inline dropdown loc-title">
@@ -390,7 +395,7 @@
 						<li class="ui dropdown">
 							<a href="#" class="opts_account">
 								<img src="images/avatar/img-5.jpg" alt="">
-								<span class="user__name">John Doe</span>
+								<span class="user__name"><?php echo$resultado['nome']?></span>
 								<i class="uil uil-angle-down"></i>
 							</a>
 							<div class="menu dropdown_account">
@@ -426,14 +431,14 @@
 						<button class="navbar-toggler menu_toggle_btn" type="button" data-target="#navbarSupportedContent"><i class="uil uil-bars"></i></button>
 						<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
 							<ul class="navbar-nav main_nav align-self-stretch">
-								<li class="nav-item"><a href="index.html" class="nav-link active" title="Home">Home</a></li>
+								<li class="nav-item"><a href="index.php" class="nav-link active" title="Home">Home</a></li>
 								<li class="nav-item"><a href="shop_grid.html" class="nav-link new_item" title="New Products">New Products</a></li>
 								<li class="nav-item"><a href="shop_grid.html" class="nav-link" title="Featured Products">Featured Products</a></li>
 								<li class="nav-item">
 									<div class="ui icon top left dropdown nav__menu">
 										<a class="nav-link" title="Pages">Pages <i class="uil uil-angle-down"></i></a>
 										<div class="menu dropdown_page">
-											<a href="dashboard_overview.html" class="item channel_item page__links">Account</a>
+											<a href="dashboard_overview.php" class="item channel_item page__links">Account</a>
 											<a href="about_us.html" class="item channel_item page__links">About Us</a>
 											<a href="shop_grid.html" class="item channel_item page__links">Shop Grid</a>
 											<a href="single_product_view.html" class="item channel_item page__links">Single Product View</a>
@@ -487,7 +492,7 @@
 					<div class="col-md-12">
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+								<li class="breadcrumb-item"><a href="index.php">Home</a></li>
 								<li class="breadcrumb-item active" aria-current="page">My Orders</li>
 							</ol>
 						</nav>
@@ -507,8 +512,8 @@
 									<label for="file"><i class="uil uil-camera-plus"></i></label>
 								</div>
 							</div>
-							<h4>Johe Doe</h4>
-							<p>+91999999999<a href="#"><i class="uil uil-edit"></i></a></p>
+							<h4><?php echo$resultado['nome']?></h4>
+							<p><?php echo$resultado['telefone']?><a href="#"><i class="uil uil-edit"></i></a></p>
 							<div class="earn-points"><img src="images/Dollar.svg" alt="">Points : <span>20</span></div>
 						</div>
 					</div>
@@ -521,13 +526,13 @@
 					<div class="col-lg-3 col-md-4">
 						<div class="left-side-tabs">
 							<div class="dashboard-left-links">
-								<a href="dashboard_overview.html" class="user-item"><i class="uil uil-apps"></i>Overview</a>
-								<a href="dashboard_my_orders.html" class="user-item active"><i class="uil uil-box"></i>My Orders</a>
-								<a href="dashboard_my_rewards.html" class="user-item"><i class="uil uil-gift"></i>My Rewards</a>
-								<a href="dashboard_my_wallet.html" class="user-item"><i class="uil uil-wallet"></i>My Wallet</a>
-								<a href="dashboard_my_wishlist.html" class="user-item"><i class="uil uil-heart"></i>Shopping Wishlist</a>
-								<a href="dashboard_my_addresses.html" class="user-item"><i class="uil uil-location-point"></i>My Address</a>
-								<a href="sign_in.html" class="user-item"><i class="uil uil-exit"></i>Logout</a>
+								<a href="dashboard_overview.php" class="user-item"><i class="uil uil-apps"></i>Overview</a>
+								<a href="dashboard_my_orders.php" class="user-item active"><i class="uil uil-box"></i>My Orders</a>
+								<a href="dashboard_my_rewards.php" class="user-item"><i class="uil uil-gift"></i>My Rewards</a>
+								<a href="dashboard_my_wallet.php" class="user-item"><i class="uil uil-wallet"></i>My Wallet</a>
+								<a href="dashboard_my_wishlist.php" class="user-item"><i class="uil uil-heart"></i>Shopping Wishlist</a>
+								<a href="dashboard_my_addresses.php" class="user-item"><i class="uil uil-location-point"></i>My Address</a>
+								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="user-item"><i class="uil uil-exit"></i>Logout</a>
 							</div>
 						</div>
 					</div>

@@ -1,13 +1,16 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-
+	<?php
+		include('php/verificar_login.php');
+		include('php/dados_cliente.php');
+	?>
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
 		<meta name="description" content="Gambolthemes">
 		<meta name="author" content="Gambolthemes">		
-		<title>Gambo - My Wallet</title>
+		<title>Gambo - My Address</title>
 		
 		<!-- Favicon Icon -->
 		<link rel="icon" type="image/png" href="images/fav.png">
@@ -30,6 +33,88 @@
 	</head>
 
 <body>
+	<!-- Add Address Model Start-->
+	<div id="address_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
+        <div class="modal-dialog category-area" role="document">
+            <div class="category-area-inner">
+                <div class="modal-header">
+                    <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+						<i class="uil uil-multiply"></i>
+                    </button>
+                </div>
+                <div class="category-model-content modal-content"> 
+					<div class="cate-header">
+						<h4>Add New Address</h4>
+					</div>
+					<div class="add-address-form">
+						<div class="checout-address-step">
+							<div class="row">
+								<div class="col-lg-12">												
+									<form class="">
+										<!-- Multiple Radios (inline) -->
+										<div class="form-group">
+											<div class="product-radio">
+												<ul class="product-now">
+													<li>
+														<input type="radio" id="ad1" name="address1" checked>
+														<label for="ad1">Home</label>
+													</li>
+													<li>
+														<input type="radio" id="ad2" name="address1">
+														<label for="ad2">Office</label>
+													</li>
+													<li>
+														<input type="radio" id="ad3" name="address1">
+														<label for="ad3">Other</label>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="address-fieldset">
+											<div class="row">
+												<div class="col-lg-12 col-md-12">
+													<div class="form-group">
+														<label class="control-label">Flat / House / Office No.*</label>
+														<input id="flat" name="flat" type="text" placeholder="Address" class="form-control input-md" required="">
+													</div>
+												</div>
+												<div class="col-lg-12 col-md-12">
+													<div class="form-group">
+														<label class="control-label">Street / Society / Office Name*</label>
+														<input id="street" name="street" type="text" placeholder="Street Address" class="form-control input-md">
+													</div>
+												</div>
+												<div class="col-lg-6 col-md-12">
+													<div class="form-group">
+														<label class="control-label">Pincode*</label>
+														<input id="pincode" name="pincode" type="text" placeholder="Pincode" class="form-control input-md" required="">
+													</div>
+												</div>
+												<div class="col-lg-6 col-md-12">
+													<div class="form-group">
+														<label class="control-label">Locality*</label>
+														<input id="Locality" name="locality" type="text" placeholder="Enter City" class="form-control input-md" required="">
+													</div>
+												</div>
+												<div class="col-lg-12 col-md-12">
+													<div class="form-group mb-0">
+														<div class="address-btns">
+															<button class="save-btn14 hover-btn">Save</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- Add Address Model End-->
 	<!-- Category Model Start-->
 	<div id="category_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
         <div class="modal-dialog category-area" role="document">
@@ -316,11 +401,11 @@
 		<div class="top-header-group">
 			<div class="top-header">
 				<div class="res_main_logo">
-					<a href="index.html"><img src="images/dark-logo-1.svg" alt=""></a>
+					<a href="index.php"><img src="images/dark-logo-1.svg" alt=""></a>
 				</div>
 				<div class="main_logo" id="logo">
-					<a href="index.html"><img src="images/logo.svg" alt=""></a>
-					<a href="index.html"><img class="logo-inverse" src="images/dark-logo.svg" alt=""></a>
+					<a href="index.php"><img src="images/logo.svg" alt=""></a>
+					<a href="index.php"><img class="logo-inverse" src="images/dark-logo.svg" alt=""></a>
 				</div>
 				<div class="select_location">
 					<div class="ui inline dropdown loc-title">
@@ -390,7 +475,7 @@
 						<li class="ui dropdown">
 							<a href="#" class="opts_account">
 								<img src="images/avatar/img-5.jpg" alt="">
-								<span class="user__name">John Doe</span>
+								<span class="user__name"><?php echo$resultado['nome']?></span>
 								<i class="uil uil-angle-down"></i>
 							</a>
 							<div class="menu dropdown_account">
@@ -402,14 +487,14 @@
 										</span>
 									</a>
 								</div>	
-								<a href="dashboard_overview.html" class="item channel_item"><i class="uil uil-apps icon__1"></i>Dashbaord</a>								
-								<a href="dashboard_my_orders.html" class="item channel_item"><i class="uil uil-box icon__1"></i>My Orders</a>
-								<a href="dashboard_my_wishlist.html" class="item channel_item"><i class="uil uil-heart icon__1"></i>My Wishlist</a>
-								<a href="dashboard_my_wallet.html" class="item channel_item"><i class="uil uil-usd-circle icon__1"></i>My Wallet</a>
-								<a href="dashboard_my_addresses.html" class="item channel_item"><i class="uil uil-location-point icon__1"></i>My Address</a>
+								<a href="dashboard_overview.php" class="item channel_item"><i class="uil uil-apps icon__1"></i>Dashbaord</a>								
+								<a href="dashboard_my_orders.php" class="item channel_item"><i class="uil uil-box icon__1"></i>My Orders</a>
+								<a href="dashboard_my_wishlist.php" class="item channel_item"><i class="uil uil-heart icon__1"></i>My Wishlist</a>
+								<a href="dashboard_my_wallet.php" class="item channel_item"><i class="uil uil-usd-circle icon__1"></i>My Wallet</a>
+								<a href="dashboard_my_addresses.php" class="item channel_item"><i class="uil uil-location-point icon__1"></i>My Address</a>
 								<a href="offers.html" class="item channel_item"><i class="uil uil-gift icon__1"></i>Offers</a>
 								<a href="faq.html" class="item channel_item"><i class="uil uil-info-circle icon__1"></i>Faq</a>
-								<a href="sign_in.html" class="item channel_item"><i class="uil uil-lock-alt icon__1"></i>Logout</a>
+								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="item channel_item"><i class="uil uil-lock-alt icon__1"></i>Logout</a>
 							</div>
 						</li>
 					</ul>
@@ -426,7 +511,7 @@
 						<button class="navbar-toggler menu_toggle_btn" type="button" data-target="#navbarSupportedContent"><i class="uil uil-bars"></i></button>
 						<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
 							<ul class="navbar-nav main_nav align-self-stretch">
-								<li class="nav-item"><a href="index.html" class="nav-link active" title="Home">Home</a></li>
+								<li class="nav-item"><a href="index.php" class="nav-link active" title="Home">Home</a></li>
 								<li class="nav-item"><a href="shop_grid.html" class="nav-link new_item" title="New Products">New Products</a></li>
 								<li class="nav-item"><a href="shop_grid.html" class="nav-link" title="Featured Products">Featured Products</a></li>
 								<li class="nav-item">
@@ -487,7 +572,7 @@
 					<div class="col-md-12">
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+								<li class="breadcrumb-item"><a href="index.php">Home</a></li>
 								<li class="breadcrumb-item active" aria-current="page">User Dashboard</li>
 							</ol>
 						</nav>
@@ -507,8 +592,8 @@
 									<label for="file"><i class="uil uil-camera-plus"></i></label>
 								</div>
 							</div>
-							<h4>Johe Doe</h4>
-							<p>+91999999999<a href="#"><i class="uil uil-edit"></i></a></p>
+							<h4><?php echo$resultado['nome']?></h4>
+							<p><?php echo$resultado['telefone']?><a href="#"><i class="uil uil-edit"></i></a></p>
 							<div class="earn-points"><img src="images/Dollar.svg" alt="">Points : <span>20</span></div>
 						</div>
 					</div>
@@ -521,13 +606,13 @@
 					<div class="col-lg-3 col-md-4">
 						<div class="left-side-tabs">
 							<div class="dashboard-left-links">
-								<a href="dashboard_overview.html" class="user-item"><i class="uil uil-apps"></i>Overview</a>
-								<a href="dashboard_my_orders.html" class="user-item"><i class="uil uil-box"></i>My Orders</a>
-								<a href="dashboard_my_rewards.html" class="user-item"><i class="uil uil-gift"></i>My Rewards</a>
-								<a href="dashboard_my_wallet.html" class="user-item active"><i class="uil uil-wallet"></i>My Wallet</a>
-								<a href="dashboard_my_wishlist.html" class="user-item"><i class="uil uil-heart"></i>Shopping Wishlist</a>
-								<a href="dashboard_my_addresses.html" class="user-item"><i class="uil uil-location-point"></i>My Address</a>
-								<a href="sign_in.html" class="user-item"><i class="uil uil-exit"></i>Logout</a>
+								<a href="dashboard_overview.php" class="user-item"><i class="uil uil-apps"></i>Overview</a>
+								<a href="dashboard_my_orders.php" class="user-item"><i class="uil uil-box"></i>My Orders</a>
+								<a href="dashboard_my_rewards.php" class="user-item"><i class="uil uil-gift"></i>My Rewards</a>
+								<a href="dashboard_my_wallet.php" class="user-item"><i class="uil uil-wallet"></i>My Wallet</a>
+								<a href="dashboard_my_wishlist.php" class="user-item"><i class="uil uil-heart"></i>Shopping Wishlist</a>
+								<a href="dashboard_my_addresses.php" class="user-item active"><i class="uil uil-location-point"></i>My Address</a>
+								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="user-item"><i class="uil uil-exit"></i>Logout</a>
 							</div>
 						</div>
 					</div>
@@ -536,222 +621,55 @@
 							<div class="row">
 								<div class="col-md-12">
 									<div class="main-title-tab">
-										<h4><i class="uil uil-wallet"></i>My Wallet</h4>
-									</div>
-								</div>								
-								<div class="col-lg-6 col-md-12">
-									<div class="pdpt-bg">
-										<div class="reward-body-dtt">
-											<div class="reward-img-icon">
-												<img src="images/money.svg" alt="">
-											</div>
-											<span class="rewrd-title">My Balance</span>
-											<h4 class="cashbk-price">$120</h4>
-											<span class="date-reward">Added : 8 May 2020</span>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-12">
-									<div class="pdpt-bg">
-										<div class="gambo-body-cash">
-											<div class="reward-img-icon">
-												<img class="rotate-img" src="images/business.svg" alt="">
-											</div>
-											<span class="rewrd-title">Gambo Cashback Blance</span>
-											<h4 class="cashbk-price">$5</h4>
-											<p>100% of thiscan be used for your next order.</p>
-										</div>
+										<h4><i class="uil uil-location-point"></i>My Address</h4>
 									</div>
 								</div>
 								<div class="col-lg-12 col-md-12">
 									<div class="pdpt-bg">
 										<div class="pdpt-title">
-											<h4>Active Offers</h4>
+											<h4>My Address</h4>
 										</div>
-										<div class="active-offers-body">
-											<div class="table-responsive">
-												<table class="table ucp-table earning__table">
-													<thead class="thead-s">
-														<tr>
-															<th scope="col">Offers</th>
-															<th scope="col">Offer Code</th>
-															<th scope="col">Expires Date</th>
-															<th scope="col">Status</th>								
-														</tr>
-													</thead>
-													<tbody>
-														<tr>										
-															<td>15%</td>	
-															<td>GAMBOCOUP15</td>	
-															<td>31 May 2020</td>	
-															<td><b class="offer_active">Activated</b></td>	
-														</tr>
-														<tr>										
-															<td>10%</td>	
-															<td>GAMBOCOUP10</td>	
-															<td>25 May 2020</td>	
-															<td><b class="offer_active">Activated</b></td>	
-														</tr>
-														<tr>										
-															<td>25%</td>	
-															<td>GAMBOCOUP25</td>	
-															<td>20 May 2020</td>	
-															<td><b class="offer_active">Activated</b></td>	
-														</tr>
-														<tr>										
-															<td>5%</td>	
-															<td>GAMBOCOUP05</td>	
-															<td>15 May 2020</td>	
-															<td><b class="offer_active">Activated</b></td>	
-														</tr>
-													</tbody>				
-												</table>
-											</div>	
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-12">
-									<div class="pdpt-bg">
-										<div class="pdpt-title">
-											<h4>Add Balance</h4>
-										</div>
-										<div class="add-cash-body">
-											<div class="row">
-												<div class="col-lg-6 col-md-12">
-													<div class="form-group mt-1">
-														<label class="control-label">Holder Name*</label>
-														<div class="ui search focus">
-															<div class="ui left icon input swdh11 swdh19">
-																<input class="prompt srch_explore" type="text" name="holdername" value="" id="holder[name]" required="" maxlength="64" placeholder="Holder Name">															
-															</div>
-														</div>
-													</div>
-												</div> 
-												<div class="col-lg-6 col-md-12">
-													<div class="form-group mt-1">
-														<label class="control-label">Card Number*</label>
-														<div class="ui search focus">
-															<div class="ui left icon input swdh11 swdh19">
-																<input class="prompt srch_explore" type="text" name="cardnumber" value="" id="card[number]" required="" maxlength="64" placeholder="Card Number">															
-															</div>
-														</div>
-													</div>
+										<div class="address-body">
+											<a href="#" class="add-address hover-btn" data-toggle="modal" data-target="#address_model">Add New Address</a>
+											<div class="address-item">
+												<div class="address-icon1">
+													<i class="uil uil-home-alt"></i>
 												</div>
-												<div class="col-lg-4 col-md-4">
-													<div class="form-group mt-1">																	
-														<label class="control-label">Expiration Month*</label>
-														<select class="ui fluid search dropdown form-dropdown" name="card[expire-month]">
-															<option value="">Month</option>
-															<option value="1">January</option>
-															<option value="2">February</option>
-															<option value="3">March</option>
-															<option value="4">April</option>
-															<option value="5">May</option>
-															<option value="6">June</option>
-															<option value="7">July</option>
-															<option value="8">August</option>
-															<option value="9">September</option>
-															<option value="10">October</option>
-															<option value="11">November</option>
-															<option value="12">December</option>
-														  </select>	
-													</div>
-												</div>
-												<div class="col-lg-4 col-md-4">
-													<div class="form-group mt-1">
-														<label class="control-label">Expiration Year*</label>
-														<div class="ui search focus">
-															<div class="ui left icon input swdh11 swdh19">
-																<input class="prompt srch_explore" type="text" name="card[expire-year]" maxlength="4" placeholder="Year">															
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-lg-4 col-md-4">
-													<div class="form-group mt-1">
-														<label class="control-label">CVV*</label>
-														<div class="ui search focus">
-															<div class="ui left icon input swdh11 swdh19">
-																<input class="prompt srch_explore" name="card[cvc]" maxlength="3" placeholder="CVV">															
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-lg-12 col-md-12">
-													<div class="form-group mt-1">
-														<label class="control-label">Add Balance*</label>
-														<div class="ui search focus">
-															<div class="ui left icon input swdh11 swdh19">
-																<input class="prompt srch_explore" type="text" name="addbalance" maxlength="3" placeholder="$0">															
-															</div>
-														</div>
-													</div>
+												<div class="address-dt-all">
+													<h4>Home</h4>
+													<p>#0000, St No. 8, Shahid Karnail Singh Nagar, MBD Mall, Frozpur road, Ludhiana, 141001</p>
+													<ul class="action-btns">
+														<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
+														<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
+													</ul>
 												</div>
 											</div>
-											<a href="#" class="next-btn16 hover-btn mt-3">Add Balance</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-12">
-									<div class="pdpt-bg">
-										<div class="pdpt-title">
-											<h4>History</h4>
-										</div>
-										<div class="history-body scrollstyle_4">
-											<ul class="history-list">
-												<li>
-													<div class="purchase-history">
-														<div class="purchase-history-left">
-															<h4>Purchase</h4>
-															<p>Transaction ID <ins>gambo14255896</ins></p>
-															<span>6 May 2018, 12.56PM</span>
-														</div>
-														<div class="purchase-history-right">
-															<span>-$25</span>
-															<a href="#">View</a>
-														</div>
-													</div>
-												</li>
-												<li>
-													<div class="purchase-history">
-														<div class="purchase-history-left">
-															<h4>Purchase</h4>
-															<p>Transaction ID <ins>gambo14255895</ins></p>
-															<span>5 May 2018, 11.16AM</span>
-														</div>
-														<div class="purchase-history-right">
-															<span>-$21</span>
-															<a href="#">View</a>
-														</div>
-													</div>
-												</li>
-												<li>
-													<div class="purchase-history">
-														<div class="purchase-history-left">
-															<h4>Purchase</h4>
-															<p>Transaction ID <ins>gambo14255894</ins></p>
-															<span>4 May 2018, 02.56PM</span>
-														</div>
-														<div class="purchase-history-right">
-															<span>-$30</span>
-															<a href="#">View</a>
-														</div>
-													</div>
-												</li>
-												<li>
-													<div class="purchase-history">
-														<div class="purchase-history-left">
-															<h4>Purchase</h4>
-															<p>Transaction ID <ins>gambo14255893</ins></p>
-															<span>3 May 2018, 5.56PM</span>
-														</div>
-														<div class="purchase-history-right">
-															<span>-$15</span>
-															<a href="#">View</a>
-														</div>
-													</div>
-												</li>
-											</ul>
+											<div class="address-item">
+												<div class="address-icon1">
+													<i class="uil uil-home-alt"></i>
+												</div>
+												<div class="address-dt-all">
+													<h4>Office</h4>
+													<p>#0000, St No. 8, Shahid Karnail Singh Nagar, MBD Mall, Frozpur road, Ludhiana, 141001</p>	
+													<ul class="action-btns">
+														<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
+														<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="address-item">
+												<div class="address-icon1">
+													<i class="uil uil-home-alt"></i>
+												</div>
+												<div class="address-dt-all">
+													<h4>Other</h4>
+													<p>#0000, St No. 8, Shahid Karnail Singh Nagar, MBD Mall, Frozpur road, Ludhiana, 141001</p>
+													<ul class="action-btns">
+														<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
+														<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
+													</ul>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
