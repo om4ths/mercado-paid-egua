@@ -1,6 +1,10 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 
+	<?php
+		include('php/verificar_login.php');
+		include('php/dados_cliente.php');
+	?>
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -390,7 +394,7 @@
 						<li class="ui dropdown">
 							<a href="#" class="opts_account">
 								<img src="images/avatar/img-5.jpg" alt="">
-								<span class="user__name">John Doe</span>
+								<span class="user__name"><?php echo$resultado['nome']?></span>
 								<i class="uil uil-angle-down"></i>
 							</a>
 							<div class="menu dropdown_account">
@@ -507,8 +511,8 @@
 									<label for="file"><i class="uil uil-camera-plus"></i></label>
 								</div>
 							</div>
-							<h4>Johe Doe</h4>
-							<p>+91999999999<a href="#"><i class="uil uil-edit"></i></a></p>
+							<h4><?php echo$resultado['nome']?></h4>
+							<p><?php echo$resultado['telefone']?><a href="#"><i class="uil uil-edit"></i></a></p>
 							<div class="earn-points"><img src="images/Dollar.svg" alt="">Points : <span>20</span></div>
 						</div>
 					</div>
@@ -539,7 +543,7 @@
 										<h4><i class="uil uil-apps"></i>Overview</h4>
 									</div>
 									<div class="welcome-text">
-										<h2>Hi! John Doe</h2>
+										<h2>Hi! <?php echo$resultado['nome']?></h2>
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-12">

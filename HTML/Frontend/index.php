@@ -1,19 +1,17 @@
 ﻿<!DOCTYPE html>
 <html lang="pt_BR>
-		<?php
+	<?php
 		session_start();
-		if(!$_SESSION['telefone']) {
-			header('Location: sign_in.html');
-			exit();
-			}
-		?>
+		include('php/verificar_login.php');
+		include('php/dados_cliente.php');
+	?>
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
 		<meta name="description" content="Gambolthemes">
 		<meta name="author" content="Gambolthemes">		
-		<title>Mercado Pai D'égua - Início</title>
+		<title>Mercado Pai D'égua - Início </title>
 		
 		<!--  Icones -->
 		<link rel="icon" type="image/png" href="images/logo-1.png">
@@ -47,7 +45,7 @@
                 </div>
                 <div class="category-model-content modal-content"> 
 					<div class="cate-header">
-						<h4>Selecionar Categoria</h4>
+						<h4>Selecionar Categoria </h4>
 					</div>
                     <ul class="category-by-cat">
 						<li>
@@ -396,7 +394,7 @@
 						<li class="ui dropdown">
 							<a href="#" class="opts_account">
 								<img src="images/avatar/img-5.jpg" alt="">
-								<span class="user__name">John Doe</span>
+								<span class="user__name"><?php echo$resultado['nome']?></span>
 								<i class="uil uil-angle-down"></i>
 							</a>
 							<div class="menu dropdown_account">
@@ -408,7 +406,7 @@
 										</span>
 									</a>
 								</div>	
-								<a href="dashboard_overview.html" class="item channel_item"><i class="uil uil-apps icon__1"></i>Dashbaord</a>								
+								<a href="dashboard_overview.php" class="item channel_item"><i class="uil uil-apps icon__1"></i>Dashbaord</a>								
 								<a href="dashboard_my_orders.html" class="item channel_item"><i class="uil uil-box icon__1"></i>My Orders</a>
 								<a href="dashboard_my_wishlist.html" class="item channel_item"><i class="uil uil-heart icon__1"></i>My Wishlist</a>
 								<a href="dashboard_my_wallet.html" class="item channel_item"><i class="uil uil-usd-circle icon__1"></i>My Wallet</a>
