@@ -402,7 +402,7 @@
 										</span>
 									</a>
 								</div>	
-								<a href="dashboard_overview.html" class="item channel_item"><i class="uil uil-apps icon__1"></i>Dashbaord</a>								
+								<a href="dashboard_overview.php" class="item channel_item"><i class="uil uil-apps icon__1"></i>Dashbaord</a>								
 								<a href="dashboard_my_orders.html" class="item channel_item"><i class="uil uil-box icon__1"></i>My Orders</a>
 								<a href="dashboard_my_wishlist.html" class="item channel_item"><i class="uil uil-heart icon__1"></i>My Wishlist</a>
 								<a href="dashboard_my_wallet.html" class="item channel_item"><i class="uil uil-usd-circle icon__1"></i>My Wallet</a>
@@ -521,12 +521,12 @@
 					<div class="col-lg-3 col-md-4">
 						<div class="left-side-tabs">
 							<div class="dashboard-left-links">
-								<a href="dashboard_overview.html" class="user-item"><i class="uil uil-apps"></i>Overview</a>
-								<a href="dashboard_my_orders.html" class="user-item"><i class="uil uil-box"></i>My Orders</a>
-								<a href="dashboard_my_rewards.html" class="user-item"><i class="uil uil-gift"></i>My Rewards</a>
-								<a href="dashboard_my_wallet.html" class="user-item"><i class="uil uil-wallet"></i>My Wallet</a>
-								<a href="dashboard_my_wishlist.html" class="user-item active"><i class="uil uil-heart"></i>Shopping Wishlist</a>
-								<a href="dashboard_my_addresses.html" class="user-item"><i class="uil uil-location-point"></i>My Address</a>
+								<a href="dashboard_overview.php" class="user-item"><i class="uil uil-apps"></i>Overview</a>
+								<a href="dashboard_my_orders.php" class="user-item"><i class="uil uil-box"></i>My Orders</a>
+								<a href="dashboard_my_rewards.php" class="user-item"><i class="uil uil-gift"></i>My Rewards</a>
+								<a href="dashboard_my_wallet.php" class="user-item"><i class="uil uil-wallet"></i>My Wallet</a>
+								<a href="dashboard_my_wishlist.php" class="user-item active"><i class="uil uil-heart"></i>Shopping Wishlist</a>
+								<a href="dashboard_my_addresses.php" class="user-item"><i class="uil uil-location-point"></i>My Address</a>
 								<a href="sign_in.html" class="user-item"><i class="uil uil-exit"></i>Logout</a>
 							</div>
 						</div>
