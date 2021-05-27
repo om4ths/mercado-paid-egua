@@ -17,10 +17,10 @@ include('php/verificar_login.php');
 		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
 		<meta name="description" content="Gambolthemes">
 		<meta name="author" content="Gambolthemes">		
-		<title>Gambo - Meus Endereços</title>
+		<title>Mercado Pai D'égua - Endereço</title>
 		
 		<!-- Favicon Icon -->
-		<link rel="icon" type="image/png" href="images/fav.png">
+		<link rel="icon" type="image/png" href="images/logo-1.png">
 		
 		<!-- Stylesheets -->
 		<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -116,9 +116,12 @@ include('php/verificar_login.php');
 	</head>
 
 <body>
+	
+
 	<!-- Add Address Model Start-->
 	<div id="address_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
-        <div class="modal-dialog category-area" role="document">
+        
+		<div class="modal-dialog category-area" role="document">
             <div class="category-area-inner">
                 <div class="modal-header">
                     <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
@@ -154,31 +157,49 @@ include('php/verificar_login.php');
 											</div>
 										</div>
 										<div class="address-fieldset">
+											
+																	
 											<div class="row">
+												<div class="col-lg-6-cep col-md-12">
+													<div class="form-group">
+														<label class="control-label">CEP*</label>
+														<input id="cep" name="cep" type="tel" placeholder="" class="form-control input-md" data-mask="00000-000" required="">
+													</div>
+												</div>
+												
+												<div class="col-lg-6 col-md-12">
+													<div class="form-group">
+														<label class="control-label">Estado*</label>
+														<input id="estado" name="estado" type="text" placeholder="" class="form-control input-md" maxlength="30" required="">
+													</div>
+												</div>
+												<div class="col-lg-6 col-md-12">
+														<div class="form-group">
+															<label class="control-label">Cidade*</label>
+															<input id="cidade" name="cidade" type="text" placeholder="" class="form-control input-md" maxlength="80"required="">
+														</div>
+													</div>	
 												<div class="col-lg-12 col-md-12">
 													<div class="form-group">
 														<label class="control-label">Rua / Avenida *</label>
-														<input id="rua" name="rua" type="text" placeholder="" class="form-control input-md" required="">
+														<input id="rua" name="rua" type="text" placeholder="" class="form-control input-md" maxlength="200" required="">
 													</div>
 												</div>
 												<div class="col-lg-12 col-md-12">
 													<div class="form-group">
-														<label class="control-label"> Nº Apartamento / Nº Casa / Escritório No. *</label>
-														<input id="street" name="n_end" type="text" placeholder="" class="form-control input-md">
+														<label class="control-label"> Número*</label>
+														<input id="street" name="n_end" type="tel" placeholder="" class="form-control input-md" data-mask="0000000000000">
 													</div>
 												</div>
-												<div class="col-lg-6 col-md-12">
+												<div class="col-lg-12 col-md-12">
 													<div class="form-group">
-														<label class="control-label">CEP*</label>
-														<input id="cep" name="cep" type="text" placeholder="" class="form-control input-md" required="">
+														<label class="control-label">Complemento</label>
+														<input id="complemento" name="complemento" type="text" placeholder="" class="form-control input-md" maxlength="100" required="">
 													</div>
 												</div>
-												<div class="col-lg-6 col-md-12">
-													<div class="form-group">
-														<label class="control-label">Cidade*</label>
-														<input id="cidade" name="cidade" type="text" placeholder="" class="form-control input-md" required="">
-													</div>
-												</div>
+												
+											
+												
 												<div class="col-lg-12 col-md-12">
 													<div class="form-group mb-0">
 														<div class="address-btns">
@@ -484,11 +505,11 @@ include('php/verificar_login.php');
 		<div class="top-header-group">
 			<div class="top-header">
 				<div class="res_main_logo">
-					<a href="index.php"><img src="images/dark-logo-1.svg" alt=""></a>
+					<a href="index.php"><img src="images/logo-1.png" alt=""></a>
 				</div>
 				<div class="main_logo" id="logo">
-					<a href="index.php"><img src="images/logo.svg" alt=""></a>
-					<a href="index.php"><img class="logo-inverse" src="images/dark-logo.svg" alt=""></a>
+					<a href="index.php"><img src="images/logo.png" alt=""></a>
+					<a href="index.php"><img class="logo-inverse" src="images/dark-logo.png" alt=""></a>
 				</div>
 				<div class="select_location">
 					<div class="ui inline dropdown loc-title">
@@ -935,7 +956,7 @@ include('php/verificar_login.php');
 
 	<!-- Javascripts -->
 	
-	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 	
 </body>
 </html>
