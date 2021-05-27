@@ -1,16 +1,23 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+include('php/verificar_login.php');
+?>
+<!DOCTYPE html>
 <html lang="en">
 	<?php
-		include('php/verificar_login.php');
+		
 		include('php/dados_cliente.php');
+		include('php/dados_endereco.php');
 	?>
 	<head>
+
+
+
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
 		<meta name="description" content="Gambolthemes">
 		<meta name="author" content="Gambolthemes">		
-		<title>Gambo - My Address</title>
+		<title>Gambo - Meus Endereços</title>
 		
 		<!-- Favicon Icon -->
 		<link rel="icon" type="image/png" href="images/fav.png">
@@ -30,6 +37,82 @@
 		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="vendor/semantic/semantic.min.css">	
 		
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="vendor/OwlCarousel/owl.carousel.js"></script>
+		<script src="vendor/semantic/semantic.min.js"></script>
+		<script src="js/jquery.countdown.min.js"></script>
+		<script src="js/custom.js"></script>
+		<script src="js/product.thumbnail.slider.js"></script>
+		<script src="js/offset_overlay.js"></script>
+		<script src="js/night-mode.js"></script>
+
+		<script>
+
+        $(document).ready(function() {
+
+            function limpa_formulário_cep() {
+                // Limpa valores do formulário de cep.
+                $("#rua").val("");
+                $("#bairro").val("");
+                $("#cidade").val("");              
+            }
+            
+            //Quando o campo cep perde o foco.
+            $("#cep").blur(function() {
+
+                //Nova variável "cep" somente com dígitos.
+                var cep = $(this).val().replace(/\D/g, '');
+
+                //Verifica se campo cep possui valor informado.
+                if (cep != "") {
+
+                    //Expressão regular para validar o CEP.
+                    var validacep = /^[0-9]{8}$/;
+
+                    //Valida o formato do CEP.
+                    if(validacep.test(cep)) {
+
+                        //Preenche os campos com "..." enquanto consulta webservice.
+                        $("#rua").val("...");
+                        $("#bairro").val("...");
+                        $("#cidade").val("...");
+                        $("#uf").val("...");
+                        $("#ibge").val("...");
+
+                        //Consulta o webservice viacep.com.br/
+                        $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
+
+                            if (!("erro" in dados)) {
+                                //Atualiza os campos com os valores da consulta.
+                                $("#rua").val(dados.logradouro);
+                                $("#bairro").val(dados.bairro);
+                                $("#cidade").val(dados.localidade);
+                                $("#uf").val(dados.uf);
+                                $("#ibge").val(dados.ibge);
+                            } //end if.
+                            else {
+                                //CEP pesquisado não foi encontrado.
+                                limpa_formulário_cep();
+                                alert("CEP não encontrado.");
+                            }
+                        });
+                    } //end if.
+                    else {
+                        //cep é inválido.
+                        limpa_formulário_cep();
+                        alert("Formato de CEP inválido.");
+                    }
+                } //end if.
+                else {
+                    //cep sem valor, limpa formulário.
+                    limpa_formulário_cep();
+                }
+            });
+        });
+
+    </script>
+
 	</head>
 
 <body>
@@ -44,28 +127,28 @@
                 </div>
                 <div class="category-model-content modal-content"> 
 					<div class="cate-header">
-						<h4>Add New Address</h4>
+						<h4>Adicionar Endereço</h4>
 					</div>
 					<div class="add-address-form">
 						<div class="checout-address-step">
 							<div class="row">
 								<div class="col-lg-12">												
-									<form class="">
+									<form class="" method="POST" action="php/endereco.php">
 										<!-- Multiple Radios (inline) -->
 										<div class="form-group">
 											<div class="product-radio">
 												<ul class="product-now">
 													<li>
-														<input type="radio" id="ad1" name="address1" checked>
-														<label for="ad1">Home</label>
+														<input type="radio" id="ad1" name="tipo" value="1"checked>
+														<label for="ad1">Casa</label>
 													</li>
 													<li>
-														<input type="radio" id="ad2" name="address1">
-														<label for="ad2">Office</label>
+														<input type="radio" id="ad2" name="tipo" value="2">
+														<label for="ad2">Trabalho</label>
 													</li>
 													<li>
-														<input type="radio" id="ad3" name="address1">
-														<label for="ad3">Other</label>
+														<input type="radio" id="ad3" name="tipo" value="3">
+														<label for="ad3">Outros</label>
 													</li>
 												</ul>
 											</div>
@@ -74,32 +157,32 @@
 											<div class="row">
 												<div class="col-lg-12 col-md-12">
 													<div class="form-group">
-														<label class="control-label">Flat / House / Office No.*</label>
-														<input id="flat" name="flat" type="text" placeholder="Address" class="form-control input-md" required="">
+														<label class="control-label">Rua / Avenida *</label>
+														<input id="rua" name="rua" type="text" placeholder="" class="form-control input-md" required="">
 													</div>
 												</div>
 												<div class="col-lg-12 col-md-12">
 													<div class="form-group">
-														<label class="control-label">Street / Society / Office Name*</label>
-														<input id="street" name="street" type="text" placeholder="Street Address" class="form-control input-md">
+														<label class="control-label"> Nº Apartamento / Nº Casa / Escritório No. *</label>
+														<input id="street" name="n_end" type="text" placeholder="" class="form-control input-md">
 													</div>
 												</div>
 												<div class="col-lg-6 col-md-12">
 													<div class="form-group">
-														<label class="control-label">Pincode*</label>
-														<input id="pincode" name="pincode" type="text" placeholder="Pincode" class="form-control input-md" required="">
+														<label class="control-label">CEP*</label>
+														<input id="cep" name="cep" type="text" placeholder="" class="form-control input-md" required="">
 													</div>
 												</div>
 												<div class="col-lg-6 col-md-12">
 													<div class="form-group">
-														<label class="control-label">Locality*</label>
-														<input id="Locality" name="locality" type="text" placeholder="Enter City" class="form-control input-md" required="">
+														<label class="control-label">Cidade*</label>
+														<input id="cidade" name="cidade" type="text" placeholder="" class="form-control input-md" required="">
 													</div>
 												</div>
 												<div class="col-lg-12 col-md-12">
 													<div class="form-group mb-0">
 														<div class="address-btns">
-															<button class="save-btn14 hover-btn">Save</button>
+															<button class="save-btn14 hover-btn">Salvar</button>
 														</div>
 													</div>
 												</div>
@@ -491,7 +574,7 @@
 								<a href="dashboard_my_orders.php" class="item channel_item"><i class="uil uil-box icon__1"></i>My Orders</a>
 								<a href="dashboard_my_wishlist.php" class="item channel_item"><i class="uil uil-heart icon__1"></i>My Wishlist</a>
 								<a href="dashboard_my_wallet.php" class="item channel_item"><i class="uil uil-usd-circle icon__1"></i>My Wallet</a>
-								<a href="dashboard_my_addresses.php" class="item channel_item"><i class="uil uil-location-point icon__1"></i>My Address</a>
+								<a href="dashboard_my_addresses.php" class="item channel_item"><i class="uil uil-location-point icon__1"></i>Meus Endereços</a>
 								<a href="offers.html" class="item channel_item"><i class="uil uil-gift icon__1"></i>Offers</a>
 								<a href="faq.html" class="item channel_item"><i class="uil uil-info-circle icon__1"></i>Faq</a>
 								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="item channel_item"><i class="uil uil-lock-alt icon__1"></i>Logout</a>
@@ -611,7 +694,7 @@
 								<a href="dashboard_my_rewards.php" class="user-item"><i class="uil uil-gift"></i>My Rewards</a>
 								<a href="dashboard_my_wallet.php" class="user-item"><i class="uil uil-wallet"></i>My Wallet</a>
 								<a href="dashboard_my_wishlist.php" class="user-item"><i class="uil uil-heart"></i>Shopping Wishlist</a>
-								<a href="dashboard_my_addresses.php" class="user-item active"><i class="uil uil-location-point"></i>My Address</a>
+								<a href="dashboard_my_addresses.php" class="user-item active"><i class="uil uil-location-point"></i>Meus Endereços</a>
 								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="user-item"><i class="uil uil-exit"></i>Logout</a>
 							</div>
 						</div>
@@ -621,27 +704,41 @@
 							<div class="row">
 								<div class="col-md-12">
 									<div class="main-title-tab">
-										<h4><i class="uil uil-location-point"></i>My Address</h4>
+										<h4><i class="uil uil-location-point"></i>Meus Endereços</h4>
 									</div>
 								</div>
 								<div class="col-lg-12 col-md-12">
 									<div class="pdpt-bg">
 										<div class="pdpt-title">
-											<h4>My Address</h4>
+											<h4>Endereços</h4>
 										</div>
 										<div class="address-body">
-											<a href="#" class="add-address hover-btn" data-toggle="modal" data-target="#address_model">Add New Address</a>
+											<a href="#" class="add-address hover-btn" data-toggle="modal" data-target="#address_model">Adicionar Novo Endereço</a>
 											<div class="address-item">
 												<div class="address-icon1">
 													<i class="uil uil-home-alt"></i>
 												</div>
 												<div class="address-dt-all">
-													<h4>Home</h4>
-													<p>#0000, St No. 8, Shahid Karnail Singh Nagar, MBD Mall, Frozpur road, Ludhiana, 141001</p>
+												<?php 
+													
+												if(isset($r_end_casa))
+												{	
+													foreach($r_end_casa as $key => $r_end)
+													{
+																			
+												?>
+
+													<h4><?php echo $r_end['tipo'];?></h4>
+													<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
+													<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
 													<ul class="action-btns">
 														<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
 														<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
 													</ul>
+												<?php
+													};
+												};
+												?> 
 												</div>
 											</div>
 											<div class="address-item">
@@ -649,12 +746,26 @@
 													<i class="uil uil-home-alt"></i>
 												</div>
 												<div class="address-dt-all">
-													<h4>Office</h4>
-													<p>#0000, St No. 8, Shahid Karnail Singh Nagar, MBD Mall, Frozpur road, Ludhiana, 141001</p>	
-													<ul class="action-btns">
-														<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
-														<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
-													</ul>
+												<?php 
+													
+													if(isset($r_end_trab))
+													{	
+														foreach($r_end_trab as $key => $r_end)
+														{
+																				
+													?>
+
+														<h4><?php echo $r_end['tipo'];?></h4>
+														<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
+														<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
+														<ul class="action-btns">
+															<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
+															<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
+														</ul>
+													<?php
+														};
+													};
+												?> 
 												</div>
 											</div>
 											<div class="address-item">
@@ -662,13 +773,27 @@
 													<i class="uil uil-home-alt"></i>
 												</div>
 												<div class="address-dt-all">
-													<h4>Other</h4>
-													<p>#0000, St No. 8, Shahid Karnail Singh Nagar, MBD Mall, Frozpur road, Ludhiana, 141001</p>
-													<ul class="action-btns">
-														<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
-														<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
-													</ul>
-												</div>
+												<?php 
+													
+													if(isset($r_end_out))
+													{	
+														foreach($r_end_out as $key => $r_end)
+														{
+																				
+													?>
+
+														<h4><?php echo $r_end['tipo'];?></h4>
+														<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
+														<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
+														<ul class="action-btns">
+															<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
+															<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
+														</ul>
+													<?php
+														};
+													};
+												?> 
+												</div>							
 											</div>
 										</div>
 									</div>
@@ -809,15 +934,7 @@
 	<!-- Footer End -->
 
 	<!-- Javascripts -->
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="vendor/OwlCarousel/owl.carousel.js"></script>
-	<script src="vendor/semantic/semantic.min.js"></script>
-	<script src="js/jquery.countdown.min.js"></script>
-	<script src="js/custom.js"></script>
-	<script src="js/product.thumbnail.slider.js"></script>
-	<script src="js/offset_overlay.js"></script>
-	<script src="js/night-mode.js"></script>
+	
 	
 	
 </body>
