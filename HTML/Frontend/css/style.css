@@ -904,8 +904,8 @@ i.icon1 {
     -o-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
-	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
-    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
+	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), #ff0404);
+    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), #ff0404);
 }
 
 .cart__btn ins {
@@ -963,8 +963,8 @@ i.icon1 {
 
 /* --- Category Model --- */
 .main-gambo-model {
-    background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
-    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
+    background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), #ff0404);
+    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), #ff0404);
 }
 
 .category-area-inner .modal-header {
@@ -1517,8 +1517,8 @@ i.icon1 {
     -o-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
-	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
-    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
+	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), #ff0404);
+    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), #ff0404);
  }
 
 .quantity input::-webkit-outer-spin-button,
@@ -2501,8 +2501,8 @@ img.download-btn {
     -o-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
-	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
-    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
+	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), #ff0404);
+    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), #ff0404);
 }
 
 .product-sort {
@@ -2681,7 +2681,7 @@ img.download-btn {
 
 .product-now li {
 	margin-right: 5px;
-    width: 50px;
+    width: 60px;
     height: 36px;
     position: relative;
     text-align: center;
@@ -2829,8 +2829,8 @@ span.save-icon {
     -o-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
-	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
-    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
+	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), #ff0404);
+    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), #ff0404);
 }
 
 .facebook {
@@ -3664,8 +3664,8 @@ label.control-label {
     -o-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
-	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
-    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
+	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), #ff0404);
+    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), #ff0404);
 }
 
 .user-dt h4 {
@@ -3768,8 +3768,8 @@ label.control-label {
     -o-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
-	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
-    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));;
+	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), #ff0404);
+    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), #ff0404);;
 	pointer-events:none;
 }
 
@@ -4664,8 +4664,8 @@ table {
     -o-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
-	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
-    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
+	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), #ff0404);
+    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), #ff0404);
     border-color: inherit !important;
     border-top: 0 !important;
     border-bottom: 0 !important;
@@ -5658,8 +5658,8 @@ textarea {
     -o-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
-	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
-    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
+	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), #ff0404);
+    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), #ff0404);
 }
 
 /* --- Blog Detail View --- */
@@ -6193,8 +6193,8 @@ textarea {
     -o-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
-	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
-    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
+	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), #ff0404);
+    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), #ff0404);
 }
 
 .signup-link p {
