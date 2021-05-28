@@ -28,14 +28,14 @@
 										<h3 class="text-center font-weight-light my-4">Login</h3>
 									</div>
                                     <div class="card-body">
-                                        <form>
+                                        <form method="POST" action="php/login.php">
                                             <div class="form-group">
 												<label class="form-label" for="inputEmailAddress">Email*</label>
-												<input class="form-control py-3" id="inputEmailAddress" type="email" placeholder="Enter email address">
+												<input class="form-control py-3" id="inputEmailAddress" name="email" type="email" placeholder="Enter email address">
 											</div>
                                             <div class="form-group">
 												<label class="form-label" for="inputPassword">Password*</label>
-												<input class="form-control py-3" id="inputPassword" type="password" placeholder="Enter password">
+												<input class="form-control py-3" id="inputPassword" name="senha" type="password" placeholder="Enter password">
 											</div>
                                             <div class="form-group">
                                                 <div class="custom-control custom-checkbox">
@@ -44,7 +44,7 @@
 												</div>
                                             </div>
                                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-												<a class="btn btn-sign hover-btn" href="index.html">Login</a>
+												<button class="btn btn-sign hover-btn" type="submit" href="php/login.php">Login</button>
 											</div>
                                         </form>
                                     </div>

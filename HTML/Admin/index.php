@@ -1,3 +1,7 @@
+<?php
+include('php/verificar_login.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,16 +22,15 @@
 
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-light bg-clr">
-            <a class="navbar-brand logo-brand" href="index.html">Mercado Pai D'égua</a>
+            <a class="navbar-brand logo-brand" href="index.php">Mercado Pai D'égua</a>
 			<button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
-            <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/index.html" class="frnt-link"><i class="fas fa-external-link-alt"></i>Inicio</a>
+            <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/index.php" class="frnt-link"><i class="fas fa-external-link-alt"></i>Inicio</a>
             <ul class="navbar-nav ml-auto mr-md-0">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                        <a class="dropdown-item admin-dropdown-item" href="edit_profile.html">Editar Perfil</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">                        
 						<a class="dropdown-item admin-dropdown-item" href="change_password.html">Mudar Senha</a>
-                        <a class="dropdown-item admin-dropdown-item" href="login.html">Sair</a>
+                        <a class="dropdown-item admin-dropdown-item" href="php/logout.php">Sair</a>
                     </div>
                 </li>
             </ul>
@@ -37,7 +40,7 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <a class="nav-link active" href="index.html">
+                            <a class="nav-link active" href="index.php">
 								<div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Painel de Controle
 							</a>
