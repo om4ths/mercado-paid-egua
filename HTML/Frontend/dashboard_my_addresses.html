@@ -3,20 +3,24 @@ include('php/verificar_login.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 	<?php
+		
 		include('php/dados_cliente.php');
+		include('php/dados_endereco.php');
 	?>
 	<head>
+
+
+
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
 		<meta name="description" content="Gambolthemes">
 		<meta name="author" content="Gambolthemes">		
-		<title>Gambo - Dashboard</title>
+		<title>Mercado Pai D'égua - Endereço</title>
 		
 		<!-- Favicon Icon -->
-		<link rel="icon" type="image/png" href="images/fav.png">
+		<link rel="icon" type="image/png" href="images/logo-1.png">
 		
 		<!-- Stylesheets -->
 		<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -33,10 +37,188 @@ include('php/verificar_login.php');
 		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="vendor/semantic/semantic.min.css">	
 		
-		
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="vendor/OwlCarousel/owl.carousel.js"></script>
+		<script src="vendor/semantic/semantic.min.js"></script>
+		<script src="js/jquery.countdown.min.js"></script>
+		<script src="js/custom.js"></script>
+		<script src="js/product.thumbnail.slider.js"></script>
+		<script src="js/offset_overlay.js"></script>
+		<script src="js/night-mode.js"></script>
+
+		<script>
+
+        $(document).ready(function() {
+
+            function limpa_formulário_cep() {
+                // Limpa valores do formulário de cep.
+                $("#rua").val("");
+                $("#bairro").val("");
+                $("#cidade").val("");              
+            }
+            
+            //Quando o campo cep perde o foco.
+            $("#cep").blur(function() {
+
+                //Nova variável "cep" somente com dígitos.
+                var cep = $(this).val().replace(/\D/g, '');
+
+                //Verifica se campo cep possui valor informado.
+                if (cep != "") {
+
+                    //Expressão regular para validar o CEP.
+                    var validacep = /^[0-9]{8}$/;
+
+                    //Valida o formato do CEP.
+                    if(validacep.test(cep)) {
+
+                        //Preenche os campos com "..." enquanto consulta webservice.
+                        $("#rua").val("...");
+                        $("#bairro").val("...");
+                        $("#cidade").val("...");
+                        $("#uf").val("...");
+                        $("#ibge").val("...");
+
+                        //Consulta o webservice viacep.com.br/
+                        $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
+
+                            if (!("erro" in dados)) {
+                                //Atualiza os campos com os valores da consulta.
+                                $("#rua").val(dados.logradouro);
+                                $("#bairro").val(dados.bairro);
+                                $("#cidade").val(dados.localidade);
+                                $("#uf").val(dados.uf);
+                                $("#ibge").val(dados.ibge);
+                            } //end if.
+                            else {
+                                //CEP pesquisado não foi encontrado.
+                                limpa_formulário_cep();
+                                alert("CEP não encontrado.");
+                            }
+                        });
+                    } //end if.
+                    else {
+                        //cep é inválido.
+                        limpa_formulário_cep();
+                        alert("Formato de CEP inválido.");
+                    }
+                } //end if.
+                else {
+                    //cep sem valor, limpa formulário.
+                    limpa_formulário_cep();
+                }
+            });
+        });
+
+    </script>
+
 	</head>
 
 <body>
+	
+
+	<!-- Add Address Model Start-->
+	<div id="address_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
+        
+		<div class="modal-dialog category-area" role="document">
+            <div class="category-area-inner">
+                <div class="modal-header">
+                    <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+						<i class="uil uil-multiply"></i>
+                    </button>
+                </div>
+                <div class="category-model-content modal-content"> 
+					<div class="cate-header">
+						<h4>Adicionar Endereço</h4>
+					</div>
+					<div class="add-address-form">
+						<div class="checout-address-step">
+							<div class="row">
+								<div class="col-lg-12">												
+									<form class="" method="POST" action="php/endereco.php">
+										<!-- Multiple Radios (inline) -->
+										<div class="form-group">
+											<div class="product-radio">
+												<ul class="product-now">
+													<li>
+														<input type="radio" id="ad1" name="tipo" value="1"checked>
+														<label for="ad1">Casa</label>
+													</li>
+													<li>
+														<input type="radio" id="ad2" name="tipo" value="2">
+														<label for="ad2">Trabalho</label>
+													</li>
+													<li>
+														<input type="radio" id="ad3" name="tipo" value="3">
+														<label for="ad3">Outros</label>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="address-fieldset">
+											
+											<div class="col-lg-6-cep col-md-12">
+												<div class="form-group">
+													<label class="control-label">CEP*</label>
+													<input id="cep" name="cep" type="tel" placeholder="" class="form-control input-md" data-mask="00000-000" required="">
+												</div>
+											</div>
+											<div class="row">
+												
+												
+												<div class="col-lg-6 col-md-12">
+													<div class="form-group">
+														<label class="control-label">Estado*</label>
+														<input id="estado" name="estado" type="text" placeholder="" class="form-control input-md" maxlength="30" required="">
+													</div>
+												</div>
+												<div class="col-lg-6 col-md-12">
+														<div class="form-group">
+															<label class="control-label">Cidade*</label>
+															<input id="cidade" name="cidade" type="text" placeholder="" class="form-control input-md" maxlength="80"required="">
+														</div>
+													</div>	
+												<div class="col-lg-12 col-md-12">
+													<div class="form-group">
+														<label class="control-label">Rua / Avenida *</label>
+														<input id="rua" name="rua" type="text" placeholder="" class="form-control input-md" maxlength="200" required="">
+													</div>
+												</div>
+												<div class="col-lg-12 col-md-12">
+													<div class="form-group">
+														<label class="control-label"> Número*</label>
+														<input id="street" name="n_end" type="tel" placeholder="" class="form-control input-md" data-mask="0000000000000">
+													</div>
+												</div>
+												<div class="col-lg-12 col-md-12">
+													<div class="form-group">
+														<label class="control-label">Complemento</label>
+														<input id="complemento" name="complemento" type="text" placeholder="" class="form-control input-md" maxlength="100" required="">
+													</div>
+												</div>
+												
+											
+												
+												<div class="col-lg-12 col-md-12">
+													<div class="form-group mb-0">
+														<div class="address-btns">
+															<button class="save-btn14 hover-btn">Salvar</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- Add Address Model End-->
 	<!-- Category Model Start-->
 	<div id="category_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
         <div class="modal-dialog category-area" role="document">
@@ -323,25 +505,59 @@ include('php/verificar_login.php');
 		<div class="top-header-group">
 			<div class="top-header">
 				<div class="res_main_logo">
-					<a href="index.php"><img src="images/dark-logo-1.svg" alt=""></a>
+					<a href="index.php"><img src="images/logo-1.png" alt=""></a>
 				</div>
 				<div class="main_logo" id="logo">
-					<a href="index.php"><img src="images/logo.svg" alt=""></a>
-					<a href="index.php"><img class="logo-inverse" src="images/dark-logo.svg" alt=""></a>
+					<a href="index.php"><img src="images/logo.png" alt=""></a>
+					<a href="index.php"><img class="logo-inverse" src="images/dark-logo.png" alt=""></a>
 				</div>
 				<div class="select_location">
 					<div class="ui inline dropdown loc-title">
 						<div class="text">
 						  <i class="uil uil-location-point"></i>
-						  Castanhal
+						  Gurugram
 						</div>
-
+						<i class="uil uil-angle-down icon__14"></i>
+						<div class="menu dropdown_loc">
+							<div class="item channel_item">
+								<i class="uil uil-location-point"></i>
+								Gurugram
+							</div>
+							<div class="item channel_item">
+								<i class="uil uil-location-point"></i>
+								New Delhi
+							</div>
+							<div class="item channel_item">
+								<i class="uil uil-location-point"></i>
+								Bangaluru
+							</div>
+							<div class="item channel_item">
+								<i class="uil uil-location-point"></i>
+								Mumbai
+							</div>
+							<div class="item channel_item">
+								<i class="uil uil-location-point"></i>
+								Hyderabad
+							</div>
+							<div class="item channel_item">
+								<i class="uil uil-location-point"></i>
+								Kolkata
+							</div>
+							<div class="item channel_item">
+								<i class="uil uil-location-point"></i>
+								Ludhiana
+							</div>
+							<div class="item channel_item">
+								<i class="uil uil-location-point"></i>
+								Chandigrah
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="search120">
 					<div class="ui search">
 					  <div class="ui left icon input swdh10">
-						<input class="prompt srch10" type="text" placeholder="Pesquise produtos..">
+						<input class="prompt srch10" type="text" placeholder="Search for products..">
 						<i class='uil uil-search-alt icon icon1'></i>
 					  </div>
 					</div>
@@ -352,13 +568,13 @@ include('php/verificar_login.php');
 							<a href="#" class="offer-link"><i class="uil uil-phone-alt"></i>1800-000-000</a>
 						</li>
 						<li>
-							<a href="offers.html" class="offer-link"><i class="uil uil-gift"></i>Ofertas</a>
+							<a href="offers.html" class="offer-link"><i class="uil uil-gift"></i>Offers</a>
 						</li>
 						<li>
-							<a href="faq.html" class="offer-link"><i class="uil uil-question-circle"></i>Ajuda</a>
+							<a href="faq.html" class="offer-link"><i class="uil uil-question-circle"></i>Help</a>
 						</li>
 						<li>
-							<a href="dashboard_my_wishlist.php" class="option_links" title="Wishlist"><i class='uil uil-heart icon_wishlist'></i><span class="noti_count1">3</span></a>
+							<a href="dashboard_my_wishlist.html" class="option_links" title="Wishlist"><i class='uil uil-heart icon_wishlist'></i><span class="noti_count1">3</span></a>
 						</li>	
 						<li class="ui dropdown">
 							<a href="#" class="opts_account">
@@ -369,20 +585,20 @@ include('php/verificar_login.php');
 							<div class="menu dropdown_account">
 								<div class="night_mode_switch__btn">
 									<a href="#" id="night-mode" class="btn-night-mode">
-										<i class="uil uil-moon"></i> Modo noturno
+										<i class="uil uil-moon"></i> Night mode
 										<span class="btn-night-mode-switch">
 											<span class="uk-switch-button"></span>
 										</span>
 									</a>
 								</div>	
-								<a href="dashboard_overview.php" class="item channel_item"><i class="uil uil-apps icon__1"></i>Perfil</a>								
-								<a href="dashboard_my_orders.php" class="item channel_item"><i class="uil uil-box icon__1"></i>Ordens de compra</a>
-								<a href="dashboard_my_wishlist.php" class="item channel_item"><i class="uil uil-heart icon__1"></i>Lista de desejos</a>
-								<a href="dashboard_my_wallet.php" class="item channel_item"><i class="uil uil-usd-circle icon__1"></i>Carteira</a>
-								<a href="dashboard_my_addresses.php" class="item channel_item"><i class="uil uil-location-point icon__1"></i>Endereço</a>
-								<a href="offers.html" class="item channel_item"><i class="uil uil-gift icon__1"></i>Ofertas</a>
-								<a href="faq.html" class="item channel_item"><i class="uil uil-info-circle icon__1"></i>Perguntas frequentes</a>
-								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="item channel_item"><i class="uil uil-lock-alt icon__1"></i>Sair</a>
+								<a href="dashboard_overview.php" class="item channel_item"><i class="uil uil-apps icon__1"></i>Dashbaord</a>								
+								<a href="dashboard_my_orders.php" class="item channel_item"><i class="uil uil-box icon__1"></i>My Orders</a>
+								<a href="dashboard_my_wishlist.php" class="item channel_item"><i class="uil uil-heart icon__1"></i>My Wishlist</a>
+								<a href="dashboard_my_wallet.php" class="item channel_item"><i class="uil uil-usd-circle icon__1"></i>My Wallet</a>
+								<a href="dashboard_my_addresses.php" class="item channel_item"><i class="uil uil-location-point icon__1"></i>Meus Endereços</a>
+								<a href="offers.html" class="item channel_item"><i class="uil uil-gift icon__1"></i>Offers</a>
+								<a href="faq.html" class="item channel_item"><i class="uil uil-info-circle icon__1"></i>Faq</a>
+								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="item channel_item"><i class="uil uil-lock-alt icon__1"></i>Logout</a>
 							</div>
 						</li>
 					</ul>
@@ -433,7 +649,7 @@ include('php/verificar_login.php');
 											<a href="blog_left_sidebar_single_view.html" class="item channel_item page__links">Blog Detail View with Sidebar</a>
 										</div>
 									</div>
-								</li>
+								</li>	
 								<li class="nav-item"><a href="contact_us.html" class="nav-link" title="Contact">Contact Us</a></li>
 							</ul>
 						</div>
@@ -494,12 +710,12 @@ include('php/verificar_login.php');
 					<div class="col-lg-3 col-md-4">
 						<div class="left-side-tabs">
 							<div class="dashboard-left-links">
-								<a href="dashboard_overview.php" class="user-item active"><i class="uil uil-apps"></i>Overview</a>
+								<a href="dashboard_overview.php" class="user-item"><i class="uil uil-apps"></i>Overview</a>
 								<a href="dashboard_my_orders.php" class="user-item"><i class="uil uil-box"></i>My Orders</a>
 								<a href="dashboard_my_rewards.php" class="user-item"><i class="uil uil-gift"></i>My Rewards</a>
 								<a href="dashboard_my_wallet.php" class="user-item"><i class="uil uil-wallet"></i>My Wallet</a>
 								<a href="dashboard_my_wishlist.php" class="user-item"><i class="uil uil-heart"></i>Shopping Wishlist</a>
-								<a href="dashboard_my_addresses.php" class="user-item"><i class="uil uil-location-point"></i>My Address</a>
+								<a href="dashboard_my_addresses.php" class="user-item active"><i class="uil uil-location-point"></i>Meus Endereços</a>
 								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="user-item"><i class="uil uil-exit"></i>Logout</a>
 							</div>
 						</div>
@@ -509,77 +725,98 @@ include('php/verificar_login.php');
 							<div class="row">
 								<div class="col-md-12">
 									<div class="main-title-tab">
-										<h4><i class="uil uil-apps"></i>Overview</h4>
-									</div>
-									<div class="welcome-text">
-										<h2>Hi! <?php echo$resultado['nome']?></h2>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-12">
-									<div class="pdpt-bg">
-										<div class="pdpt-title">
-											<h4>My Rewards</h4>
-										</div>
-										<div class="ddsh-body">
-											<h2>6 Rewards</h2>
-											<ul>
-												<li>
-													<a href="#" class="small-reward-dt hover-btn">Won $2</a>
-												</li>
-												<li>
-													<a href="#" class="small-reward-dt hover-btn">Won 40% Off</a>
-												</li>
-												<li>
-													<a href="#" class="small-reward-dt hover-btn">Caskback $1</a>
-												</li>
-												<li>
-													<a href="#" class="rewards-link5">+More</a>
-												</li>
-											</ul>
-										</div>
-										<a href="#" class="more-link14">Rewards and Details <i class="uil uil-angle-double-right"></i></a>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-12">
-									<div class="pdpt-bg">
-										<div class="pdpt-title">
-											<h4>My Orders</h4>
-										</div>
-										<div class="ddsh-body">
-											<h2>2 Recently Purchases</h2>
-											<ul class="order-list-145">
-												<li>
-													<div class="smll-history">
-														<div class="order-title">2 Items <span data-inverted="" data-tooltip="2kg broccoli, 1kg Apple" data-position="top center">?</span></div>
-														<div class="order-status">On the way</div>
-														<p>$22</p>
-													</div>
-												</li>
-											</ul>
-										</div>
-										<a href="#" class="more-link14">All Orders <i class="uil uil-angle-double-right"></i></a>
+										<h4><i class="uil uil-location-point"></i>Meus Endereços</h4>
 									</div>
 								</div>
 								<div class="col-lg-12 col-md-12">
 									<div class="pdpt-bg">
 										<div class="pdpt-title">
-											<h4>My Wallet</h4>
+											<h4>Endereços</h4>
 										</div>
-										<div class="wllt-body">
-											<h2>Credits $100</h2>
-											<ul class="wallet-list">
-												<li>
-													<a href="#" class="wallet-links14"><i class="uil uil-card-atm"></i>Payment Methods</a>
-												</li>
-												<li>
-													<a href="#" class="wallet-links14"><i class="uil uil-gift"></i>3 offers Active</a>
-												</li>	
-												<li>
-													<a href="#" class="wallet-links14"><i class="uil uil-coins"></i>Points Earning</a>
-												</li>	
-											</ul>
+										<div class="address-body">
+											<a href="#" class="add-address hover-btn" data-toggle="modal" data-target="#address_model">Adicionar Novo Endereço</a>
+											<div class="address-item">
+												<div class="address-icon1">
+													<i class="uil uil-home-alt"></i>
+												</div>
+												<div class="address-dt-all">
+												<?php 
+													
+												if(isset($r_end_casa))
+												{	
+													foreach($r_end_casa as $key => $r_end)
+													{
+																			
+												?>
+
+													<h4><?php echo $r_end['tipo'];?></h4>
+													<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
+													<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
+													<ul class="action-btns">
+														<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
+														<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
+													</ul>
+												<?php
+													};
+												};
+												?> 
+												</div>
+											</div>
+											<div class="address-item">
+												<div class="address-icon1">
+													<i class="uil uil-home-alt"></i>
+												</div>
+												<div class="address-dt-all">
+												<?php 
+													
+													if(isset($r_end_trab))
+													{	
+														foreach($r_end_trab as $key => $r_end)
+														{
+																				
+													?>
+
+														<h4><?php echo $r_end['tipo'];?></h4>
+														<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
+														<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
+														<ul class="action-btns">
+															<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
+															<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
+														</ul>
+													<?php
+														};
+													};
+												?> 
+												</div>
+											</div>
+											<div class="address-item">
+												<div class="address-icon1">
+													<i class="uil uil-home-alt"></i>
+												</div>
+												<div class="address-dt-all">
+												<?php 
+													
+													if(isset($r_end_out))
+													{	
+														foreach($r_end_out as $key => $r_end)
+														{
+																				
+													?>
+
+														<h4><?php echo $r_end['tipo'];?></h4>
+														<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
+														<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
+														<ul class="action-btns">
+															<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
+															<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
+														</ul>
+													<?php
+														};
+													};
+												?> 
+												</div>							
+											</div>
 										</div>
-										<a href="#" class="more-link14">Rewards and Details <i class="uil uil-angle-double-right"></i></a>
 									</div>
 								</div>
 							</div>
@@ -718,16 +955,8 @@ include('php/verificar_login.php');
 	<!-- Footer End -->
 
 	<!-- Javascripts -->
-		<script src="js/jquery-3.3.1.min.js"></script>
-		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<script src="vendor/OwlCarousel/owl.carousel.js"></script>
-		<script src="vendor/semantic/semantic.min.js"></script>
-		<script src="js/jquery.countdown.min.js"></script>
-		<script src="js/custom.js"></script>
-		<script src="js/product.thumbnail.slider.js"></script>
-		<script src="js/offset_overlay.js"></script>
-		<script src="js/night-mode.js"></script>
 	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 	
 </body>
 </html>

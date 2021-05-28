@@ -1,8 +1,10 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+include('php/verificar_login.php');
+?>
+<!DOCTYPE html>
 <html lang="en">
 
-	<?php
-		include('php/verificar_login.php');
+	<?php		
 		include('php/dados_cliente.php');
 	?>
 	<head>
@@ -31,6 +33,7 @@
 		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="vendor/semantic/semantic.min.css">	
 		
+	
 	</head>
 
 <body>
@@ -861,15 +864,15 @@
 	<!-- Footer End -->
 
 	<!-- Javascripts -->
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="vendor/OwlCarousel/owl.carousel.js"></script>
-	<script src="vendor/semantic/semantic.min.js"></script>
-	<script src="js/jquery.countdown.min.js"></script>
-	<script src="js/custom.js"></script>
-	<script src="js/product.thumbnail.slider.js"></script>
-	<script src="js/offset_overlay.js"></script>
-	<script src="js/night-mode.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="vendor/OwlCarousel/owl.carousel.js"></script>
+		<script src="vendor/semantic/semantic.min.js"></script>
+		<script src="js/jquery.countdown.min.js"></script>
+		<script src="js/custom.js"></script>
+		<script src="js/product.thumbnail.slider.js"></script>
+		<script src="js/offset_overlay.js"></script>
+		<script src="js/night-mode.js"></script>
 	
 	
 </body>
