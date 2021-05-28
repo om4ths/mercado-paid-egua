@@ -1,8 +1,9 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+include('php/verificar_login.php');
+?>
+<!DOCTYPE html>
 <html lang="pt_BR>
 	<?php
-		session_start();
-		include('php/verificar_login.php');
 		include('php/dados_cliente.php');
 	?>
 	<head>
@@ -29,6 +30,7 @@
 		<link href="vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
 		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="vendor/semantic/semantic.min.css">	
+		
 		
 	</head>
 
@@ -1493,14 +1495,14 @@
 	<!-- Fim do Footer (rodapé)  -->
 
 	<!-- Javascripts -->
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="vendor/OwlCarousel/owl.carousel.js"></script>
-	<script src="vendor/semantic/semantic.min.js"></script>
-	<script src="js/jquery.countdown.min.js"></script>
-	<script src="js/custom.js"></script>
-	<script src="js/offset_overlay.js"></script>
-	<script src="js/night-mode.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="vendor/OwlCarousel/owl.carousel.js"></script>
+		<script src="vendor/semantic/semantic.min.js"></script>
+		<script src="js/jquery.countdown.min.js"></script>
+		<script src="js/custom.js"></script>
+		<script src="js/offset_overlay.js"></script>
+		<script src="js/night-mode.js"></script>
 	
 	
 </body>

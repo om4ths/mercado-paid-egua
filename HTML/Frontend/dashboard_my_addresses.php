@@ -3,20 +3,24 @@ include('php/verificar_login.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
-	<?php		
+	<?php
+		
 		include('php/dados_cliente.php');
+		include('php/dados_endereco.php');
 	?>
 	<head>
+
+
+
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
 		<meta name="description" content="Gambolthemes">
 		<meta name="author" content="Gambolthemes">		
-		<title>Gambo - My Wallet</title>
+		<title>Mercado Pai D'égua - Endereço</title>
 		
 		<!-- Favicon Icon -->
-		<link rel="icon" type="image/png" href="images/fav.png">
+		<link rel="icon" type="image/png" href="images/logo-1.png">
 		
 		<!-- Stylesheets -->
 		<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -33,10 +37,180 @@ include('php/verificar_login.php');
 		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="vendor/semantic/semantic.min.css">	
 		
-	
+		<script src="js/jquery-3.3.1.min.js"></script>
+
+		<script>
+
+        $(document).ready(function() {
+
+            function limpa_formulário_cep() {
+                // Limpa valores do formulário de cep.
+                $("#rua").val("");
+                $("#bairro").val("");
+                $("#cidade").val("");              
+            }
+            
+            //Quando o campo cep perde o foco.
+            $("#cep").blur(function() {
+
+                //Nova variável "cep" somente com dígitos.
+                var cep = $(this).val().replace(/\D/g, '');
+
+                //Verifica se campo cep possui valor informado.
+                if (cep != "") {
+
+                    //Expressão regular para validar o CEP.
+                    var validacep = /^[0-9]{8}$/;
+
+                    //Valida o formato do CEP.
+                    if(validacep.test(cep)) {
+
+                        //Preenche os campos com "..." enquanto consulta webservice.
+                        $("#rua").val("...");
+                        $("#bairro").val("...");
+                        $("#cidade").val("...");
+                        $("#uf").val("...");
+                        $("#ibge").val("...");
+
+                        //Consulta o webservice viacep.com.br/
+                        $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
+
+                            if (!("erro" in dados)) {
+                                //Atualiza os campos com os valores da consulta.
+                                $("#rua").val(dados.logradouro);
+                                $("#bairro").val(dados.bairro);
+                                $("#cidade").val(dados.localidade);
+                                $("#uf").val(dados.uf);
+                                $("#ibge").val(dados.ibge);
+                            } //end if.
+                            else {
+                                //CEP pesquisado não foi encontrado.
+                                limpa_formulário_cep();
+                                alert("CEP não encontrado.");
+                            }
+                        });
+                    } //end if.
+                    else {
+                        //cep é inválido.
+                        limpa_formulário_cep();
+                        alert("Formato de CEP inválido.");
+                    }
+                } //end if.
+                else {
+                    //cep sem valor, limpa formulário.
+                    limpa_formulário_cep();
+                }
+            });
+        });
+
+    </script>
+
 	</head>
 
 <body>
+	
+
+	<!-- Add Address Model Start-->
+	<div id="address_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
+        
+		<div class="modal-dialog category-area" role="document">
+            <div class="category-area-inner">
+                <div class="modal-header">
+                    <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+						<i class="uil uil-multiply"></i>
+                    </button>
+                </div>
+                <div class="category-model-content modal-content"> 
+					<div class="cate-header">
+						<h4>Adicionar Endereço</h4>
+					</div>
+					<div class="add-address-form">
+						<div class="checout-address-step">
+							<div class="row">
+								<div class="col-lg-12">												
+									<form class="" method="POST" action="php/endereco.php">
+										<!-- Multiple Radios (inline) -->
+										<div class="form-group">
+											<div class="product-radio">
+												<ul class="product-now">
+													<li>
+														<input type="radio" id="ad1" name="tipo" value="1"checked>
+														<label for="ad1">Casa</label>
+													</li>
+													<li>
+														<input type="radio" id="ad2" name="tipo" value="2">
+														<label for="ad2">Trabalho</label>
+													</li>
+													<li>
+														<input type="radio" id="ad3" name="tipo" value="3">
+														<label for="ad3">Outros</label>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="address-fieldset">
+											
+											<div class="col-lg-6-cep col-md-12">
+												<div class="form-group">
+													<label class="control-label">CEP*</label>
+													<input id="cep" name="cep" type="tel" placeholder="" class="form-control input-md" data-mask="00000-000" required="">
+												</div>
+											</div>
+											<div class="row">
+												
+												
+												<div class="col-lg-6 col-md-12">
+													<div class="form-group">
+														<label class="control-label">Estado*</label>
+														<input id="estado" name="estado" type="text" placeholder="" class="form-control input-md" maxlength="30" required="">
+													</div>
+												</div>
+												<div class="col-lg-6 col-md-12">
+														<div class="form-group">
+															<label class="control-label">Cidade*</label>
+															<input id="cidade" name="cidade" type="text" placeholder="" class="form-control input-md" maxlength="80"required="">
+														</div>
+													</div>	
+												<div class="col-lg-12 col-md-12">
+													<div class="form-group">
+														<label class="control-label">Rua / Avenida *</label>
+														<input id="rua" name="rua" type="text" placeholder="" class="form-control input-md" maxlength="200" required="">
+													</div>
+												</div>
+												<div class="col-lg-12 col-md-12">
+													<div class="form-group">
+														<label class="control-label"> Número*</label>
+														<input id="street" name="n_end" type="tel" placeholder="" class="form-control input-md" data-mask="0000000000000">
+													</div>
+												</div>
+												<div class="col-lg-12 col-md-12">
+													<div class="form-group">
+														<label class="control-label">Complemento</label>
+														<input id="complemento" name="complemento" type="text" placeholder="" class="form-control input-md" maxlength="100" required="">
+													</div>
+												</div>
+												
+											
+												
+												<div class="col-lg-12 col-md-12">
+													<div class="form-group mb-0">
+														<div class="address-btns">
+															<button class="save-btn14 hover-btn">Salvar</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- Add Address Model End-->
 	<!-- Category Model Start-->
 	<div id="category_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
         <div class="modal-dialog category-area" role="document">
@@ -323,11 +497,11 @@ include('php/verificar_login.php');
 		<div class="top-header-group">
 			<div class="top-header">
 				<div class="res_main_logo">
-					<a href="index.php"><img src="images/dark-logo-1.svg" alt=""></a>
+					<a href="index.php"><img src="images/logo-1.png" alt=""></a>
 				</div>
 				<div class="main_logo" id="logo">
-					<a href="index.php"><img src="images/logo.svg" alt=""></a>
-					<a href="index.php"><img class="logo-inverse" src="images/dark-logo.svg" alt=""></a>
+					<a href="index.php"><img src="images/logo.png" alt=""></a>
+					<a href="index.php"><img class="logo-inverse" src="images/dark-logo.png" alt=""></a>
 				</div>
 				<div class="select_location">
 					<div class="ui inline dropdown loc-title">
@@ -409,14 +583,14 @@ include('php/verificar_login.php');
 										</span>
 									</a>
 								</div>	
-								<a href="dashboard_overview.html" class="item channel_item"><i class="uil uil-apps icon__1"></i>Dashbaord</a>								
-								<a href="dashboard_my_orders.html" class="item channel_item"><i class="uil uil-box icon__1"></i>My Orders</a>
-								<a href="dashboard_my_wishlist.html" class="item channel_item"><i class="uil uil-heart icon__1"></i>My Wishlist</a>
-								<a href="dashboard_my_wallet.html" class="item channel_item"><i class="uil uil-usd-circle icon__1"></i>My Wallet</a>
-								<a href="dashboard_my_addresses.html" class="item channel_item"><i class="uil uil-location-point icon__1"></i>My Address</a>
+								<a href="dashboard_overview.php" class="item channel_item"><i class="uil uil-apps icon__1"></i>Dashbaord</a>								
+								<a href="dashboard_my_orders.php" class="item channel_item"><i class="uil uil-box icon__1"></i>My Orders</a>
+								<a href="dashboard_my_wishlist.php" class="item channel_item"><i class="uil uil-heart icon__1"></i>My Wishlist</a>
+								<a href="dashboard_my_wallet.php" class="item channel_item"><i class="uil uil-usd-circle icon__1"></i>My Wallet</a>
+								<a href="dashboard_my_addresses.php" class="item channel_item"><i class="uil uil-location-point icon__1"></i>Meus Endereços</a>
 								<a href="offers.html" class="item channel_item"><i class="uil uil-gift icon__1"></i>Offers</a>
 								<a href="faq.html" class="item channel_item"><i class="uil uil-info-circle icon__1"></i>Faq</a>
-								<a href="sign_in.html" class="item channel_item"><i class="uil uil-lock-alt icon__1"></i>Logout</a>
+								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="item channel_item"><i class="uil uil-lock-alt icon__1"></i>Logout</a>
 							</div>
 						</li>
 					</ul>
@@ -440,7 +614,7 @@ include('php/verificar_login.php');
 									<div class="ui icon top left dropdown nav__menu">
 										<a class="nav-link" title="Pages">Pages <i class="uil uil-angle-down"></i></a>
 										<div class="menu dropdown_page">
-											<a href="dashboard_overview.php" class="item channel_item page__links">Account</a>
+											<a href="dashboard_overview.html" class="item channel_item page__links">Account</a>
 											<a href="about_us.html" class="item channel_item page__links">About Us</a>
 											<a href="shop_grid.html" class="item channel_item page__links">Shop Grid</a>
 											<a href="single_product_view.html" class="item channel_item page__links">Single Product View</a>
@@ -531,9 +705,9 @@ include('php/verificar_login.php');
 								<a href="dashboard_overview.php" class="user-item"><i class="uil uil-apps"></i>Overview</a>
 								<a href="dashboard_my_orders.php" class="user-item"><i class="uil uil-box"></i>My Orders</a>
 								<a href="dashboard_my_rewards.php" class="user-item"><i class="uil uil-gift"></i>My Rewards</a>
-								<a href="dashboard_my_wallet.php" class="user-item active"><i class="uil uil-wallet"></i>My Wallet</a>
+								<a href="dashboard_my_wallet.php" class="user-item"><i class="uil uil-wallet"></i>My Wallet</a>
 								<a href="dashboard_my_wishlist.php" class="user-item"><i class="uil uil-heart"></i>Shopping Wishlist</a>
-								<a href="dashboard_my_addresses.php" class="user-item"><i class="uil uil-location-point"></i>My Address</a>
+								<a href="dashboard_my_addresses.php" class="user-item active"><i class="uil uil-location-point"></i>Meus Endereços</a>
 								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="user-item"><i class="uil uil-exit"></i>Logout</a>
 							</div>
 						</div>
@@ -543,222 +717,97 @@ include('php/verificar_login.php');
 							<div class="row">
 								<div class="col-md-12">
 									<div class="main-title-tab">
-										<h4><i class="uil uil-wallet"></i>My Wallet</h4>
-									</div>
-								</div>								
-								<div class="col-lg-6 col-md-12">
-									<div class="pdpt-bg">
-										<div class="reward-body-dtt">
-											<div class="reward-img-icon">
-												<img src="images/money.svg" alt="">
-											</div>
-											<span class="rewrd-title">My Balance</span>
-											<h4 class="cashbk-price">$120</h4>
-											<span class="date-reward">Added : 8 May 2020</span>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-12">
-									<div class="pdpt-bg">
-										<div class="gambo-body-cash">
-											<div class="reward-img-icon">
-												<img class="rotate-img" src="images/business.svg" alt="">
-											</div>
-											<span class="rewrd-title">Gambo Cashback Blance</span>
-											<h4 class="cashbk-price">$5</h4>
-											<p>100% of thiscan be used for your next order.</p>
-										</div>
+										<h4><i class="uil uil-location-point"></i>Meus Endereços</h4>
 									</div>
 								</div>
 								<div class="col-lg-12 col-md-12">
 									<div class="pdpt-bg">
 										<div class="pdpt-title">
-											<h4>Active Offers</h4>
+											<h4>Endereços</h4>
 										</div>
-										<div class="active-offers-body">
-											<div class="table-responsive">
-												<table class="table ucp-table earning__table">
-													<thead class="thead-s">
-														<tr>
-															<th scope="col">Offers</th>
-															<th scope="col">Offer Code</th>
-															<th scope="col">Expires Date</th>
-															<th scope="col">Status</th>								
-														</tr>
-													</thead>
-													<tbody>
-														<tr>										
-															<td>15%</td>	
-															<td>GAMBOCOUP15</td>	
-															<td>31 May 2020</td>	
-															<td><b class="offer_active">Activated</b></td>	
-														</tr>
-														<tr>										
-															<td>10%</td>	
-															<td>GAMBOCOUP10</td>	
-															<td>25 May 2020</td>	
-															<td><b class="offer_active">Activated</b></td>	
-														</tr>
-														<tr>										
-															<td>25%</td>	
-															<td>GAMBOCOUP25</td>	
-															<td>20 May 2020</td>	
-															<td><b class="offer_active">Activated</b></td>	
-														</tr>
-														<tr>										
-															<td>5%</td>	
-															<td>GAMBOCOUP05</td>	
-															<td>15 May 2020</td>	
-															<td><b class="offer_active">Activated</b></td>	
-														</tr>
-													</tbody>				
-												</table>
-											</div>	
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-12">
-									<div class="pdpt-bg">
-										<div class="pdpt-title">
-											<h4>Add Balance</h4>
-										</div>
-										<div class="add-cash-body">
-											<div class="row">
-												<div class="col-lg-6 col-md-12">
-													<div class="form-group mt-1">
-														<label class="control-label">Holder Name*</label>
-														<div class="ui search focus">
-															<div class="ui left icon input swdh11 swdh19">
-																<input class="prompt srch_explore" type="text" name="holdername" value="" id="holder[name]" required="" maxlength="64" placeholder="Holder Name">															
-															</div>
-														</div>
-													</div>
-												</div> 
-												<div class="col-lg-6 col-md-12">
-													<div class="form-group mt-1">
-														<label class="control-label">Card Number*</label>
-														<div class="ui search focus">
-															<div class="ui left icon input swdh11 swdh19">
-																<input class="prompt srch_explore" type="text" name="cardnumber" value="" id="card[number]" required="" maxlength="64" placeholder="Card Number">															
-															</div>
-														</div>
-													</div>
+										<div class="address-body">
+											<a href="#" class="add-address hover-btn" data-toggle="modal" data-target="#address_model">Adicionar Novo Endereço</a>
+											<div class="address-item">
+												<div class="address-icon1">
+													<i class="uil uil-home-alt"></i>
 												</div>
-												<div class="col-lg-4 col-md-4">
-													<div class="form-group mt-1">																	
-														<label class="control-label">Expiration Month*</label>
-														<select class="ui fluid search dropdown form-dropdown" name="card[expire-month]">
-															<option value="">Month</option>
-															<option value="1">January</option>
-															<option value="2">February</option>
-															<option value="3">March</option>
-															<option value="4">April</option>
-															<option value="5">May</option>
-															<option value="6">June</option>
-															<option value="7">July</option>
-															<option value="8">August</option>
-															<option value="9">September</option>
-															<option value="10">October</option>
-															<option value="11">November</option>
-															<option value="12">December</option>
-														  </select>	
-													</div>
-												</div>
-												<div class="col-lg-4 col-md-4">
-													<div class="form-group mt-1">
-														<label class="control-label">Expiration Year*</label>
-														<div class="ui search focus">
-															<div class="ui left icon input swdh11 swdh19">
-																<input class="prompt srch_explore" type="text" name="card[expire-year]" maxlength="4" placeholder="Year">															
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-lg-4 col-md-4">
-													<div class="form-group mt-1">
-														<label class="control-label">CVV*</label>
-														<div class="ui search focus">
-															<div class="ui left icon input swdh11 swdh19">
-																<input class="prompt srch_explore" name="card[cvc]" maxlength="3" placeholder="CVV">															
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="col-lg-12 col-md-12">
-													<div class="form-group mt-1">
-														<label class="control-label">Add Balance*</label>
-														<div class="ui search focus">
-															<div class="ui left icon input swdh11 swdh19">
-																<input class="prompt srch_explore" type="text" name="addbalance" maxlength="3" placeholder="$0">															
-															</div>
-														</div>
-													</div>
+												<div class="address-dt-all">
+												<?php 
+													
+												if(isset($r_end_casa))
+												{	
+													foreach($r_end_casa as $key => $r_end)
+													{
+																			
+												?>
+
+													<h4><?php echo $r_end['tipo'];?></h4>
+													<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
+													<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
+													<ul class="action-btns">
+														<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
+														<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
+													</ul>
+												<?php
+													};
+												};
+												?> 
 												</div>
 											</div>
-											<a href="#" class="next-btn16 hover-btn mt-3">Add Balance</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-12">
-									<div class="pdpt-bg">
-										<div class="pdpt-title">
-											<h4>History</h4>
-										</div>
-										<div class="history-body scrollstyle_4">
-											<ul class="history-list">
-												<li>
-													<div class="purchase-history">
-														<div class="purchase-history-left">
-															<h4>Purchase</h4>
-															<p>Transaction ID <ins>gambo14255896</ins></p>
-															<span>6 May 2018, 12.56PM</span>
-														</div>
-														<div class="purchase-history-right">
-															<span>-$25</span>
-															<a href="#">View</a>
-														</div>
-													</div>
-												</li>
-												<li>
-													<div class="purchase-history">
-														<div class="purchase-history-left">
-															<h4>Purchase</h4>
-															<p>Transaction ID <ins>gambo14255895</ins></p>
-															<span>5 May 2018, 11.16AM</span>
-														</div>
-														<div class="purchase-history-right">
-															<span>-$21</span>
-															<a href="#">View</a>
-														</div>
-													</div>
-												</li>
-												<li>
-													<div class="purchase-history">
-														<div class="purchase-history-left">
-															<h4>Purchase</h4>
-															<p>Transaction ID <ins>gambo14255894</ins></p>
-															<span>4 May 2018, 02.56PM</span>
-														</div>
-														<div class="purchase-history-right">
-															<span>-$30</span>
-															<a href="#">View</a>
-														</div>
-													</div>
-												</li>
-												<li>
-													<div class="purchase-history">
-														<div class="purchase-history-left">
-															<h4>Purchase</h4>
-															<p>Transaction ID <ins>gambo14255893</ins></p>
-															<span>3 May 2018, 5.56PM</span>
-														</div>
-														<div class="purchase-history-right">
-															<span>-$15</span>
-															<a href="#">View</a>
-														</div>
-													</div>
-												</li>
-											</ul>
+											<div class="address-item">
+												<div class="address-icon1">
+													<i class="uil uil-home-alt"></i>
+												</div>
+												<div class="address-dt-all">
+												<?php 
+													
+													if(isset($r_end_trab))
+													{	
+														foreach($r_end_trab as $key => $r_end)
+														{
+																				
+													?>
+
+														<h4><?php echo $r_end['tipo'];?></h4>
+														<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
+														<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
+														<ul class="action-btns">
+															<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
+															<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
+														</ul>
+													<?php
+														};
+													};
+												?> 
+												</div>
+											</div>
+											<div class="address-item">
+												<div class="address-icon1">
+													<i class="uil uil-home-alt"></i>
+												</div>
+												<div class="address-dt-all">
+												<?php 
+													
+													if(isset($r_end_out))
+													{	
+														foreach($r_end_out as $key => $r_end)
+														{
+																				
+													?>
+
+														<h4><?php echo $r_end['tipo'];?></h4>
+														<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
+														<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
+														<ul class="action-btns">
+															<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
+															<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
+														</ul>
+													<?php
+														};
+													};
+												?> 
+												</div>							
+											</div>
 										</div>
 									</div>
 								</div>
@@ -898,7 +947,11 @@ include('php/verificar_login.php');
 	<!-- Footer End -->
 
 	<!-- Javascripts -->
-		<script src="js/jquery-3.3.1.min.js"></script>
+<<<<<<< HEAD:HTML/Frontend/dashboard_my_addresses.html
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+=======
+		
 		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 		<script src="vendor/OwlCarousel/owl.carousel.js"></script>
 		<script src="vendor/semantic/semantic.min.js"></script>
@@ -908,6 +961,7 @@ include('php/verificar_login.php');
 		<script src="js/offset_overlay.js"></script>
 		<script src="js/night-mode.js"></script>
 	
+>>>>>>> cb0b25c5f402a12dd4a4700710db3fd55203fb26:HTML/Frontend/dashboard_my_addresses.php
 	
 </body>
 </html>
