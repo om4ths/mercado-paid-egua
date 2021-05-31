@@ -1,5 +1,11 @@
+<?php
+include('php/verificar_login.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
+	<?php
+	include('php/dados_cliente.php');
+	?>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -72,7 +78,7 @@
 								<div class="sb-nav-link-icon"><i class="fas fa-cart-arrow-down"></i></div>
                                 Orders
 							</a>
-							<a class="nav-link" href="customers.html">
+							<a class="nav-link" href="customers.php">
 								<div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Customers
 							</a>
@@ -97,125 +103,40 @@
 							<div class="col-lg-12 col-md-12">
 								<div class="card card-static-2 mb-30">
 									<div class="card-title-2">
-										<h4>All Customers</h4>
+										<h4>Todos Usuarios</h4>
 									</div>
 									<div class="card-body-table">
 										<div class="table-responsive">
 											<table class="table ucp-table table-hover">
 												<thead>
-													<tr>
-														<th style="width:60px"><input type="checkbox" class="check-all"></th>
-														<th style="width:60px">ID</th>
-														<th style="width:100px">Image</th>
-														<th>Name</th>
-														<th>Email</th>
-														<th>Phone</th>
-														<th>Action</th>
+													<tr>														
+														<th style="width:60px">ID</th>			
+														<th>Nome</th>
+														<th>E-mail</th>
+														<th>Telefone</th>	
+														<th>Data de Nascimento</th>													
 													</tr>
 												</thead>
 												<tbody>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="10"></td>
-														<td>1</td>
-														<td>
-															<div class="cate-img-6">
-																<img src="images/avatar/img-1.jpg" alt="">
-															</div>
-														</td>
-														<td>Joginder Singh</td>
-														<td>johndoe@example.com</td>
-														<td>+911234567890</td>
-														<td class="action-btns">
-															<a href="customer_view.html" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
-															<a href="customer_edit.html" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
-															<a href="#" class="delete-btn" title="Edit"><i class="fas fa-trash-alt"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="5"></td>
-														<td>2</td>
-														<td>
-															<div class="cate-img-6">
-																<img src="images/avatar/img-2.jpg" alt="">
-															</div>
-														</td>
-														<td>Jassica William</td>
-														<td>jassica@example.com</td>
-														<td>+911234567890</td>
-														<td class="action-btns">
-															<a href="customer_view.html" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
-															<a href="customer_edit.html" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
-															<a href="#" class="delete-btn" title="Edit"><i class="fas fa-trash-alt"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="4"></td>
-														<td>3</td>
-														<td>
-															<div class="cate-img-6">
-																<img src="images/avatar/img-3.jpg" alt="">
-															</div>
-														</td>
-														<td>John Smith</td>
-														<td>john@example.com</td>
-														<td>+911234567890</td>
-														<td class="action-btns">
-															<a href="customer_view.html" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
-															<a href="customer_edit.html" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
-															<a href="#" class="delete-btn" title="Edit"><i class="fas fa-trash-alt"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="3"></td>
-														<td>4</td>
-														<td>
-															<div class="cate-img-6">
-																<img src="images/avatar/img-4.jpg" alt="">
-															</div>
-														</td>
-														<td>Zoena Singh</td>
-														<td>zoenasingh@example.com</td>
-														<td>+911234567890</td>
-														<td class="action-btns">
-															<a href="customer_view.html" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
-															<a href="customer_edit.html" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
-															<a href="#" class="delete-btn" title="Edit"><i class="fas fa-trash-alt"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="2"></td>
-														<td>5</td>
-														<td>
-															<div class="cate-img-6">
-																<img src="images/avatar/img-5.jpg" alt="">
-															</div>
-														</td>
-														<td>Amritpal Singh</td>
-														<td>amritpal@example.com</td>
-														<td>+911234567890</td>
-														<td class="action-btns">
-															<a href="customer_view.html" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
-															<a href="customer_edit.html" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
-															<a href="#" class="delete-btn" title="Edit"><i class="fas fa-trash-alt"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="1"></td>
-														<td>6</td>
-														<td>
-															<div class="cate-img-6">
-																<img src="images/avatar/img-6.jpg" alt="">
-															</div>
-														</td>
-														<td>Davinder Singh</td>
-														<td>davinder@example.com</td>
-														<td>+911234567890</td>
-														<td class="action-btns">
-															<a href="customer_view.html" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
-															<a href="customer_edit.html" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
-															<a href="#" class="delete-btn" title="Edit"><i class="fas fa-trash-alt"></i></a>
-														</td>
-													</tr>
+
+													<?php 
+														
+														if(isset($r_end_cli))
+														{	
+															foreach($r_end_cli as $key => $r_end)
+															{																			
+														?>		
+															<tr>												
+																<td><?php echo $r_end['id']?></td>	
+																<td><?php echo $r_end['nome']?></td>
+																<td><?php echo $r_end['email']?></td>
+																<td><?php echo $r_end['telefone']?></td>
+																<td><?php echo $r_end['data_nascimento']?></td>
+															</tr>																										
+														<?php
+															};
+														};
+													?> 													
 												</tbody>
 											</table>
 										</div>

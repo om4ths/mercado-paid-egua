@@ -6,10 +6,13 @@ include('dados_cliente.php');
 
 
 $tipo = $_POST['tipo'];
+$bairro = $_POST['bairro'];
 $rua = $_POST['rua'];
 $cep = $_POST['cep'];
 $n_end = $_POST['n_end'];
 $cidade = $_POST['cidade'];
+$complemento = $_POST['complemento'];
+
 
 if($tipo == 1){
 $tipo = 'Casa';
@@ -21,8 +24,8 @@ $tipo = 'Outro';
 
 
 
-$query_end = "INSERT INTO endereco ( id_telefone , rua , cep, numero , tipo, cidade)
-    VALUES ('$telefone', '$rua', '$cep', '$n_end', '$tipo', '$cidade')";
+$query_end = "INSERT INTO endereco ( id_telefone , rua , cep, numero , tipo, cidade, bairro, complemento)
+    VALUES ('$telefone', '$rua', '$cep', '$n_end', '$tipo', '$cidade', '$bairro', '$complemento')";
 
 $insert_end = mysqli_query($conexao,$query_end);
 
