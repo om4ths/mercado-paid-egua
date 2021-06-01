@@ -31,9 +31,8 @@ include('php/verificar_login.php');
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                        <a class="dropdown-item admin-dropdown-item" href="edit_profile.html">Editar Perfil</a>
 						<a class="dropdown-item admin-dropdown-item" href="change_password.html">Mudar Senha</a>
-                        <a class="dropdown-item admin-dropdown-item" href="login.html">Sair</a>
+                        <a class="dropdown-item admin-dropdown-item" href="php/logout.php">Sair</a>
                     </div>
                 </li>
             </ul>
@@ -112,26 +111,34 @@ include('php/verificar_login.php');
 													<tr>														
 														<th style="width:60px">ID</th>			
 														<th>Nome</th>
-														<th>E-mail</th>
 														<th>Telefone</th>	
-														<th>Data de Nascimento</th>													
+														<th>Ações</th>												
 													</tr>
 												</thead>
 												<tbody>
 
 													<?php 
 														
-														if(isset($r_end_cli))
+														if(isset($r_cli))
 														{	
-															foreach($r_end_cli as $key => $r_end)
+															foreach($r_cli as $key => $r_cliente)
 															{																			
 														?>		
 															<tr>												
-																<td><?php echo $r_end['id']?></td>	
-																<td><?php echo $r_end['nome']?></td>
-																<td><?php echo $r_end['email']?></td>
-																<td><?php echo $r_end['telefone']?></td>
-																<td><?php echo $r_end['data_nascimento']?></td>
+																<td><?php echo $r_cliente['id']?></td>	
+																<td><?php echo $r_cliente['nome']?></td>
+																<td><?php echo $r_cliente['telefone']?></td>
+																<td class="action-btns">
+																	<form method="GET" action="customer_view.php">	
+																		<input  type="hidden" name="tel_id" value="<?= $r_cliente['telefone']?>">
+																		<button href="customer_view.php" class="view-shop-btn" title="Ver" type="submit" ><i class="fas fa-eye"></i></button>
+																	</form>
+																	<form method="POST" action="login.php">	
+																		<input  type="hidden" name="tel_id" value="<?= $r_cliente['telefone']?>">
+																		<button href="#" class="delete-btn"	type="submit" title="Apagar"><i class="fas fa-trash-alt"></i></button>
+																	</form>																
+
+																</td>
 															</tr>																										
 														<?php
 															};

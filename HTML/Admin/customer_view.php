@@ -1,5 +1,11 @@
+<?php
+include('php/verificar_login.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
+		<?php
+			include('php/dados_cliente.php');
+		?>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,9 +31,8 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                        <a class="dropdown-item admin-dropdown-item" href="edit_profile.html">Editar Perfil</a>
 						<a class="dropdown-item admin-dropdown-item" href="change_password.html">Mudar Senha</a>
-                        <a class="dropdown-item admin-dropdown-item" href="login.html">Sair</a>
+                        <a class="dropdown-item admin-dropdown-item" href="php/logout.php">Sair</a>
                     </div>
                 </li>
             </ul>
@@ -103,42 +108,27 @@
 												<img src="images/avatar/img-1.jpg" alt="">
 											</div>
 											<div class="shopowner-dt-left mt-4">
-												<h4>Joginder Singh</h4>
-												<span>Customer</span>
+												<h4><?php echo $r_view_cli['nome'];  ?></h4>
+												<span>Cliente</span>												
 											</div>
-											<ul class="product-dt-purchases">
-												<li>
-													<div class="product-status">
-														Purchased <span class="badge-item-2 badge-status">15</span>
-													</div>
-												</li>
-												<li>
-													<div class="product-status">
-														Rewards <span class="badge-item-2 badge-status">5</span>
-													</div>
-												</li>
-											</ul>
+										
 											<div class="shopowner-dts">
 												<div class="shopowner-dt-list">
-													<span class="left-dt">Name</span>
-													<span class="right-dt">Joginder Singh</span>
-												</div>
-												<div class="shopowner-dt-list">
-													<span class="left-dt">Username</span>
-													<span class="right-dt">joginder</span>
-												</div>
+													<span class="left-dt">Nome</span>
+													<span class="right-dt"><?php echo $r_view_cli['nome'];  ?></span>
+												</div>												
 												<div class="shopowner-dt-list">
 													<span class="left-dt">Email</span>
-													<span class="right-dt">sjas1202@gmail.com</span>
+													<span class="right-dt"><?php echo $r_view_cli['email'];  ?></span>
 												</div>
 												<div class="shopowner-dt-list">
-													<span class="left-dt">Phone</span>
-													<span class="right-dt">+918437176189</span>
+													<span class="left-dt">Telefone</span>
+													<span class="right-dt"><?php echo $r_view_cli['telefone'];  ?></span>
 												</div>
 												<div class="shopowner-dt-list">
-													<span class="left-dt">Address</span>
-													<span class="right-dt">Ludhiana, Punjab</span>
-												</div>
+													<span class="left-dt">Data de Nascimento</span>
+													<span class="right-dt"><?php  $date =$r_view_cli['data_nascimento']; echo $date= implode("/",array_reverse(explode("-",$date))); ?></span>
+												</div>												
 											</div>
 										</div>
 									</div>
