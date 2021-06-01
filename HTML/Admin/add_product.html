@@ -190,7 +190,7 @@
 										<form name="f_prod" method="POST" action="php/add_produto.php"> <!--CRIEI UM FORMULARIO-->
 											<div class="form-group">
 												<label class="form-label">Nome*</label>
-												<input type="text" class="form-control" placeholder="Nome do Produto">
+												<input type="text" class="form-control" name="p_nome" placeholder="Nome do Produto">
 											</div>
 											<div class="form-group">
 												<label class="form-label">Categoria*</label>
@@ -211,17 +211,17 @@
 											</div>
 											<div class="form-group">
 												<label class="form-label">Preço*</label>
-												<input type="text" class="form-control" placeholder="$0">
+												<input type="text" class="form-control" name="p_valor" placeholder="$0">
 											</div>
 											<div class="form-group">
-												<label class="form-label">Disconto*</label>
-												<input type="text" class="form-control" placeholder="$0">
+												<label class="form-label">Desconto*</label>
+												<input type="text" class="form-control" name="p_desconto" placeholder="$0">
 											</div>
 											<div class="form-group">
 												<label class="form-label">Status*</label>
 												<select id="status" name="status" class="form-control">
-													<option selected>Activo</option>
-													<option value="1">Inactivo</option>
+													<option selected>Ativo</option>
+													<option value="1">Inativo</option>
 												</select>
 											</div>
 											<div class="form-group">
