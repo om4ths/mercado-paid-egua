@@ -1,3 +1,7 @@
+<?php
+include('php/verificar_login.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description-gambolthemes" content="">
 	<meta name="author-gambolthemes" content="">
-	<title>Gambo Supermarket Admin</title>
+	<title>Mercado Pai D'égua</title>
 	<link href="css/styles.css" rel="stylesheet">
 	<link href="css/admin-style.css" rel="stylesheet">
 	
@@ -18,16 +22,15 @@
 
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-light bg-clr">
-            <a class="navbar-brand logo-brand" href="index.html">Gambo Supermarket</a>
+            <a class="navbar-brand logo-brand" href="index.php">Mercado Pai D'égua</a>
 			<button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
-            <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/index.html" class="frnt-link"><i class="fas fa-external-link-alt"></i>Home</a>
+            <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/index.php" class="frnt-link"><i class="fas fa-external-link-alt"></i>Inicio</a>
             <ul class="navbar-nav ml-auto mr-md-0">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                        <a class="dropdown-item admin-dropdown-item" href="edit_profile.html">Edit Profile</a>
-						<a class="dropdown-item admin-dropdown-item" href="change_password.html">Change Password</a>
-                        <a class="dropdown-item admin-dropdown-item" href="login.html">Logout</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">                        
+						<a class="dropdown-item admin-dropdown-item" href="change_password.html">Mudar Senha</a>
+                        <a class="dropdown-item admin-dropdown-item" href="php/logout.php">Sair</a>
                     </div>
                 </li>
             </ul>
@@ -37,118 +40,50 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <a class="nav-link active" href="index.html">
+                            <a class="nav-link active" href="index.php">
 								<div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
+                                Painel de Controle
 							</a>
-                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-								<div class="sb-nav-link-icon"><i class="fas fa-newspaper"></i></div>
-                                Posts
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-							</a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-									<a class="nav-link sub_nav_link" href="posts.html">All Posts</a>
-									<a class="nav-link sub_nav_link" href="add_post.html">Add New</a>
-									<a class="nav-link sub_nav_link" href="post_categories.html">Categories</a>
-									<a class="nav-link sub_nav_link" href="post_tags.html">Tags</a>
-								</nav>
-                            </div>		
-							<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLocations" aria-expanded="false" aria-controls="collapseLocations">
-								<div class="sb-nav-link-icon"><i class="fas fa-map-marker-alt"></i></div>
-                                Locations
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-							</a>
-                            <div class="collapse" id="collapseLocations" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-									<a class="nav-link sub_nav_link" href="locations.html">All Locations</a>
-									<a class="nav-link sub_nav_link" href="add_location.html">Add Location</a>
-								</nav>
-                            </div>		
-							<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAreas" aria-expanded="false" aria-controls="collapseAreas">
-								<div class="sb-nav-link-icon"><i class="fas fa-map-marked-alt"></i></div>
-                                Areas
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-							</a>
-                            <div class="collapse" id="collapseAreas" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-									<a class="nav-link sub_nav_link" href="areas.html">All Areas</a>
-									<a class="nav-link sub_nav_link" href="add_area.html">Add Area</a>
-								</nav>
-                            </div>
+                             		
+								
+							
 							<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCategories" aria-expanded="false" aria-controls="collapseCategories">
 								<div class="sb-nav-link-icon"><i class="fas fa-list"></i></div>
-                                Categories
+                                Categorias
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
 							</a>
                             <div class="collapse" id="collapseCategories" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-									<a class="nav-link sub_nav_link" href="category.html">All Categories</a>
-									<a class="nav-link sub_nav_link" href="add_category.html">Add Category</a>
+									<a class="nav-link sub_nav_link" href="category.html">Todas as Categorias</a>
+									<a class="nav-link sub_nav_link" href="add_category.html">Adicionar Categoria</a>
 								</nav>
                             </div>
-							<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseShops" aria-expanded="false" aria-controls="collapseShops">
-								<div class="sb-nav-link-icon"><i class="fas fa-store"></i></div>
-                                Shops
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-							</a>
-                            <div class="collapse" id="collapseShops" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-									<a class="nav-link sub_nav_link" href="shops.html">All Shops</a>
-									<a class="nav-link sub_nav_link" href="add_shop.html">Add Shop</a>
-								</nav>
-                            </div>
+
+							
 							<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProducts" aria-expanded="false" aria-controls="collapseProducts">
 								<div class="sb-nav-link-icon"><i class="fas fa-box"></i></div>
-                                Products
+                                Produtos
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
 							</a>
                             <div class="collapse" id="collapseProducts" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-									<a class="nav-link sub_nav_link" href="products.html">All Products</a>
-									<a class="nav-link sub_nav_link" href="add_product.html">Add Product</a>
+									<a class="nav-link sub_nav_link" href="products.html">Todos os Produtos</a>
+									<a class="nav-link sub_nav_link" href="add_product.html">Adicionar Produtos</a>
 								</nav>
                             </div>
 							<a class="nav-link" href="orders.html">
 								<div class="sb-nav-link-icon"><i class="fas fa-cart-arrow-down"></i></div>
-                                Orders
+                                Ordens de compra
 							</a>
-							<a class="nav-link" href="customers.html">
+							<a class="nav-link" href="customers.php">
 								<div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
-                                Customers
+                                Usuários
 							</a>
 							<a class="nav-link" href="offers.html">
 								<div class="sb-nav-link-icon"><i class="fas fa-gift"></i></div>
-                                Offers
+                                Ofertas
 							</a>
-							<a class="nav-link" href="pages.html">
-								<div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Pages
-							</a>
-                            <a class="nav-link" href="menu.html">
-								<div class="sb-nav-link-icon"><i class="fas fa-layer-group"></i></div>
-                                Menu
-							</a>
-							<a class="nav-link" href="updater.html">
-								<div class="sb-nav-link-icon"><i class="fas fa-cloud-upload-alt"></i></div>
-                                Updater
-							</a>
-							<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSettings" aria-expanded="false" aria-controls="collapseSettings">
-								<div class="sb-nav-link-icon"><i class="fas fa-cog"></i></div>
-                                Setting
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-							</a>
-                            <div class="collapse" id="collapseSettings" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-									<a class="nav-link sub_nav_link" href="general_setting.html">General Settings</a>
-									<a class="nav-link sub_nav_link" href="payment_setting.html">Payment Settings</a>
-									<a class="nav-link sub_nav_link" href="email_setting.html">Email Settings</a>
-								</nav>
-                            </div>
-							<a class="nav-link" href="reports.html">
-								<div class="sb-nav-link-icon"><i class="fas fa-chart-bar"></i></div>
-                                Reports
-							</a>
+
                         </div>
                     </div>
                 </nav>
@@ -156,15 +91,15 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <h2 class="mt-30 page-title">Dashboard</h2>
+                        <h2 class="mt-30 page-title">Painel de Controle</h2>
                         <ol class="breadcrumb mb-30">
-                            <li class="breadcrumb-item active">Dashboard</li>
+                            <li class="breadcrumb-item active">Painel</li>
                         </ol>
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
                                 <div class="dashboard-report-card purple">
 									<div class="card-content">
-										<span class="card-title">Order Pending</span>
+										<span class="card-title">Ordens Pendentes</span>
 										<span class="card-count">2</span>
 									</div>
 									<div class="card-media">
@@ -175,7 +110,7 @@
                             <div class="col-xl-3 col-md-6">
 								<div class="dashboard-report-card red">
 									<div class="card-content">
-										<span class="card-title">Order Cancel</span>
+										<span class="card-title">Ordens Canceladas</span>
 										<span class="card-count">0</span>
 									</div>
 									<div class="card-media">
@@ -186,7 +121,7 @@
                             <div class="col-xl-3 col-md-6">
                                 <div class="dashboard-report-card info">
 									<div class="card-content">
-										<span class="card-title">Order Process</span>
+										<span class="card-title">Ordens Processadas</span>
 										<span class="card-count">5</span>
 									</div>
 									<div class="card-media">
@@ -197,7 +132,7 @@
                             <div class="col-xl-3 col-md-6">
 								<div class="dashboard-report-card success">
 									<div class="card-content">
-										<span class="card-title">Today Income</span>
+										<span class="card-title">Vendas de Hoje</span>
 										<span class="card-count">$9568.00</span>
 									</div>
 									<div class="card-media">
@@ -205,31 +140,25 @@
 									</div>
                                 </div>
                             </div>
-							<div class="col-xl-12 col-md-12">
-								<div class="card card-static-1 mb-30">
-									<div class="card-body">
-										<div id="earningGraph"></div>
-									</div>
-								</div>
-							</div>
+						
 							<div class="col-xl-12 col-md-12">
 								<div class="card card-static-2 mb-30">
 									<div class="card-title-2">
-										<h4>Recent Orders</h4>
-										<a href="orders.html" class="view-btn hover-btn">View All</a> 
+										<h4>Ordens Recentes</h4>
+										<a href="orders.html" class="view-btn hover-btn">Ver Tudo</a> 
 									</div>
 									<div class="card-body-table">
 										<div class="table-responsive">
 											<table class="table ucp-table table-hover">
 												<thead>
 													<tr>
-														<th style="width:130px">Order ID</th>
+														<th style="width:130px">Ordem ID</th>
 														<th>Item</th>
-														<th style="width:200px">Date</th>
-														<th style="width:300px">Address</th>
+														<th style="width:200px">Data</th>
+														<th style="width:300px">Endereço do Cliente</th>
 														<th style="width:130px">Status</th>
 														<th style="width:130px">Total</th>
-														<th style="width:100px">Action</th>
+														<th style="width:100px">Ação</th>
 													</tr>
 												</thead>
 												<tbody>

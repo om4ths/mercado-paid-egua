@@ -1,5 +1,11 @@
+<?php
+include('php/verificar_login.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
+	<?php
+	include('php/dados_cliente.php');
+	?>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +23,7 @@
 </head>
 
     <body class="sb-nav-fixed">
-		<nav class="sb-topnav navbar navbar-expand navbar-light bg-clr">
+        <nav class="sb-topnav navbar navbar-expand navbar-light bg-clr">
             <a class="navbar-brand logo-brand" href="index.php">Mercado Pai D'égua</a>
 			<button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
             <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/index.php" class="frnt-link"><i class="fas fa-external-link-alt"></i>Inicio</a>
@@ -87,53 +93,60 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <h2 class="mt-30 page-title">Categories</h2>
+                        <h2 class="mt-30 page-title">Customers</h2>
                         <ol class="breadcrumb mb-30">
                             <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="category.html">Categories</a></li>
-                            <li class="breadcrumb-item active">Add Category</li>
+                            <li class="breadcrumb-item active">Customers</li>
                         </ol>
                         <div class="row">
-							<div class="col-lg-6 col-md-6">
+							<div class="col-lg-12 col-md-12">
 								<div class="card card-static-2 mb-30">
 									<div class="card-title-2">
-										<h4>Add New Category</h4>
+										<h4>Todos Usuarios</h4>
 									</div>
 									<div class="card-body-table">
-										<div class="news-content-right pd-20">
-											<div class="form-group">
-												<label class="form-label">Name*</label>
-												<input type="text" class="form-control" placeholder="Category Name">
-											</div>
-											<div class="form-group">
-												<label class="form-label">Status*</label>
-												<select id="status" name="status" class="form-control">
-													<option selected>Active</option>
-													<option value="1">Inactive</option>
-												</select>
-											</div>
-											<div class="form-group">
-												<label class="form-label">Category Image*</label>
-												<div class="input-group">
-													<div class="custom-file">
-														<input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
-														<label class="custom-file-label" for="inputGroupFile04">Choose Image</label>
-													</div>
-												</div>
-												<div class="add-cate-img">
-													<img src="images/category/icon-1.svg" alt="">
-												</div>
-											</div>
-											<div class="form-group">
-												<label class="form-label">Description*</label>
-												<div class="card card-editor">
-													<div class="content-editor">
-														<textarea class="text-control" placeholder="Enter Description"></textarea>
-													</div>
-												</div>
-											</div>
-											<button class="save-btn hover-btn" type="submit">Add New Category</button>
-										</div> 
+										<div class="table-responsive">
+											<table class="table ucp-table table-hover">
+												<thead>
+													<tr>														
+														<th style="width:60px">ID</th>			
+														<th>Nome</th>
+														<th>Telefone</th>	
+														<th>Ações</th>												
+													</tr>
+												</thead>
+												<tbody>
+
+													<?php 
+														
+														if(isset($r_cli))
+														{	
+															foreach($r_cli as $key => $r_cliente)
+															{																			
+														?>		
+															<tr>												
+																<td><?php echo $r_cliente['id']?></td>	
+																<td><?php echo $r_cliente['nome']?></td>
+																<td><?php echo $r_cliente['telefone']?></td>
+																<td class="action-btns">
+																	<form method="GET" action="customer_view.php">	
+																		<input  type="hidden" name="tel_id" value="<?= $r_cliente['telefone']?>">
+																		<button href="customer_view.php" class="view-shop-btn" title="Ver" type="submit" ><i class="fas fa-eye"></i></button>
+																	</form>
+																	<form method="POST" action="login.php">	
+																		<input  type="hidden" name="tel_id" value="<?= $r_cliente['telefone']?>">
+																		<button href="#" class="delete-btn"	type="submit" title="Apagar"><i class="fas fa-trash-alt"></i></button>
+																	</form>																
+
+																</td>
+															</tr>																										
+														<?php
+															};
+														};
+													?> 													
+												</tbody>
+											</table>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -153,11 +166,9 @@
                 </footer>
             </div>
         </div>
-		
-		<!-- Javascripts -->
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
-		
+       
     </body>
 </html>

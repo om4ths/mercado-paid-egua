@@ -17,10 +17,10 @@ include('php/verificar_login.php');
 		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
 		<meta name="description" content="Gambolthemes">
 		<meta name="author" content="Gambolthemes">		
-		<title>Gambo - Meus Endereços</title>
+		<title>Mercado Pai D'égua - Endereço</title>
 		
 		<!-- Favicon Icon -->
-		<link rel="icon" type="image/png" href="images/fav.png">
+		<link rel="icon" type="image/png" href="images/logo-1.png">
 		
 		<!-- Stylesheets -->
 		<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -38,14 +38,6 @@ include('php/verificar_login.php');
 		<link rel="stylesheet" type="text/css" href="vendor/semantic/semantic.min.css">	
 		
 		<script src="js/jquery-3.3.1.min.js"></script>
-		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<script src="vendor/OwlCarousel/owl.carousel.js"></script>
-		<script src="vendor/semantic/semantic.min.js"></script>
-		<script src="js/jquery.countdown.min.js"></script>
-		<script src="js/custom.js"></script>
-		<script src="js/product.thumbnail.slider.js"></script>
-		<script src="js/offset_overlay.js"></script>
-		<script src="js/night-mode.js"></script>
 
 		<script>
 
@@ -55,7 +47,8 @@ include('php/verificar_login.php');
                 // Limpa valores do formulário de cep.
                 $("#rua").val("");
                 $("#bairro").val("");
-                $("#cidade").val("");              
+                $("#cidade").val("");
+				$("#estado").val("");              
             }
             
             //Quando o campo cep perde o foco.
@@ -116,9 +109,12 @@ include('php/verificar_login.php');
 	</head>
 
 <body>
+	
+
 	<!-- Add Address Model Start-->
 	<div id="address_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
-        <div class="modal-dialog category-area" role="document">
+        
+		<div class="modal-dialog category-area" role="document">
             <div class="category-area-inner">
                 <div class="modal-header">
                     <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
@@ -154,31 +150,49 @@ include('php/verificar_login.php');
 											</div>
 										</div>
 										<div class="address-fieldset">
+											
+											<div class="col-lg-6-cep col-md-12">
+												<div class="form-group">
+													<label class="control-label">CEP*</label>
+													<input id="cep" name="cep" type="tel" placeholder="" class="form-control input-md" data-mask="00000-000" required="">
+												</div>
+											</div>
 											<div class="row">
+												
+												
+												<div class="col-lg-6 col-md-12">
+													<div class="form-group">
+														<label class="control-label">Bairro*</label>
+														<input id="bairro" name="bairro" type="text" placeholder="" class="form-control input-md" maxlength="30" required="">
+													</div>
+												</div>
+												<div class="col-lg-6 col-md-12">
+														<div class="form-group">
+															<label class="control-label">Cidade*</label>
+															<input id="cidade" name="cidade" type="text" placeholder="" class="form-control input-md" maxlength="80"required="">
+														</div>
+													</div>	
 												<div class="col-lg-12 col-md-12">
 													<div class="form-group">
 														<label class="control-label">Rua / Avenida *</label>
-														<input id="rua" name="rua" type="text" placeholder="" class="form-control input-md" required="">
+														<input id="rua" name="rua" type="text" placeholder="" class="form-control input-md" maxlength="200" required="">
 													</div>
 												</div>
 												<div class="col-lg-12 col-md-12">
 													<div class="form-group">
-														<label class="control-label"> Nº Apartamento / Nº Casa / Escritório No. *</label>
-														<input id="street" name="n_end" type="text" placeholder="" class="form-control input-md">
+														<label class="control-label"> Número*</label>
+														<input id="street" name="n_end" type="tel" placeholder="" class="form-control input-md" data-mask="0000000000000">
 													</div>
 												</div>
-												<div class="col-lg-6 col-md-12">
+												<div class="col-lg-12 col-md-12">
 													<div class="form-group">
-														<label class="control-label">CEP*</label>
-														<input id="cep" name="cep" type="text" placeholder="" class="form-control input-md" required="">
+														<label class="control-label">Complemento</label>
+														<input id="complemento" name="complemento" type="text" placeholder="" class="form-control input-md" maxlength="100" required="">
 													</div>
 												</div>
-												<div class="col-lg-6 col-md-12">
-													<div class="form-group">
-														<label class="control-label">Cidade*</label>
-														<input id="cidade" name="cidade" type="text" placeholder="" class="form-control input-md" required="">
-													</div>
-												</div>
+												
+											
+												
 												<div class="col-lg-12 col-md-12">
 													<div class="form-group mb-0">
 														<div class="address-btns">
@@ -484,59 +498,25 @@ include('php/verificar_login.php');
 		<div class="top-header-group">
 			<div class="top-header">
 				<div class="res_main_logo">
-					<a href="index.php"><img src="images/dark-logo-1.svg" alt=""></a>
+					<a href="index.php"><img src="images/logo-1.png" alt=""></a>
 				</div>
 				<div class="main_logo" id="logo">
-					<a href="index.php"><img src="images/logo.svg" alt=""></a>
-					<a href="index.php"><img class="logo-inverse" src="images/dark-logo.svg" alt=""></a>
+					<a href="index.php"><img src="images/logo.png" alt=""></a>
+					<a href="index.php"><img class="logo-inverse" src="images/dark-logo.png" alt=""></a>
 				</div>
 				<div class="select_location">
 					<div class="ui inline dropdown loc-title">
 						<div class="text">
 						  <i class="uil uil-location-point"></i>
-						  Gurugram
+						  Castanhal
 						</div>
-						<i class="uil uil-angle-down icon__14"></i>
-						<div class="menu dropdown_loc">
-							<div class="item channel_item">
-								<i class="uil uil-location-point"></i>
-								Gurugram
-							</div>
-							<div class="item channel_item">
-								<i class="uil uil-location-point"></i>
-								New Delhi
-							</div>
-							<div class="item channel_item">
-								<i class="uil uil-location-point"></i>
-								Bangaluru
-							</div>
-							<div class="item channel_item">
-								<i class="uil uil-location-point"></i>
-								Mumbai
-							</div>
-							<div class="item channel_item">
-								<i class="uil uil-location-point"></i>
-								Hyderabad
-							</div>
-							<div class="item channel_item">
-								<i class="uil uil-location-point"></i>
-								Kolkata
-							</div>
-							<div class="item channel_item">
-								<i class="uil uil-location-point"></i>
-								Ludhiana
-							</div>
-							<div class="item channel_item">
-								<i class="uil uil-location-point"></i>
-								Chandigrah
-							</div>
-						</div>
+
 					</div>
 				</div>
 				<div class="search120">
 					<div class="ui search">
 					  <div class="ui left icon input swdh10">
-						<input class="prompt srch10" type="text" placeholder="Search for products..">
+						<input class="prompt srch10" type="text" placeholder="Pesquise produtos..">
 						<i class='uil uil-search-alt icon icon1'></i>
 					  </div>
 					</div>
@@ -547,10 +527,10 @@ include('php/verificar_login.php');
 							<a href="#" class="offer-link"><i class="uil uil-phone-alt"></i>1800-000-000</a>
 						</li>
 						<li>
-							<a href="offers.html" class="offer-link"><i class="uil uil-gift"></i>Offers</a>
+							<a href="offers.html" class="offer-link"><i class="uil uil-gift"></i>Ofertas</a>
 						</li>
 						<li>
-							<a href="faq.html" class="offer-link"><i class="uil uil-question-circle"></i>Help</a>
+							<a href="faq.html" class="offer-link"><i class="uil uil-question-circle"></i>Ajuda</a>
 						</li>
 						<li>
 							<a href="dashboard_my_wishlist.html" class="option_links" title="Wishlist"><i class='uil uil-heart icon_wishlist'></i><span class="noti_count1">3</span></a>
@@ -564,20 +544,20 @@ include('php/verificar_login.php');
 							<div class="menu dropdown_account">
 								<div class="night_mode_switch__btn">
 									<a href="#" id="night-mode" class="btn-night-mode">
-										<i class="uil uil-moon"></i> Night mode
+										<i class="uil uil-moon"></i> Modo noturno
 										<span class="btn-night-mode-switch">
 											<span class="uk-switch-button"></span>
 										</span>
 									</a>
 								</div>	
-								<a href="dashboard_overview.php" class="item channel_item"><i class="uil uil-apps icon__1"></i>Dashbaord</a>								
-								<a href="dashboard_my_orders.php" class="item channel_item"><i class="uil uil-box icon__1"></i>My Orders</a>
-								<a href="dashboard_my_wishlist.php" class="item channel_item"><i class="uil uil-heart icon__1"></i>My Wishlist</a>
-								<a href="dashboard_my_wallet.php" class="item channel_item"><i class="uil uil-usd-circle icon__1"></i>My Wallet</a>
-								<a href="dashboard_my_addresses.php" class="item channel_item"><i class="uil uil-location-point icon__1"></i>Meus Endereços</a>
-								<a href="offers.html" class="item channel_item"><i class="uil uil-gift icon__1"></i>Offers</a>
-								<a href="faq.html" class="item channel_item"><i class="uil uil-info-circle icon__1"></i>Faq</a>
-								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="item channel_item"><i class="uil uil-lock-alt icon__1"></i>Logout</a>
+								<a href="dashboard_overview.php" class="item channel_item"><i class="uil uil-apps icon__1"></i>Perfil</a>								
+								<a href="dashboard_my_orders.php" class="item channel_item"><i class="uil uil-box icon__1"></i>Ordens de compra</a>
+								<a href="dashboard_my_wishlist.php" class="item channel_item"><i class="uil uil-heart icon__1"></i>Lista de desejos</a>
+								<a href="dashboard_my_wallet.php" class="item channel_item"><i class="uil uil-usd-circle icon__1"></i>Carteira</a>
+								<a href="dashboard_my_addresses.php" class="item channel_item"><i class="uil uil-location-point icon__1"></i>Endereço </a>
+								<a href="offers.html" class="item channel_item"><i class="uil uil-gift icon__1"></i>Ofertas</a>
+								<a href="faq.html" class="item channel_item"><i class="uil uil-info-circle icon__1"></i>Perguntas frequentes</a>
+								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="item channel_item"><i class="uil uil-lock-alt icon__1"></i>Sair</a>
 							</div>
 						</li>
 					</ul>
@@ -729,7 +709,9 @@ include('php/verificar_login.php');
 												?>
 
 													<h4><?php echo $r_end['tipo'];?></h4>
+													<p><?php echo $r_end['bairro']?></p>
 													<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
+													<p><?php echo $r_end['complemento']?></p>
 													<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
 													<ul class="action-btns">
 														<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
@@ -934,8 +916,21 @@ include('php/verificar_login.php');
 	<!-- Footer End -->
 
 	<!-- Javascripts -->
+<<<<<<< HEAD:HTML/Frontend/dashboard_my_addresses.html
 	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+=======
+		
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="vendor/OwlCarousel/owl.carousel.js"></script>
+		<script src="vendor/semantic/semantic.min.js"></script>
+		<script src="js/jquery.countdown.min.js"></script>
+		<script src="js/custom.js"></script>
+		<script src="js/product.thumbnail.slider.js"></script>
+		<script src="js/offset_overlay.js"></script>
+		<script src="js/night-mode.js"></script>
 	
+>>>>>>> cb0b25c5f402a12dd4a4700710db3fd55203fb26:HTML/Frontend/dashboard_my_addresses.php
 	
 </body>
 </html>
