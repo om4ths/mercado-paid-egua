@@ -173,28 +173,29 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <h2 class="mt-30 page-title">Products</h2>
+                        <h2 class="mt-30 page-title">Productos</h2>
                         <ol class="breadcrumb mb-30">
                             <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="products.html">Products</a></li>
-                            <li class="breadcrumb-item active">Add Product</li>
+                            <li class="breadcrumb-item"><a href="products.html">Productos</a></li>
+                            <li class="breadcrumb-item active">Adicionar Produto</li>
                         </ol>
                         <div class="row">
 							<div class="col-lg-6 col-md-6">
 								<div class="card card-static-2 mb-30">
 									<div class="card-title-2">
-										<h4>Add New Product</h4>
+										<h4>Adicionar Novo Produto</h4>
 									</div>
 									<div class="card-body-table">
 										<div class="news-content-right pd-20">
+										<form name="f_prod" method="POST" action="php/add_produto.php"> <!--CRIEI UM FORMULARIO-->
 											<div class="form-group">
-												<label class="form-label">Name*</label>
-												<input type="text" class="form-control" placeholder="Category Name">
+												<label class="form-label">Nome*</label>
+												<input type="text" class="form-control" placeholder="Nome do Produto">
 											</div>
 											<div class="form-group">
-												<label class="form-label">Category*</label>
+												<label class="form-label">Categoria*</label>
 												<select id="categtory" name="categtory" class="form-control">
-													<option selected>--Select Category--</option>
+													<option selected>--Selecione a Categoria--</option>
 													<option value="1">Fruits & Vegetables</option>
 													<option value="2">Grocery & Staples</option>
 													<option value="3">Dairy & Eggs</option>
@@ -209,7 +210,7 @@
 												</select>
 											</div>
 											<div class="form-group">
-												<label class="form-label">MRP*</label>
+												<label class="form-label">Preço*</label>
 												<input type="text" class="form-control" placeholder="$0">
 											</div>
 											<div class="form-group">
@@ -219,12 +220,12 @@
 											<div class="form-group">
 												<label class="form-label">Status*</label>
 												<select id="status" name="status" class="form-control">
-													<option selected>Active</option>
-													<option value="1">Inactive</option>
+													<option selected>Activo</option>
+													<option value="1">Inactivo</option>
 												</select>
 											</div>
 											<div class="form-group">
-												<label class="form-label">Description*</label>
+												<label class="form-label">Descrição*</label>
 												<div class="card card-editor">
 													<div class="content-editor">
 														 <div id='edit'></div>
@@ -232,11 +233,11 @@
 												</div>
 											</div>
 											<div class="form-group">
-												<label class="form-label">Category Image*</label>
+												<label class="form-label">Imagem do Produto*</label>
 												<div class="input-group">
 													<div class="custom-file">
 														<input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
-														<label class="custom-file-label" for="inputGroupFile04">Choose Image</label>
+														<label class="custom-file-label" for="inputGroupFile04">Selecione a Imagem</label>
 													</div>
 												</div>
 												<div class="add-cate-img-1">
@@ -244,11 +245,11 @@
 												</div>
 											</div>
 											<div class="form-group">
-												<label class="form-label">More Image*</label>
+												<label class="form-label">Mais Imagens*</label>
 												<div class="input-group">
 													<div class="custom-file">
 														<input type="file" class="custom-file-input" id="inputGroupFile05" aria-describedby="inputGroupFileAddon05">
-														<label class="custom-file-label" for="inputGroupFile05">Choose Image</label>
+														<label class="custom-file-label" for="inputGroupFile05">Selecione a Imagem</label>
 													</div>
 												</div>
 												<ul class="add-produc-imgs">
@@ -274,7 +275,8 @@
 													</li>
 												</ul>
 											</div>
-											<button class="save-btn hover-btn" type="submit">Add New Product</button>
+											<button class="save-btn hover-btn" type="submit">Adicionar Produto</button>
+										</form>
 										</div> 
 									</div>
 								</div>
@@ -285,10 +287,10 @@
                 <footer class="py-4 bg-footer mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted-1">© 2020 <b>Gambo Supermarket</b>. by <a href="https://themeforest.net/user/gambolthemes">Gambolthemes</a></div>
+                            <div class="text-muted-1">© 2020 <b>Mercado Pai D'égua</b>. by <a href="https://themeforest.net/user/gambolthemes">Gambolthemes</a></div>
                             <div class="footer-links">
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/privacy_policy.html">Privacy Policy</a>
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/term_and_conditions.html">Terms &amp; Conditions</a>
+                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/privacy_policy.html">Politica de Privacidade</a>
+                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/term_and_conditions.html">Termos &amp; Condições</a>
                             </div>
                         </div>
                     </div>
