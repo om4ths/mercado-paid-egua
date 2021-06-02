@@ -19,6 +19,7 @@ include('php/verificar_login.php');
 	<!-- Vendor Stylesheets -->
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	
 </head>
 
@@ -133,13 +134,17 @@ include('php/verificar_login.php');
 																		<input  type="hidden" name="tel_id" value="<?= $r_cliente['telefone']?>">
 																		<button href="customer_view.php" class="view-shop-btn" title="Ver" type="submit" ><i class="fas fa-eye"></i></button>
 																	</form>
-																	<form method="POST" action="login.php">	
-																		<input  type="hidden" name="tel_id" value="<?= $r_cliente['telefone']?>">
-																		<button href="#" class="delete-btn"	type="submit" title="Apagar"><i class="fas fa-trash-alt"></i></button>
-																	</form>																
 
+																	<!-- Modal do Delete-->
+																	<form method="POST" action="customer_view.php"></form>
+																	<button  href="#" class="delete-btn" type="submit" title="Apagar" data-confirm='Deseja realmente APAGAR O USUÁRIO DO BANCO?'><i class="fas fa-trash-alt"></i></button>
+																	</form>
+																	
+															
 																</td>
-															</tr>																										
+															</tr>
+															
+																																									
 														<?php
 															};
 														};
@@ -169,6 +174,12 @@ include('php/verificar_login.php');
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
+
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<script src="js/deleteconfirm.js"></script>
+
        
     </body>
 </html>
