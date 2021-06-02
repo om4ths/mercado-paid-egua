@@ -1,6 +1,7 @@
 <?php
 		session_start();
-		if(!$_SESSION['email']) {
+		$email_id = $_SESSION['email'];	
+		if(!$_SESSION['email']) {					
 			header('Location: login.html');
 			exit();
 			}

@@ -3,9 +3,9 @@ include('php/verificar_login.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
-		<?php
-			include('php/dados_cliente.php');
-		?>
+	<?php
+	include('php/dados_cliente.php');
+	?>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,24 +19,9 @@ include('php/verificar_login.php');
 	<!-- Vendor Stylesheets -->
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-
-	<!-- Stylesheets endereço -->
-	<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-	<link href="/mercado-paid-egua/HTML/Frontend/css/style.css" rel="stylesheet">
-	<link href="/mercado-paid-egua/HTML/Frontend/css/responsive.css" rel="stylesheet">
-	<link href="/mercado-paid-egua/HTML/Frontend/css/night-mode.css" rel="stylesheet">
-	<link href="/mercado-paid-egua/HTML/Frontend/css/step-wizard.css" rel="stylesheet">
-	
-	<!-- endereço #2 Stylesheets -->
-	<link href="/mercado-paid-egua/HTML/Frontend/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-	<link href="/mercado-paid-egua/HTML/Frontend/vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
-	<link href="/mercado-paid-egua/HTML/Frontend/vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
-	<link href="/mercado-paid-egua/HTML/Frontend/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="/mercado-paid-egua/HTML/Frontend/vendor/semantic/semantic.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	
 </head>
-
-
 
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-light bg-clr">
@@ -112,147 +97,63 @@ include('php/verificar_login.php');
                         <h2 class="mt-30 page-title">Customers</h2>
                         <ol class="breadcrumb mb-30">
                             <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="customers.php">Customers</a></li>
-                            <li class="breadcrumb-item active">Customer View</li>
+                            <li class="breadcrumb-item active">Customers</li>
                         </ol>
                         <div class="row">
-							
-							<div class="col-lg-5 col-md-6">
+							<div class="col-lg-12 col-md-12">
 								<div class="card card-static-2 mb-30">
-									<div class="card-body-table">
-										<div class="shopowner-content-left text-center pd-20">
-											<div class="customer_img">
-												<img src="images/avatar/img-1.jpg" alt="">
-											</div>
-											<div class="shopowner-dt-left mt-4">
-												<h4><?php echo $r_view_cli['nome'];  ?></h4>
-												<span>Cliente</span>												
-											</div>
-										
-											<div class="shopowner-dts">
-												<div class="shopowner-dt-list">
-													<span class="left-dt">Nome</span>
-													<span class="right-dt"><?php echo $r_view_cli['nome'];  ?></span>
-												</div>												
-												<div class="shopowner-dt-list">
-													<span class="left-dt">Email</span>
-													<span class="right-dt"><?php echo $r_view_cli['email'];  ?></span>
-												</div>
-												<div class="shopowner-dt-list">
-													<span class="left-dt">Telefone</span>
-													<span class="right-dt"><?php echo $r_view_cli['telefone'];  ?></span>
-												</div>
-												<div class="shopowner-dt-list">
-													<span class="left-dt">Data de Nascimento</span>
-													<span class="right-dt"><?php  $date =$r_view_cli['data_nascimento']; echo $date= implode("/",array_reverse(explode("-",$date))); ?></span>
-												</div>												
-											</div>
-										</div>
-
+									<div class="card-title-2">
+										<h4>Todos Usuarios</h4>
 									</div>
+									<div class="card-body-table">
+										<div class="table-responsive">
+											<table class="table ucp-table table-hover">
+												<thead>
+													<tr>														
+														<th style="width:60px">ID</th>			
+														<th>Nome</th>
+														<th>Telefone</th>	
+														<th style="width:175px">Ações</th>												
+													</tr>
+												</thead>
+												<tbody>
 
-
-									
-								</div>
-							</div>
-
-							<div class="col-lg-9 col-md-8">
-								<div class="dashboard-right-endereco">							
-										<div class="col-md-12">
-										</div>
-										<div class="col-lg-12-end col-md-12">
-											<div class="pdpt-bg">
-		
-												<div class="pdpt-title">
-													<h4>Endereços</h4>
-												</div>
-												<div class="address-body">	
-													<div class="address-item">
-														<div class="address-icon1">
-															<i class="uil uil-home-alt"></i>
-														</div>
-														<div class="address-dt-all">
-														<?php 
-															
-														if(isset($r_end_casa))
+													<?php 
+														
+														if(isset($r_cli))
 														{	
-															foreach($r_end_casa as $key => $r_end)
-															{
-																					
-														?>
-		
-															<h4><?php echo $r_end['tipo'];?></h4>
-															<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
-															<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
-															<ul class="action-btns">
-																<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
-																<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
-															</ul>
+															foreach($r_cli as $key => $r_cliente)
+															{																			
+														?>		
+															<tr>												
+																<td><?php echo $r_cliente['id']?></td>	
+																<td><?php echo $r_cliente['nome']?></td>
+																<td><?php echo $r_cliente['telefone']?></td>
+																<td class="action-btns">
+																	<form method="GET" action="customer_view.php">	
+																		<input  type="hidden" name="tel_id" value="<?= $r_cliente['telefone']?>">
+																		<button href="customer_view.php" class="views-btn" title="Ver" type="submit" ><i class="fas fa-eye"></i></button>
+																	</form>
+
+																	<!-- Modal do Delete-->
+																	<form method="GET" action="php/delete.php">
+																		<input  type="hidden" name="tel_id" value="<?= $r_cliente['telefone']?>">
+																		<button  href="#" class="delete-btn" type="submit" title="Apagar" data-confirm='Deseja realmente APAGAR O USUÁRIO DO BANCO?'><i class="fas fa-trash-alt"></i></button>
+																	</form>
+																	
+															
+																</td>
+															</tr>
+															
+																																									
 														<?php
 															};
 														};
-														?> 
-														</div>
-													</div>
-		
-													<div class="address-item">
-														<div class="address-icon1">
-															<i class="uil uil-home-alt"></i>
-														</div>
-														<div class="address-dt-all">
-														<?php 
-															
-															if(isset($r_end_trab))
-															{	
-																foreach($r_end_trab as $key => $r_end)
-																{
-																						
-															?>
-		
-																<h4><?php echo $r_end['tipo'];?></h4>
-																<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
-																<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
-																<ul class="action-btns">
-																	<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
-																	<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
-																</ul>
-															<?php
-																};
-															};
-														?> 
-														</div>
-													</div>
-													<div class="address-item">
-														<div class="address-icon1">
-															<i class="uil uil-home-alt"></i>
-														</div>
-														<div class="address-dt-all">
-														<?php 
-															
-															if(isset($r_end_out))
-															{	
-																foreach($r_end_out as $key => $r_end)
-																{
-																						
-															?>
-		
-																<h4><?php echo $r_end['tipo'];?></h4>
-																<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
-																<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
-																<ul class="action-btns">
-																	<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
-																	<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
-																</ul>
-															<?php
-																};
-															};
-														?> 
-														</div>							
-													</div>
-												</div>
-											</div>
+													?> 													
+												</tbody>
+											</table>
 										</div>
-									
+									</div>
 								</div>
 							</div>
                         </div>
@@ -271,11 +172,15 @@ include('php/verificar_login.php');
                 </footer>
             </div>
         </div>
-		
-		<!-- Javascripts -->
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
-		
+
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<script src="js/deleteconfirm.js"></script>
+
+       
     </body>
 </html>
