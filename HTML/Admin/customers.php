@@ -1,5 +1,11 @@
+<?php
+include('php/verificar_login.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
+	<?php
+	include('php/dados_cliente.php');
+	?>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,9 +31,8 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                        <a class="dropdown-item admin-dropdown-item" href="edit_profile.html">Editar Perfil</a>
 						<a class="dropdown-item admin-dropdown-item" href="change_password.html">Mudar Senha</a>
-                        <a class="dropdown-item admin-dropdown-item" href="login.html">Sair</a>
+                        <a class="dropdown-item admin-dropdown-item" href="php/logout.php">Sair</a>
                     </div>
                 </li>
             </ul>
@@ -72,7 +77,7 @@
 								<div class="sb-nav-link-icon"><i class="fas fa-cart-arrow-down"></i></div>
                                 Orders
 							</a>
-							<a class="nav-link" href="customers.html">
+							<a class="nav-link" href="customers.php">
 								<div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Customers
 							</a>
@@ -97,125 +102,48 @@
 							<div class="col-lg-12 col-md-12">
 								<div class="card card-static-2 mb-30">
 									<div class="card-title-2">
-										<h4>All Customers</h4>
+										<h4>Todos Usuarios</h4>
 									</div>
 									<div class="card-body-table">
 										<div class="table-responsive">
 											<table class="table ucp-table table-hover">
 												<thead>
-													<tr>
-														<th style="width:60px"><input type="checkbox" class="check-all"></th>
-														<th style="width:60px">ID</th>
-														<th style="width:100px">Image</th>
-														<th>Name</th>
-														<th>Email</th>
-														<th>Phone</th>
-														<th>Action</th>
+													<tr>														
+														<th style="width:60px">ID</th>			
+														<th>Nome</th>
+														<th>Telefone</th>	
+														<th>Ações</th>												
 													</tr>
 												</thead>
 												<tbody>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="10"></td>
-														<td>1</td>
-														<td>
-															<div class="cate-img-6">
-																<img src="images/avatar/img-1.jpg" alt="">
-															</div>
-														</td>
-														<td>Joginder Singh</td>
-														<td>johndoe@example.com</td>
-														<td>+911234567890</td>
-														<td class="action-btns">
-															<a href="customer_view.html" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
-															<a href="customer_edit.html" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
-															<a href="#" class="delete-btn" title="Edit"><i class="fas fa-trash-alt"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="5"></td>
-														<td>2</td>
-														<td>
-															<div class="cate-img-6">
-																<img src="images/avatar/img-2.jpg" alt="">
-															</div>
-														</td>
-														<td>Jassica William</td>
-														<td>jassica@example.com</td>
-														<td>+911234567890</td>
-														<td class="action-btns">
-															<a href="customer_view.html" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
-															<a href="customer_edit.html" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
-															<a href="#" class="delete-btn" title="Edit"><i class="fas fa-trash-alt"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="4"></td>
-														<td>3</td>
-														<td>
-															<div class="cate-img-6">
-																<img src="images/avatar/img-3.jpg" alt="">
-															</div>
-														</td>
-														<td>John Smith</td>
-														<td>john@example.com</td>
-														<td>+911234567890</td>
-														<td class="action-btns">
-															<a href="customer_view.html" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
-															<a href="customer_edit.html" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
-															<a href="#" class="delete-btn" title="Edit"><i class="fas fa-trash-alt"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="3"></td>
-														<td>4</td>
-														<td>
-															<div class="cate-img-6">
-																<img src="images/avatar/img-4.jpg" alt="">
-															</div>
-														</td>
-														<td>Zoena Singh</td>
-														<td>zoenasingh@example.com</td>
-														<td>+911234567890</td>
-														<td class="action-btns">
-															<a href="customer_view.html" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
-															<a href="customer_edit.html" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
-															<a href="#" class="delete-btn" title="Edit"><i class="fas fa-trash-alt"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="2"></td>
-														<td>5</td>
-														<td>
-															<div class="cate-img-6">
-																<img src="images/avatar/img-5.jpg" alt="">
-															</div>
-														</td>
-														<td>Amritpal Singh</td>
-														<td>amritpal@example.com</td>
-														<td>+911234567890</td>
-														<td class="action-btns">
-															<a href="customer_view.html" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
-															<a href="customer_edit.html" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
-															<a href="#" class="delete-btn" title="Edit"><i class="fas fa-trash-alt"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="1"></td>
-														<td>6</td>
-														<td>
-															<div class="cate-img-6">
-																<img src="images/avatar/img-6.jpg" alt="">
-															</div>
-														</td>
-														<td>Davinder Singh</td>
-														<td>davinder@example.com</td>
-														<td>+911234567890</td>
-														<td class="action-btns">
-															<a href="customer_view.html" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
-															<a href="customer_edit.html" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
-															<a href="#" class="delete-btn" title="Edit"><i class="fas fa-trash-alt"></i></a>
-														</td>
-													</tr>
+
+													<?php 
+														
+														if(isset($r_cli))
+														{	
+															foreach($r_cli as $key => $r_cliente)
+															{																			
+														?>		
+															<tr>												
+																<td><?php echo $r_cliente['id']?></td>	
+																<td><?php echo $r_cliente['nome']?></td>
+																<td><?php echo $r_cliente['telefone']?></td>
+																<td class="action-btns">
+																	<form method="GET" action="customer_view.php">	
+																		<input  type="hidden" name="tel_id" value="<?= $r_cliente['telefone']?>">
+																		<button href="customer_view.php" class="view-shop-btn" title="Ver" type="submit" ><i class="fas fa-eye"></i></button>
+																	</form>
+																	<form method="POST" action="login.php">	
+																		<input  type="hidden" name="tel_id" value="<?= $r_cliente['telefone']?>">
+																		<button href="#" class="delete-btn"	type="submit" title="Apagar"><i class="fas fa-trash-alt"></i></button>
+																	</form>																
+
+																</td>
+															</tr>																										
+														<?php
+															};
+														};
+													?> 													
 												</tbody>
 											</table>
 										</div>

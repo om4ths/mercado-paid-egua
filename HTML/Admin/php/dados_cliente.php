@@ -1,8 +1,25 @@
 <?php
 		
 		include('conexao.php');
-		$telefone = $_SESSION['telefone'];
-		$query = "SELECT * FROM cliente WHERE telefone = '$telefone'";
-		$array = mysqli_query($conexao,$query);
-		$resultado = mysqli_fetch_array($array);
+		
+		$select_cli = "SELECT * FROM cliente ";   
+		$array_cli = mysqli_query($conexao,$select_cli);
+		while($r_cliw = mysqli_fetch_array($array_cli)){
+			$r_cli[] = $r_cliw; 
+		}
+
+		$view_id = $_GET['tel_id'];
+		$select_view_cli = "SELECT * FROM cliente WHERE telefone = '$view_id' ";   
+		$array_view_cli = mysqli_query($conexao,$select_view_cli);
+		$r_view_cli = mysqli_fetch_array($array_view_cli);
+
+
+
+
+
 ?>
+
+
+
+
+

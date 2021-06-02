@@ -1,5 +1,11 @@
+<?php
+include('php/verificar_login.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
+		<?php
+			include('php/dados_cliente.php');
+		?>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,9 +47,8 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                        <a class="dropdown-item admin-dropdown-item" href="edit_profile.html">Editar Perfil</a>
 						<a class="dropdown-item admin-dropdown-item" href="change_password.html">Mudar Senha</a>
-                        <a class="dropdown-item admin-dropdown-item" href="login.html">Sair</a>
+                        <a class="dropdown-item admin-dropdown-item" href="php/logout.php">Sair</a>
                     </div>
                 </li>
             </ul>
@@ -88,7 +93,7 @@
 								<div class="sb-nav-link-icon"><i class="fas fa-cart-arrow-down"></i></div>
                                 Orders
 							</a>
-							<a class="nav-link" href="customers.html">
+							<a class="nav-link" href="customers.php">
 								<div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Customers
 							</a>
@@ -107,7 +112,7 @@
                         <h2 class="mt-30 page-title">Customers</h2>
                         <ol class="breadcrumb mb-30">
                             <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="customers.html">Customers</a></li>
+                            <li class="breadcrumb-item"><a href="customers.php">Customers</a></li>
                             <li class="breadcrumb-item active">Customer View</li>
                         </ol>
                         <div class="row">
@@ -120,43 +125,35 @@
 												<img src="images/avatar/img-1.jpg" alt="">
 											</div>
 											<div class="shopowner-dt-left mt-4">
-												<h4>Joginder Singh</h4>
-												<span>Customer</span>
+												<h4><?php echo $r_view_cli['nome'];  ?></h4>
+												<span>Cliente</span>												
 											</div>
-											<ul class="product-dt-purchases">
-												<li>
-													<div class="product-status">
-														Purchased <span class="badge-item-2 badge-status">15</span>
-													</div>
-												</li>
-												<li>
-													<div class="product-status">
-														Rewards <span class="badge-item-2 badge-status">5</span>
-													</div>
-												</li>
-											</ul>
+										
 											<div class="shopowner-dts">
 												<div class="shopowner-dt-list">
-													<span class="left-dt">Name</span>
-													<span class="right-dt">Joginder Singh</span>
-												</div>
-												<div class="shopowner-dt-list">
-													<span class="left-dt">Username</span>
-													<span class="right-dt">joginder</span>
-												</div>
+													<span class="left-dt">Nome</span>
+													<span class="right-dt"><?php echo $r_view_cli['nome'];  ?></span>
+												</div>												
 												<div class="shopowner-dt-list">
 													<span class="left-dt">Email</span>
-													<span class="right-dt">sjas1202@gmail.com</span>
+													<span class="right-dt"><?php echo $r_view_cli['email'];  ?></span>
 												</div>
 												<div class="shopowner-dt-list">
-													<span class="left-dt">Phone</span>
-													<span class="right-dt">+918437176189</span>
+													<span class="left-dt">Telefone</span>
+													<span class="right-dt"><?php echo $r_view_cli['telefone'];  ?></span>
 												</div>
+<<<<<<< HEAD:HTML/Admin/customer_view.html
 
 												<!-- ENDEREÇOS DO USUÁRIO -->
 
 												
 
+=======
+												<div class="shopowner-dt-list">
+													<span class="left-dt">Data de Nascimento</span>
+													<span class="right-dt"><?php  $date =$r_view_cli['data_nascimento']; echo $date= implode("/",array_reverse(explode("-",$date))); ?></span>
+												</div>												
+>>>>>>> 0ab2c8c9f294c1a0750a8f8b9b54737d7d02b448:HTML/Admin/customer_view.php
 											</div>
 										</div>
 

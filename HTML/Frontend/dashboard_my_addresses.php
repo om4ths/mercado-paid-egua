@@ -47,7 +47,8 @@ include('php/verificar_login.php');
                 // Limpa valores do formulário de cep.
                 $("#rua").val("");
                 $("#bairro").val("");
-                $("#cidade").val("");              
+                $("#cidade").val("");
+				$("#estado").val("");              
             }
             
             //Quando o campo cep perde o foco.
@@ -161,8 +162,8 @@ include('php/verificar_login.php');
 												
 												<div class="col-lg-6 col-md-12">
 													<div class="form-group">
-														<label class="control-label">Estado*</label>
-														<input id="estado" name="estado" type="text" placeholder="" class="form-control input-md" maxlength="30" required="">
+														<label class="control-label">Bairro*</label>
+														<input id="bairro" name="bairro" type="text" placeholder="" class="form-control input-md" maxlength="30" required="">
 													</div>
 												</div>
 												<div class="col-lg-6 col-md-12">
@@ -708,7 +709,9 @@ include('php/verificar_login.php');
 												?>
 
 													<h4><?php echo $r_end['tipo'];?></h4>
+													<p><?php echo $r_end['bairro']?></p>
 													<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
+													<p><?php echo $r_end['complemento']?></p>
 													<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
 													<ul class="action-btns">
 														<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
