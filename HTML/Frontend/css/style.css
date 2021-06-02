@@ -3784,7 +3784,9 @@ label.control-label {
 .dashboard-right {
     margin-top: 50px;
 }
-
+.dashboard-right-endereco {
+    margin-top:-30px;
+}
 .main-title-tab h4 {
     font-size: 18px;
     font-weight: 700;

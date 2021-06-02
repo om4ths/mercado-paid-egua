@@ -75,7 +75,7 @@ include('php/verificar_login.php');
 								<div class="sb-nav-link-icon"><i class="fas fa-cart-arrow-down"></i></div>
                                 Ordens de compra
 							</a>
-							<a class="nav-link" href="customers.html">
+							<a class="nav-link" href="customers.php">
 								<div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Usuários
 							</a>

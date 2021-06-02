@@ -1,5 +1,12 @@
+<?php
+	include('php/verificar_login.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
+		<?php
+			include('php/dados_cliente.php');
+			include('php/dados_endereco.php');
+		?>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,11 +20,27 @@
 	<!-- Vendor Stylesheets -->
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+	<!-- Stylesheets endereço -->
+	<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link href="/mercado-paid-egua/HTML/Frontend/css/style.css" rel="stylesheet">
+	<link href="/mercado-paid-egua/HTML/Frontend/css/responsive.css" rel="stylesheet">
+	<link href="/mercado-paid-egua/HTML/Frontend/css/night-mode.css" rel="stylesheet">
+	<link href="/mercado-paid-egua/HTML/Frontend/css/step-wizard.css" rel="stylesheet">
+	
+	<!-- endereço #2 Stylesheets -->
+	<link href="/mercado-paid-egua/HTML/Frontend/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+	<link href="/mercado-paid-egua/HTML/Frontend/vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
+	<link href="/mercado-paid-egua/HTML/Frontend/vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+	<link href="/mercado-paid-egua/HTML/Frontend/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/mercado-paid-egua/HTML/Frontend/vendor/semantic/semantic.min.css">
 	
 </head>
 
+
+
     <body class="sb-nav-fixed">
-		<nav class="sb-topnav navbar navbar-expand navbar-light bg-clr">
+        <nav class="sb-topnav navbar navbar-expand navbar-light bg-clr">
             <a class="navbar-brand logo-brand" href="index.php">Mercado Pai D'égua</a>
 			<button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
             <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/index.php" class="frnt-link"><i class="fas fa-external-link-alt"></i>Inicio</a>
@@ -33,7 +56,7 @@
         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+				<nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <a class="nav-link active" href="index.php">
@@ -91,55 +114,146 @@
                         <ol class="breadcrumb mb-30">
                             <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
                             <li class="breadcrumb-item"><a href="customers.php">Customers</a></li>
-                            <li class="breadcrumb-item active">Customer Edit</li>
+                            <li class="breadcrumb-item active">Customer View</li>
                         </ol>
                         <div class="row">
-							<div class="col-lg-6 col-md-6">
+							
+							<div class="col-lg-5 col-md-6">
 								<div class="card card-static-2 mb-30">
-									<div class="card-title-2">
-										<h4>Edit Customer</h4>
-									</div>
 									<div class="card-body-table">
-										<div class="news-content-right pd-20">
-											<div class="form-group">
-												<label class="form-label">Name*</label>
-												<input type="text" class="form-control" value="Joginder Singh" placeholder="Enter Full Name">
+										<div class="shopowner-content-left text-center pd-20">
+											<div class="customer_img">
+												<img src="images/avatar/img-1.jpg" alt="">
 											</div>
-											<div class="form-group">
-												<label class="form-label">Username*</label>
-												<input type="text" class="form-control" value="joginder" placeholder="Enter Username">
+											<div class="shopowner-dt-left mt-4">
+												<h4><?php echo $r_view_cli['nome'];  ?></h4>
+												<span>Cliente</span>												
 											</div>
-											<div class="form-group">
-												<label class="form-label">Email*</label>
-												<input type="email" class="form-control" value="sjas1202@gmail.com" placeholder="Enter Email Address">
-											</div>
-											<div class="form-group">
-												<label class="form-label">Phone*</label>
-												<input type="text" class="form-control" value="+918437176189" placeholder="Enter Phone Number">
-											</div>
-											<div class="form-group">
-												<label class="form-label">Customer Image*</label>
-												<div class="input-group">
-													<div class="custom-file">
-														<input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
-														<label class="custom-file-label" for="inputGroupFile04">Choose Image</label>
-													</div>
+										
+											<div class="shopowner-dts">
+												<div class="shopowner-dt-list">
+													<span class="left-dt">Nome</span>
+													<span class="right-dt"><?php echo $r_view_cli['nome'];  ?></span>
+												</div>												
+												<div class="shopowner-dt-list">
+													<span class="left-dt">Email</span>
+													<span class="right-dt"><?php echo $r_view_cli['email'];  ?></span>
 												</div>
-												<div class="add-customer-img">
-													<img src="images/avatar/img-1.jpg" alt="">
+												<div class="shopowner-dt-list">
+													<span class="left-dt">Telefone</span>
+													<span class="right-dt"><?php echo $r_view_cli['telefone'];  ?></span>
 												</div>
+												<div class="shopowner-dt-list">
+													<span class="left-dt">Data de Nascimento</span>
+													<span class="right-dt"><?php  $date =$r_view_cli['data_nascimento']; echo $date= implode("/",array_reverse(explode("-",$date))); ?></span>
+												</div>												
 											</div>
-											<div class="form-group">
-												<label class="form-label">Address*</label>
-												<div class="card card-editor">
-													<div class="content-editor">
-														<textarea class="text-control" value="Ludhiana, Punjab" placeholder="Enter Description"></textarea>
-													</div>
-												</div>
-											</div>
-											<button class="save-btn hover-btn" type="submit">Save Changes</button>
-										</div> 
+										</div>
+
 									</div>
+
+
+									
+								</div>
+							</div>
+
+							<div class="col-lg-9 col-md-8">
+								<div class="dashboard-right-endereco">							
+										<div class="col-md-12">
+										</div>
+										<div class="col-lg-12-end col-md-12">
+											<div class="pdpt-bg">
+		
+												<div class="pdpt-title">
+													<h4>Endereços</h4>
+												</div>
+												<div class="address-body">	
+													<div class="address-item">
+														<div class="address-icon1">
+															<i class="uil uil-home-alt"></i>
+														</div>
+														<div class="address-dt-all">
+														<?php 
+															
+														if(isset($r_end_casa))
+														{	
+															foreach($r_end_casa as $key => $r_end)
+															{
+																					
+														?>
+		
+															<h4><?php echo $r_end['tipo'];?></h4>
+															<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
+															<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
+															<ul class="action-btns">
+																<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
+																<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
+															</ul>
+														<?php
+															};
+														};
+														?> 
+														</div>
+													</div>
+		
+													<div class="address-item">
+														<div class="address-icon1">
+															<i class="uil uil-home-alt"></i>
+														</div>
+														<div class="address-dt-all">
+														<?php 
+															
+															if(isset($r_end_trab))
+															{	
+																foreach($r_end_trab as $key => $r_end)
+																{
+																						
+															?>
+		
+																<h4><?php echo $r_end['tipo'];?></h4>
+																<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
+																<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
+																<ul class="action-btns">
+																	<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
+																	<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
+																</ul>
+															<?php
+																};
+															};
+														?> 
+														</div>
+													</div>
+													<div class="address-item">
+														<div class="address-icon1">
+															<i class="uil uil-home-alt"></i>
+														</div>
+														<div class="address-dt-all">
+														<?php 
+															
+															if(isset($r_end_out))
+															{	
+																foreach($r_end_out as $key => $r_end)
+																{
+																						
+															?>
+		
+																<h4><?php echo $r_end['tipo'];?></h4>
+																<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
+																<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
+																<ul class="action-btns">
+																	<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
+																	<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
+																</ul>
+															<?php
+																};
+															};
+														?> 
+														</div>							
+													</div>
+												</div>
+											</div>
+										</div>
+									
 								</div>
 							</div>
                         </div>

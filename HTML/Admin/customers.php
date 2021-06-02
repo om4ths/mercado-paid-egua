@@ -1,5 +1,11 @@
+<?php
+include('php/verificar_login.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
+	<?php
+	include('php/dados_cliente.php');
+	?>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +19,7 @@
 	<!-- Vendor Stylesheets -->
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	
 </head>
 
@@ -25,16 +32,15 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                        <a class="dropdown-item admin-dropdown-item" href="edit_profile.html">Editar Perfil</a>
 						<a class="dropdown-item admin-dropdown-item" href="change_password.html">Mudar Senha</a>
-                        <a class="dropdown-item admin-dropdown-item" href="login.html">Sair</a>
+                        <a class="dropdown-item admin-dropdown-item" href="php/logout.php">Sair</a>
                     </div>
                 </li>
             </ul>
         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+				<nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <a class="nav-link active" href="index.php">
@@ -46,39 +52,39 @@
 							
 							<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCategories" aria-expanded="false" aria-controls="collapseCategories">
 								<div class="sb-nav-link-icon"><i class="fas fa-list"></i></div>
-                                Categories
+                                Categorias
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
 							</a>
                             <div class="collapse" id="collapseCategories" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-									<a class="nav-link sub_nav_link" href="category.html">All Categories</a>
-									<a class="nav-link sub_nav_link" href="add_category.html">Add Category</a>
+									<a class="nav-link sub_nav_link" href="category.html">Todas as Categorias</a>
+									<a class="nav-link sub_nav_link" href="add_category.html">Adicionar Categoria</a>
 								</nav>
                             </div>
 
 							
 							<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProducts" aria-expanded="false" aria-controls="collapseProducts">
 								<div class="sb-nav-link-icon"><i class="fas fa-box"></i></div>
-                                Products
+                                Produtos
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
 							</a>
                             <div class="collapse" id="collapseProducts" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-									<a class="nav-link sub_nav_link" href="products.html">All Products</a>
-									<a class="nav-link sub_nav_link" href="add_product.html">Add Product</a>
+									<a class="nav-link sub_nav_link" href="products.html">Todos os Produtos</a>
+									<a class="nav-link sub_nav_link" href="add_product.html">Adicionar Produtos</a>
 								</nav>
                             </div>
 							<a class="nav-link" href="orders.html">
 								<div class="sb-nav-link-icon"><i class="fas fa-cart-arrow-down"></i></div>
-                                Orders
+                                Ordens de compra
 							</a>
-							<a class="nav-link" href="customers.html">
+							<a class="nav-link" href="customers.php">
 								<div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
-                                Customers
+                                Usuários
 							</a>
 							<a class="nav-link" href="offers.html">
 								<div class="sb-nav-link-icon"><i class="fas fa-gift"></i></div>
-                                Offers
+                                Ofertas
 							</a>
 
                         </div>
@@ -91,55 +97,61 @@
                         <h2 class="mt-30 page-title">Customers</h2>
                         <ol class="breadcrumb mb-30">
                             <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="customers.html">Customers</a></li>
-                            <li class="breadcrumb-item active">Customer View</li>
+                            <li class="breadcrumb-item active">Customers</li>
                         </ol>
                         <div class="row">
-							<div class="col-lg-5 col-md-6">
+							<div class="col-lg-12 col-md-12">
 								<div class="card card-static-2 mb-30">
+									<div class="card-title-2">
+										<h4>Todos Usuarios</h4>
+									</div>
 									<div class="card-body-table">
-										<div class="shopowner-content-left text-center pd-20">
-											<div class="customer_img">
-												<img src="images/avatar/img-1.jpg" alt="">
-											</div>
-											<div class="shopowner-dt-left mt-4">
-												<h4>Joginder Singh</h4>
-												<span>Customer</span>
-											</div>
-											<ul class="product-dt-purchases">
-												<li>
-													<div class="product-status">
-														Purchased <span class="badge-item-2 badge-status">15</span>
-													</div>
-												</li>
-												<li>
-													<div class="product-status">
-														Rewards <span class="badge-item-2 badge-status">5</span>
-													</div>
-												</li>
-											</ul>
-											<div class="shopowner-dts">
-												<div class="shopowner-dt-list">
-													<span class="left-dt">Name</span>
-													<span class="right-dt">Joginder Singh</span>
-												</div>
-												<div class="shopowner-dt-list">
-													<span class="left-dt">Username</span>
-													<span class="right-dt">joginder</span>
-												</div>
-												<div class="shopowner-dt-list">
-													<span class="left-dt">Email</span>
-													<span class="right-dt">sjas1202@gmail.com</span>
-												</div>
-												<div class="shopowner-dt-list">
-													<span class="left-dt">Phone</span>
-													<span class="right-dt">+918437176189</span>
-												</div>
-												<div class="shopowner-dt-list">
-													<span class="left-dt">Address</span>
-													<span class="right-dt">Ludhiana, Punjab</span>
-												</div>
-											</div>
+										<div class="table-responsive">
+											<table class="table ucp-table table-hover">
+												<thead>
+													<tr>														
+														<th style="width:60px">ID</th>			
+														<th>Nome</th>
+														<th>Telefone</th>	
+														<th style="width:175px">Ações</th>												
+													</tr>
+												</thead>
+												<tbody>
+
+													<?php 
+														
+														if(isset($r_cli))
+														{	
+															foreach($r_cli as $key => $r_cliente)
+															{																			
+														?>		
+															<tr>												
+																<td><?php echo $r_cliente['id']?></td>	
+																<td><?php echo $r_cliente['nome']?></td>
+																<td><?php echo $r_cliente['telefone']?></td>
+																<td class="action-btns">
+																	<form method="GET" action="customer_view.php">	
+																		<input  type="hidden" name="tel_id" value="<?= $r_cliente['telefone']?>">
+																		<button href="customer_view.php" class="views-btn" title="Ver" type="submit" ><i class="fas fa-eye"></i></button>
+																	</form>
+
+																	<!-- Modal do Delete-->
+																	<form method="GET" action="php/delete.php">
+																		<input  type="hidden" name="tel_id" value="<?= $r_cliente['telefone']?>">
+																		<button  href="#" class="delete-btn" type="submit" title="Apagar" data-confirm='Deseja realmente APAGAR O USUÁRIO DO BANCO?'><i class="fas fa-trash-alt"></i></button>
+																	</form>
+																	
+															
+																</td>
+															</tr>
+															
+																																									
+														<?php
+															};
+														};
+													?> 													
+												</tbody>
+											</table>
 										</div>
 									</div>
 								</div>
@@ -160,11 +172,15 @@
                 </footer>
             </div>
         </div>
-		
-		<!-- Javascripts -->
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
-		
+
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<script src="js/deleteconfirm.js"></script>
+
+       
     </body>
 </html>
