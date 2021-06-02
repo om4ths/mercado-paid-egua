@@ -142,18 +142,10 @@ include('php/verificar_login.php');
 													<span class="left-dt">Telefone</span>
 													<span class="right-dt"><?php echo $r_view_cli['telefone'];  ?></span>
 												</div>
-<<<<<<< HEAD:HTML/Admin/customer_view.html
-
-												<!-- ENDEREÇOS DO USUÁRIO -->
-
-												
-
-=======
 												<div class="shopowner-dt-list">
 													<span class="left-dt">Data de Nascimento</span>
 													<span class="right-dt"><?php  $date =$r_view_cli['data_nascimento']; echo $date= implode("/",array_reverse(explode("-",$date))); ?></span>
 												</div>												
->>>>>>> 0ab2c8c9f294c1a0750a8f8b9b54737d7d02b448:HTML/Admin/customer_view.php
 											</div>
 										</div>
 
