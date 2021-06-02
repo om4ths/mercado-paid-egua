@@ -482,7 +482,7 @@ include('php/verificar_login.php');
 							</div>
 							<h4><?php echo$resultado['nome']?></h4>
 							<p><?php echo$resultado['telefone']?><a href="#"><i class="uil uil-edit"></i></a></p>
-							<div class="earn-points"><img src="images/Dollar.svg" alt="">Points : <span>20</span></div>
+							<div class="earn-points"><img src="images/Dollar.svg" alt="">Pontos : <span>20</span></div>
 						</div>
 					</div>
 				</div>
@@ -494,13 +494,13 @@ include('php/verificar_login.php');
 					<div class="col-lg-3 col-md-4">
 						<div class="left-side-tabs">
 							<div class="dashboard-left-links">
-								<a href="dashboard_overview.php" class="user-item active"><i class="uil uil-apps"></i>Overview</a>
-								<a href="dashboard_my_orders.php" class="user-item"><i class="uil uil-box"></i>My Orders</a>
-								<a href="dashboard_my_rewards.php" class="user-item"><i class="uil uil-gift"></i>My Rewards</a>
-								<a href="dashboard_my_wallet.php" class="user-item"><i class="uil uil-wallet"></i>My Wallet</a>
-								<a href="dashboard_my_wishlist.php" class="user-item"><i class="uil uil-heart"></i>Shopping Wishlist</a>
-								<a href="dashboard_my_addresses.php" class="user-item"><i class="uil uil-location-point"></i>My Address</a>
-								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="user-item"><i class="uil uil-exit"></i>Logout</a>
+								<a href="dashboard_overview.php" class="user-item active"><i class="uil uil-apps"></i>Visão geral</a>
+								<a href="dashboard_my_orders.php" class="user-item"><i class="uil uil-box"></i>Ordens de compra</a>
+								<a href="dashboard_my_rewards.php" class="user-item"><i class="uil uil-gift"></i>Minhas recompensas</a>
+								<a href="dashboard_my_wallet.php" class="user-item"><i class="uil uil-wallet"></i>Carteira</a>
+								<a href="dashboard_my_wishlist.php" class="user-item"><i class="uil uil-heart"></i>Lista de desejos</a>
+								<a href="dashboard_my_addresses.php" class="user-item"><i class="uil uil-location-point"></i>Endereço</a>
+								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="user-item"><i class="uil uil-exit"></i>Sair</a>
 							</div>
 						</div>
 					</div>
@@ -509,77 +509,77 @@ include('php/verificar_login.php');
 							<div class="row">
 								<div class="col-md-12">
 									<div class="main-title-tab">
-										<h4><i class="uil uil-apps"></i>Overview</h4>
+										<h4><i class="uil uil-apps"></i>Visão geral</h4>
 									</div>
 									<div class="welcome-text">
-										<h2>Hi! <?php echo$resultado['nome']?></h2>
+										<h2>Oi! <?php echo$resultado['nome']?></h2>
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-12">
 									<div class="pdpt-bg">
 										<div class="pdpt-title">
-											<h4>My Rewards</h4>
+											<h4>Minhas recompensas</h4>
 										</div>
 										<div class="ddsh-body">
-											<h2>6 Rewards</h2>
+											<h2>6 Recompensas</h2>
 											<ul>
 												<li>
-													<a href="#" class="small-reward-dt hover-btn">Won $2</a>
+													<a href="#" class="small-reward-dt hover-btn">Ganhou $2</a>
 												</li>
 												<li>
-													<a href="#" class="small-reward-dt hover-btn">Won 40% Off</a>
+													<a href="#" class="small-reward-dt hover-btn">Ganhou 40% Off</a>
 												</li>
 												<li>
-													<a href="#" class="small-reward-dt hover-btn">Caskback $1</a>
+													<a href="#" class="small-reward-dt hover-btn">Dinheiro de volta $1</a>
 												</li>
 												<li>
-													<a href="#" class="rewards-link5">+More</a>
+													<a href="#" class="rewards-link5">+Mais</a>
 												</li>
 											</ul>
 										</div>
-										<a href="#" class="more-link14">Rewards and Details <i class="uil uil-angle-double-right"></i></a>
+										<a href="#" class="more-link14">Recompensas e detalhes <i class="uil uil-angle-double-right"></i></a>
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-12">
 									<div class="pdpt-bg">
 										<div class="pdpt-title">
-											<h4>My Orders</h4>
+											<h4>minhas ordens</h4>
 										</div>
 										<div class="ddsh-body">
-											<h2>2 Recently Purchases</h2>
+											<h2>2 Compras recentes</h2>
 											<ul class="order-list-145">
 												<li>
 													<div class="smll-history">
 														<div class="order-title">2 Items <span data-inverted="" data-tooltip="2kg broccoli, 1kg Apple" data-position="top center">?</span></div>
-														<div class="order-status">On the way</div>
+														<div class="order-status">A caminho</div>
 														<p>$22</p>
 													</div>
 												</li>
 											</ul>
 										</div>
-										<a href="#" class="more-link14">All Orders <i class="uil uil-angle-double-right"></i></a>
+										<a href="#" class="more-link14">Todos os pedidos <i class="uil uil-angle-double-right"></i></a>
 									</div>
 								</div>
 								<div class="col-lg-12 col-md-12">
 									<div class="pdpt-bg">
 										<div class="pdpt-title">
-											<h4>My Wallet</h4>
+											<h4>Carteira</h4>
 										</div>
 										<div class="wllt-body">
-											<h2>Credits $100</h2>
+											<h2>Creditos $100</h2>
 											<ul class="wallet-list">
 												<li>
-													<a href="#" class="wallet-links14"><i class="uil uil-card-atm"></i>Payment Methods</a>
+													<a href="#" class="wallet-links14"><i class="uil uil-card-atm"></i>Metodos de pagamento</a>
 												</li>
 												<li>
-													<a href="#" class="wallet-links14"><i class="uil uil-gift"></i>3 offers Active</a>
+													<a href="#" class="wallet-links14"><i class="uil uil-gift"></i>3 oferece Ativo</a>
 												</li>	
 												<li>
-													<a href="#" class="wallet-links14"><i class="uil uil-coins"></i>Points Earning</a>
+													<a href="#" class="wallet-links14"><i class="uil uil-coins"></i>Ganhando pontos</a>
 												</li>	
 											</ul>
 										</div>
-										<a href="#" class="more-link14">Rewards and Details <i class="uil uil-angle-double-right"></i></a>
+										<a href="#" class="more-link14">Recompensas e detalhes <i class="uil uil-angle-double-right"></i></a>
 									</div>
 								</div>
 							</div>

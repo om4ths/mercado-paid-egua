@@ -494,13 +494,13 @@ include('php/verificar_login.php');
 					<div class="col-lg-3 col-md-4">
 						<div class="left-side-tabs">
 							<div class="dashboard-left-links">
-								<a href="dashboard_overview.php" class="user-item"><i class="uil uil-apps"></i>Overview</a>
-								<a href="dashboard_my_orders.php" class="user-item"><i class="uil uil-box"></i>My Orders</a>
-								<a href="dashboard_my_rewards.php" class="user-item"><i class="uil uil-gift"></i>My Rewards</a>
-								<a href="dashboard_my_wallet.php" class="user-item active"><i class="uil uil-wallet"></i>My Wallet</a>
-								<a href="dashboard_my_wishlist.php" class="user-item"><i class="uil uil-heart"></i>Shopping Wishlist</a>
-								<a href="dashboard_my_addresses.php" class="user-item"><i class="uil uil-location-point"></i>My Address</a>
-								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="user-item"><i class="uil uil-exit"></i>Logout</a>
+								<a href="dashboard_overview.php" class="user-item"><i class="uil uil-apps"></i>Visão geral</a>
+								<a href="dashboard_my_orders.php" class="user-item"><i class="uil uil-box"></i>Ordens de compra</a>
+								<a href="dashboard_my_rewards.php" class="user-item"><i class="uil uil-gift"></i>Minhas recompensas</a>
+								<a href="dashboard_my_wallet.php" class="user-item active"><i class="uil uil-wallet"></i>Carteira</a>
+								<a href="dashboard_my_wishlist.php" class="user-item"><i class="uil uil-heart"></i>Lista de desejos</a>
+								<a href="dashboard_my_addresses.php" class="user-item"><i class="uil uil-location-point"></i>Endereço</a>
+								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="user-item"><i class="uil uil-exit"></i>Sair</a>
 							</div>
 						</div>
 					</div>
@@ -509,7 +509,7 @@ include('php/verificar_login.php');
 							<div class="row">
 								<div class="col-md-12">
 									<div class="main-title-tab">
-										<h4><i class="uil uil-wallet"></i>My Wallet</h4>
+										<h4><i class="uil uil-wallet"></i>Carteira</h4>
 									</div>
 								</div>								
 								<div class="col-lg-6 col-md-12">
@@ -518,9 +518,9 @@ include('php/verificar_login.php');
 											<div class="reward-img-icon">
 												<img src="images/money.svg" alt="">
 											</div>
-											<span class="rewrd-title">My Balance</span>
+											<span class="rewrd-title">Meu Saldo</span>
 											<h4 class="cashbk-price">$120</h4>
-											<span class="date-reward">Added : 8 May 2020</span>
+											<span class="date-reward">Adicionado: 8 de maio de 2020</span>
 										</div>
 									</div>
 								</div>
@@ -530,25 +530,25 @@ include('php/verificar_login.php');
 											<div class="reward-img-icon">
 												<img class="rotate-img" src="images/business.svg" alt="">
 											</div>
-											<span class="rewrd-title">Gambo Cashback Blance</span>
+											<span class="rewrd-title">Gambo Saldo de Cashback</span>
 											<h4 class="cashbk-price">$5</h4>
-											<p>100% of thiscan be used for your next order.</p>
+											<p>100% disso pode ser usado em seu próximo pedido.</p>
 										</div>
 									</div>
 								</div>
 								<div class="col-lg-12 col-md-12">
 									<div class="pdpt-bg">
 										<div class="pdpt-title">
-											<h4>Active Offers</h4>
+											<h4>Ofertas Ativas</h4>
 										</div>
 										<div class="active-offers-body">
 											<div class="table-responsive">
 												<table class="table ucp-table earning__table">
 													<thead class="thead-s">
 														<tr>
-															<th scope="col">Offers</th>
-															<th scope="col">Offer Code</th>
-															<th scope="col">Expires Date</th>
+															<th scope="col">Ofertas</th>
+															<th scope="col">Código de oferta</th>
+															<th scope="col">Data de Vencimento</th>
 															<th scope="col">Status</th>								
 														</tr>
 													</thead>
@@ -556,26 +556,26 @@ include('php/verificar_login.php');
 														<tr>										
 															<td>15%</td>	
 															<td>GAMBOCOUP15</td>	
-															<td>31 May 2020</td>	
-															<td><b class="offer_active">Activated</b></td>	
+															<td>31 Maio 2020</td>	
+															<td><b class="offer_active">Ativado</b></td>	
 														</tr>
 														<tr>										
 															<td>10%</td>	
 															<td>GAMBOCOUP10</td>	
-															<td>25 May 2020</td>	
-															<td><b class="offer_active">Activated</b></td>	
+															<td>25 Maio 2020</td>	
+															<td><b class="offer_active">Ativado</b></td>	
 														</tr>
 														<tr>										
 															<td>25%</td>	
 															<td>GAMBOCOUP25</td>	
-															<td>20 May 2020</td>	
-															<td><b class="offer_active">Activated</b></td>	
+															<td>20 Maio 2020</td>	
+															<td><b class="offer_active">Ativado</b></td>	
 														</tr>
 														<tr>										
 															<td>5%</td>	
 															<td>GAMBOCOUP05</td>	
-															<td>15 May 2020</td>	
-															<td><b class="offer_active">Activated</b></td>	
+															<td>15 Maio 2020</td>	
+															<td><b class="offer_active">Ativado</b></td>	
 														</tr>
 													</tbody>				
 												</table>
@@ -586,56 +586,56 @@ include('php/verificar_login.php');
 								<div class="col-lg-6 col-md-12">
 									<div class="pdpt-bg">
 										<div class="pdpt-title">
-											<h4>Add Balance</h4>
+											<h4>Adicionar saldo</h4>
 										</div>
 										<div class="add-cash-body">
 											<div class="row">
 												<div class="col-lg-6 col-md-12">
 													<div class="form-group mt-1">
-														<label class="control-label">Holder Name*</label>
+														<label class="control-label">Nome do titular*</label>
 														<div class="ui search focus">
 															<div class="ui left icon input swdh11 swdh19">
-																<input class="prompt srch_explore" type="text" name="holdername" value="" id="holder[name]" required="" maxlength="64" placeholder="Holder Name">															
+																<input class="prompt srch_explore" type="text" name="holdername" value="" id="holder[name]" required="" maxlength="64" placeholder="nome do titular">															
 															</div>
 														</div>
 													</div>
 												</div> 
 												<div class="col-lg-6 col-md-12">
 													<div class="form-group mt-1">
-														<label class="control-label">Card Number*</label>
+														<label class="control-label">Número do cartao*</label>
 														<div class="ui search focus">
 															<div class="ui left icon input swdh11 swdh19">
-																<input class="prompt srch_explore" type="text" name="cardnumber" value="" id="card[number]" required="" maxlength="64" placeholder="Card Number">															
+																<input class="prompt srch_explore" type="text" name="cardnumber" value="" id="card[number]" required="" maxlength="64" placeholder="Número do cartao">															
 															</div>
 														</div>
 													</div>
 												</div>
 												<div class="col-lg-4 col-md-4">
 													<div class="form-group mt-1">																	
-														<label class="control-label">Expiration Month*</label>
+														<label class="control-label">Mês de validade*</label>
 														<select class="ui fluid search dropdown form-dropdown" name="card[expire-month]">
-															<option value="">Month</option>
-															<option value="1">January</option>
-															<option value="2">February</option>
-															<option value="3">March</option>
-															<option value="4">April</option>
-															<option value="5">May</option>
-															<option value="6">June</option>
-															<option value="7">July</option>
-															<option value="8">August</option>
-															<option value="9">September</option>
-															<option value="10">October</option>
-															<option value="11">November</option>
-															<option value="12">December</option>
+															<option value="">Mês</option>
+															<option value="1">Janeiro</option>
+															<option value="2">Fevereiro</option>
+															<option value="3">Março</option>
+															<option value="4">Abril</option>
+															<option value="5">Maio</option>
+															<option value="6">Junho</option>
+															<option value="7">Julho</option>
+															<option value="8">Agosto</option>
+															<option value="9">Setembro</option>
+															<option value="10">Outubro</option>
+															<option value="11">Novembro</option>
+															<option value="12">Dezembro</option>
 														  </select>	
 													</div>
 												</div>
 												<div class="col-lg-4 col-md-4">
 													<div class="form-group mt-1">
-														<label class="control-label">Expiration Year*</label>
+														<label class="control-label">Ano de Vencimento*</label>
 														<div class="ui search focus">
 															<div class="ui left icon input swdh11 swdh19">
-																<input class="prompt srch_explore" type="text" name="card[expire-year]" maxlength="4" placeholder="Year">															
+																<input class="prompt srch_explore" type="text" name="card[expire-year]" maxlength="4" placeholder="Ano">															
 															</div>
 														</div>
 													</div>
@@ -652,7 +652,7 @@ include('php/verificar_login.php');
 												</div>
 												<div class="col-lg-12 col-md-12">
 													<div class="form-group mt-1">
-														<label class="control-label">Add Balance*</label>
+														<label class="control-label">Adicionar saldo*</label>
 														<div class="ui search focus">
 															<div class="ui left icon input swdh11 swdh19">
 																<input class="prompt srch_explore" type="text" name="addbalance" maxlength="3" placeholder="$0">															
@@ -661,7 +661,7 @@ include('php/verificar_login.php');
 													</div>
 												</div>
 											</div>
-											<a href="#" class="next-btn16 hover-btn mt-3">Add Balance</a>
+											<a href="#" class="next-btn16 hover-btn mt-3">Adicionar saldo</a>
 										</div>
 									</div>
 								</div>
@@ -675,52 +675,52 @@ include('php/verificar_login.php');
 												<li>
 													<div class="purchase-history">
 														<div class="purchase-history-left">
-															<h4>Purchase</h4>
-															<p>Transaction ID <ins>gambo14255896</ins></p>
-															<span>6 May 2018, 12.56PM</span>
+															<h4>Comprar</h4>
+															<p>ID de transação <ins>gambo14255896</ins></p>
+															<span>6 de maio de 2018, 12h56</span>
 														</div>
 														<div class="purchase-history-right">
 															<span>-$25</span>
-															<a href="#">View</a>
+															<a href="#">Visualizar</a>
 														</div>
 													</div>
 												</li>
 												<li>
 													<div class="purchase-history">
 														<div class="purchase-history-left">
-															<h4>Purchase</h4>
-															<p>Transaction ID <ins>gambo14255895</ins></p>
-															<span>5 May 2018, 11.16AM</span>
+															<h4>Comprar</h4>
+															<p>ID de transação <ins>gambo14255895</ins></p>
+															<span>5 de maio de 2018, 11.16</span>
 														</div>
 														<div class="purchase-history-right">
 															<span>-$21</span>
-															<a href="#">View</a>
+															<a href="#">Visualizar</a>
 														</div>
 													</div>
 												</li>
 												<li>
 													<div class="purchase-history">
 														<div class="purchase-history-left">
-															<h4>Purchase</h4>
-															<p>Transaction ID <ins>gambo14255894</ins></p>
-															<span>4 May 2018, 02.56PM</span>
+															<h4>Comprar</h4>
+															<p>ID de transação <ins>gambo14255894</ins></p>
+															<span>4 de maio de 2018, 14h56</span>
 														</div>
 														<div class="purchase-history-right">
 															<span>-$30</span>
-															<a href="#">View</a>
+															<a href="#">Visualizar</a>
 														</div>
 													</div>
 												</li>
 												<li>
 													<div class="purchase-history">
 														<div class="purchase-history-left">
-															<h4>Purchase</h4>
-															<p>Transaction ID <ins>gambo14255893</ins></p>
-															<span>3 May 2018, 5.56PM</span>
+															<h4>Comprar</h4>
+															<p>ID de transação <ins>gambo14255893</ins></p>
+															<span>3 de maio de 2018, 17:56</span>
 														</div>
 														<div class="purchase-history-right">
 															<span>-$15</span>
-															<a href="#">View</a>
+															<a href="#">Visualizar</a>
 														</div>
 													</div>
 												</li>
