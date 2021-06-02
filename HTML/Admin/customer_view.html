@@ -13,8 +13,24 @@
 	<!-- Vendor Stylesheets -->
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+	<!-- Stylesheets endereço -->
+	<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link href="/mercado-paid-egua/HTML/Frontend/css/style.css" rel="stylesheet">
+	<link href="/mercado-paid-egua/HTML/Frontend/css/responsive.css" rel="stylesheet">
+	<link href="/mercado-paid-egua/HTML/Frontend/css/night-mode.css" rel="stylesheet">
+	<link href="/mercado-paid-egua/HTML/Frontend/css/step-wizard.css" rel="stylesheet">
+	
+	<!-- endereço #2 Stylesheets -->
+	<link href="/mercado-paid-egua/HTML/Frontend/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+	<link href="/mercado-paid-egua/HTML/Frontend/vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
+	<link href="/mercado-paid-egua/HTML/Frontend/vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+	<link href="/mercado-paid-egua/HTML/Frontend/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/mercado-paid-egua/HTML/Frontend/vendor/semantic/semantic.min.css">
 	
 </head>
+
+
 
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-light bg-clr">
@@ -95,6 +111,7 @@
                             <li class="breadcrumb-item active">Customer View</li>
                         </ol>
                         <div class="row">
+							
 							<div class="col-lg-5 col-md-6">
 								<div class="card card-static-2 mb-30">
 									<div class="card-body-table">
@@ -135,13 +152,118 @@
 													<span class="left-dt">Phone</span>
 													<span class="right-dt">+918437176189</span>
 												</div>
-												<div class="shopowner-dt-list">
-													<span class="left-dt">Address</span>
-													<span class="right-dt">Ludhiana, Punjab</span>
+
+												<!-- ENDEREÇOS DO USUÁRIO -->
+
+												
+
+											</div>
+										</div>
+
+									</div>
+
+
+									
+								</div>
+							</div>
+
+							<div class="col-lg-9 col-md-8">
+								<div class="dashboard-right-endereco">							
+										<div class="col-md-12">
+										</div>
+										<div class="col-lg-12-end col-md-12">
+											<div class="pdpt-bg">
+		
+												<div class="pdpt-title">
+													<h4>Endereços</h4>
+												</div>
+												<div class="address-body">	
+													<div class="address-item">
+														<div class="address-icon1">
+															<i class="uil uil-home-alt"></i>
+														</div>
+														<div class="address-dt-all">
+														<?php 
+															
+														if(isset($r_end_casa))
+														{	
+															foreach($r_end_casa as $key => $r_end)
+															{
+																					
+														?>
+		
+															<h4><?php echo $r_end['tipo'];?></h4>
+															<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
+															<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
+															<ul class="action-btns">
+																<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
+																<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
+															</ul>
+														<?php
+															};
+														};
+														?> 
+														</div>
+													</div>
+		
+													<div class="address-item">
+														<div class="address-icon1">
+															<i class="uil uil-home-alt"></i>
+														</div>
+														<div class="address-dt-all">
+														<?php 
+															
+															if(isset($r_end_trab))
+															{	
+																foreach($r_end_trab as $key => $r_end)
+																{
+																						
+															?>
+		
+																<h4><?php echo $r_end['tipo'];?></h4>
+																<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
+																<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
+																<ul class="action-btns">
+																	<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
+																	<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
+																</ul>
+															<?php
+																};
+															};
+														?> 
+														</div>
+													</div>
+													<div class="address-item">
+														<div class="address-icon1">
+															<i class="uil uil-home-alt"></i>
+														</div>
+														<div class="address-dt-all">
+														<?php 
+															
+															if(isset($r_end_out))
+															{	
+																foreach($r_end_out as $key => $r_end)
+																{
+																						
+															?>
+		
+																<h4><?php echo $r_end['tipo'];?></h4>
+																<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
+																<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
+																<ul class="action-btns">
+																	<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
+																	<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
+																</ul>
+															<?php
+																};
+															};
+														?> 
+														</div>							
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
+									
 								</div>
 							</div>
                         </div>
