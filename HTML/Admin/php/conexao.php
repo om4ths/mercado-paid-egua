@@ -4,7 +4,7 @@ $usuario = ('root');
 $senha = ('');
 $bd = ('mercado');
 
-$conexao = mysqli_connect($userbd,$usuario,$senha,$bd) or die ('Não foi possível conectar');
+$conexao = mysqli_connect($userbd,$usuario,$senha, $bd) or die ('Não foi possível conectar');
 
 
 
