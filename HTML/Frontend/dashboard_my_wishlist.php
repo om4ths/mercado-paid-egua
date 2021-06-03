@@ -10,10 +10,10 @@ include('php/verificar_login.php');
 		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
 		<meta name="description" content="Gambolthemes">
 		<meta name="author" content="Gambolthemes">		
-		<title>Gambo - My Wishlist</title>
+		<title>Mercado Pai D'égua - Lista de Desejos</title>
 		
 		<!-- Favicon Icon -->
-		<link rel="icon" type="image/png" href="images/fav.png">
+		<link rel="icon" type="image/png" href="images/logo-1.png">
 		
 		<!-- Stylesheets -->
 		<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -321,11 +321,11 @@ include('php/verificar_login.php');
 		<div class="top-header-group">
 			<div class="top-header">
 				<div class="res_main_logo">
-					<a href="index.html"><img src="images/dark-logo-1.svg" alt=""></a>
+					<a href="index.html"><img src="images/logo-1.png" alt=""></a>
 				</div>
 				<div class="main_logo" id="logo">
-					<a href="index.html"><img src="images/logo.svg" alt=""></a>
-					<a href="index.html"><img class="logo-inverse" src="images/dark-logo.svg" alt=""></a>
+					<a href="index.html"><img src="images/logo.png" alt=""></a>
+					<a href="index.html"><img class="logo-inverse" src="images/dark-logo.png" alt=""></a>
 				</div>
 				<div class="select_location">
 					<div class="ui inline dropdown loc-title">
@@ -480,7 +480,7 @@ include('php/verificar_login.php');
 							</div>
 							<h4>Johe Doe</h4>
 							<p>+91999999999<a href="#"><i class="uil uil-edit"></i></a></p>
-							<div class="earn-points"><img src="images/Dollar.svg" alt="">Points : <span>20</span></div>
+							<div class="earn-points"><img src="images/Dollar.svg" alt="">Pontos : <span>20</span></div>
 						</div>
 					</div>
 				</div>
@@ -492,13 +492,13 @@ include('php/verificar_login.php');
 					<div class="col-lg-3 col-md-4">
 						<div class="left-side-tabs">
 							<div class="dashboard-left-links">
-								<a href="dashboard_overview.php" class="user-item"><i class="uil uil-apps"></i>Overview</a>
-								<a href="dashboard_my_orders.php" class="user-item"><i class="uil uil-box"></i>My Orders</a>
-								<a href="dashboard_my_rewards.php" class="user-item"><i class="uil uil-gift"></i>My Rewards</a>
-								<a href="dashboard_my_wallet.php" class="user-item"><i class="uil uil-wallet"></i>My Wallet</a>
-								<a href="dashboard_my_wishlist.php" class="user-item active"><i class="uil uil-heart"></i>Shopping Wishlist</a>
-								<a href="dashboard_my_addresses.php" class="user-item"><i class="uil uil-location-point"></i>My Address</a>
-								<a href="sign_in.html" class="user-item"><i class="uil uil-exit"></i>Logout</a>
+								<a href="dashboard_overview.php" class="user-item"><i class="uil uil-apps"></i>Visão geral</a>
+								<a href="dashboard_my_orders.php" class="user-item"><i class="uil uil-box"></i>Ordens de compra</a>
+								<a href="dashboard_my_rewards.php" class="user-item"><i class="uil uil-gift"></i>Minhas recompensas</a>
+								<a href="dashboard_my_wallet.php" class="user-item"><i class="uil uil-wallet"></i>Carteira</a>
+								<a href="dashboard_my_wishlist.php" class="user-item active"><i class="uil uil-heart"></i>Lista de desejos</a>
+								<a href="dashboard_my_addresses.php" class="user-item"><i class="uil uil-location-point"></i>Endereço</a>
+								<a href="sign_in.html" class="user-item"><i class="uil uil-exit"></i>Sair</a>
 							</div>
 						</div>
 					</div>
@@ -507,7 +507,7 @@ include('php/verificar_login.php');
 							<div class="row">
 								<div class="col-md-12">
 									<div class="main-title-tab">
-										<h4><i class="uil uil-heart"></i>Shopping Wishlist</h4>
+										<h4><i class="uil uil-heart"></i>Lista de desejos de compras</h4>
 									</div>
 								</div>								
 								<div class="col-lg-12 col-md-12">
@@ -519,7 +519,7 @@ include('php/verificar_login.php');
 													<div class="offer-badge">4% OFF</div>
 												</div>
 												<div class="cart-text">
-													<h4>Product Title Here</h4>
+													<h4>Título do produto aqui</h4>
 													<div class="cart-item-price">$15 <span>$18</span></div>
 													<button type="button" class="cart-close-btn"><i class="uil uil-trash-alt"></i></button>
 												</div>		
@@ -530,7 +530,7 @@ include('php/verificar_login.php');
 													<div class="offer-badge">1% OFF</div>
 												</div>
 												<div class="cart-text">
-													<h4>Product Title Here</h4>
+													<h4>Título do produto aqui</h4>
 													<div class="cart-item-price">$9.9 <span>$10</span></div>
 													<button type="button" class="cart-close-btn"><i class="uil uil-trash-alt"></i></button>
 												</div>		
@@ -540,7 +540,7 @@ include('php/verificar_login.php');
 													<img src="images/product/img-14.jpg" alt="">
 												</div>
 												<div class="cart-text">
-													<h4>Product Title Here</h4>
+													<h4>Título do produto aqui</h4>
 													<div class="cart-item-price">$12</div>
 													<button type="button" class="cart-close-btn"><i class="uil uil-trash-alt"></i></button>
 												</div>		

@@ -398,25 +398,25 @@ include('php/verificar_login.php');
 						<button class="navbar-toggler menu_toggle_btn" type="button" data-target="#navbarSupportedContent"><i class="uil uil-bars"></i></button>
 						<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
 							<ul class="navbar-nav main_nav align-self-stretch">
-								<li class="nav-item"><a href="index.html" class="nav-link active" title="Home">Home</a></li>
-								<li class="nav-item"><a href="shop_grid.html" class="nav-link new_item" title="New Products">New Products</a></li>
-								<li class="nav-item"><a href="shop_grid.html" class="nav-link" title="Featured Products">Featured Products</a></li>
+							<li class="nav-item"><a href="index.php" class="nav-link active" title="Home">Home</a></li>
+								<li class="nav-item"><a href="shop_grid.html" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
+								<li class="nav-item"><a href="shop_grid.html" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
 								<li class="nav-item">
 									<div class="ui icon top left dropdown nav__menu">
-										<a class="nav-link" title="Pages">Pages <i class="uil uil-angle-down"></i></a>
+										<a class="nav-link" title="Pages">Páginas <i class="uil uil-angle-down"></i></a>
 										<div class="menu dropdown_page">
-											<a href="dashboard_overview.html" class="item channel_item page__links">Account</a>
-											<a href="about_us.html" class="item channel_item page__links">About Us</a>
-											<a href="shop_grid.html" class="item channel_item page__links">Shop Grid</a>
-											<a href="single_product_view.html" class="item channel_item page__links">Single Product View</a>
-											<a href="checkout.html" class="item channel_item page__links">Checkout</a>
-											<a href="request_product.html" class="item channel_item page__links">Product Request</a>										
-											<a href="order_placed.html" class="item channel_item page__links">Order Placed</a>										
-											<a href="bill.html" class="item channel_item page__links">Bill Slip</a>										
-											<a href="sign_in.html" class="item channel_item page__links">Sign In</a>
-											<a href="sign_up.html" class="item channel_item page__links">Sign Up</a>
-											<a href="forgot_password.html" class="item channel_item page__links">Forgot Password</a>
-											<a href="contact_us.html" class="item channel_item page__links">Contact Us</a>
+											<a href="dashboard_overview.html" class="item channel_item page__links">Conta</a>
+											<a href="about_us.html" class="item channel_item page__links">Sobre nós</a>
+											<a href="shop_grid.html" class="item channel_item page__links">Rede de lojas</a>
+											<a href="single_product_view.html" class="item channel_item page__links">Visualizar um Produto</a>
+											<a href="checkout.html" class="item channel_item page__links">Finalizar Pedido</a>
+											<a href="request_product.html" class="item channel_item page__links">Pedidos de Produto</a>										
+											<a href="order_placed.html" class="item channel_item page__links">Pedidos Finalizados</a>										
+											<a href="bill.html" class="item channel_item page__links">Imprimir Pedidos</a>							
+											<a href="sign_in.html" class="item channel_item page__links">Entrar</a>
+											<a href="sign_up.html" class="item channel_item page__links">Cadastrar-se</a>
+											<a href="forgot_password.html" class="item channel_item page__links">Esqueceu sua senha?</a>
+											<a href="contact_us.html" class="item channel_item page__links">Fale Conosco</a>
 										</div>
 									</div>
 								</li>
@@ -424,16 +424,16 @@ include('php/verificar_login.php');
 									<div class="ui icon top left dropdown nav__menu">
 										<a class="nav-link" title="Blog">Blog <i class="uil uil-angle-down"></i></a>
 										<div class="menu dropdown_page">
-											<a href="our_blog.html" class="item channel_item page__links">Our Blog</a>
-											<a href="blog_no_sidebar.html" class="item channel_item page__links">Our Blog Two No Sidebar</a>
-											<a href="blog_left_sidebar.html" class="item channel_item page__links">Our Blog with Left Sidebar</a>
-											<a href="blog_right_sidebar.html" class="item channel_item page__links">Our Blog with Right Sidebar</a>
-											<a href="blog_detail_view.html" class="item channel_item page__links">Blog Detail View</a>
-											<a href="blog_left_sidebar_single_view.html" class="item channel_item page__links">Blog Detail View with Sidebar</a>
+											<a href="our_blog.html" class="item channel_item page__links">Nosso Blog</a>
+											<a href="blog_no_sidebar.html" class="item channel_item page__links">Dois Sem Barra Lateral</a>
+											<a href="blog_left_sidebar.html" class="item channel_item page__links">Com Barra Lateral Esquerda</a>
+											<a href="blog_right_sidebar.html" class="item channel_item page__links">Com Barra Lateral Direita</a>
+											<a href="blog_detail_view.html" class="item channel_item page__links">Visualização de detalhes</a>
+											<a href="blog_left_sidebar_single_view.html" class="item channel_item page__links">Detalhes Com Barra Lateral</a>
 										</div>
 									</div>
 								</li>	
-								<li class="nav-item"><a href="contact_us.html" class="nav-link" title="Contact">Contact Us</a></li>
+								<li class="nav-item"><a href="contact_us.html" class="nav-link" title="Contact">Fale conosco</a></li>
 							</ul>
 						</div>
 					</div>
@@ -442,7 +442,7 @@ include('php/verificar_login.php');
 					<a href="#" class="cate__btn" data-toggle="modal" data-target="#category_model" title="Categories"><i class="uil uil-apps"></i></a>
 				</div>
 				<div class="header_cart order-1">
-					<a href="#" class="cart__btn hover-btn pull-bs-canvas-left" title="Cart"><i class="uil uil-shopping-cart-alt"></i><span>Cart</span><ins>2</ins><i class="uil uil-angle-down"></i></a>
+					<a href="#" class="cart__btn hover-btn pull-bs-canvas-left" title="Cart"><i class="uil uil-shopping-cart-alt"></i><span>Carrinho</span><ins>2</ins><i class="uil uil-angle-down"></i></a>
 				</div>
 				<div class="search__icon order-1">
 					<a href="#" class="search__btn hover-btn" data-toggle="modal" data-target="#search_model" title="Search"><i class="uil uil-search"></i></a>
