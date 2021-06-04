@@ -334,7 +334,6 @@ include('php/verificar_login.php');
 						  <i class="uil uil-location-point"></i>
 						  Castanhal
 						</div>
-
 					</div>
 				</div>
 				<div class="search120">
@@ -403,7 +402,7 @@ include('php/verificar_login.php');
 								<li class="nav-item"><a href="shop_grid.html" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
 								<li class="nav-item">
 									<div class="ui icon top left dropdown nav__menu">
-										<a class="nav-link" title="Pages">Páginas <i class="uil uil-angle-down"></i></a>
+										<a class="nav-link" title="Pages">Mais <i class="uil uil-angle-down"></i></a>
 										<div class="menu dropdown_page">
 											<a href="dashboard_overview.html" class="item channel_item page__links">Conta</a>
 											<a href="about_us.html" class="item channel_item page__links">Sobre nós</a>
@@ -679,8 +678,8 @@ include('php/verificar_login.php');
 									</a>
 									<div class="product-text-dt">
 										<p>Acessível<span>(Em Estoque)</span></p>
-										<h4>Nome do Prouto Aqui</h4>
-										<div class="product-price">$8 <span>$10</span></div>
+										<h4>Nome do Produto Aqui</h4>
+										<div class="product-price">R$8 <span>R$10</span></div>
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
@@ -703,8 +702,8 @@ include('php/verificar_login.php');
 									</a>
 									<div class="product-text-dt">
 										<p>Acessível<span>(Em Estoque)</span></p>
-										<h4>Nome do Prouto Aqui</h4>
-										<div class="product-price">$8 <span>$10</span></div>
+										<h4>Nome do Produto Aqui</h4>
+										<div class="product-price">R$8 <span>R$10</span></div>
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
@@ -727,8 +726,8 @@ include('php/verificar_login.php');
 									</a>
 									<div class="product-text-dt">
 										<p>Acessível<span>(Em Estoque)</span></p>
-										<h4>Nome do Prouto Aqui</h4>
-										<div class="product-price">$8 <span>$10</span></div>
+										<h4>Nome do Produto Aqui</h4>
+										<div class="product-price">R$8 <span>R$10</span></div>
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
@@ -751,8 +750,8 @@ include('php/verificar_login.php');
 									</a>
 									<div class="product-text-dt">
 										<p>Acessível<span>(Em Estoque)</span></p>
-										<h4>Nome do Prouto Aqui</h4>
-										<div class="product-price">$8 <span>$10</span></div>
+										<h4>Nome do Produto Aqui</h4>
+										<div class="product-price">R$8 <span>R$10</span></div>
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
@@ -775,8 +774,8 @@ include('php/verificar_login.php');
 									</a>
 									<div class="product-text-dt">
 										<p>Acessível<span>(Em Estoque)</span></p>
-										<h4>Nome do Prouto Aqui</h4>
-										<div class="product-price">$8 <span>$10</span></div>
+										<h4>Nome do Produto Aqui</h4>
+										<div class="product-price">R$8 <span>R$10</span></div>
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
@@ -799,8 +798,8 @@ include('php/verificar_login.php');
 									</a>
 									<div class="product-text-dt">
 										<p>Acessível<span>(Em Estoque)</span></p>
-										<h4>Nome do Prouto Aqui</h4>
-										<div class="product-price">$8 <span>$10</span></div>
+										<h4>Nome do Produto Aqui</h4>
+										<div class="product-price">R$8 <span>R$10</span></div>
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
@@ -823,8 +822,8 @@ include('php/verificar_login.php');
 									</a>
 									<div class="product-text-dt">
 										<p>Acessível<span>(Em Estoque)</span></p>
-										<h4>Nome do Prouto Aqui</h4>
-										<div class="product-price">$8 <span>$10</span></div>
+										<h4>Nome do Produto Aqui</h4>
+										<div class="product-price">R$8 <span>R$10</span></div>
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
@@ -847,8 +846,8 @@ include('php/verificar_login.php');
 									</a>
 									<div class="product-text-dt">
 										<p>Acessível<span>(Em Estoque)</span></p>
-										<h4>Nome do Prouto Aqui</h4>
-										<div class="product-price">$8 <span>$10</span></div>
+										<h4>Nome do Produto Aqui</h4>
+										<div class="product-price">R$8 <span>R$10</span></div>
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
@@ -932,7 +931,7 @@ include('php/verificar_login.php');
 									<div class="product-text-dt">
 										<p>Acessível<span>(Em Estoque)</span></p>
 										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">$8 <span>$10</span></div>
+										<div class="product-price">R$8 <span>R$10</span></div>
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
@@ -956,7 +955,7 @@ include('php/verificar_login.php');
 									<div class="product-text-dt">
 										<p>Acessível<span>(Em Estoque)</span></p>
 										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">$8 <span>$10</span></div>
+										<div class="product-price">R$8 <span>R$10</span></div>
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
@@ -980,7 +979,7 @@ include('php/verificar_login.php');
 									<div class="product-text-dt">
 										<p>Acessível<span>(Em Estoque)</span></p>
 										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">$8 <span>$10</span></div>
+										<div class="product-price">R$8 <span>R$10</span></div>
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
@@ -1004,7 +1003,7 @@ include('php/verificar_login.php');
 									<div class="product-text-dt">
 										<p>Acessível<span>(Em Estoque)</span></p>
 										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">$8 <span>$10</span></div>
+										<div class="product-price">R$8 <span>R$10</span></div>
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
@@ -1028,7 +1027,7 @@ include('php/verificar_login.php');
 									<div class="product-text-dt">
 										<p>Acessível<span>(Em Estoque)</span></p>
 										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">$8 <span>$10</span></div>
+										<div class="product-price">R$8 <span>R$10</span></div>
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
@@ -1052,7 +1051,7 @@ include('php/verificar_login.php');
 									<div class="product-text-dt">
 										<p>Acessível<span>(Em Estoque)</span></p>
 										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">$8 <span>$10</span></div>
+										<div class="product-price">R$8 <span>R$10</span></div>
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
@@ -1076,7 +1075,7 @@ include('php/verificar_login.php');
 									<div class="product-text-dt">
 										<p>Acessível<span>(Em Estoque)</span></p>
 										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">$8 <span>$10</span></div>
+										<div class="product-price">R$8 <span>R$10</span></div>
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
@@ -1100,7 +1099,7 @@ include('php/verificar_login.php');
 									<div class="product-text-dt">
 										<p>Acessível<span>(Em Estoque)</span></p>
 										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">$8 <span>$10</span></div>
+										<div class="product-price">R$8 <span>R$10</span></div>
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
@@ -1145,7 +1144,7 @@ include('php/verificar_login.php');
 									<div class="product-text-dt">
 										<p>Acessível<span>(Em Estoque)</span></p>
 										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">R$8 <span>8.75</span></div>
+										<div class="product-price">R$8 <span>R$8.75</span></div>
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
@@ -1169,7 +1168,7 @@ include('php/verificar_login.php');
 									<div class="product-text-dt">
 										<p>Acessível<span>(Em Estoque)</span></p>
 										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">R$8 <span>8.75</span></div>
+										<div class="product-price">R$8 <span>R$8.75</span></div>
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
@@ -1193,7 +1192,7 @@ include('php/verificar_login.php');
 									<div class="product-text-dt">
 										<p>Acessível<span>(Em Estoque)</span></p>
 										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">R$8 <span>8.75</span></div>
+										<div class="product-price">R$8 <span>R$8.75</span></div>
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
@@ -1217,7 +1216,7 @@ include('php/verificar_login.php');
 									<div class="product-text-dt">
 										<p>Acessível<span>(Em Estoque)</span></p>
 										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">R$8 <span>8.75</span></div>
+										<div class="product-price">R$8 <span>R$8.75</span></div>
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
@@ -1241,7 +1240,7 @@ include('php/verificar_login.php');
 									<div class="product-text-dt">
 										<p>Acessível<span>(Em Estoque)</span></p>
 										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">R$8 <span>8.75</span></div>
+										<div class="product-price">R$8 <span>R$8.75</span></div>
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
@@ -1265,7 +1264,7 @@ include('php/verificar_login.php');
 									<div class="product-text-dt">
 										<p>Acessível<span>(Em Estoque)</span></p>
 										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">R$8 <span>8.75</span></div>
+										<div class="product-price">R$8 <span>R$8.75</span></div>
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
@@ -1289,7 +1288,7 @@ include('php/verificar_login.php');
 									<div class="product-text-dt">
 										<p>Acessível<span>(Em Estoque)</span></p>
 										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">R$8 <span>8.75</span></div>
+										<div class="product-price">R$8 <span>R$8.75</span></div>
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
@@ -1313,7 +1312,7 @@ include('php/verificar_login.php');
 									<div class="product-text-dt">
 										<p>Acessível<span>(Em Estoque)</span></p>
 										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">R$8 <span>8.75</span></div>
+										<div class="product-price">R$8 <span>R$8.75</span></div>
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
