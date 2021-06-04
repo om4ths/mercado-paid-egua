@@ -129,20 +129,21 @@ include('php/verificar_login.php');
 																<td><?php echo $r_cliente['id']?></td>	
 																<td><?php echo $r_cliente['nome']?></td>
 																<td><?php echo $r_cliente['telefone']?></td>
-																<td class="action-btns">
-																	<form method="GET" action="customer_view.php">	
-																		<input  type="hidden" name="tel_id" value="<?= $r_cliente['telefone']?>">
-																		<button href="customer_view.php" class="views-btn" title="Ver" type="submit" ><i class="fas fa-eye"></i></button>
-																	</form>
 
-																	<!-- Modal do Delete-->
-																	<form method="GET" action="php/delete.php">
-																		<input  type="hidden" name="tel_id" value="<?= $r_cliente['telefone']?>">
-																		<button  href="#" class="delete-btn" type="submit" title="Apagar" data-confirm='Deseja realmente APAGAR O USUÁRIO DO BANCO?'><i class="fas fa-trash-alt"></i></button>
-																	</form>
-																	
-															
-																</td>
+																<div class="botoes">
+																	<td class="action-btns">
+																		<form method="GET" action="customer_view.php">	
+																			<input  type="hidden" name="tel_id" value="<?= $r_cliente['telefone']?>">
+																			<button href="customer_view.php" class="views-btn" title="Ver" type="submit" ><i class="fas fa-eye"></i></button>
+																		</form>
+	
+																		<!-- Modal do Delete-->
+																		<form method="GET" action="php/delete.php">
+																			<input  type="hidden" name="tel_id" value="<?= $r_cliente['telefone']?>">
+																			<button  href="#" class="delete-btn" type="submit" title="Apagar" data-confirm='Deseja realmente APAGAR O USUÁRIO DO BANCO?'><i class="fas fa-trash-alt"></i></button>
+																		</form>
+																	</td>
+																</div>
 															</tr>
 															
 																																									
