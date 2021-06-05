@@ -102,11 +102,17 @@ include('php/verificar_login.php');
                         <div class="row">
 							<div class="col-lg-12 col-md-12">
 								<div class="card card-static-2 mb-30">
+										<?php
+											if(isset($_SESSION['msg'])){
+												echo $_SESSION['msg'];
+												unset($_SESSION['msg']);
+											}?>
 									<div class="card-title-2">
 										<h4>Todos Usuarios</h4>
 									</div>
 									<div class="card-body-table">
 										<div class="table-responsive">
+										
 											<table class="table ucp-table table-hover">
 												<thead>
 													<tr>														
