@@ -140,7 +140,7 @@ include('php/verificar_login.php');
 																		<!-- Modal do Delete-->
 																		<form method="GET" action="php/delete.php">
 																			<input  type="hidden" name="tel_id" value="<?= $r_cliente['telefone']?>">
-																			<button  href="#" class="delete-btn" type="submit" title="Apagar" data-confirm='Deseja realmente APAGAR O USUÁRIO DO BANCO?'><i class="fas fa-trash-alt"></i></button>
+																			<button  href="login.html" class="delete-btn" type="submit" title="Apagar" data-confirm='Deseja realmente APAGAR O USUÁRIO DO BANCO?'><i class="fas fa-trash-alt"></i></button>
 																		</form>
 																	</td>
 																</div>
