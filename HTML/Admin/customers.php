@@ -141,7 +141,7 @@ include('php/dados_cliente.php');
 																		<?php echo"	<a href='customer_view.php?id_tel=" . $r_cliente['telefone'] . "' class=views-btn' title='Ver' type='submit' ><i class='fas fa-eye'></i></a>"?>
 	
 																		<!-- Modal do Delete-->
-																		<?php echo"<a  href='php/delete.php?id=" . $r_cliente['id'] . "' class='delete-btn' title='Apagar' data-confirm='Deseja realmente APAGAR O USUÁRIO'><i class='fas fa-trash-alt'></i></a>"?>;
+																		<?php echo"<a  href='php/delete.php?id_tel=" . $r_cliente['telefone'] . "' class='delete-btn' title='Apagar' data-confirm='Deseja realmente APAGAR O USUÁRIO'><i class='fas fa-trash-alt'></i></a>"?>;
 																	</td>
 																</div>
 															</tr>

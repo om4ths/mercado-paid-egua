@@ -11,7 +11,6 @@ $data_nascimento = implode("-",array_reverse(explode("/",$data_nascimento)));
 $senha = $_POST ["senha"]; 
 $confsenha = $_POST["confsenha"];
  
-echo $data_nascimento;
 
 $query_select = "SELECT telefone FROM cliente WHERE telefone = '$tel'";
 $select = mysqli_query($conexao,$query_select);
