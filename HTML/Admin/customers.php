@@ -3,9 +3,9 @@ include('php/verificar_login.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
-	<?php
-	include('php/dados_cliente.php');
-	?>
+<?php
+include('php/dados_cliente.php');
+?>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -104,8 +104,8 @@ include('php/verificar_login.php');
 								<div class="card card-static-2 mb-30">
 										<?php
 											if(isset($_SESSION['msg'])){
-												echo $_SESSION['msg'];
-												unset($_SESSION['msg']);
+												echo $_SESSION['msg'];	
+												unset($_SESSION['msg']);											
 											}?>
 									<div class="card-title-2">
 										<h4>Todos Usuarios</h4>
@@ -138,16 +138,10 @@ include('php/verificar_login.php');
 
 																<div class="botoes">
 																	<td class="action-btns">
-																		<form method="GET" action="customer_view.php">	
-																			<input  type="hidden" name="tel_id" value="<?= $r_cliente['telefone']?>">
-																			<button href="customer_view.php" class="views-btn" title="Ver" type="submit" ><i class="fas fa-eye"></i></button>
-																		</form>
+																		<?php echo"	<a href='customer_view.php?id_tel=" . $r_cliente['telefone'] . "' class=views-btn' title='Ver' type='submit' ><i class='fas fa-eye'></i></a>"?>
 	
 																		<!-- Modal do Delete-->
-																		<form method="GET" action="php/delete.php">
-																			<input  type="hidden" name="tel_id" value="<?= $r_cliente['telefone']?>">
-																			<button  href="#" class="delete-btn" type="submit" title="Apagar" data-confirm='Deseja realmente APAGAR O USUÁRIO DO BANCO?'><i class="fas fa-trash-alt"></i></button>
-																		</form>
+																		<?php echo"<a  href='php/delete.php?id=" . $r_cliente['id'] . "' class='delete-btn' title='Apagar' data-confirm='Deseja realmente APAGAR O USUÁRIO'><i class='fas fa-trash-alt'></i></a>"?>;
 																	</td>
 																</div>
 															</tr>

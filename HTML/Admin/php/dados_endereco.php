@@ -1,7 +1,7 @@
 <?php
 include('dados_cliente.php');
 
-$view_id = $_GET['tel_id'];
+$view_id = $_GET['id_tel'];
 
 $select_end_casa = "SELECT * FROM endereco WHERE id_telefone = '$view_id' AND tipo = 'Casa'";   
 $array_end_casa = mysqli_query($conexao,$select_end_casa);

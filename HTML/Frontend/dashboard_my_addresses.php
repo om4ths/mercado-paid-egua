@@ -186,7 +186,7 @@ include('php/verificar_login.php');
 												</div>
 												<div class="col-lg-12 col-md-12">
 													<div class="form-group">
-														<label class="control-label">Complemento</label>
+														<label class="control-label">Complemento/Ponto de referência</label>
 														<input id="complemento" name="complemento" type="text" placeholder="" class="form-control input-md" maxlength="100" required="">
 													</div>
 												</div>
@@ -738,7 +738,9 @@ include('php/verificar_login.php');
 													?>
 
 														<h4><?php echo $r_end['tipo'];?></h4>
+														<p><?php echo $r_end['bairro']?></p>
 														<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
+														<p><?php echo $r_end['complemento']?></p>
 														<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
 														<ul class="action-btns">
 															<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
@@ -764,9 +766,11 @@ include('php/verificar_login.php');
 																				
 													?>
 
-														<h4><?php echo $r_end['tipo'];?></h4>
-														<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
-														<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
+													<h4><?php echo $r_end['tipo'];?></h4>
+													<p><?php echo $r_end['bairro']?></p>
+													<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
+													<p><?php echo $r_end['complemento']?></p>
+													<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
 														<ul class="action-btns">
 															<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
 															<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
