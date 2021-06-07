@@ -148,15 +148,15 @@
 											</div>
 											<div class="form-group">
 												<label class="form-label">Preço*</label>
-												<input type="text" class="form-control" name="p_valor" placeholder="$0">
+												<input type="text" class="form-control" name="p_valor" placeholder="R$0">
 											</div>
 											<div class="form-group">
 												<label class="form-label">Desconto*</label>
-												<input type="text" class="form-control" name="p_desconto" placeholder="$0">
+												<input type="text" class="form-control" name="p_desconto" placeholder="R$0">
 											</div>
 											<div class="form-group">
 												<label class="form-label">Status*</label>
-												<select id="status" name="status" class="form-control">
+												<select id="status" name="p_status" class="form-control">
 													<option value="1" selected>Ativo</option>
 													<option value="0">Inativo</option>
 												</select>
@@ -169,7 +169,7 @@
 												<label class="form-label">Imagem do Produto*</label>
 												<div class="input-group">
 													<div class="custom-file">
-														<input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+														<input type="file" name="p_img" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
 														<label class="custom-file-label" for="inputGroupFile04">Selecione a Imagem</label>
 													</div>
 												</div>
@@ -208,7 +208,7 @@
 													</li>
 												</ul>
 											</div>
-											<button class="save-btn hover-btn" type="submit">Adicionar Produto</button>
+											<button class="save-btn hover-btn" name="salvar_produto" type="submit">Adicionar Produto</button>
 										</form><!--FIM DO FORMULARIO-->
 										</div> 
 									</div>
