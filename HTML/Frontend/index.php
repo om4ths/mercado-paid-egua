@@ -1,55 +1,55 @@
-﻿<?php 
+﻿<?php
 include('php/verificar_login.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt_BR>
 	<?php
-		include('php/dados_cliente.php');
+	include('php/dados_cliente.php');
 	?>
 	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
-		<meta name="description" content="Gambolthemes">
-		<meta name="author" content="Gambolthemes">		
-		<title>Mercado Pai D'égua - Início </title>
-		
-		<!--  Icones -->
-		<link rel="icon" type="image/png" href="images/logo-1.png">
-		
-		<!-- Stylesheets -->
-		<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-		<link href='vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
-		<link href="css/style.css" rel="stylesheet">
-		<link href="css/responsive.css" rel="stylesheet">
-		<link href="css/night-mode.css" rel="stylesheet">
-		
-		<!-- CSS -->
-		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-		<link href="vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
-		<link href="vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
-		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="vendor/semantic/semantic.min.css">	
-		
-		
-	</head>
+		<meta charset=" utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=9">
+	<meta name="description" content="Gambolthemes">
+	<meta name="author" content="Gambolthemes">
+	<title>Mercado Pai D'égua - Início </title>
+
+	<!--  Icones -->
+	<link rel="icon" type="image/png" href="images/logo-1.png">
+
+	<!-- Stylesheets -->
+	<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link href='vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+	<link href="css/night-mode.css" rel="stylesheet">
+
+	<!-- CSS -->
+	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+	<link href="vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
+	<link href="vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="vendor/semantic/semantic.min.css">
+
+
+</head>
 
 <body>
-		
+
 	<!-- modelo das categorias-->
 	<div id="category_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
-        <div class="modal-dialog category-area" role="document">
-            <div class="category-area-inner">
-                <div class="modal-header">
-                    <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+		<div class="modal-dialog category-area" role="document">
+			<div class="category-area-inner">
+				<div class="modal-header">
+					<button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
 						<i class="uil uil-multiply"></i>
-                    </button>
-                </div>
-                <div class="category-model-content modal-content"> 
+					</button>
+				</div>
+				<div class="category-model-content modal-content">
 					<div class="cate-header">
 						<h4>Selecionar Categoria </h4>
 					</div>
-                    <ul class="category-by-cat">
+					<ul class="category-by-cat">
 						<li>
 							<a href="#" class="single-cat-item">
 								<div class="icon">
@@ -122,23 +122,23 @@ include('php/verificar_login.php');
 								<div class="text"> Pets </div>
 							</a>
 						</li>
-                    </ul>
+					</ul>
 					<a href="#" class="morecate-btn"><i class="uil uil-apps"></i>Mais Categorias</a>
-                </div>
-            </div>
-        </div>
-    </div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- Categoria fim-->
 	<!-- pesquisar produtos inicio-->
 	<div id="search_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
-        <div class="modal-dialog search-ground-area" role="document">
-            <div class="category-area-inner">
-                <div class="modal-header">
-                    <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+		<div class="modal-dialog search-ground-area" role="document">
+			<div class="category-area-inner">
+				<div class="modal-header">
+					<button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
 						<i class="uil uil-multiply"></i>
-                    </button>
-                </div>
-                <div class="category-model-content modal-content"> 
+					</button>
+				</div>
+				<div class="category-model-content modal-content">
 					<div class="search-header">
 						<form action="#">
 							<input type="search" placeholder="Search for products...">
@@ -146,14 +146,14 @@ include('php/verificar_login.php');
 						</form>
 					</div>
 					<div class="search-by-cat">
-                        <a href="#" class="single-cat">
-                            <div class="icon">
+						<a href="#" class="single-cat">
+							<div class="icon">
 								<img src="images/category/icon-1.svg" alt="">
-                            </div>
-                            <div class="text">
-                                Frutas e Vegetais
-                            </div>
-                        </a>
+							</div>
+							<div class="text">
+								Frutas e Vegetais
+							</div>
+						</a>
 						<a href="#" class="single-cat">
 							<div class="icon">
 								<img src="images/category/icon-2.svg" alt="">
@@ -170,7 +170,7 @@ include('php/verificar_login.php');
 							<div class="icon">
 								<img src="images/category/icon-4.svg" alt="">
 							</div>
-							<div class="text"> Bebidas  </div>
+							<div class="text"> Bebidas </div>
 						</a>
 						<a href="#" class="single-cat">
 							<div class="icon">
@@ -202,18 +202,18 @@ include('php/verificar_login.php');
 							</div>
 							<div class="text"> Pets </div>
 						</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- pesquisar produtos fim-->
 	<!-- Carrinho sidebar inicio-->
 	<div class="bs-canvas bs-canvas-left position-fixed bg-cart h-100">
 		<div class="bs-canvas-header side-cart-header p-3 ">
 			<div class="d-inline-block  main-cart-title">Meu Carrinho <span>(2 Itens)</span></div>
 			<button type="button" class="bs-canvas-close close" aria-label="Close"><i class="uil uil-multiply"></i></button>
-		</div> 
+		</div>
 		<div class="bs-canvas-body">
 			<div class="cart-top-total">
 				<div class="cart-total-dil">
@@ -261,7 +261,7 @@ include('php/verificar_login.php');
 							</div>
 							<div class="cart-item-price">$10 <span>$15</span></div>
 						</div>
-						
+
 						<button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button>
 					</div>
 				</div>
@@ -295,7 +295,7 @@ include('php/verificar_login.php');
 								<input type="button" value="+" class="plus plus-btn">
 							</div>
 							<div class="cart-item-price">R$24 <span>R$30</span></div>
-						</div>	
+						</div>
 						<button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button>
 					</div>
 				</div>
@@ -331,17 +331,17 @@ include('php/verificar_login.php');
 				<div class="select_location">
 					<div class="ui inline dropdown loc-title">
 						<div class="text">
-						  <i class="uil uil-location-point"></i>
-						  Castanhal
+							<i class="uil uil-location-point"></i>
+							Castanhal
 						</div>
 					</div>
 				</div>
 				<div class="search120">
 					<div class="ui search">
-					  <div class="ui left icon input swdh10">
-						<input class="prompt srch10" type="text" placeholder="Pesquisar produtos ..">
-						<i class='uil uil-search-alt icon icon1'></i>
-					  </div>
+						<div class="ui left icon input swdh10">
+							<input class="prompt srch10" type="text" placeholder="Pesquisar produtos ..">
+							<i class='uil uil-search-alt icon icon1'></i>
+						</div>
 					</div>
 				</div>
 				<div class="header_right">
@@ -357,11 +357,11 @@ include('php/verificar_login.php');
 						</li>
 						<li>
 							<a href="dashboard_my_wishlist.html" class="option_links" title="Wishlist"><i class='uil uil-heart icon_wishlist'></i><span class="noti_count1">3</span></a>
-						</li>	
+						</li>
 						<li class="ui dropdown">
 							<a href="#" class="opts_account">
 								<img src="images/avatar/img-5.jpg" alt="">
-								<span class="user__name"><?php echo$resultado['nome']?></span>
+								<span class="user__name"><?php echo $resultado['nome'] ?></span>
 								<i class="uil uil-angle-down"></i>
 							</a>
 							<div class="menu dropdown_account">
@@ -372,8 +372,8 @@ include('php/verificar_login.php');
 											<span class="uk-switch-button"></span>
 										</span>
 									</a>
-								</div>	
-								<a href="dashboard_overview.php" class="item channel_item"><i class="uil uil-apps icon__1"></i>Perfil</a>								
+								</div>
+								<a href="dashboard_overview.php" class="item channel_item"><i class="uil uil-apps icon__1"></i>Perfil</a>
 								<a href="dashboard_my_orders.php" class="item channel_item"><i class="uil uil-box icon__1"></i>Ordens de compra</a>
 								<a href="dashboard_my_wishlist.php" class="item channel_item"><i class="uil uil-heart icon__1"></i>Lista de desejos</a>
 								<a href="dashboard_my_wallet.php" class="item channel_item"><i class="uil uil-usd-circle icon__1"></i>Carteira</a>
@@ -397,21 +397,21 @@ include('php/verificar_login.php');
 						<button class="navbar-toggler menu_toggle_btn" type="button" data-target="#navbarSupportedContent"><i class="uil uil-bars"></i></button>
 						<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
 							<ul class="navbar-nav main_nav align-self-stretch">
-							<li class="nav-item"><a href="index.php" class="nav-link active" title="Home">Home</a></li>
+								<li class="nav-item"><a href="index.php" class="nav-link active" title="Home">Home</a></li>
 								<li class="nav-item"><a href="shop_grid.html" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
 								<li class="nav-item"><a href="shop_grid.html" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
 								<li class="nav-item">
 									<div class="ui icon top left dropdown nav__menu">
 										<a class="nav-link" title="Pages">Mais <i class="uil uil-angle-down"></i></a>
 										<div class="menu dropdown_page">
-											<a href="dashboard_overview.html" class="item channel_item page__links">Conta</a>
+											<a href="dashboard_overview.php" class="item channel_item page__links">Conta</a>
 											<a href="about_us.html" class="item channel_item page__links">Sobre nós</a>
 											<a href="shop_grid.html" class="item channel_item page__links">Rede de lojas</a>
 											<a href="single_product_view.html" class="item channel_item page__links">Visualizar um Produto</a>
 											<a href="checkout.html" class="item channel_item page__links">Finalizar Pedido</a>
-											<a href="request_product.html" class="item channel_item page__links">Pedidos de Produto</a>										
-											<a href="order_placed.html" class="item channel_item page__links">Pedidos Finalizados</a>										
-											<a href="bill.html" class="item channel_item page__links">Imprimir Pedidos</a>							
+											<a href="request_product.html" class="item channel_item page__links">Pedidos de Produto</a>
+											<a href="order_placed.html" class="item channel_item page__links">Pedidos Finalizados</a>
+											<a href="bill.html" class="item channel_item page__links">Imprimir Pedidos</a>
 											<a href="sign_in.html" class="item channel_item page__links">Entrar</a>
 											<a href="sign_up.html" class="item channel_item page__links">Cadastrar-se</a>
 											<a href="forgot_password.html" class="item channel_item page__links">Esqueceu sua senha?</a>
@@ -419,19 +419,6 @@ include('php/verificar_login.php');
 										</div>
 									</div>
 								</li>
-								<li class="nav-item">
-									<div class="ui icon top left dropdown nav__menu">
-										<a class="nav-link" title="Blog">Blog <i class="uil uil-angle-down"></i></a>
-										<div class="menu dropdown_page">
-											<a href="our_blog.html" class="item channel_item page__links">Nosso Blog</a>
-											<a href="blog_no_sidebar.html" class="item channel_item page__links">Dois Sem Barra Lateral</a>
-											<a href="blog_left_sidebar.html" class="item channel_item page__links">Com Barra Lateral Esquerda</a>
-											<a href="blog_right_sidebar.html" class="item channel_item page__links">Com Barra Lateral Direita</a>
-											<a href="blog_detail_view.html" class="item channel_item page__links">Visualização de detalhes</a>
-											<a href="blog_left_sidebar_single_view.html" class="item channel_item page__links">Detalhes Com Barra Lateral</a>
-										</div>
-									</div>
-								</li>	
 								<li class="nav-item"><a href="contact_us.html" class="nav-link" title="Contact">Fale conosco</a></li>
 							</ul>
 						</div>
@@ -459,7 +446,7 @@ include('php/verificar_login.php');
 					<div class="col-md-12">
 						<div class="owl-carousel offers-banner owl-theme">
 							<div class="item">
-								<div class="offer-item">								
+								<div class="offer-item">
 									<div class="offer-item-img">
 										<div class="gambo-overlay"></div>
 										<img src="images/banners/offer-1.jpg" alt="">
@@ -475,7 +462,7 @@ include('php/verificar_login.php');
 								</div>
 							</div>
 							<div class="item">
-								<div class="offer-item">								
+								<div class="offer-item">
 									<div class="offer-item-img">
 										<div class="gambo-overlay"></div>
 										<img src="images/banners/offer-2.jpg" alt="">
@@ -491,7 +478,7 @@ include('php/verificar_login.php');
 								</div>
 							</div>
 							<div class="item">
-								<div class="offer-item">								
+								<div class="offer-item">
 									<div class="offer-item-img">
 										<div class="gambo-overlay"></div>
 										<img src="images/banners/offer-3.jpg" alt="">
@@ -507,8 +494,8 @@ include('php/verificar_login.php');
 								</div>
 							</div>
 							<div class="item">
-								<div class="offer-item">								
-									<div class="offer-item-img">	
+								<div class="offer-item">
+									<div class="offer-item-img">
 										<div class="gambo-overlay"></div>
 										<img src="images/banners/offer-4.jpg" alt="">
 									</div>
@@ -523,7 +510,7 @@ include('php/verificar_login.php');
 								</div>
 							</div>
 							<div class="item">
-								<div class="offer-item">								
+								<div class="offer-item">
 									<div class="offer-item-img">
 										<div class="gambo-overlay"></div>
 										<img src="images/banners/offer-5.jpg" alt="">
@@ -587,7 +574,7 @@ include('php/verificar_login.php');
 									<div class="cate-img">
 										<img src="images/category/icon-4.svg" alt="">
 									</div>
-									<h4> Bebidas  </h4>
+									<h4> Bebidas </h4>
 								</a>
 							</div>
 							<div class="item">
@@ -1351,7 +1338,7 @@ include('php/verificar_login.php');
 								<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
 							</ul>
 						</div>
-					</div>				
+					</div>
 				</div>
 			</div>
 		</div>
@@ -1395,32 +1382,32 @@ include('php/verificar_login.php');
 							<h4>Onde Atendemos</h4>
 							<ul>
 								<li><a href="#">Castanhal</a></li>
-								
+
 							</ul>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-6">
 						<div class="second-row-item-app">
-							
+
 						</div>
 						<div class="second-row-item-payment">
 							<h4>Métodos de Pagamento</h4>
 							<div class="footer-payments">
 								<ul id="paypal-gateway" class="financial-institutes">
 									<li class="financial-institutes__logo">
-									  <img alt="Visa" title="Visa" src="images/footer-icons/pyicon-6.svg">
+										<img alt="Visa" title="Visa" src="images/footer-icons/pyicon-6.svg">
 									</li>
 									<li class="financial-institutes__logo">
-									  <img alt="Visa" title="Visa" src="images/footer-icons/pyicon-1.svg">
+										<img alt="Visa" title="Visa" src="images/footer-icons/pyicon-1.svg">
 									</li>
 									<li class="financial-institutes__logo">
-									  <img alt="MasterCard" title="MasterCard" src="images/footer-icons/pyicon-2.svg">
+										<img alt="MasterCard" title="MasterCard" src="images/footer-icons/pyicon-2.svg">
 									</li>
 									<li class="financial-institutes__logo">
-									  <img alt="American Express" title="American Express" src="images/footer-icons/pyicon-3.svg">
+										<img alt="American Express" title="American Express" src="images/footer-icons/pyicon-3.svg">
 									</li>
 									<li class="financial-institutes__logo">
-									  <img alt="Discover" title="Discover" src="images/footer-icons/pyicon-4.svg">
+										<img alt="Discover" title="Discover" src="images/footer-icons/pyicon-4.svg">
 									</li>
 								</ul>
 							</div>
@@ -1460,15 +1447,16 @@ include('php/verificar_login.php');
 	<!-- Fim do Footer (rodapé)  -->
 
 	<!-- Javascripts -->
-		<script src="js/jquery-3.3.1.min.js"></script>
-		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<script src="vendor/OwlCarousel/owl.carousel.js"></script>
-		<script src="vendor/semantic/semantic.min.js"></script>
-		<script src="js/jquery.countdown.min.js"></script>
-		<script src="js/custom.js"></script>
-		<script src="js/offset_overlay.js"></script>
-		<script src="js/night-mode.js"></script>
-	
-	
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="vendor/OwlCarousel/owl.carousel.js"></script>
+	<script src="vendor/semantic/semantic.min.js"></script>
+	<script src="js/jquery.countdown.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/offset_overlay.js"></script>
+	<script src="js/night-mode.js"></script>
+
+
 </body>
+
 </html>
