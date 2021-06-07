@@ -3,7 +3,7 @@
 	/* Enter your name or company name below
 	 * You can also use your website URL
 	--------------------------------------------- */
-	$receiver_name = "My Company";
+	$receiver_name = "Mercado P'Dégua";
 	
 	/* Enter your message subject below
 	 * This subject is the one you will see in your email

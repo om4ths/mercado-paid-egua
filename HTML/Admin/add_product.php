@@ -1,3 +1,9 @@
+<?php 
+		include('php/exibe_categoria.php');
+		include('php/conexao.php');
+	?>
+
+
 <!DOCTYPE html>
 <html lang="utf-8">
 <head>
@@ -126,19 +132,18 @@
 											</div>
 											<div class="form-group">
 												<label class="form-label">Categoria*</label>
-												<select id="categtory" name="categtory" class="form-control">
+												<select id="categtory" name="p_cat" class="form-control">
 													<option selected>--Selecione a Categoria--</option>
-													<option value="1">Frutas e Vegetais</option>
-													<option value="2">Alimentos Básicos</option>
-													<option value="3">Ovos e Laticínios</option>
-													<option value="4">Bebidas</option>
-													<option value="5">Lanches</option>
-													<option value="6">Limpeza</option>
-													<option value="7">Macarrão e molhos</option>
-													<option value="8">Higiene</option>
-													<option value="9">Pets</option>
-													<option value="10">Carnes</option>
-													<option value="11">Eletrônicos</option>
+												<?php
+												if(isset($r_categoria))
+														{	
+															foreach($r_categoria as $key => $r_cat)
+															{									
+														?>
+
+													<?php echo"<option value= '".$r_cat['cat_id']."'> ".$r_cat['cat_nome']." </option>" ;?>;
+													
+												<?php }} ?>
 												</select>
 											</div>
 											<div class="form-group">
