@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="utf-8">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -100,10 +100,11 @@
 										<h4>Add New Category</h4>
 									</div>
 									<div class="card-body-table">
+									<form method="POST" action="php/add_produto.php" enctype="multipart/form-data">
 										<div class="news-content-right pd-20">
 											<div class="form-group">
 												<label class="form-label">Name*</label>
-												<input type="text" class="form-control" placeholder="Category Name">
+												<input type="text" name="c_name" class="form-control" placeholder="Category Name">
 											</div>
 											<div class="form-group">
 												<label class="form-label">Status*</label>

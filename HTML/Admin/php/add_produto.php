@@ -11,7 +11,7 @@
 
     move_uploaded_file($caminhoAtualArquivo , $caminhoSalvar);
     
-
+    $pro_img = $caminhoSalvar;
 
     $pro_nome = $_POST['p_nome'];
     $pro_desc =  $_POST['p_desc'];
@@ -19,16 +19,19 @@
     $pro_valor = $_POST['p_valor'];
     $pro_desconto = $_POST['p_desconto'];
     $pro_ativo = $_POST['p_status'];
-    $pro_img = $caminhoSalvar;
-
-    echo $pro_img;
-
+ 
     $query = "INSERT INTO produtos (pro_nome, pro_desc, pro_cat, pro_valor, pro_desconto, pro_ativo, pro_img)
               VALUES ('$pro_nome', '$pro_desc', '$pro_cat', '$pro_valor', '$pro_desconto', '$pro_ativo', '$pro_img')";
 
      $insert = mysqli_query($conexao,$query);
 
     echo $query;
+
+    
+    
+    
+
+
 
     /*if($insert){
         $_SESSION['msg'] = "<p style='color:green;'>Produto adicionado com sucesso!</p>";

@@ -3,25 +3,6 @@
 		include('php/conexao.php');
 	?>
 
-<?php 
-
-
-/*$pro_img = $_POST['p_img'];
-if(isset($_POST['salvar_produto'])):
-  $formatosPermitidos = array("png", "jpg", "jpeg");
-  $extensao = pathinfo($_FILES['p_img']['name'], PATHINFO_EXTENSION);
-
-  echo $extensao;
-
-endif;*/
-
-
-
-
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="utf-8">
 <head>
