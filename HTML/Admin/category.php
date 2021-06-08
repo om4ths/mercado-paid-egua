@@ -1,3 +1,17 @@
+<?php 
+		include('php/exibe_categoria.php');
+		include('php/conexao.php');
+
+		function limpa_link($valor){
+			$valor = trim($valor);
+			$valor = str_replace("../", "", $valor);
+			
+			return $valor;
+		   }
+	?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -147,21 +161,48 @@
 													</tr>
 												</thead>
 												<tbody>
+												<!--CATEGORIAS SERAO EXIBIDAS AQUI-->
+												<?php
+												if(isset($r_categoria))
+														{	
+															foreach($r_categoria as $key => $r_cat)
+															{	
+																
+																$caminhoCorretoImg = limpa_link($r_cat['cat_img']);
+																
+														?>
 													<tr>
 														<td><input type="checkbox" class="check-item" name="ids[]" value="11"></td>
-														<td>1</td>
+														<?php echo "<td>".$r_cat['cat_id']."</td>" ?>
 														<td>
 															<div class="cate-img">
-																<img src="images/category/icon-1.svg" alt="">
+																<?php echo "<img src=' ".$caminhoCorretoImg." ' alt='erro ao Carregar a imagem'>" ?>
 															</div>
 														</td>
-														<td>Fruits and Vegetables</td>
-														<td></td>
-														<td><span class="badge-item badge-status">Active</span></td>
+														<?php echo "<td>".$r_cat['cat_nome']."</td>" ?>
+														<?php echo "<td>".$r_cat['cat_desc']."</td>" ?>
+														
+														<?php
+														if($r_cat['cat_ativo'] == 1)
+														{ 
+														?>
+															<td><span class="badge-item badge-status">Ativo</span></td>
+														<?php 
+														}
+														else{
+														?>
+															<td><span class="badge-item badge-status">Inativo</span></td>
+
+														<?php 
+														}
+														?>
+
 														<td class="action-btns">
 															<a href="#" class="edit-btn"><i class="fas fa-edit"></i> Edit</a>
 														</td>
 													</tr>
+												<?php }}	?>
+													<!--
 													<tr>
 														<td><input type="checkbox" class="check-item" name="ids[]" value="10"></td>
 														<td>2</td>
@@ -312,6 +353,8 @@
 															<a href="#" class="edit-btn"><i class="fas fa-edit"></i> Edit</a>
 														</td>
 													</tr>
+													-->
+													<!--FIM EXIBIR CATEGORIAS-->
 												</tbody>
 											</table>
 										</div>

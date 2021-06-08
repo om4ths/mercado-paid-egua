@@ -129,13 +129,13 @@
 												<label class="form-label">Description*</label>
 												<div class="card card-editor">
 													<div class="content-editor">
-														<textarea name="c_status" class="text-control" placeholder="Enter Description"></textarea>
+														<textarea name="c_desc" class="text-control" placeholder="Enter Description"></textarea>
 													</div>
 												</div>
 											</div>
 											<button class="save-btn hover-btn" type="submit">Add New Category</button>									
 										</div> 
-									</form>
+									</form><!--Fim do FORMULARIO-->
 									</div>
 								</div>
 							</div>

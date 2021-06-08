@@ -33,7 +33,7 @@
 
 
 
-    /*if($insert){
+    if($insert){
         $_SESSION['msg'] = "<p style='color:green;'>Produto adicionado com sucesso!</p>";
         header("Location: /mercado-paid-egua/HTML/admin/products.php");
         die();
@@ -41,7 +41,7 @@
         $_SESSION['msg'] = "<p style='color:red;'>Erro! o produto não foi gravado com sucesso!</p>";
         header("Location: /mercado-paid-egua/HTML/admin/add_product.php");
         die();
-      }*/
+      }
 
     /*$pro_img = $_POST['p_img'];
     if(isset($_POST['salvar_produto'])):
