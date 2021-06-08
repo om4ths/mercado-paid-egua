@@ -3,6 +3,24 @@
 		include('php/conexao.php');
 	?>
 
+<?php 
+
+
+/*$pro_img = $_POST['p_img'];
+if(isset($_POST['salvar_produto'])):
+  $formatosPermitidos = array("png", "jpg", "jpeg");
+  $extensao = pathinfo($_FILES['p_img']['name'], PATHINFO_EXTENSION);
+
+  echo $extensao;
+
+endif;*/
+
+
+
+
+?>
+
+
 
 <!DOCTYPE html>
 <html lang="utf-8">
@@ -125,7 +143,7 @@
 									</div>
 									<div class="card-body-table">
 										<div class="news-content-right pd-20">
-										<form method="POST" action="php/add_produto.php"> <!--FORMULARIO-->
+										<form method="POST" action="php/add_produto.php" enctype="multipart/form-data"> <!--FORMULARIO-->
 											<div class="form-group">
 												<label class="form-label">Nome*</label>
 												<input type="text" class="form-control" name="p_nome" placeholder="Nome do Produto">
