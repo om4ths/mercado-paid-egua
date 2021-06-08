@@ -1,3 +1,15 @@
+<?php 
+		include('php/exibe_produtos.php');
+		include('php/conexao.php');
+
+		function limpa_link($valor){
+			$valor = trim($valor);
+			$valor = str_replace("../", "", $valor);
+			
+			return $valor;
+		   }
+	?>
+
 <!DOCTYPE html>
 <html lang="utf-8">
 <head>
@@ -217,23 +229,52 @@
 													</tr>
 												</thead>
 												<tbody>
+												<!--OS PRODUTOS SERAO EXIBIDOS AQUI-->
+												<?php
+												if(isset($r_produtos))
+														{	
+															foreach($r_produtos as $key => $r_pro)
+															{	
+																
+																$caminhoCorretoImg = limpa_link($r_pro['pro_img']);
+																
+														?>
+
 													<tr>
 														<td><input type="checkbox" class="check-item" name="ids[]" value="10"></td>
-														<td>1</td>
+														<?php echo "<td>".$r_pro['pro_id']."</td>" ?>
 														<td>
 															<div class="cate-img-5">
-																<img src="images/product/img-1.jpg" alt="">
+																<?php echo "<img src=' ".$caminhoCorretoImg." ' alt='erro ao Carregar a imagem'>" ?>
 															</div>
 														</td>
-														<td>Product Name Here</td>
+														<?php echo "<td>".$r_pro['pro_nome']."</td>" ?>
 														<td>Vegetables &amp; Fruits</td>
 														<td>8 hours ago</td>
-														<td><span class="badge-item badge-status">Active</span></td>
+														<?php
+														if($r_pro['pro_ativo'] == 1)
+														{ 
+														?>
+															<td><span class="badge-item badge-status">Ativo</span></td>
+														<?php 
+														}
+														else{
+														?>
+															<td><span class="badge-item badge-status">Inativo</span></td>
+														<?php 
+														}
+														?>
+
 														<td class="action-btns">
 															<a href="product_view.html" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
 															<a href="#" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
 														</td>
 													</tr>
+
+													<?php 
+													}}
+													?>
+													<!--
 													<tr>
 														<td><input type="checkbox" class="check-item" name="ids[]" value="9"></td>
 														<td>2</td>
@@ -386,7 +427,8 @@
 															<a href="product_view.html" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
 															<a href="#" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
 														</td>
-													</tr>
+													</tr>-->
+													<!--FIM DA EXIBIÇÃO DE PRODUTOS-->
 												</tbody>
 											</table>
 										</div>
