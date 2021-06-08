@@ -100,7 +100,7 @@
 										<h4>Add New Category</h4>
 									</div>
 									<div class="card-body-table">
-									<form method="POST" action="php/add_produto.php" enctype="multipart/form-data">
+									<form method="POST" action="php/add_categoria.php" enctype="multipart/form-data"> <!--Formulario-->
 										<div class="news-content-right pd-20">
 											<div class="form-group">
 												<label class="form-label">Name*</label>
@@ -108,16 +108,16 @@
 											</div>
 											<div class="form-group">
 												<label class="form-label">Status*</label>
-												<select id="status" name="status" class="form-control">
-													<option selected>Active</option>
-													<option value="1">Inactive</option>
+												<select id="status" name="c_status" class="form-control">
+													<option value="1" selected>Active</option>
+													<option value="0">Inactive</option>
 												</select>
 											</div>
 											<div class="form-group">
 												<label class="form-label">Category Image*</label>
 												<div class="input-group">
 													<div class="custom-file">
-														<input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+														<input type="file" name="c_img" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
 														<label class="custom-file-label" for="inputGroupFile04">Choose Image</label>
 													</div>
 												</div>
@@ -129,12 +129,13 @@
 												<label class="form-label">Description*</label>
 												<div class="card card-editor">
 													<div class="content-editor">
-														<textarea class="text-control" placeholder="Enter Description"></textarea>
+														<textarea name="c_status" class="text-control" placeholder="Enter Description"></textarea>
 													</div>
 												</div>
 											</div>
-											<button class="save-btn hover-btn" type="submit">Add New Category</button>
+											<button class="save-btn hover-btn" type="submit">Add New Category</button>									
 										</div> 
+									</form>
 									</div>
 								</div>
 							</div>
