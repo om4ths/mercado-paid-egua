@@ -702,7 +702,7 @@ include('php/verificar_login.php');
 													<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
 													<ul class="action-btns">
 														<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
-														<?php echo"<li><a href='php/delete_end.php?id=" . $r_end['id'] . "' class='action-btn' title='Apagar' data-confirm='Deseja realmente apagar esse endereço?'>Apagar</a></li>" ?>
+														<?php echo"<li><a href='php/delete_end.php?id=" . $r_end['id'] . "' class='action-btn' title='Apagar' data-confirm='Deseja realmente apagar esse endereço?'><i class='uil uil-trash-alt'></i></a></li>" ?>
 													</ul>
 												<?php
 													};
