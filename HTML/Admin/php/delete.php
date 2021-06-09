@@ -3,7 +3,6 @@ session_start();
 include("conexao.php");
 
 $view_id = $_GET['id_tel'];
-echo $view_id;
 
 $query = "DELETE FROM cliente WHERE telefone = '$view_id'" ;
 $query_end = "DELETE FROM endereco WHERE id_telefone = '$view_id'" ;

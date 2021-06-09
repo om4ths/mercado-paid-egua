@@ -666,6 +666,11 @@ include('php/verificar_login.php');
 							<div class="row">
 								<div class="col-md-12">
 									<div class="main-title-tab">
+											<?php
+												if(isset($_SESSION['msg_e'])){
+													echo $_SESSION['msg_e'];	
+													unset($_SESSION['msg_e']);											
+											}?>
 										<h4><i class="uil uil-location-point"></i>Meus Endereços</h4>
 									</div>
 								</div>
@@ -697,7 +702,7 @@ include('php/verificar_login.php');
 													<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
 													<ul class="action-btns">
 														<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
-														<li><a href='php/delete.php?id_tel=" . $r_cliente['telefone'] . "' class='action-btn' title='Apagar' data-confirm='Deseja realmente apagar esse endereço?'><i class='uil uil-trash-alt'></i></a></li>
+														<?php echo"<li><a href='php/delete_end.php?id=" . $r_end['id'] . "' class='action-btn' title='Apagar' data-confirm='Deseja realmente apagar esse endereço?'>Apagar</a></li>" ?>
 													</ul>
 												<?php
 													};

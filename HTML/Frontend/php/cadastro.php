@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include("conexao.php");
 
 
@@ -39,14 +39,12 @@ if($logarray == $tel){
     $insert = mysqli_query($conexao,$query);
 
     if($insert){
-      echo"<script language='javascript' type='text/javascript'>
-      alert('Usuário cadastrado com sucesso!');window.location.
-      href='/mercado-paid-egua/HTML/frontend/sign_in.html'</script>";
+      $_SESSION['msg_l'] = "<p style='color:green;'>Cadastro feito com sucesso</p>";
+      header("Location: /mercado-paid-egua/HTML/frontend/sign_in.php");        
       die();
     }else{
-      echo"<script language='javascript' type='text/javascript'>
-      alert('Não foi possível cadastrar esse usuário');window.location
-      .href='/mercado-paid-egua/HTML/frontend/sign_up.html'</script>";
+      $_SESSION['msg_l'] = "<p style='color:green;'>Erro ao cadastrar</p>";
+      header("Location: /mercado-paid-egua/HTML/frontend/sign_in.php");
       die();
     }
   }

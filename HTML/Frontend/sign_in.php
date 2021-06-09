@@ -1,5 +1,8 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">	
 
 	<head>
 		<meta charset="utf-8">
@@ -45,6 +48,11 @@
 								<div class="form-inpts checout-address-step">
 									<form method="POST" action="php/login.php">
 										<div class="form-title"><h6>Entrar</h6></div>
+										<?php
+											if(isset($_SESSION['msg_l'])){
+												echo $_SESSION['msg_l'];	
+												unset($_SESSION['msg_l']);											
+											}?>
 										<div class="form-group pos_rel">
 											<input id="phone[number]" name="telefone" type="tel" placeholder="Digite seu Numero de Celular" class="form-control lgn_input" data-mask="(00) 00000-0000" required="">
 											<i class="uil uil-mobile-android-alt lgn_icon"></i>
