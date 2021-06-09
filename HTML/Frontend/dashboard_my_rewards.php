@@ -318,11 +318,11 @@ include('php/verificar_login.php');
 		<div class="top-header-group">
 			<div class="top-header">
 				<div class="res_main_logo">
-					<a href="index.html"><img src="images/logo-1.png" alt=""></a>
+					<a href="index.php"><img src="images/logo-1.png" alt=""></a>
 				</div>
 				<div class="main_logo" id="logo">
-					<a href="index.html"><img src="images/logo.png" alt=""></a>
-					<a href="index.html"><img class="logo-inverse" src="images/dark-logo.png" alt=""></a>
+					<a href="index.php"><img src="images/logo.png" alt=""></a>
+					<a href="index.php"><img class="logo-inverse" src="images/dark-logo.png" alt=""></a>
 				</div>
 				<div class="select_location">
 					<div class="ui inline dropdown loc-title">
@@ -406,7 +406,7 @@ include('php/verificar_login.php');
 											<a href="checkout.html" class="item channel_item page__links">Finalizar Pedido</a>
 											<a href="order_placed.html" class="item channel_item page__links">Pedidos Finalizados</a>
 											<a href="bill.html" class="item channel_item page__links">Imprimir Pedidos</a>
-											<a href="sign_in.html" class="item channel_item page__links">Entrar</a>
+											<a href="sign_in.php" class="item channel_item page__links">Entrar</a>
 											<a href="sign_up.html" class="item channel_item page__links">Cadastrar-se</a>
 											<a href="forgot_password.html" class="item channel_item page__links">Esqueceu sua senha?</a>
 											<a href="contact_us.html" class="item channel_item page__links">Fale Conosco</a>
@@ -439,7 +439,7 @@ include('php/verificar_login.php');
 					<div class="col-md-12">
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+								<li class="breadcrumb-item"><a href="index.php">Home</a></li>
 								<li class="breadcrumb-item active" aria-current="page">User Dashboard</li>
 							</ol>
 						</nav>
@@ -479,7 +479,7 @@ include('php/verificar_login.php');
 								<a href="dashboard_my_wallet.php" class="user-item"><i class="uil uil-wallet"></i>My Wallet</a>
 								<a href="dashboard_my_wishlist.php" class="user-item"><i class="uil uil-heart"></i>Shopping Wishlist</a>
 								<a href="dashboard_my_addresses.php" class="user-item"><i class="uil uil-location-point"></i>My Address</a>
-								<a href="sign_in.html" class="user-item"><i class="uil uil-exit"></i>Logout</a>
+								<a href="sign_in.php" class="user-item"><i class="uil uil-exit"></i>Logout</a>
 							</div>
 						</div>
 					</div>
