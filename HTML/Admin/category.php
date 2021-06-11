@@ -20,7 +20,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description-gambolthemes" content="">
 	<meta name="author-gambolthemes" content="">
-	<title>Gambo Supermarket Admin</title>
+	<title>Mercado Pai D'égua - admin</title>
 	<link href="css/styles.css" rel="stylesheet">
 	<link href="css/admin-style.css" rel="stylesheet">
 	
@@ -34,12 +34,10 @@
 		<nav class="sb-topnav navbar navbar-expand navbar-light bg-clr">
             <a class="navbar-brand logo-brand" href="index.php">Mercado Pai D'égua</a>
 			<button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
-            <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/index.php" class="frnt-link"><i class="fas fa-external-link-alt"></i>Inicio</a>
             <ul class="navbar-nav ml-auto mr-md-0">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-						<a class="dropdown-item admin-dropdown-item" href="change_password.html">Mudar Senha</a>
                         <a class="dropdown-item admin-dropdown-item" href="php/logout.php">Sair</a>
                     </div>
                 </li>
@@ -64,8 +62,8 @@
 							</a>
                             <div class="collapse" id="collapseCategories" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-									<a class="nav-link sub_nav_link" href="category.html">Todas as Categorias</a>
-									<a class="nav-link sub_nav_link" href="add_category.html">Adicionar Categoria</a>
+									<a class="nav-link sub_nav_link" href="category.php">Todas as Categorias</a>
+									<a class="nav-link sub_nav_link" href="add_category.php">Adicionar Categoria</a>
 								</nav>
                             </div>
 
@@ -77,23 +75,15 @@
 							</a>
                             <div class="collapse" id="collapseProducts" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-									<a class="nav-link sub_nav_link" href="products.html">Todos os Produtos</a>
-									<a class="nav-link sub_nav_link" href="add_product.html">Adicionar Produtos</a>
+									<a class="nav-link sub_nav_link" href="products.php">Todos os Produtos</a>
+									<a class="nav-link sub_nav_link" href="add_product.php">Adicionar Produtos</a>
 								</nav>
-                            </div>
-							<a class="nav-link" href="orders.html">
-								<div class="sb-nav-link-icon"><i class="fas fa-cart-arrow-down"></i></div>
-                                Ordens de compra
-							</a>
+                            </div>							
 							<a class="nav-link" href="customers.php">
 								<div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Usuários
 							</a>
-							<a class="nav-link" href="offers.html">
-								<div class="sb-nav-link-icon"><i class="fas fa-gift"></i></div>
-                                Ofertas
-							</a>
-
+							
                         </div>
                     </div>
                 </nav>
@@ -101,26 +91,26 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <h2 class="mt-30 page-title">Categories</h2>
+                        <h2 class="mt-30 page-title">Categorias</h2>
                         <ol class="breadcrumb mb-30">
-                            <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Categories</li>
+                            <li class="breadcrumb-item"><a href="index.php">Painel</a></li>
+                            <li class="breadcrumb-item active">Categorias</li>
                         </ol>
                         <div class="row justify-content-between">
 							<div class="col-lg-12">
-								<a href="add_category.html" class="add-btn hover-btn">Add New</a>
+								<a href="add_category.php" class="add-btn hover-btn">Adicionar Nova</a>
 							</div>
 							<div class="col-lg-3 col-md-4">
 								<div class="bulk-section mt-30">
 									<div class="input-group">
 										<select id="action" name="action" class="form-control">
-											<option selected>Bulk Actions</option>
-											<option value="1">Active</option>
-											<option value="2">Inactive</option>
-											<option value="3">Delete</option>
+											<option selected>Modificar em Massa</option>
+											<option value="1">Ativa</option>
+											<option value="2">Inativa</option>
+											<option value="3">Deletar</option>
 										</select>
 										<div class="input-group-append">
-											<button class="status-btn hover-btn" type="submit">Apply</button>
+											<button class="status-btn hover-btn" type="submit">Aplicar</button>
 										</div>
 									</div>
 								</div>
@@ -128,15 +118,15 @@
 							<div class="col-lg-5 col-md-6">
 								<div class="bulk-section mt-30">
 									<div class="search-by-name-input">
-										<input type="text" class="form-control" placeholder="Search">
+										<input type="text" class="form-control" placeholder="Pesquisar">
 									</div>
 									<div class="input-group">
 										<select id="categeory" name="categeory" class="form-control">
-											<option selected>Active</option>
-											<option value="1">Inactive</option>
+											<option selected>Ativa</option>
+											<option value="1">Inativa</option>
 										</select>
 										<div class="input-group-append">
-											<button class="status-btn hover-btn" type="submit">Search Category</button>
+											<button class="status-btn hover-btn" type="submit">Pesquisar Categoria</button>
 										</div>
 									</div>
 								</div>
@@ -144,7 +134,7 @@
 							<div class="col-lg-12 col-md-12">
 								<div class="card card-static-2 mt-30 mb-30">
 									<div class="card-title-2">
-										<h4>All Categories</h4>
+										<h4>Todas as Categorias</h4>
 									</div>
 									<div class="card-body-table">
 										<div class="table-responsive">
@@ -153,11 +143,11 @@
 													<tr>
 														<th style="width:60px"><input type="checkbox" class="check-all"></th>
 														<th style="width:60px">ID</th>
-														<th style="width:130px">Image</th>
-														<th>Name</th>
-														<th>Description</th>
+														<th style="width:130px">Imagem</th>
+														<th>Nome</th>
+														<th>Descrição</th>
 														<th>Status</th>
-														<th>Action</th>
+														<th>Ação</th>
 													</tr>
 												</thead>
 												<tbody>
@@ -367,11 +357,8 @@
                 <footer class="py-4 bg-footer mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted-1">© 2020 <b>Gambo Supermarket</b>. by <a href="https://themeforest.net/user/gambolthemes">Gambolthemes</a></div>
-                            <div class="footer-links">
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/privacy_policy.html">Privacy Policy</a>
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/term_and_conditions.html">Terms &amp; Conditions</a>
-                            </div>
+                            <div class="text-muted-1">© 2021 <b>Mercado Pai D'égua</b><a href="#"></a><a href="#"></a></div>
+                            
                         </div>
                     </div>
                 </footer>

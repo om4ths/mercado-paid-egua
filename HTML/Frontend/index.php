@@ -319,13 +319,7 @@ include('php/verificar_login.php');
 							<a href="#" class="offer-link"><i class="uil uil-phone-alt"></i>1800-000-000</a>
 						</li>
 						<li>
-							<a href="offers.html" class="offer-link"><i class="uil uil-gift"></i>Ofertas</a>
-						</li>
-						<li>
 							<a href="faq.html" class="offer-link"><i class="uil uil-question-circle"></i>Ajuda</a>
-						</li>
-						<li>
-							<a href="dashboard_my_wishlist.html" class="option_links" title="Wishlist"><i class='uil uil-heart icon_wishlist'></i><span class="noti_count1">3</span></a>
 						</li>
 						<li class="ui dropdown">
 							<a href="#" class="opts_account">
@@ -375,14 +369,8 @@ include('php/verificar_login.php');
 										<div class="menu dropdown_page">
 											<a href="dashboard_overview.php" class="item channel_item page__links">Conta</a>
 											<a href="about_us.html" class="item channel_item page__links">Sobre nós</a>
-											<a href="single_product_view.html" class="item channel_item page__links">Visualizar um Produto</a>
 											<a href="checkout.html" class="item channel_item page__links">Finalizar Pedido</a>
 											<a href="order_placed.html" class="item channel_item page__links">Pedidos Finalizados</a>
-											<a href="bill.html" class="item channel_item page__links">Imprimir Pedidos</a>
-											<a href="sign_in.html" class="item channel_item page__links">Entrar</a>
-											<a href="sign_up.html" class="item channel_item page__links">Cadastrar-se</a>
-											<a href="forgot_password.html" class="item channel_item page__links">Esqueceu sua senha?</a>
-											<a href="contact_us.html" class="item channel_item page__links">Fale Conosco</a>
 										</div>
 									</div>
 								</li>

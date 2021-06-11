@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description-gambolthemes" content="">
 	<meta name="author-gambolthemes" content="">
-	<title>Gambo Supermarket Admin</title>
+	<title>Mercado Pai D'égua Admin</title>
 	<link href="css/styles.css" rel="stylesheet">
 	<link href="css/admin-style.css" rel="stylesheet">
 	
@@ -20,12 +20,10 @@
 		<nav class="sb-topnav navbar navbar-expand navbar-light bg-clr">
             <a class="navbar-brand logo-brand" href="index.php">Mercado Pai D'égua</a>
 			<button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
-            <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/index.php" class="frnt-link"><i class="fas fa-external-link-alt"></i>Inicio</a>
             <ul class="navbar-nav ml-auto mr-md-0">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-						<a class="dropdown-item admin-dropdown-item" href="change_password.html">Mudar Senha</a>
                         <a class="dropdown-item admin-dropdown-item" href="php/logout.php">Sair</a>
                     </div>
                 </li>
@@ -67,19 +65,11 @@
 									<a class="nav-link sub_nav_link" href="add_product.html">Adicionar Produtos</a>
 								</nav>
                             </div>
-							<a class="nav-link" href="orders.html">
-								<div class="sb-nav-link-icon"><i class="fas fa-cart-arrow-down"></i></div>
-                                Ordens de compra
-							</a>
 							<a class="nav-link" href="customers.php">
 								<div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Usuários
 							</a>
-							<a class="nav-link" href="offers.html">
-								<div class="sb-nav-link-icon"><i class="fas fa-gift"></i></div>
-                                Ofertas
-							</a>
-
+							
                         </div>
                     </div>
                 </nav>
@@ -87,29 +77,28 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <h2 class="mt-30 page-title">Orders</h2>
+                        <h2 class="mt-30 page-title">Ordens</h2>
                         <ol class="breadcrumb mb-30">
-                            <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="orders.html">Orders</a></li>
-                            <li class="breadcrumb-item active">Order View</li>
+                            <li class="breadcrumb-item"><a href="index.php">Painel</a></li>
+                            <li class="breadcrumb-item active">Visualizar Ordem</li>
                         </ol>
                         <div class="row">
 							<div class="col-xl-12 col-md-12">
 								<div class="card card-static-2 mb-30">
 									<div class="card-title-2">
-										<h2 class="title1458">Invoice</h2>
-										<span class="order-id">Order #ORDR-123456</span> 
+										<h2 class="title1458">Fatura</h2>
+										<span class="order-id">Ordem #ORDR-123456</span> 
 									</div>
 									<div class="invoice-content">
 										<div class="row">
 											<div class="col-lg-6 col-sm-6">
 												<div class="ordr-date">
-													<b>Order Date :</b> 29 May 2020
+													<b>Data da Ordem:</b> 29 May 2020
 												</div>
 											</div>
 											<div class="col-lg-6 col-sm-6">
 												<div class="ordr-date right-text">
-													<b>Order Date :</b><br>
+													<b>Data da Ordem:</b><br>
 													#0000, St No. 8,<br>
 													Shahid Karnail Singh Nagar,<br>
 													MBD Mall,<br>
@@ -121,7 +110,7 @@
 											<div class="col-lg-12">
 												<div class="card card-static-2 mb-30 mt-30">
 													<div class="card-title-2">
-														<h4>Recent Orders</h4>
+														<h4>Ordens Recentes</h4>
 													</div>
 													<div class="card-body-table">
 														<div class="table-responsive">
@@ -130,8 +119,8 @@
 																	<tr>
 																		<th style="width:130px">#</th>
 																		<th>Item</th>
-																		<th style="width:150px" class="text-center">Price</th>
-																		<th style="width:150px" class="text-center">Qty</th>
+																		<th style="width:150px" class="text-center">Preço</th>
+																		<th style="width:150px" class="text-center">Qtd</th>
 																		<th style="width:100px" class="text-center">Total</th>
 																	</tr>
 																</thead>
@@ -172,7 +161,7 @@
 												</div>
 												<div class="order-total-dt">
 													<div class="order-total-left-text">
-														Delivery Fees
+														Taxas de Entrega
 													</div>
 													<div class="order-total-right-text">
 														$0
@@ -180,7 +169,7 @@
 												</div>
 												<div class="order-total-dt">
 													<div class="order-total-left-text fsz-18">
-														Total Amount
+														Total=
 													</div>
 													<div class="order-total-right-text fsz-18">
 														$27
@@ -192,7 +181,7 @@
 												<div class="select-status">
 													<label for="status">Status*</label>
 													<div class="status-active">
-														Pending
+														Pendente
 													</div>
 												</div>
 											</div>
@@ -206,11 +195,7 @@
                 <footer class="py-4 bg-footer mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted-1">© 2020 <b>Gambo Supermarket</b>. by <a href="https://themeforest.net/user/gambolthemes">Gambolthemes</a></div>
-                            <div class="footer-links">
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/privacy_policy.html">Privacy Policy</a>
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/term_and_conditions.html">Terms &amp; Conditions</a>
-                            </div>
+                            <div class="text-muted-1">© 2021 <b>Mercado Pai D'égua</b><a href="#"></a></div>
                         </div>
                     </div>
                 </footer>

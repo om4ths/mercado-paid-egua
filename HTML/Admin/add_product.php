@@ -11,7 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description-gambolthemes" content="">
 	<meta name="author-gambolthemes" content="">
-	<title>Gambo Supermarket Admin</title>
+	<title>Mercado Pai D'égua - admin</title>
 	<link href="css/styles.css" rel="stylesheet">
 	<link href="css/admin-style.css" rel="stylesheet">
 
@@ -40,15 +40,12 @@
 
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-light bg-clr">
-            <a class="navbar-brand logo-brand" href="index.html">Gambo Supermarket</a>
+            <a class="navbar-brand logo-brand" href="index.php">Mercado Pai D'égua</a>
 			<button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
-            <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/index.html" class="frnt-link"><i class="fas fa-external-link-alt"></i>Home</a>
             <ul class="navbar-nav ml-auto mr-md-0">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                        <a class="dropdown-item admin-dropdown-item" href="edit_profile.html">Edit Profile</a>
-						<a class="dropdown-item admin-dropdown-item" href="change_password.html">Change Password</a>
                         <a class="dropdown-item admin-dropdown-item" href="login.html">Logout</a>
                     </div>
                 </li>
@@ -73,8 +70,8 @@
 							</a>
                             <div class="collapse" id="collapseCategories" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-									<a class="nav-link sub_nav_link" href="category.html">Todas as Categorias</a>
-									<a class="nav-link sub_nav_link" href="add_category.html">Adicionar Categoria</a>
+									<a class="nav-link sub_nav_link" href="category.php">Todas as Categorias</a>
+									<a class="nav-link sub_nav_link" href="add_category.php">Adicionar Categoria</a>
 								</nav>
                             </div>
 
@@ -86,23 +83,15 @@
 							</a>
                             <div class="collapse" id="collapseProducts" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-									<a class="nav-link sub_nav_link" href="products.html">Todos os Produtos</a>
-									<a class="nav-link sub_nav_link" href="add_product.html">Adicionar Produtos</a>
+									<a class="nav-link sub_nav_link" href="products.php">Todos os Produtos</a>
+									<a class="nav-link sub_nav_link" href="add_product.php">Adicionar Produtos</a>
 								</nav>
-                            </div>
-							<a class="nav-link" href="orders.html">
-								<div class="sb-nav-link-icon"><i class="fas fa-cart-arrow-down"></i></div>
-                                Ordens de compra
-							</a>
+                            </div>							
 							<a class="nav-link" href="customers.php">
 								<div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Usuários
 							</a>
-							<a class="nav-link" href="offers.html">
-								<div class="sb-nav-link-icon"><i class="fas fa-gift"></i></div>
-                                Ofertas
-							</a>
-
+						
                         </div>
                     </div>
                 </nav>
@@ -110,11 +99,11 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <h2 class="mt-30 page-title">Productos</h2>
+                        <h2 class="mt-30 page-title">Produtos</h2>
                         <ol class="breadcrumb mb-30">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="products.html">Productos</a></li>
-                            <li class="breadcrumb-item active">Adicionar Produto</li>
+                            <li class="breadcrumb-item"><a href="index.php">Painel</a></li>
+                            <li class="breadcrumb-item"><a href="products.php">Produtos</a></li>
+                            <li class="breadcrumb-item active">Adicionar Produtos</li>
                         </ol>
                         <div class="row">
 							<div class="col-lg-6 col-md-6">
@@ -219,11 +208,7 @@
                 <footer class="py-4 bg-footer mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted-1">© 2021 <b>Mercado Pai D'égua</b>. by <a href="https://themeforest.net/user/gambolthemes">Gambolthemes</a></div>
-                            <div class="footer-links">
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/privacy_policy.html">Política de Privacidade</a>
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/term_and_conditions.html">Termos &amp; Condições</a>
-                            </div>
+                            <div class="text-muted-1">© 2021 <b>Mercado Pai D'égua</b><a href="#"></a></div>                          
                         </div>
                     </div>
                 </footer>

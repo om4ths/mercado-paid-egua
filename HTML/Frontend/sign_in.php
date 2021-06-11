@@ -68,7 +68,7 @@ session_start();
 									<a href="forgot_password.html">Esqueci Minha Senha</a>
 								</div>
 								<div class="signup-link">
-									<p>Não possui uma Conta?  <a href="sign_up.html">Cadastre-se</a></p>
+									<p>Não possui uma Conta?  <a href="sign_up.php">Cadastre-se</a></p>
 								</div>
 							</div>
 						</div>

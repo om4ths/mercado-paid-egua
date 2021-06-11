@@ -12,7 +12,7 @@ include('php/dados_cliente.php');
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description-gambolthemes" content="">
 	<meta name="author-gambolthemes" content="">
-	<title>Gambo Supermarket Admin</title>
+	<title>Mercado Pai D'égua Admin</title>
 	<link href="css/styles.css" rel="stylesheet">
 	<link href="css/admin-style.css" rel="stylesheet">
 	
@@ -27,12 +27,10 @@ include('php/dados_cliente.php');
 		<nav class="sb-topnav navbar navbar-expand navbar-light bg-clr">
             <a class="navbar-brand logo-brand" href="index.php">Mercado Pai D'égua</a>
 			<button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
-            <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/index.php" class="frnt-link"><i class="fas fa-external-link-alt"></i>Inicio</a>
             <ul class="navbar-nav ml-auto mr-md-0">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-						<a class="dropdown-item admin-dropdown-item" href="change_password.html">Mudar Senha</a>
                         <a class="dropdown-item admin-dropdown-item" href="php/logout.php">Sair</a>
                     </div>
                 </li>
@@ -74,19 +72,11 @@ include('php/dados_cliente.php');
 									<a class="nav-link sub_nav_link" href="add_product.html">Adicionar Produtos</a>
 								</nav>
                             </div>
-							<a class="nav-link" href="orders.html">
-								<div class="sb-nav-link-icon"><i class="fas fa-cart-arrow-down"></i></div>
-                                Ordens de compra
-							</a>
 							<a class="nav-link" href="customers.php">
 								<div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Usuários
 							</a>
-							<a class="nav-link" href="offers.html">
-								<div class="sb-nav-link-icon"><i class="fas fa-gift"></i></div>
-                                Ofertas
-							</a>
-
+						
                         </div>
                     </div>
                 </nav>
@@ -94,10 +84,10 @@ include('php/dados_cliente.php');
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <h2 class="mt-30 page-title">Customers</h2>
+                        <h2 class="mt-30 page-title">Usuários</h2>
                         <ol class="breadcrumb mb-30">
-                            <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Customers</li>
+                            <li class="breadcrumb-item"><a href="index.php">Painel</a></li>
+                            <li class="breadcrumb-item active">Usuários</li>
                         </ol>
                         <div class="row">
 							<div class="col-lg-12 col-md-12">
@@ -163,11 +153,7 @@ include('php/dados_cliente.php');
                 <footer class="py-4 bg-footer mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted-1">© 2020 <b>Gambo Supermarket</b>. by <a href="https://themeforest.net/user/gambolthemes">Gambolthemes</a></div>
-                            <div class="footer-links">
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/privacy_policy.html">Privacy Policy</a>
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/term_and_conditions.html">Terms &amp; Conditions</a>
-                            </div>
+                            <div class="text-muted-1">© 2021 <b>Mercado Pai D'égua</b><a href="#"></a></div>
                         </div>
                     </div>
                 </footer>

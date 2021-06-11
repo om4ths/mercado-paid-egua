@@ -1,33 +1,42 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+include('php/verificar_login.php');
+?>
+<!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
-		<meta name="description" content="Gambolthemes">
-		<meta name="author" content="Gambolthemes">		
-		<title>Gambo - Blog Detail View</title>
-		
-		<!-- Favicon Icon -->
-		<link rel="icon" type="image/png" href="images/fav.png">
-		
-		<!-- Stylesheets -->
-		<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-		<link href='vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
-		<link href="css/style.css" rel="stylesheet">
-		<link href="css/responsive.css" rel="stylesheet">
-		<link href="css/night-mode.css" rel="stylesheet">
-		<link href="css/step-wizard.css" rel="stylesheet">
-		
-		<!-- Vendor Stylesheets -->
-		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-		<link href="vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
-		<link href="vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
-		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="vendor/semantic/semantic.min.css">	
-		
-	</head>
+<?php
+		include('php/dados_cliente.php');
+	?>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=9">
+	<meta name="description" content="Gambolthemes">
+	<meta name="author" content="Gambolthemes">
+	<title>Mercado Pai D'égua - Painel</title>
+
+	<!-- Favicon Icon -->
+	<link rel="icon" type="image/png" href="images/logo-1.png">
+
+	<!-- Stylesheets -->
+	<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet">
+	<link href='vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+	<link href="css/night-mode.css" rel="stylesheet">
+	<link href="css/step-wizard.css" rel="stylesheet">
+
+	<!-- Vendor Stylesheets -->
+	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+	<link href="vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
+	<link href="vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="vendor/semantic/semantic.min.css">
+
+
+</head>
 
 <body>
 	<!-- modelo das categorias-->
@@ -436,133 +445,158 @@
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.php">Home</a></li>
-								<li class="breadcrumb-item"><a href="our_blog.html">Our Blog</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Blog Detail View</li>
+								<li class="breadcrumb-item active" aria-current="page">Conta</li>
 							</ol>
 						</nav>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="blog-dt-vw banner-blog banner.visible parallax">
-			<div class="blog-inner">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12 col-md-12">
-							<h1>Blog Title Here</h1>
-							<div class="extra-info">
-								<span class="entry-date">Tuesday, May 19, 2020</span>
-								<div class="single-post-cat">
-									<a href="#">Food &amp; Lifestyle</a>
-								</div>
+		<div class="dashboard-group">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="user-dt">
+							<div class="user-img">
+								<?php 
+								if(isset($resultado['foto'])){
+									echo "<img src=' ".$resultado['foto']." ' alt=''>";									
+								}else{
+									echo "<img src='images/avatar/img-5.jpg' alt=''>";
+								};								 								
+								?>
+								<div class="img-add">
+								<form method="POST" action="php/img_cliente.php" enctype="multipart/form-data"> 
+									<input type="file" name="c_img" id="file">
+									<label for="file"><i class="uil uil-camera-plus"></i></label>
+									<input type="submit" value="Enviar arquivo" />
+									</div>
+								</form > 
 							</div>
+							<h4>
+								<?php echo$resultado['nome']?>
+							</h4>
+							<p>
+								<?php echo$resultado['telefone']?><a href="#"><i class="uil uil-edit"></i></a>
+							</p>
+							<div class="earn-points"><img src="images/Dollar.svg" alt="">Pontos : <span>20</span></div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="blog-single-dts-text">
+		<div class="">
 			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-lg-10">
-						<div class="bb-des12">
-							<div class="blog-des-dt142">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum turpis vitae facilisis tempus. Donec in blandit risus, eget pretium mauris. Aliquam nec venenatis massa. Ut vel nulla id velit dictum rutrum nec vel ex. Phasellus sit amet faucibus massa, in feugiat augue. Maecenas eget dapibus turpis, a finibus justo. Suspendisse pretium lorem non lorem faucibus, non sagittis nisi finibus. Sed efficitur massa ac nibh condimentum interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse luctus, ex ut congue interdum, nibh turpis malesuada orci, vel vulputate arcu velit condimentum orci. Ut sed dictum lacus.</p>
-								<ul class="joby-list-dt mt-21">
-									<li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
-									<li><p>Sed ut dui et tellus euismod accumsan.</p></li>
-									<li><p>Aenean sed neque vitae nisi commodo ultricies sed ut sapien.</p></li>
-									<li><p>Sed euismod urna vel lacus porta imperdiet.</p></li>
-									<li><p>Proin id neque condimentum, eleifend ipsum sed, luctus nisi.</p></li>
-									<li><p>Ut eu sem eget dolor bibendum tempor.</p></li>
-									<li><p>Sed scelerisque purus id nunc semper, in elementum quam fringilla.</p></li>
-									<li><p>Donec pulvinar enim vel convallis egestas.</p></li>
-								</ul>
-								<p class="mt-21">Sed imperdiet erat eget nunc cursus dictum. Maecenas urna nisl, lacinia sit amet convallis quis, mattis eu ligula. Quisque ultricies lacinia volutpat. Integer malesuada vehicula blandit. Maecenas commodo scelerisque maximus. Nam et metus cursus, congue mi a, iaculis arcu. Etiam quis porta ipsum, nec sodales dui. Fusce gravida odio sed leo luctus, sit amet sollicitudin dui laoreet. Nunc vestibulum risus in varius venenatis. Quisque mattis rhoncus erat et feugiat. Aenean vitae tristique quam. Quisque feugiat risus lorem, eget viverra eros auctor a. Sed nec lorem vel risus ornare maximus. Maecenas id sodales massa, id venenatis odio. Integer aliquet dolor vel lectus mollis condimentum.</p>
-								<p class="mt-21">Proin lacinia risus vel lectus tempor dapibus vitae quis tellus. Donec ligula mi, suscipit in pulvinar at, commodo eu ipsum. Pellentesque sed neque ut ante feugiat semper. Donec consectetur id odio tempus blandit. Nullam sit amet nunc tristique magna venenatis fermentum ac vel felis. Nam eget elit mattis dui fringilla vehicula nec eu quam. Nam convallis risus ac mi finibus, a venenatis enim congue.</p>
+				<div class="row">
+					<div class="col-lg-3 col-md-4">
+						<div class="left-side-tabs">
+							<div class="dashboard-left-links">
+								<a href="dashboard_overview.php" class="user-item active"><i
+										class="uil uil-apps"></i>Visão geral</a>
+								<a href="dashboard_my_orders.php" class="user-item"><i class="uil uil-box"></i>Ordens de
+									compra</a>
+								<a href="dashboard_my_rewards.php" class="user-item"><i class="uil uil-gift"></i>Minhas
+									recompensas</a>
+								<a href="dashboard_my_wallet.php" class="user-item"><i
+										class="uil uil-wallet"></i>Carteira</a>
+								<a href="dashboard_my_wishlist.php" class="user-item"><i class="uil uil-heart"></i>Lista
+									de desejos</a>
+								<a href="dashboard_my_addresses.php" class="user-item"><i
+										class="uil uil-location-point"></i>Endereço</a>
+								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="user-item"><i
+										class="uil uil-exit"></i>Sair</a>
 							</div>
-							<div class="date-icons-group vew1458">
-								<div class="blog-time sz-14"></div>
-								<ul class="like-share-icons">
-									<li>
-										<a href="#" class="like-share ss18"><i class="uil uil-thumbs-up"></i><span>5</span></a>
-									</li>
-									<li>
-										<a href="#" class="like-share ss18"><i class="uil uil-share-alt"></i></a>
-									</li>
-								</ul>
-							</div>
-							<div class="all-comment">
-								<h2>Comments 2</h2>
-								<div class="cmmnt_item">
-									<div class="cmmnt_usr_dt">
-										<img src="images/avatar/img-1.jpg" alt="">
-										<div class="rv1458">
-											<h4 class="tutor_name1">John Doe</h4>
-											<span class="time_145">2 hour ago</span>
-										</div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-8">
+						<div class="dashboard-right">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="main-title-tab">
+										<h4><i class="uil uil-apps"></i>Visão geral</h4>
 									</div>
-									<p class="rvds10">Nam gravida elit a velit rutrum, eget dapibus ex elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce lacinia, nunc sit amet tincidunt venenatis.</p>
+									<div class="welcome-text">
+										<h2>Oi!
+											<?php echo$resultado['nome']?>
+										</h2>
+									</div>
 								</div>
-								<div class="cmmnt_item">
-									<div class="cmmnt_usr_dt">
-										<img src="images/avatar/img-8.jpg" alt="">
-										<div class="rv1458">
-											<h4 class="tutor_name1">Rock Smith</h4>
-											<span class="time_145">3 hour ago</span>
+								<div class="col-lg-6 col-md-12">
+									<div class="pdpt-bg">
+										<div class="pdpt-title">
+											<h4>Minhas recompensas</h4>
 										</div>
+										<div class="ddsh-body">
+											<h2>6 Recompensas</h2>
+											<ul>
+												<li>
+													<a href="#" class="small-reward-dt hover-btn">Ganhou $2</a>
+												</li>
+												<li>
+													<a href="#" class="small-reward-dt hover-btn">Ganhou 40% Off</a>
+												</li>
+												<li>
+													<a href="#" class="small-reward-dt hover-btn">Dinheiro de volta
+														$1</a>
+												</li>
+												<li>
+													<a href="#" class="rewards-link5">+Mais</a>
+												</li>
+											</ul>
+										</div>
+										<a href="#" class="more-link14">Recompensas e detalhes <i
+												class="uil uil-angle-double-right"></i></a>
 									</div>
-									<p class="rvds10">Nam gravida elit a velit rutrum, eget dapibus ex elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce lacinia, nunc sit amet tincidunt venenatis.</p>
 								</div>
-							</div>
-							<div class="leave-comment">
-								<h2>Leave a Reply</h2>
-								<span>Your email address and phone number will not be published. Required fields are marked *</span>
-								<form>	
-									<div class="row">
-										<div class="col-lg-4">
-											<div class="form-group mt-1">
-												<label class="control-label">Full Name*</label>
-												<div class="ui search focus">
-													<div class="ui left icon input swdh11 swdh19">
-														<input class="prompt srch_explore" type="text" name="fullname" value="" id="full[name]" required="" maxlength="64" placeholder="Your Full Name">															
+								<div class="col-lg-6 col-md-12">
+									<div class="pdpt-bg">
+										<div class="pdpt-title">
+											<h4>minhas ordens</h4>
+										</div>
+										<div class="ddsh-body">
+											<h2>2 Compras recentes</h2>
+											<ul class="order-list-145">
+												<li>
+													<div class="smll-history">
+														<div class="order-title">2 Items <span data-inverted=""
+																data-tooltip="2kg broccoli, 1kg Apple"
+																data-position="top center">?</span></div>
+														<div class="order-status">A caminho</div>
+														<p>$22</p>
 													</div>
-												</div>
-											</div>
+												</li>
+											</ul>
 										</div>
-										<div class="col-lg-4">
-											<div class="form-group mt-1">
-												<label class="control-label">Email Address*</label>
-												<div class="ui search focus">
-													<div class="ui left icon input swdh11 swdh19">
-														<input class="prompt srch_explore" type="email" name="emailaddress" value="" id="email[address]" required="" placeholder="Your Email Address">															
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-4">
-											<div class="form-group mt-1">
-												<label class="control-label">Phone Number*</label>
-												<div class="ui search focus">
-													<div class="ui left icon input swdh11 swdh19">
-														<input class="prompt srch_explore" type="text" name="phonenumber" value="" id="phone[number]" required="" placeholder="Your Phone Number">															
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-12">
-											<div class="form-group mt-1">	
-												<div class="field">
-													<label class="control-label">Add Comment*</label>
-													<textarea rows="2" class="form-control" placeholder="Add your comment"></textarea>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-12">
-											<button class="post-btn hover-btn" type="submit">Post Comment</button>
-										</div>
+										<a href="#" class="more-link14">Todos os pedidos <i
+												class="uil uil-angle-double-right"></i></a>
 									</div>
-								</form>
+								</div>
+								<div class="col-lg-12 col-md-12">
+									<div class="pdpt-bg">
+										<div class="pdpt-title">
+											<h4>Carteira</h4>
+										</div>
+										<div class="wllt-body">
+											<h2>Creditos $100</h2>
+											<ul class="wallet-list">
+												<li>
+													<a href="#" class="wallet-links14"><i
+															class="uil uil-card-atm"></i>Metodos de pagamento</a>
+												</li>
+												<li>
+													<a href="#" class="wallet-links14"><i class="uil uil-gift"></i>3
+														oferece Ativo</a>
+												</li>
+												<li>
+													<a href="#" class="wallet-links14"><i
+															class="uil uil-coins"></i>Ganhando pontos</a>
+												</li>
+											</ul>
+										</div>
+										<a href="#" class="more-link14">Recompensas e detalhes <i
+												class="uil uil-angle-double-right"></i></a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -579,7 +613,8 @@
 					<div class="col-md-6 col-sm-6">
 						<ul class="call-email-alt">
 							<li><a href="#" class="callemail"><i class="uil uil-dialpad-alt"></i>1800-000-000</a></li>
-							<li><a href="#" class="callemail"><i class="uil uil-envelope-alt"></i>info@mercadopaidegua.com</a></li>
+							<li><a href="#" class="callemail"><i
+										class="uil uil-envelope-alt"></i>info@mercadopaidegua.com</a></li>
 						</ul>
 					</div>
 					<div class="col-md-6 col-sm-6">
@@ -590,7 +625,7 @@
 								<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
 							</ul>
 						</div>
-					</div>				
+					</div>
 				</div>
 			</div>
 		</div>
@@ -634,32 +669,33 @@
 							<h4>Onde Atendemos</h4>
 							<ul>
 								<li><a href="#">Castanhal</a></li>
-								
+
 							</ul>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-6">
 						<div class="second-row-item-app">
-							
+
 						</div>
 						<div class="second-row-item-payment">
 							<h4>Métodos de Pagamento</h4>
 							<div class="footer-payments">
 								<ul id="paypal-gateway" class="financial-institutes">
 									<li class="financial-institutes__logo">
-									  <img alt="Visa" title="Visa" src="images/footer-icons/pyicon-6.svg">
+										<img alt="Visa" title="Visa" src="images/footer-icons/pyicon-6.svg">
 									</li>
 									<li class="financial-institutes__logo">
-									  <img alt="Visa" title="Visa" src="images/footer-icons/pyicon-1.svg">
+										<img alt="Visa" title="Visa" src="images/footer-icons/pyicon-1.svg">
 									</li>
 									<li class="financial-institutes__logo">
-									  <img alt="MasterCard" title="MasterCard" src="images/footer-icons/pyicon-2.svg">
+										<img alt="MasterCard" title="MasterCard" src="images/footer-icons/pyicon-2.svg">
 									</li>
 									<li class="financial-institutes__logo">
-									  <img alt="American Express" title="American Express" src="images/footer-icons/pyicon-3.svg">
+										<img alt="American Express" title="American Express"
+											src="images/footer-icons/pyicon-3.svg">
 									</li>
 									<li class="financial-institutes__logo">
-									  <img alt="Discover" title="Discover" src="images/footer-icons/pyicon-4.svg">
+										<img alt="Discover" title="Discover" src="images/footer-icons/pyicon-4.svg">
 									</li>
 								</ul>
 							</div>
@@ -667,8 +703,10 @@
 						<div class="second-row-item-payment">
 							<h4>Newsletter</h4>
 							<div class="newsletter-input">
-								<input id="email" name="email" type="text" placeholder="Email Address" class="form-control input-md" required="">
-								<button class="newsletter-btn hover-btn" type="submit"><i class="uil uil-telegram-alt"></i></button>
+								<input id="email" name="email" type="text" placeholder="Email Address"
+									class="form-control input-md" required="">
+								<button class="newsletter-btn hover-btn" type="submit"><i
+										class="uil uil-telegram-alt"></i></button>
 							</div>
 						</div>
 					</div>
@@ -689,7 +727,8 @@
 							</ul>
 						</div>
 						<div class="copyright-text">
-							<i class="uil uil-copyright"></i>Copyright 2020 <b>Mercado Pai D'égua</b> . All rights reserved
+							<i class="uil uil-copyright"></i>Copyright 2020 <b>Mercado Pai D'égua</b> . All rights
+							reserved
 						</div>
 					</div>
 				</div>
@@ -708,7 +747,8 @@
 	<script src="js/product.thumbnail.slider.js"></script>
 	<script src="js/offset_overlay.js"></script>
 	<script src="js/night-mode.js"></script>
-	
-	
+
+
 </body>
+
 </html>

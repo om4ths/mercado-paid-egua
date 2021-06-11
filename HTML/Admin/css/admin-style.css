@@ -16,11 +16,11 @@
     height: 4px;
     border: 1px solid transparent;
     background-clip: padding-box;
-    -webkit-border-radius: 7px;
-    background-color: rgba(245,93,44,.8);
+    border-radius: 7px;
+    background-color: #ff0404;
     -webkit-box-shadow: inset -1px -1px 0 rgba(0,0,0,.05), inset 1px 1px 0 rgba(0,0,0,.05);
+        box-shadow: inset -1px -1px 0 rgba(0,0,0,.05), inset 1px 1px 0 rgba(0,0,0,.05);
 }
-
 /* --- Main Css --- */
 
 .admin-dropdown-item {
@@ -33,7 +33,7 @@
 
 .admin-dropdown-item:focus {
     color: #fff !important;
-	background-color: #f55d2c !important;
+	background-color: #ff0404 !important;
 }
 
 .sb-nav-fixed .sb-topnav {
@@ -98,7 +98,7 @@
 }
 
 .frnt-link:hover {
-    color: #f55d2c !important;
+    color: #ff0404 !important;
 }
 
 .page-title {
@@ -110,7 +110,7 @@
 }
 
 .breadcrumb-item.active {
-    color: #f55d2c !important;
+    color: #ff0404 !important;
 }
 
 .breadcrumb-item {
@@ -124,7 +124,7 @@
 }
 
 .breadcrumb-item a:hover {
-    color: #f55d2c !important;
+    color: #ff0404 !important;
 	text-decoration: none !important;
 }
 
@@ -286,8 +286,8 @@
 .view-btn {
     margin-left: auto;
     padding: 5px 15px;
-    border: 1px solid #f55d2c;
-    background: #f55d2c;
+    border: 1px solid #ff0404;
+    background: #ff0404;
     color: #fff;
     border-radius: 5px;
 	font-size: 14px;
@@ -374,7 +374,7 @@ input[type=checkbox], input[type=radio] {
 
 .badge-status {
     color: #fff;
-    background-color: #f55d2c;
+    background-color: #ff0404;
 }
 
 .badge-item {
@@ -392,15 +392,15 @@ input[type=checkbox], input[type=radio] {
 
 .hover-btn:hover {
 	text-decoration: none !important;
-	background: #f55d2c;
+	background: #ff0404;
 	color: #fff !important;
 	transition: all .2s ease-in-out;
 	-webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
-	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
-    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
+	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), #ff0404);
+    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), #ff0404);
 }
 
 .action-btns {
@@ -419,7 +419,7 @@ input[type=checkbox], input[type=radio] {
 }
 
 .action-btns a:hover {
-	color: #f55d2c !important;
+	color: #ff0404 !important;
 }
 
 .footer-links a {
@@ -430,7 +430,7 @@ input[type=checkbox], input[type=radio] {
 }
 
 .footer-links a:hover {
-	color: #f55d2c !important;
+	color: #ff0404 !important;
 	text-decoration: none !important;
 }
 
@@ -561,7 +561,7 @@ input[type=checkbox], input[type=radio] {
     color: #fff;
     text-align: center;
     white-space: nowrap;
-    background-color: #f55d2c;
+    background-color: #ff0404;
     border: 0;
     border-radius: 3px;
 }
@@ -569,7 +569,7 @@ input[type=checkbox], input[type=radio] {
 .status-active {
     font-weight: 600;
     font-size: 18px;
-    color: #f55d2c;
+    color: #ff0404;
 }
 
 /* --- All News --- */
@@ -578,7 +578,7 @@ input[type=checkbox], input[type=radio] {
     font-size: 14px;
     font-weight: 500;
     color: #fff;
-    background: #f55d2c;
+    background: #ff0404;
     padding: 10px 20px;
     display: inline-block;
     height: 40px;
@@ -613,17 +613,14 @@ input[type=checkbox], input[type=radio] {
 
 input[type=checkbox]:checked:before {
     margin: 1px 0 0 -1px;
-    color: #f55d2c;
+    color: #ff0404;
     content: "";
     font: normal normal normal 12px/1 FontAwesome;
 }
-
 input[type=checkbox]:checked:before, input[type=checkbox]:checked:before, input[type=radio]:checked:before, input[type=radio]:checked:before {
     float: left;
-    display: inline-block;
     vertical-align: middle;
     width: 16px;
-    speak: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -778,12 +775,12 @@ div#editor {
 }
 
 .custom-control-input:checked~.custom-control-label::before {
-    border-color: #f55d2c !important;
-    background-color: #f55d2c !important;
+    border-color: #ff0404 !important;
+    background-color: #ff0404 !important;
 }
 
 .save-btn {
-    background: #f55d2c;
+    background: #ff0404;
     border: 0;
     color: #fff;
     font-size: 14px;
@@ -822,7 +819,7 @@ div#editor {
 	transition: all 0.3s;
 	vertical-align: middle;
 	margin: 0;
-    background: #f55d2c;
+    background: #ff0404;
     color: #fff;
     height: 40px;
     border-radius: 3px;
@@ -833,7 +830,7 @@ div#editor {
 }
 
 .img-add [type="file"] + label:hover {
-	background: #f55d2c;
+	background: #ff0404;
 	color: #fff !important;
 	transition: all .2s ease-in-out;
 	-webkit-transition: all 0.2s ease-in-out;
@@ -881,7 +878,7 @@ div#editor {
     padding: 0.3rem .75rem !important;
     color: #fff !important;
     content: "Browse" !important;
-    background-color: #f55d2c !important;
+    background-color: #ff0404 !important;
     border-radius: 0 3px 3px 0 !important;
 }
 
@@ -1173,7 +1170,7 @@ div#editor {
 }
 
 .tail-select .select-dropdown ul li.dropdown-option.selected {
-    color: #f55d2c !important;
+    color: #ff0404 !important;
     background-color: transparent;
 }
 
@@ -1236,7 +1233,7 @@ div#editor {
 .panel-title > a:active,
 .panel-title > a:focus  {
     text-decoration:none;
-	color: #f55d2c !important;
+	color: #ff0404 !important;
 }
 
 .control-label {
@@ -1372,7 +1369,7 @@ div#editor {
 }
 
 .menu-delete:hover {
-    color: #f55d2c !important;
+    color: #ff0404 !important;
     text-decoration: none !important;
 }
 
@@ -1431,11 +1428,11 @@ div#editor {
 }
 
 .user-item:hover i { 
-	color: #f55d2c !important;
+	color: #ff0404 !important;
 }
 
 .user-item.active { 
-	background: #f55d2c;
+	background: #ff0404;
 	color: #fff !important;
 	transition: all .2s ease-in-out;
 	-webkit-transition: all 0.2s ease-in-out;
@@ -1476,7 +1473,7 @@ div#editor {
 }
 
 .img-delete:hover {
-    color: #f55d2c !important;
+    color: #ff0404 !important;
 }
 
 .site-logo-1 {
@@ -1508,7 +1505,7 @@ div#editor {
 }
 
 .download-btn {
-    background: #f55d2c;
+    background: #ff0404;
     color: #fff;
     border: 0;
     font-size: 12px;
@@ -1518,7 +1515,7 @@ div#editor {
 }
 
 .bg-sign {
-	background: #f55d2c;
+	background: #ff0404;
 	transition: all .2s ease-in-out;
 	-webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
@@ -1540,7 +1537,7 @@ div#editor {
 
 .btn-sign {
     color: #fff !important;
-    background-color: #f55d2c !important;
+    background-color: #ff0404 !important;
     border-color:0 !important;
 	width: 100% !important;
 }

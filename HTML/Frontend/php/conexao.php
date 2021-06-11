@@ -1,4 +1,5 @@
 <?php
+
 $userbd = ('localhost');
 $usuario = ('root');
 $senha = ('');
