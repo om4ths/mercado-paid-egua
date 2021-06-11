@@ -523,15 +523,11 @@ include('php/verificar_login.php');
 						<li>
 							<a href="#" class="offer-link"><i class="uil uil-phone-alt"></i>1800-000-000</a>
 						</li>
-						<li>
-							<a href="offers.html" class="offer-link"><i class="uil uil-gift"></i>Ofertas</a>
-						</li>
+						
 						<li>
 							<a href="faq.html" class="offer-link"><i class="uil uil-question-circle"></i>Ajuda</a>
 						</li>
-						<li>
-							<a href="dashboard_my_wishlist.html" class="option_links" title="Wishlist"><i class='uil uil-heart icon_wishlist'></i><span class="noti_count1">3</span></a>
-						</li>
+						
 						<li class="ui dropdown">
 							<a href="#" class="opts_account">
 								<img src="images/avatar/img-5.jpg" alt="">
@@ -549,10 +545,8 @@ include('php/verificar_login.php');
 								</div>
 								<a href="dashboard_overview.php" class="item channel_item"><i class="uil uil-apps icon__1"></i>Perfil</a>
 								<a href="dashboard_my_orders.php" class="item channel_item"><i class="uil uil-box icon__1"></i>Ordens de compra</a>
-								<a href="dashboard_my_wishlist.php" class="item channel_item"><i class="uil uil-heart icon__1"></i>Lista de desejos</a>
 								<a href="dashboard_my_wallet.php" class="item channel_item"><i class="uil uil-usd-circle icon__1"></i>Carteira</a>
 								<a href="dashboard_my_addresses.php" class="item channel_item"><i class="uil uil-location-point icon__1"></i>Endereço</a>
-								<a href="offers.html" class="item channel_item"><i class="uil uil-gift icon__1"></i>Ofertas</a>
 								<a href="faq.html" class="item channel_item"><i class="uil uil-info-circle icon__1"></i>Perguntas frequentes</a>
 								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="item channel_item"><i class="uil uil-lock-alt icon__1"></i>Sair</a>
 							</div>
@@ -653,9 +647,7 @@ include('php/verificar_login.php');
 							<div class="dashboard-left-links">
 								<a href="dashboard_overview.php" class="user-item"><i class="uil uil-apps"></i>Visão geral</a>
 								<a href="dashboard_my_orders.php" class="user-item"><i class="uil uil-box"></i>Ordens de compra</a>
-								<a href="dashboard_my_rewards.php" class="user-item"><i class="uil uil-gift"></i>Minhas recompensas</a>
 								<a href="dashboard_my_wallet.php" class="user-item"><i class="uil uil-wallet"></i>Carteira</a>
-								<a href="dashboard_my_wishlist.php" class="user-item"><i class="uil uil-heart"></i>Lista de desejos</a>
 								<a href="dashboard_my_addresses.php" class="user-item active"><i class="uil uil-location-point"></i>Endereço</a>
 								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="user-item"><i class="uil uil-exit"></i>Sair</a>
 							</div>
@@ -788,8 +780,8 @@ include('php/verificar_login.php');
 				<div class="row">
 					<div class="col-md-6 col-sm-6">
 						<ul class="call-email-alt">
-							<li><a href="#" class="callemail"><i class="uil uil-dialpad-alt"></i>1800-000-000</a></li>
-							<li><a href="#" class="callemail"><i class="uil uil-envelope-alt"></i>info@mercadopaidegua.com</a></li>
+							<li><a href="#" class="callemail"><i class="uil uil-dialpad-alt"></i>(91)982832-2055</a></li>
+							<li><a href="#" class="callemail"><i class="uil uil-envelope-alt"></i>mercadopaidegua@gmail.com</a></li>
 						</ul>
 					</div>
 					<div class="col-md-6 col-sm-6">
@@ -800,7 +792,7 @@ include('php/verificar_login.php');
 								<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
 							</ul>
 						</div>
-					</div>				
+					</div>
 				</div>
 			</div>
 		</div>
@@ -829,10 +821,7 @@ include('php/verificar_login.php');
 							<ul>
 								<li><a href="about_us.html">Sobre Nós</a></li>
 								<li><a href="shop_grid.html">Produtos em Destaque</a></li>
-								<li><a href="offers.html">Ofertas</a></li>
-								<li><a href="our_blog.html">Blog</a></li>
 								<li><a href="faq.html">FAQ</a></li>
-								<li><a href="career.html">Trabalhe Conosco</a></li>
 								<li><a href="contact_us.html">Fale Conosco</a></li>
 							</ul>
 						</div>
@@ -842,42 +831,37 @@ include('php/verificar_login.php');
 							<h4>Onde Atendemos</h4>
 							<ul>
 								<li><a href="#">Castanhal</a></li>
-								
+
 							</ul>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-6">
 						<div class="second-row-item-app">
-							
+
 						</div>
 						<div class="second-row-item-payment">
 							<h4>Métodos de Pagamento</h4>
 							<div class="footer-payments">
 								<ul id="paypal-gateway" class="financial-institutes">
 									<li class="financial-institutes__logo">
-									  <img alt="Visa" title="Visa" src="images/footer-icons/pyicon-6.svg">
+										<img alt="Visa" title="Visa" src="images/footer-icons/pyicon-6.svg">
 									</li>
 									<li class="financial-institutes__logo">
-									  <img alt="Visa" title="Visa" src="images/footer-icons/pyicon-1.svg">
+										<img alt="Visa" title="Visa" src="images/footer-icons/pyicon-1.svg">
 									</li>
 									<li class="financial-institutes__logo">
-									  <img alt="MasterCard" title="MasterCard" src="images/footer-icons/pyicon-2.svg">
+										<img alt="MasterCard" title="MasterCard" src="images/footer-icons/pyicon-2.svg">
 									</li>
 									<li class="financial-institutes__logo">
-									  <img alt="American Express" title="American Express" src="images/footer-icons/pyicon-3.svg">
+										<img alt="American Express" title="American Express" src="images/footer-icons/pyicon-3.svg">
 									</li>
 									<li class="financial-institutes__logo">
-									  <img alt="Discover" title="Discover" src="images/footer-icons/pyicon-4.svg">
+										<img alt="Discover" title="Discover" src="images/footer-icons/pyicon-4.svg">
 									</li>
 								</ul>
 							</div>
 						</div>
-						<div class="second-row-item-payment">
-							<h4>Newsletter</h4>
-							<div class="newsletter-input">
-								<input id="email" name="email" type="text" placeholder="Email Address" class="form-control input-md" required="">
-								<button class="newsletter-btn hover-btn" type="submit"><i class="uil uil-telegram-alt"></i></button>
-							</div>
+						
 						</div>
 					</div>
 				</div>
@@ -897,7 +881,7 @@ include('php/verificar_login.php');
 							</ul>
 						</div>
 						<div class="copyright-text">
-							<i class="uil uil-copyright"></i>Copyright 2020 <b>Mercado Pai D'égua</b> . All rights reserved
+							<i class="uil uil-copyright"></i>Copyright 2021 <b>Mercado Pai D'égua</b> . All rights reserved
 						</div>
 					</div>
 				</div>
