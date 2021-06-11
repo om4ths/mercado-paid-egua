@@ -24,12 +24,10 @@ include('php/verificar_login.php');
         <nav class="sb-topnav navbar navbar-expand navbar-light bg-clr">
             <a class="navbar-brand logo-brand" href="index.php">Mercado Pai D'égua</a>
 			<button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
-            <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/index.php" class="frnt-link"><i class="fas fa-external-link-alt"></i>Inicio</a>
             <ul class="navbar-nav ml-auto mr-md-0">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">                        
-						<a class="dropdown-item admin-dropdown-item" href="change_password.html">Mudar Senha</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">                        						
                         <a class="dropdown-item admin-dropdown-item" href="php/logout.php">Sair</a>
                     </div>
                 </li>
@@ -44,8 +42,6 @@ include('php/verificar_login.php');
 								<div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Painel de Controle
 							</a>
-                             		
-								
 							
 							<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCategories" aria-expanded="false" aria-controls="collapseCategories">
 								<div class="sb-nav-link-icon"><i class="fas fa-list"></i></div>
@@ -54,8 +50,8 @@ include('php/verificar_login.php');
 							</a>
                             <div class="collapse" id="collapseCategories" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-									<a class="nav-link sub_nav_link" href="category.html">Todas as Categorias</a>
-									<a class="nav-link sub_nav_link" href="add_category.html">Adicionar Categoria</a>
+									<a class="nav-link sub_nav_link" href="category.php">Todas as Categorias</a>
+									<a class="nav-link sub_nav_link" href="add_category.php">Adicionar Categoria</a>
 								</nav>
                             </div>
 
@@ -71,19 +67,12 @@ include('php/verificar_login.php');
 									<a class="nav-link sub_nav_link" href="add_product.html">Adicionar Produtos</a>
 								</nav>
                             </div>
-							<a class="nav-link" href="orders.html">
-								<div class="sb-nav-link-icon"><i class="fas fa-cart-arrow-down"></i></div>
-                                Ordens de compra
-							</a>
+							
 							<a class="nav-link" href="customers.php">
 								<div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Usuários
 							</a>
-							<a class="nav-link" href="offers.html">
-								<div class="sb-nav-link-icon"><i class="fas fa-gift"></i></div>
-                                Ofertas
-							</a>
-
+							
                         </div>
                     </div>
                 </nav>
@@ -95,67 +84,60 @@ include('php/verificar_login.php');
                         <ol class="breadcrumb mb-30">
                             <li class="breadcrumb-item active">Painel</li>
                         </ol>
-                        <div class="row">
-                            <div class="col-xl-3 col-md-6">
-                                <div class="dashboard-report-card purple">
-									<div class="card-content">
-										<span class="card-title">Ordens Pendentes</span>
-										<span class="card-count">2</span>
+                        
+                            
+
+						<div class="row justify-content-between">
+							<div class="col-lg-3 col-md-4">
+								<div class="bulk-section mb-30">
+									<div class="input-group">
+										<select id="action" name="action" class="form-control">
+											<option selected>Modificar em Massa</option>
+											<option value="1">Pendente</option>
+											<option value="2">Cancelar</option>
+											<option value="3">Processar</option>
+											<option value="4">Finalizar</option>
+											<option value="5">Deletar</option>
+										</select>
+										<div class="input-group-append">
+											<button class="status-btn hover-btn" type="submit">Aplicar</button>
+										</div>
 									</div>
-									<div class="card-media">
-										<i class="fab fa-rev"></i>
+								</div>
+							</div>
+							<div class="col-lg-5 col-md-6">
+								<div class="bulk-section mb-30">
+									<div class="search-by-name-input">
+										<input type="text" class="form-control" placeholder="Pesquisar">
 									</div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-								<div class="dashboard-report-card red">
-									<div class="card-content">
-										<span class="card-title">Ordens Canceladas</span>
-										<span class="card-count">0</span>
+									<div class="input-group">
+										<select id="categeory" name="categeory" class="form-control">
+											<option value="1">Pendente</option>
+											<option value="2">Cancelada</option>
+											<option value="3">Processada</option>
+											<option value="4">Finalizada</option>
+										</select>
+										<div class="input-group-append">
+											<button class="status-btn hover-btn" type="submit">Pesquisar Ordem</button>
+										</div>
 									</div>
-									<div class="card-media">
-										<i class="far fa-times-circle"></i>
-									</div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="dashboard-report-card info">
-									<div class="card-content">
-										<span class="card-title">Ordens Processadas</span>
-										<span class="card-count">5</span>
-									</div>
-									<div class="card-media">
-										<i class="fas fa-sync-alt rpt_icon"></i>
-									</div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-								<div class="dashboard-report-card success">
-									<div class="card-content">
-										<span class="card-title">Vendas de Hoje</span>
-										<span class="card-count">$9568.00</span>
-									</div>
-									<div class="card-media">
-										<i class="fas fa-money-bill rpt_icon"></i>
-									</div>
-                                </div>
-                            </div>
-						
-							<div class="col-xl-12 col-md-12">
+								</div>
+							</div>
+							<div class="col-lg-12 col-md-12">
 								<div class="card card-static-2 mb-30">
 									<div class="card-title-2">
-										<h4>Ordens Recentes</h4>
-										<a href="orders.html" class="view-btn hover-btn">Ver Tudo</a> 
+										<h4>Todas as Ordens</h4> 
 									</div>
 									<div class="card-body-table">
 										<div class="table-responsive">
 											<table class="table ucp-table table-hover">
 												<thead>
 													<tr>
-														<th style="width:130px">Ordem ID</th>
+														<th style="width:60px"><input type="checkbox" class="check-all"></th>
+														<th style="width:130px">Order ID</th>
 														<th>Item</th>
 														<th style="width:200px">Data</th>
-														<th style="width:300px">Endereço do Cliente</th>
+														<th style="width:300px">Endereço</th>
 														<th style="width:130px">Status</th>
 														<th style="width:130px">Total</th>
 														<th style="width:100px">Ação</th>
@@ -163,6 +145,7 @@ include('php/verificar_login.php');
 												</thead>
 												<tbody>
 													<tr>
+														<td><input type="checkbox" class="check-item" name="ids[]" value="4"></td>
 														<td>ORDER12345</td>
 														<td>
 															<a href="#" target="_blank">Product Title Here</a>
@@ -182,6 +165,7 @@ include('php/verificar_login.php');
 														</td>
 													</tr>
 													<tr>
+														<td><input type="checkbox" class="check-item" name="ids[]" value="3"></td>
 														<td>ORDER12346</td>
 														<td>
 															<a href="#" target="_blank">Product Title Here</a>
@@ -201,6 +185,7 @@ include('php/verificar_login.php');
 														</td>
 													</tr>
 													<tr>
+														<td><input type="checkbox" class="check-item" name="ids[]" value="2"></td>
 														<td>ORDER12347</td>
 														<td>
 															<a href="#" target="_blank">Product Title Here</a>
@@ -220,6 +205,7 @@ include('php/verificar_login.php');
 														</td>
 													</tr>
 													<tr>
+														<td><input type="checkbox" class="check-item" name="ids[]" value="1"></td>
 														<td>ORDER12348</td>
 														<td>
 															<a href="#" target="_blank">Product Title Here</a>
@@ -245,16 +231,15 @@ include('php/verificar_login.php');
 								</div>
 							</div>
                         </div>
-                    </div>
+
+                        </div>
+                    
                 </main>
                 <footer class="py-4 bg-footer mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted-1">© 2020 <b>Gambo Supermarket</b>. by <a href="https://themeforest.net/user/gambolthemes">Gambolthemes</a></div>
-                            <div class="footer-links">
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/privacy_policy.html">Privacy Policy</a>
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/term_and_conditions.html">Terms &amp; Conditions</a>
-                            </div>
+                            <div class="text-muted-1">© 2021 <b>Mercado Pai D'égua</b> <a href="#"></a></div>
+                            
                         </div>
                     </div>
                 </footer>
@@ -262,12 +247,7 @@ include('php/verificar_login.php');
         </div>
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<script src="vendor/chart/highcharts.js"></script>
-		<script src="vendor/chart/exporting.js"></script>
-		<script src="vendor/chart/export-data.js"></script>
-		<script src="vendor/chart/accessibility.js"></script>
         <script src="js/scripts.js"></script>
-        <script src="js/chart.js"></script>
        
     </body>
 </html>
