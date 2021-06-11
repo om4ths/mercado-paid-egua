@@ -4,13 +4,24 @@ include('php/verificar_login.php');
 ?>
 <?php 
 		include('../Admin/php/exibe_categoria.php');
+		include('../Admin/php/exibe_produtos.php');
 
+		//FUNÇÃO PARA LIMPAR O INICIO DO LINK
 		function limpa_link($valor){
 			$valor = trim($valor);
 			$valor = str_replace("../", "", $valor);
 			
 			return $valor;
 		   }
+
+		//FUNÇÃO PARA CALCULAR A PORCENTAGEM DO DESCONTO
+		function porcentagemDesconto($valorTotal, $valorCDesconto){
+			$valorDDesconto = $valorTotal - $valorCDesconto;
+			$porcentagemDesc = ($valorDDesconto * 100) / $valorTotal;
+
+			return $porcentagemDesc;
+		}
+
 	?>
 <!DOCTYPE html>
 <html lang="pt_BR>
@@ -280,11 +291,11 @@ include('php/verificar_login.php');
 		<div class="top-header-group">
 			<div class="top-header">
 				<div class="res_main_logo">
-					<a href="index.html"><img src="images/logo-1.png" alt=""></a>
+					<a href="index.php"><img src="images/logo-1.png" alt=""></a>
 				</div>
 				<div class="main_logo" id="logo">
-					<a href="index.html"><img src="images/logo.png" alt=""></a>
-					<a href="index.html"><img class="logo-inverse" src="images/dark-logo.png" alt=""></a>
+					<a href="index.php"><img src="images/logo.png" alt=""></a>
+					<a href="indexphp"><img class="logo-inverse" src="images/dark-logo.png" alt=""></a>
 				</div>
 				<div class="select_location">
 					<div class="ui inline dropdown loc-title">
@@ -513,7 +524,7 @@ include('php/verificar_login.php');
 							<div class="item">
 								<a href="#" class="category-item">
 									<div class="cate-img">
-									<?php echo "<img src=' ".$caminhoCorretoImg." ' alt='erro ao Carregar a imagem'>" ?>
+									<?php echo "<img src=' ".$caminhoCorretoImg." ' alt='Erro ao Carregar a imagem'>" ?>
 									</div>
 									<?php echo "<h4>".$r_cat['cat_nome']."</h4>" ?>
 								</a>
@@ -551,13 +562,20 @@ include('php/verificar_login.php');
 					</div>
 					<div class="col-md-12">
 						<div class="owl-carousel featured-slider owl-theme">
+						<?php
+							if(isset($r_produtos))
+								{	
+								foreach($r_produtos as $key => $r_pro)
+									{							
+										$caminhoCorretoImg = limpa_link($r_pro['pro_img']);
+						?>
 
 							<div class="item">
 								<div class="product-item">
 									<a href="single_product_view.html" class="product-img">
-										<img src="images/product/img-1.jpg" alt="">
+									    <?php echo "<img src=' ".$caminhoCorretoImg." ' alt='Erro ao Carregar a imagem'>" ?>
 										<div class="product-absolute-options">
-											<span class="offer-badge-1">6% off</span>
+											<?php echo "<span class='offer-badge-1'>".porcentagemDesconto($r_pro['pro_valor'], $r_pro['pro_desconto'])."</span>" ?>
 											<span class="like-icon" title="wishlist"></span>
 										</div>
 									</a>
@@ -576,6 +594,7 @@ include('php/verificar_login.php');
 									</div>
 								</div>
 							</div>
+							<?php }} ?>
 <!--
 							<div class="item">
 								<div class="product-item">
@@ -647,7 +666,7 @@ include('php/verificar_login.php');
 			</div>
 		</div>
 		<!-- Best Values Offers End -->
-		<!-- Vegetables and Fruits Start -->
+		<!-- Vegetables and Fruits Start 
 		<div class="section145">
 			<div class="container">
 				<div class="row">
@@ -687,7 +706,7 @@ include('php/verificar_login.php');
 									</div>
 								</div>
 							</div>
-<!--							
+						
 							<div class="item">
 								<div class="product-item">
 									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
@@ -712,13 +731,13 @@ include('php/verificar_login.php');
 									</div>
 								</div>
 							</div>
--->
+
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- Vegetables and Fruits Products End -->
+		Vegetables and Fruits Products End -->
 		<!-- New Products Start -->
 		<div class="section145">
 			<div class="container">
