@@ -458,11 +458,20 @@ include('php/verificar_login.php');
 					<div class="col-lg-12">
 						<div class="user-dt">
 							<div class="user-img">
-								<img src="images/avatar/img-5.jpg" alt="">
+								<?php 
+								if(isset($resultado['foto'])){
+									echo "<img src=' ".$resultado['foto']." ' alt=''>";									
+								}else{
+									echo "<img src='images/avatar/img-5.jpg' alt=''>";
+								};								 								
+								?>
 								<div class="img-add">
-									<input type="file" id="file">
+								<form method="POST" action="php/img_cliente.php" enctype="multipart/form-data"> 
+									<input type="file" name="c_img" id="file">
 									<label for="file"><i class="uil uil-camera-plus"></i></label>
-								</div>
+									<input type="submit" value="Enviar arquivo" />
+									</div>
+								</form > 
 							</div>
 							<h4>
 								<?php echo$resultado['nome']?>

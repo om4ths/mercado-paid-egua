@@ -674,18 +674,23 @@ include('php/verificar_login.php');
 										<div class="address-body">
 											<a href="#" class="add-address hover-btn" data-toggle="modal" data-target="#address_model">Adicionar Novo Endereço</a>
 											<div class="address-item">
-												<div class="address-icon1">
-													<i class="uil uil-home-alt"></i>
-												</div>
-												<div class="address-dt-all">
-												<?php 
-													
-												if(isset($r_end_casa))
+											<?php 
+											if(isset($r_end_casa))
 												{	
 													foreach($r_end_casa as $key => $r_end)
 													{
 																			
 												?>
+											
+											
+											
+												<div class="address-icon1">
+													<i class="uil uil-home-alt"></i>
+												</div>
+												<div class="address-dt-all">
+												
+													
+												
 
 													<h4><?php echo $r_end['tipo'];?></h4>
 													<p><?php echo $r_end['bairro']?></p>
@@ -698,17 +703,15 @@ include('php/verificar_login.php');
 
 
 													</ul>
+													</div>
 												<?php
 													};
 												};
 												?> 
-												</div>
+												
 											</div>
 											<div class="address-item">
-												<div class="address-icon1">
-													<i class="uil uil-home-alt"></i>
-												</div>
-												<div class="address-dt-all">
+												
 												<?php 
 													
 													if(isset($r_end_trab))
@@ -717,6 +720,10 @@ include('php/verificar_login.php');
 														{
 																				
 													?>
+														<div class="address-icon1">
+															<i class="uil uil-home-alt"></i>
+														</div>
+														<div class="address-dt-all">
 
 														<h4><?php echo $r_end['tipo'];?></h4>
 														<p><?php echo $r_end['bairro']?></p>
@@ -725,19 +732,17 @@ include('php/verificar_login.php');
 														<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
 														<ul class="action-btns">
 															<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
-															<li><a href='php/delete.php?id_tel=" . $r_cliente['telefone'] . "' class='action-btn' title='Apagar' data-confirm='Deseja realmente apagar esse endereço?'><i class='uil uil-trash-alt'></i></a></li>
+															<?php echo"<li><a href='php/delete_end.php?id=" . $r_end['id'] . "' class='action-btn' title='Apagar' data-confirm='Deseja realmente apagar esse endereço?'><i class='fas fa-trash-alt'></i></a></li>" ?>
 														</ul>
+														</div>
 													<?php
 														};
 													};
 												?> 
-												</div>
+												
 											</div>
 											<div class="address-item">
-												<div class="address-icon1">
-													<i class="uil uil-home-alt"></i>
-												</div>
-												<div class="address-dt-all">
+												
 												<?php 
 													
 													if(isset($r_end_out))
@@ -746,6 +751,10 @@ include('php/verificar_login.php');
 														{
 																				
 													?>
+														<div class="address-icon1">
+															<i class="uil uil-home-alt"></i>
+														</div>
+														<div class="address-dt-all">
 
 													<h4><?php echo $r_end['tipo'];?></h4>
 													<p><?php echo $r_end['bairro']?></p>
@@ -754,13 +763,14 @@ include('php/verificar_login.php');
 													<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
 														<ul class="action-btns">
 															<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
-															<li><a href='php/delete.php?id_tel=" . $r_cliente['telefone'] . "' class='action-btn' title='Apagar' data-confirm='Deseja realmente apagar esse endereço?'><i class='uil uil-trash-alt'></i></a></li>
+															<?php echo"<li><a href='php/delete_end.php?id=" . $r_end['id'] . "' class='action-btn' title='Apagar' data-confirm='Deseja realmente apagar esse endereço?'><i class='fas fa-trash-alt'></i></a></li>" ?>
 														</ul>
+														</div>
 													<?php
 														};
 													};
 												?> 
-												</div>							
+																			
 											</div>
 										</div>
 									</div>
