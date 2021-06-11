@@ -399,8 +399,8 @@ input[type=checkbox], input[type=radio] {
     -o-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
-	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
-    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), rgba(245, 93, 44, 0.9));
+	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), #ff0404);
+    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), #ff0404);
 }
 
 .action-btns {

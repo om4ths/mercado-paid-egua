@@ -63,8 +63,8 @@ include('php/verificar_login.php');
 							</a>
                             <div class="collapse" id="collapseProducts" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-									<a class="nav-link sub_nav_link" href="products.html">Todos os Produtos</a>
-									<a class="nav-link sub_nav_link" href="add_product.html">Adicionar Produtos</a>
+									<a class="nav-link sub_nav_link" href="products.php">Todos os Produtos</a>
+									<a class="nav-link sub_nav_link" href="add_product.php">Adicionar Produtos</a>
 								</nav>
                             </div>
 							
@@ -160,8 +160,8 @@ include('php/verificar_login.php');
 														</td>
 														<td>$90</td>
 														<td class="action-btns">
-															<a href="order_view.html" class="views-btn"><i class="fas fa-eye"></i></a>
-															<a href="order_edit.html" class="edit-btn"><i class="fas fa-edit"></i></a>
+															<a href="order_view.php" class="views-btn"><i class="fas fa-eye"></i></a>
+															<a href="order_edit.php" class="edit-btn"><i class="fas fa-edit"></i></a>
 														</td>
 													</tr>
 													<tr>
@@ -180,8 +180,8 @@ include('php/verificar_login.php');
 														</td>
 														<td>$105</td>
 														<td class="action-btns">
-															<a href="order_view.html" class="views-btn"><i class="fas fa-eye"></i></a>
-															<a href="order_edit.html" class="edit-btn"><i class="fas fa-edit"></i></a>
+															<a href="order_view.php" class="views-btn"><i class="fas fa-eye"></i></a>
+															<a href="order_edit.php" class="edit-btn"><i class="fas fa-edit"></i></a>
 														</td>
 													</tr>
 													<tr>
@@ -200,8 +200,8 @@ include('php/verificar_login.php');
 														</td>
 														<td>$60</td>
 														<td class="action-btns">
-															<a href="order_view.html" class="views-btn"><i class="fas fa-eye"></i></a>
-															<a href="order_edit.html" class="edit-btn"><i class="fas fa-edit"></i></a>
+															<a href="order_view.php" class="views-btn"><i class="fas fa-eye"></i></a>
+															<a href="order_edit.php" class="edit-btn"><i class="fas fa-edit"></i></a>
 														</td>
 													</tr>
 													<tr>
@@ -220,8 +220,8 @@ include('php/verificar_login.php');
 														</td>
 														<td>$120</td>
 														<td class="action-btns">
-															<a href="order_view.html" class="views-btn"><i class="fas fa-eye"></i></a>
-															<a href="order_edit.html" class="edit-btn"><i class="fas fa-edit"></i></a>
+															<a href="order_view.php" class="views-btn"><i class="fas fa-eye"></i></a>
+															<a href="order_edit.php" class="edit-btn"><i class="fas fa-edit"></i></a>
 														</td>
 													</tr>
 												</tbody>
