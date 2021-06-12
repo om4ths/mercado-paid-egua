@@ -226,76 +226,25 @@ include('php/verificar_login.php');
 						<h4>Selecionar Categoria </h4>
 					</div>
 					<ul class="category-by-cat">
+					<?php
+						if(isset($r_categoria))
+						{	
+							foreach($r_categoria as $key => $r_cat)
+							{	
+																
+							$caminhoCorretoImg = limpa_link($r_cat['cat_img']);
+																
+					?>
 						<li>
 							<a href="#" class="single-cat-item">
 								<div class="icon">
-									<img src="images/category/icon-1.svg" alt="">
+									<?php echo "<img src=' ".$caminhoCorretoImg." ' alt='erro ao Carregar a imagem'>" ?>
 								</div>
-								<div class="text"> Frutas e Vegetais </div>
+								<?php echo "<div class='text'>".$r_cat['cat_nome']."</div>" ?>
 							</a>
 						</li>
-						<li>
-							<a href="#" class="single-cat-item">
-								<div class="icon">
-									<img src="images/category/icon-2.svg" alt="">
-								</div>
-								<div class="text"> Alimentos Básicos </div>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="single-cat-item">
-								<div class="icon">
-									<img src="images/category/icon-3.svg" alt="">
-								</div>
-								<div class="text"> Ovos e Laticínios </div>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="single-cat-item">
-								<div class="icon">
-									<img src="images/category/icon-4.svg" alt="">
-								</div>
-								<div class="text"> Bebidas </div>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="single-cat-item">
-								<div class="icon">
-									<img src="images/category/icon-5.svg" alt="">
-								</div>
-								<div class="text"> Lanches </div>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="single-cat-item">
-								<div class="icon">
-									<img src="images/category/icon-6.svg" alt="">
-								</div>
-								<div class="text"> Limpeza </div>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="single-cat-item">
-								<div class="icon">
-									<img src="images/category/icon-7.svg" alt="">
-								</div>
-								<div class="text"> Macarrão e molhos </div>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="single-cat-item">
-								<div class="icon">
-									<img src="images/category/icon-8.svg" alt="">
-								</div>
-								<div class="text"> Higiene </div>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="single-cat-item">
-								<div class="icon">
-									<img src="images/category/icon-9.svg" alt="">
-								</div>
-								<div class="text"> Pets </div>
+					
+					<?php }}	?>
 							</a>
 						</li>
 					</ul>
@@ -500,7 +449,7 @@ include('php/verificar_login.php');
 				</div>
 				<div class="main_logo" id="logo">
 					<a href="index.php"><img src="images/logo.png" alt=""></a>
-					<a href="index.php"><img class="logo-inverse" src="images/dark-logo.png" alt=""></a>
+					<a href="indexphp"><img class="logo-inverse" src="images/dark-logo.png" alt=""></a>
 				</div>
 				<div class="select_location">
 					<div class="ui inline dropdown loc-title">
@@ -523,11 +472,9 @@ include('php/verificar_login.php');
 						<li>
 							<a href="#" class="offer-link"><i class="uil uil-phone-alt"></i>1800-000-000</a>
 						</li>
-						
 						<li>
 							<a href="faq.html" class="offer-link"><i class="uil uil-question-circle"></i>Ajuda</a>
 						</li>
-						
 						<li class="ui dropdown">
 							<a href="#" class="opts_account">
 								<img src="images/avatar/img-5.jpg" alt="">
@@ -574,14 +521,8 @@ include('php/verificar_login.php');
 										<div class="menu dropdown_page">
 											<a href="dashboard_overview.php" class="item channel_item page__links">Conta</a>
 											<a href="about_us.html" class="item channel_item page__links">Sobre nós</a>
-											<a href="single_product_view.html" class="item channel_item page__links">Visualizar um Produto</a>
 											<a href="checkout.html" class="item channel_item page__links">Finalizar Pedido</a>
 											<a href="order_placed.html" class="item channel_item page__links">Pedidos Finalizados</a>
-											<a href="bill.html" class="item channel_item page__links">Imprimir Pedidos</a>
-											<a href="sign_in.php" class="item channel_item page__links">Entrar</a>
-											<a href="sign_up.html" class="item channel_item page__links">Cadastrar-se</a>
-											<a href="forgot_password.html" class="item channel_item page__links">Esqueceu sua senha?</a>
-											<a href="contact_us.html" class="item channel_item page__links">Fale Conosco</a>
 										</div>
 									</div>
 								</li>
@@ -612,7 +553,7 @@ include('php/verificar_login.php');
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.php">Início</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Perfil do Usuário</li>
+								<li class="breadcrumb-item active" aria-current="page">Perfil</li>
 							</ol>
 						</nav>
 					</div>
