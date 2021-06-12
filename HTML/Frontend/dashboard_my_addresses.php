@@ -574,7 +574,6 @@ include('php/verificar_login.php');
 							</div>
 							<h4><?php echo$resultado['nome']?></h4>
 							<p><?php echo$resultado['telefone']?><a href="#"><i class="uil uil-edit"></i></a></p>
-							<div class="earn-points"><img src="images/Dollar.svg" alt="">Pontos : <span>20</span></div>
 						</div>
 					</div>
 				</div>

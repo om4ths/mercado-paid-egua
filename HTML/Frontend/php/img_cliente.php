@@ -24,7 +24,7 @@
 
 
      $insert = mysqli_query($conexao,$query);
-     header("Location: /mercado-paid-egua/HTML/frontend/dashboard_overview.php");        
+     header("Location: /mercado-paid-egua/HTML/Frontend/dashboard_overview.php");        
      
        
 

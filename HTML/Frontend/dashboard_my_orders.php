@@ -399,7 +399,6 @@ include('php/verificar_login.php');
 							</div>
 							<h4><?php echo$resultado['nome']?></h4>
 							<p><?php echo$resultado['telefone']?><a href="#"><i class="uil uil-edit"></i></a></p>
-							<div class="earn-points"><img src="images/Dollar.svg" alt="">Points : <span>20</span></div>
 						</div>
 					</div>
 				</div>
@@ -488,17 +487,12 @@ include('php/verificar_login.php');
 													</div>
 												</div>
 											</div>
-											<div class="alert-offer">
-												<img src="images/ribbon.svg" alt="">
-												O reembolso de $ 2 será creditado na carteira do Gambo Super Market 6-12 horas após a entrega.
-											</div>
+											
 											<div class="call-bill">
 												<div class="delivery-man">
 													Entregador - <a href="#"><i class="uil uil-phone"></i> Ligue para nós</a>
 												</div>
-												<div class="order-bill-slip">
-													<a href="#" class="bill-btn5 hover-btn">Ver conta</a>
-												</div>
+
 											</div>
 										</div>
 									</div>
@@ -566,9 +560,7 @@ include('php/verificar_login.php');
 												<div class="delivery-man">
 													<a href="#"><i class="uil uil-rss"></i>Comentários</a>
 												</div>
-												<div class="order-bill-slip">
-													<a href="#" class="bill-btn5 hover-btn">Ver conta</a>
-												</div>
+												
 											</div>
 										</div>
 									</div>

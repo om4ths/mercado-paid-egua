@@ -414,7 +414,6 @@ include('php/verificar_login.php');
 							<p>
 								<?php echo$resultado['telefone']?><a href="#"><i class="uil uil-edit"></i></a>
 							</p>
-							<div class="earn-points"><img src="images/Dollar.svg" alt="">Pontos : <span>20</span></div>
 						</div>
 					</div>
 				</div>
@@ -452,37 +451,11 @@ include('php/verificar_login.php');
 										</h2>
 									</div>
 								</div>
+								
 								<div class="col-lg-6 col-md-12">
 									<div class="pdpt-bg">
 										<div class="pdpt-title">
-											<h4>Minhas recompensas</h4>
-										</div>
-										<div class="ddsh-body">
-											<h2>6 Recompensas</h2>
-											<ul>
-												<li>
-													<a href="#" class="small-reward-dt hover-btn">Ganhou $2</a>
-												</li>
-												<li>
-													<a href="#" class="small-reward-dt hover-btn">Ganhou 40% Off</a>
-												</li>
-												<li>
-													<a href="#" class="small-reward-dt hover-btn">Dinheiro de volta
-														$1</a>
-												</li>
-												<li>
-													<a href="#" class="rewards-link5">+Mais</a>
-												</li>
-											</ul>
-										</div>
-										<a href="#" class="more-link14">Recompensas e detalhes <i
-												class="uil uil-angle-double-right"></i></a>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-12">
-									<div class="pdpt-bg">
-										<div class="pdpt-title">
-											<h4>minhas ordens</h4>
+											<h4>Minhas ordens</h4>
 										</div>
 										<div class="ddsh-body">
 											<h2>2 Compras recentes</h2>
@@ -498,7 +471,7 @@ include('php/verificar_login.php');
 												</li>
 											</ul>
 										</div>
-										<a href="#" class="more-link14">Todos os pedidos <i
+										<a href="dashboard_my_orders.php" class="more-link14">Todos os pedidos <i
 												class="uil uil-angle-double-right"></i></a>
 									</div>
 								</div>
