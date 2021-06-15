@@ -165,6 +165,39 @@
 													<img src="images/product/img-11.jpg" alt="">
 												</div>
 											</div>
+											<!--
+											<div class="form-group">
+												<label class="form-label">Mais Imagens*</label>
+												<div class="input-group">
+													<div class="custom-file">
+														<input type="file" class="custom-file-input" id="inputGroupFile05" aria-describedby="inputGroupFileAddon05">
+														<label class="custom-file-label" for="inputGroupFile05">Selecione a Imagem</label>
+													</div>
+												</div>
+												<ul class="add-produc-imgs">
+													<li>
+														<div class="add-cate-img-1">
+															<img src="images/product/big-1.jpg" alt="">
+														</div>
+													</li>
+													<li>
+														<div class="add-cate-img-1">
+															<img src="images/product/big-2.jpg" alt="">
+														</div>
+													</li>
+													<li>
+														<div class="add-cate-img-1">
+															<img src="images/product/big-3.jpg" alt="">
+														</div>
+													</li>
+													<li>
+														<div class="add-cate-img-1">
+															<img src="images/product/big-4.jpg" alt="">
+														</div>
+													</li>
+												</ul>
+											</div>
+															-->
 											<button class="save-btn hover-btn" name="salvar_produto" type="submit">Adicionar Produto</button>
 										</form><!--FIM DO FORMULARIO-->
 										</div> 
