@@ -3,8 +3,13 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<?php
+	include('php/dados_cliente.php');
+?>
 
 <head>
+
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, shrink-to-fit=9">
@@ -342,7 +347,7 @@
 										<div class="menu dropdown_page">
 											<a href="dashboard_overview.php" class="item channel_item page__links">Conta</a>
 											<a href="about_us.html" class="item channel_item page__links">Sobre nós</a>
-											<a href="checkout.html" class="item channel_item page__links">Finalizar Pedido</a>
+											<a href="checkout.php" class="item channel_item page__links">Finalizar Pedido</a>
 											<a href="order_placed.html" class="item channel_item page__links">Pedidos Finalizados</a>
 										</div>
 									</div>
