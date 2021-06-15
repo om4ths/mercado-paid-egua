@@ -553,22 +553,42 @@ include('php/verificar_login.php');
 								{	
 								foreach($r_produtos as $key => $r_pro)
 									{							
-										$caminhoCorretoImg = limpa_link($r_pro['pro_img']);
 						?>
 
 							<div class="item">
 								<div class="product-item">
 									<a href="single_product_view.html" class="product-img">
-									    <?php echo "<img src=' ".$caminhoCorretoImg." ' alt='Erro ao Carregar a imagem'>" ?>
+									    <?php echo "<img src=' ".limpa_link($r_pro['pro_img'])." ' alt='Erro ao Carregar a imagem'>" ?>
 										<div class="product-absolute-options">
-											<?php echo "<span class='offer-badge-1'>".porcentagemDesconto($r_pro['pro_valor'], $r_pro['pro_desconto'])."</span>" ?>
+											<?php echo "<span class='offer-badge-1'>".porcentagemDesconto($r_pro['pro_valor'], $r_pro['pro_desconto'])."%</span>" ?>
 											<span class="like-icon" title="wishlist"></span>
 										</div>
 									</a>
 									<div class="product-text-dt">
+									<?php
+									if($r_pro['pro_ativo'] == 1)
+									{ 
+									?>
 										<p>Acessível<span>(Em Estoque)</span></p>
-										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">R$8 <span>R$10</span></div>
+									<?php
+									}
+									else {
+									?>
+										<p>Esgotado<span>(Sem estoque)</span></p>
+									<?php
+									}
+									?>
+										<?php echo "<h4>".$r_pro['pro_nome']."</h4>" ?>
+
+										<?php if($r_pro['pro_desconto'] != $r_pro['pro_valor']){?>
+										<?php echo "<div class='product-price'>".$r_pro['pro_desconto']."<span>".$r_pro['pro_valor']."</span></div>" ?>
+										<?php
+										}
+										else{
+										?>
+										<?php echo "<div class='product-price'>".$r_pro['pro_valor']."</div>"; }?>
+
+
 										<div class="qty-cart">
 											<div class="quantity buttons_added">
 												<input type="button" value="-" class="minus minus-btn">
