@@ -1,37 +1,43 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<?php
+	include('php/verificar_login.php');
+?>
+<!DOCTYPE html>
+<html lang="pt_BR">
+	<?php
+	include('php/dados_cliente.php');
+	?>
 
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
-		<meta name="description" content="Gambolthemes">
-		<meta name="author" content="Gambolthemes">		
-		<title>Mercado Pai D'égua - Política de Privacidade</title>
-		
-		<!-- Favicon Icon -->
-		<link rel="icon" type="image/png" href="images/logo-1.png">
-		
-		<!-- Stylesheets -->
-		<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-		<link href='vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
-		<link href="css/style.css" rel="stylesheet">
-		<link href="css/responsive.css" rel="stylesheet">
-		<link href="css/night-mode.css" rel="stylesheet">
-		<link href="css/step-wizard.css" rel="stylesheet">
-		
-		<!-- Vendor Stylesheets -->
-		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-		<link href="vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
-		<link href="vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
-		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="vendor/semantic/semantic.min.css">	
-		
-	</head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=9">
+    <meta name="description" content="Gambolthemes">
+    <meta name="author" content="Gambolthemes">
+    <title>Mercado Pai D'égua - Pedido Feito</title>
+
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/png" href="images/logo-1.png">
+
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/night-mode.css" rel="stylesheet">
+    <link href="css/step-wizard.css" rel="stylesheet">
+
+    <!-- Vendor Stylesheets -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
+    <link href="vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="vendor/semantic/semantic.min.css">
+
+</head>
 
 <body>
-<!-- modelo das categorias-->
-<div id="category_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
+   <!-- modelo das categorias-->
+   <div id="category_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
 	<div class="modal-dialog category-area" role="document">
 		<div class="category-area-inner">
 			<div class="modal-header">
@@ -295,8 +301,14 @@
 					</li>
 					<li class="ui dropdown">
 						<a href="#" class="opts_account">
-							<img src="images/avatar/img-5.jpg" alt="">
-							<span class="user__name"><?php echo $resultado['nome'] ?></span>
+							<?php 
+							if(isset($resultado['foto'])){
+								echo "<img src=' ".$resultado['foto']." ' alt=''>";									
+							}else{
+								echo "<img src='images/avatar/img-5.jpg' alt=''>";
+							};								 								
+							?>							
+								<span class="user__name"><?php echo $resultado['nome'] ?></span>
 							<i class="uil uil-angle-down"></i>
 						</a>
 						<div class="menu dropdown_account">
@@ -361,79 +373,65 @@
 		</div>
 	</div>
 </header>
-<!-- header fim -->
-	<!-- Body Start -->
-	<div class="wrapper">
-		<div class="gambo-Breadcrumb">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<nav aria-label="breadcrumb">
-							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index.php">Início</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Política de Privacidade</li>
-							</ol>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="all-product-grid">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 col-md-12">
-						<div class="job-main-dt">
-							<h2>Mercado Pai D'égua - Política de Privacidade</h2>
-							<span>Esta Política de Privacidade ("Privacidade") foi atualizada pela última vez em tal data.....</span>
-						</div>
-						<div class="job-des-dt142 policy-des-dt">
-							<h4>Informações pessoais</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum turpis vitae facilisis tempus. Donec in blandit risus, eget pretium mauris. Aliquam nec venenatis massa. Ut vel nulla id velit dictum rutrum nec vel ex. Phasellus sit amet faucibus massa, in feugiat augue. Maecenas eget dapibus turpis, a finibus justo. Suspendisse pretium lorem non lorem faucibus, non sagittis nisi finibus. Sed efficitur massa ac nibh condimentum interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse luctus, ex ut congue interdum, nibh turpis malesuada orci, vel vulputate arcu velit condimentum orci. Ut sed dictum lacus.</p>
-						</div>
-						<div class="job-des-dt142 policy-des-dt">
-							<h4>Quais informações são, ou podem ser, coletadas de você?</h4>
-							<p>Donec maximus lorem vitae risus molestie sollicitudin. Ut sem lorem, consequat et tortor sit amet, viverra porttitor erat. Suspendisse aliquet arcu vel auctor maximus. Nunc in euismod purus. Aliquam non varius quam. Sed eros magna, tempus ullamcorper auctor vitae, pretium eu elit. Integer sagittis eu purus eget venenatis. Ut rhoncus tempor velit vitae consequat. Quisque consequat, enim eu cursus eleifend, velit mi viverra arcu, sed elementum dolor odio eget neque.</p>
-						</div>
-						<div class="job-des-dt142 policy-des-dt">
-							<h4>Como coletamos a informação?</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum turpis vitae facilisis tempus. Donec in blandit risus, eget pretium mauris. Aliquam nec venenatis massa. Ut vel nulla id velit dictum rutrum nec vel ex. Phasellus sit amet faucibus massa, in feugiat augue. Maecenas eget dapibus turpis, a finibus justo. Suspendisse pretium lorem non lorem faucibus, non sagittis nisi finibus. Sed efficitur massa ac nibh condimentum interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse luctus, ex ut congue interdum, nibh turpis malesuada orci, vel vulputate arcu velit condimentum orci. Ut sed dictum lacus.</p>
-						</div>
-						<div class="job-des-dt142 policy-des-dt">
-							<h4>Como a informação é usada?</h4>
-							<p>Donec maximus lorem vitae risus molestie sollicitudin. Ut sem lorem, consequat et tortor sit amet, viverra porttitor erat. Suspendisse aliquet arcu vel auctor maximus. Nunc in euismod purus. Aliquam non varius quam. Sed eros magna, tempus ullamcorper auctor vitae, pretium eu elit. Integer sagittis eu purus eget venenatis. Ut rhoncus tempor velit vitae consequat. Quisque consequat, enim eu cursus eleifend, velit mi viverra arcu, sed elementum dolor odio eget neque.</p>
-						</div>
-						<div class="job-des-dt142 policy-des-dt">
-							<h4>Com quem suas informações serão compartilhadas</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum turpis vitae facilisis tempus. Donec in blandit risus, eget pretium mauris. Aliquam nec venenatis massa. Ut vel nulla id velit dictum rutrum nec vel ex. Phasellus sit amet faucibus massa, in feugiat augue. Maecenas eget dapibus turpis, a finibus justo. Suspendisse pretium lorem non lorem faucibus, non sagittis nisi finibus. Sed efficitur massa ac nibh condimentum interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse luctus, ex ut congue interdum, nibh turpis malesuada orci, vel vulputate arcu velit condimentum orci. Ut sed dictum lacus.</p>
-						</div>
-						<div class="job-des-dt142 policy-des-dt">
-							<h4>Que escolha está disponível para você em relação à coleta, uso e distribuição de suas informações?</h4>
-							<p>Donec maximus lorem vitae risus molestie sollicitudin. Ut sem lorem, consequat et tortor sit amet, viverra porttitor erat. Suspendisse aliquet arcu vel auctor maximus. Nunc in euismod purus. Aliquam non varius quam. Sed eros magna, tempus ullamcorper auctor vitae, pretium eu elit. Integer sagittis eu purus eget venenatis. Ut rhoncus tempor velit vitae consequat. Quisque consequat, enim eu cursus eleifend, velit mi viverra arcu, sed elementum dolor odio eget neque.</p>
-						</div>
-						<div class="job-des-dt142 policy-des-dt">
-							<h4>Como você pode corrigir imprecisões nas informações?</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum turpis vitae facilisis tempus. Donec in blandit risus, eget pretium mauris. Aliquam nec venenatis massa. Ut vel nulla id velit dictum rutrum nec vel ex. Phasellus sit amet faucibus massa, in feugiat augue. Maecenas eget dapibus turpis, a finibus justo. Suspendisse pretium lorem non lorem faucibus, non sagittis nisi finibus. Sed efficitur massa ac nibh condimentum interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse luctus, ex ut congue interdum, nibh turpis malesuada orci, vel vulputate arcu velit condimentum orci. Ut sed dictum lacus.</p>
-						</div>
-						<div class="job-des-dt142 policy-des-dt">
-							<h4>Atualizações de Políticas</h4>
-							<p>Donec maximus lorem vitae risus molestie sollicitudin. Ut sem lorem, consequat et tortor sit amet, viverra porttitor erat. Suspendisse aliquet arcu vel auctor maximus. Nunc in euismod purus. Aliquam non varius quam. Sed eros magna, tempus ullamcorper auctor vitae.</p>
-						</div>
-						<div class="job-des-dt142 policy-des-dt">
-							<h4>Informações de contato</h4>
-							<p>	
-								mercadin pai dégua Ltda,<br>
-								Rua, número, bairro, cidade,<br>
-								Tel.: (00) 00000-0000<br>
-								Email: info@mercadopaidegua.com<br>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>	
-	</div>
-	<!-- Body End -->
-	<!-- Footer Start -->
+    <!-- Body Start -->
+    <div class="wrapper">
+        <div class="gambo-Breadcrumb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.php">Início</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Pedidos Finalizados</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="all-product-grid">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 col-md-8">
+                        <div class="order-placed-dt">
+                            <i class="uil uil-check-circle icon-circle"></i>
+                            <h2>Order Successfully Placed</h2>
+                            <p>Thank you for your order! will received order timing - <span>(Today, 3.00PM - 5.00PM)</span></p>
+                            <div class="delivery-address-bg">
+                                <div class="title585">
+                                    <div class="pln-icon"><i class="uil uil-telegram-alt"></i></div>
+                                    <h4>Your order will be sent to this address</h4>
+                                </div>
+                                <ul class="address-placed-dt1">
+                                    <li>
+                                        <p><i class="uil uil-map-marker-alt"></i>Address :<span>#000, St 8, Sks Nagar, Near Pakhowal Road, Ldh, 141001</span></p>
+                                    </li>
+                                    <li>
+                                        <p><i class="uil uil-phone-alt"></i>Phone Number :<span>+919999999999</span></p>
+                                    </li>
+                                    <li>
+                                        <p><i class="uil uil-envelope"></i>Email Address :<span>johndoe@example.com</span></p>
+                                    </li>
+                                    <li>
+                                        <p><i class="uil uil-card-atm"></i>Payment Method :<span>Cash on Delivery</span></p>
+                                    </li>
+                                </ul>
+                                <div class="stay-invoice">
+                                    <div class="st-hm">Stay Home<i class="uil uil-smile"></i></div>
+                                    <a href="#" class="invc-link hover-btn">invoice</a>
+                                </div>
+                                <div class="placed-bottom-dt">
+                                    The payment of <span>$16</span> you'll make when the deliver arrives with your order.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Body End -->
+    <!-- Footer Start -->
 	<footer class="footer">
 		<div class="footer-first-row">
 			<div class="container">
@@ -548,19 +546,20 @@
 			</div>
 		</div>
 	</footer>
-	<!-- Footer End -->
+    <!-- Footer End -->
 
-	<!-- Javascripts -->
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="vendor/OwlCarousel/owl.carousel.js"></script>
-	<script src="vendor/semantic/semantic.min.js"></script>
-	<script src="js/jquery.countdown.min.js"></script>
-	<script src="js/custom.js"></script>
-	<script src="js/product.thumbnail.slider.js"></script>
-	<script src="js/offset_overlay.js"></script>
-	<script src="js/night-mode.js"></script>
-	
-	
+    <!-- Javascripts -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/OwlCarousel/owl.carousel.js"></script>
+    <script src="vendor/semantic/semantic.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/product.thumbnail.slider.js"></script>
+    <script src="js/offset_overlay.js"></script>
+    <script src="js/night-mode.js"></script>
+
+
 </body>
+
 </html>

@@ -1,36 +1,42 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<?php
+	include('php/verificar_login.php');
+?>
+<!DOCTYPE html>
+<html lang="pt_BR">
+	<?php
+	include('php/dados_cliente.php');
+	?>
 
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
-		<meta name="description" content="Gambolthemes">
-		<meta name="author" content="Gambolthemes">		
-		<title>Mercado Pai D'égua - Política de Reembolso e Devolução</title>
-		
-		<!-- Favicon Icon -->
-		<link rel="icon" type="image/png" href="images/logo-1.png">
-		
-		<!-- Stylesheets -->
-		<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-		<link href='vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
-		<link href="css/style.css" rel="stylesheet">
-		<link href="css/responsive.css" rel="stylesheet">
-		<link href="css/night-mode.css" rel="stylesheet">
-		<link href="css/step-wizard.css" rel="stylesheet">
-		
-		<!-- Vendor Stylesheets -->
-		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-		<link href="vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
-		<link href="vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
-		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="vendor/semantic/semantic.min.css">	
-		
-	</head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=9">
+    <meta name="description" content="Gambolthemes">
+    <meta name="author" content="Gambolthemes">
+    <title>Mercado Pai D'égua - Sobre Nós</title>
+
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/png" href="images/logo-1.png">
+
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/night-mode.css" rel="stylesheet">
+    <link href="css/step-wizard.css" rel="stylesheet">
+
+    <!-- Vendor Stylesheets -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
+    <link href="vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="vendor/semantic/semantic.min.css">
+
+</head>
 
 <body>
-	<!-- Category Model Start-->
+    <!-- modelo das categorias-->
 	<div id="category_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
 		<div class="modal-dialog category-area" role="document">
 			<div class="category-area-inner">
@@ -295,8 +301,13 @@
 						</li>
 						<li class="ui dropdown">
 							<a href="#" class="opts_account">
-								<img src="images/avatar/img-5.jpg" alt="">
-								<span class="user__name"><?php echo $resultado['nome'] ?></span>
+								<?php 
+								if(isset($resultado['foto'])){
+									echo "<img src=' ".$resultado['foto']." ' alt=''>";									
+								}else{
+									echo "<img src='images/avatar/img-5.jpg' alt=''>";
+								};								 								
+								?>								<span class="user__name"><?php echo $resultado['nome'] ?></span>
 								<i class="uil uil-angle-down"></i>
 							</a>
 							<div class="menu dropdown_account">
@@ -361,46 +372,219 @@
 			</div>
 		</div>
 	</header>
-	<!-- Header End -->
-	<!-- Body Start -->
-	<div class="wrapper">
-		<div class="gambo-Breadcrumb">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<nav aria-label="breadcrumb">
-							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index.php">Home</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Refund & Return Policy</li>
-							</ol>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="all-product-grid">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 col-md-12">
-						<div class="job-main-dt">
-							<h2>Gambo Refund & Return Policy</h2>
-							<span>These Refund & Return Policy ("Refund - Return") were last updated on May 18, 2020.</span>
-						</div>
-						<div class="job-des-dt142 policy-des-dt">
-							<h4>Return Policy</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum turpis vitae facilisis tempus. Donec in blandit risus, eget pretium mauris. Aliquam nec venenatis massa. Ut vel nulla id velit dictum rutrum nec vel ex. Phasellus sit amet faucibus massa, in feugiat augue. Maecenas eget dapibus turpis, a finibus justo. Suspendisse pretium lorem non lorem faucibus, non sagittis nisi finibus. Sed efficitur massa ac nibh condimentum interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse luctus, ex ut congue interdum, nibh turpis malesuada orci, vel vulputate arcu velit condimentum orci. Ut sed dictum lacus.</p>
-						</div>
-						<div class="job-des-dt142 policy-des-dt">
-							<h4>Refund Policy</h4>
-							<p>Donec maximus lorem vitae risus molestie sollicitudin. Ut sem lorem, consequat et tortor sit amet, viverra porttitor erat. Suspendisse aliquet arcu vel auctor maximus. Nunc in euismod purus. Aliquam non varius quam. Sed eros magna, tempus ullamcorper auctor vitae, pretium eu elit. Integer sagittis eu purus eget venenatis. Ut rhoncus tempor velit vitae consequat. Quisque consequat, enim eu cursus eleifend, velit mi viverra arcu, sed elementum dolor odio eget neque.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>	
-	</div>
-	<!-- Body End -->
-	<!-- Footer Start -->
+    <!-- Header End -->
+    <!-- Body Start -->
+    <div class="wrapper">
+        <div class="default-dt">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="title129">
+                            <h2>About Us</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="life-gambo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="default-title left-text">
+                            <h2>About Gambo</h2>
+                            <p>Customers Deserve Better</p>
+                            <img src="images/line.svg" alt="">
+                        </div>
+                        <div class="about-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac sodales sapien. Sed pellentesque, quam in ornare tincidunt, magna augue placerat nunc, ut facilisis nibh ipsum non ipsum. Cras ac eros non neque viverra
+                                consequat sed at est. Fusce efficitur, lacus nec dignissim tincidunt, diam sapien rhoncus neque, at tristique sapien nibh sed neque. Proin in neque in purus luctus facilisis. Donec viverra ligula quis lorem viverra consequat.
+                                Aliquam condimentum id enim volutpat rutrum. Donec semper iaculis convallis. Praesent quis elit eget ligula facilisis mattis. Praesent sed euismod dui. Suspendisse imperdiet vel quam nec venenatis. Suspendisse dictum blandit
+                                quam, vitae auctor enim gravida et. Sed id dictum nibh. Proin egestas massa sit amet tincidunt aliquet.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-img">
+                            <img src="images/about.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-steps-group white-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="about-step">
+                            <div class="about-step-img">
+                                <img src="images/about/icon-1.svg" alt="">
+                            </div>
+                            <h4>400+</h4>
+                            <p>People have joined the Gambo team in the past six months</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="about-step">
+                            <div class="about-step-img">
+                                <img src="images/about/icon-2.svg" alt="">
+                            </div>
+                            <h4>2x</h4>
+                            <p>Rate of growth in our monthly user base</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="about-step">
+                            <div class="about-step-img">
+                                <img src="images/about/icon-3.svg" alt="">
+                            </div>
+                            <h4>10 days</h4>
+                            <p>Time taken to launch in 8 cities across India</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="about-step">
+                            <div class="about-step-img">
+                                <img src="images/about/icon-4.svg" alt="">
+                            </div>
+                            <h4>95k</h4>
+                            <p>App downloads on iOS and Android</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="life-gambo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="default-title">
+                            <h2>Our Team</h2>
+                            <p>Teamwork Makes the Dream Work</p>
+                            <img src="images/line.svg" alt="">
+                        </div>
+                        <div class="dd-content">
+                            <div class="owl-carousel team-slider owl-theme">
+                                <div class="item">
+                                    <div class="team-item">
+                                        <div class="team-img">
+                                            <img src="images/team/img-1.jpg" alt="">
+                                        </div>
+                                        <h4>Joginder Singh</h4>
+                                        <span>CEO & Co-Founder</span>
+                                        <ul class="team-social">
+                                            <li><a href="#" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="team-item">
+                                        <div class="team-img">
+                                            <img src="images/team/img-2.jpg" alt="">
+                                        </div>
+                                        <h4>John Doe</h4>
+                                        <span>CTO & Senior Developer</span>
+                                        <ul class="team-social">
+                                            <li><a href="#" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="team-item">
+                                        <div class="team-img">
+                                            <img src="images/team/img-3.jpg" alt="">
+                                        </div>
+                                        <h4>Jassica William</h4>
+                                        <span>HR Manager</span>
+                                        <ul class="team-social">
+                                            <li><a href="#" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="team-item">
+                                        <div class="team-img">
+                                            <img src="images/team/img-4.jpg" alt="">
+                                        </div>
+                                        <h4>Zoena Singh</h4>
+                                        <span>Senior Sales Manager</span>
+                                        <ul class="team-social">
+                                            <li><a href="#" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="how-order-gambo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="default-title">
+                            <h2>How Do I Order?</h2>
+                            <p>How Do I order on Gambo</p>
+                            <img src="images/line.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="how-order-steps">
+                            <div class="how-order-icon">
+                                <i class="uil uil-search"></i>
+                            </div>
+                            <h4>Browse gambo.com for products or use the search feature</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="how-order-steps">
+                            <div class="how-order-icon">
+                                <i class="uil uil-shopping-basket"></i>
+                            </div>
+                            <h4>Add item to your shopping Basket</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="how-order-steps">
+                            <div class="how-order-icon">
+                                <i class="uil uil-stopwatch"></i>
+                            </div>
+                            <h4>Choose a convenient delivery time from our 5 Slots* a day</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="how-order-steps">
+                            <div class="how-order-icon">
+                                <i class="uil uil-money-bill"></i>
+                            </div>
+                            <h4>Select suitable payment option(Cash, Master, Credit Card, Discover)</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="how-order-steps">
+                            <div class="how-order-icon">
+                                <i class="uil uil-truck"></i>
+                            </div>
+                            <h4>Your products will be home-delivered as per your order.</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="how-order-steps">
+                            <div class="how-order-icon">
+                                <i class="uil uil-smile"></i>
+                            </div>
+                            <h4>Happy Curstomers</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Body End -->
+    <!-- Footer Start -->
 	<footer class="footer">
 		<div class="footer-first-row">
 			<div class="container">
@@ -508,26 +692,27 @@
 							</ul>
 						</div>
 						<div class="copyright-text">
-							<i class="uil uil-copyright"></i>Copyright 2020 <b>Mercado Pai D'égua</b> . All rights reserved
+							<i class="uil uil-copyright"></i>Copyright 2021 <b>Mercado Pai D'égua</b> . All rights reserved
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</footer>
-	<!-- Footer End -->
+    <!-- Footer End -->
 
-	<!-- Javascripts -->
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="vendor/OwlCarousel/owl.carousel.js"></script>
-	<script src="vendor/semantic/semantic.min.js"></script>
-	<script src="js/jquery.countdown.min.js"></script>
-	<script src="js/custom.js"></script>
-	<script src="js/product.thumbnail.slider.js"></script>
-	<script src="js/offset_overlay.js"></script>
-	<script src="js/night-mode.js"></script>
-	
-	
+    <!-- Javascripts -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/OwlCarousel/owl.carousel.js"></script>
+    <script src="vendor/semantic/semantic.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/product.thumbnail.slider.js"></script>
+    <script src="js/offset_overlay.js"></script>
+    <script src="js/night-mode.js"></script>
+
+
 </body>
+
 </html>
