@@ -2,7 +2,10 @@
 	include('php/verificar_login.php');
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_BR">
+	<?php
+	include('php/dados_cliente.php');
+	?>
 
 <head>
     <meta charset="utf-8">
@@ -293,11 +296,17 @@
 							<a href="#" class="offer-link"><i class="uil uil-phone-alt"></i>1800-000-000</a>
 						</li>
 						<li>
-							<a href="faq.html" class="offer-link"><i class="uil uil-question-circle"></i>Ajuda</a>
+							<a href="faq.php" class="offer-link"><i class="uil uil-question-circle"></i>Ajuda</a>
 						</li>
 						<li class="ui dropdown">
 							<a href="#" class="opts_account">
-								<img src="images/avatar/img-5.jpg" alt="">
+								<?php 
+								if(isset($resultado['foto'])){
+									echo "<img src=' ".$resultado['foto']." ' alt=''>";									
+								}else{
+									echo "<img src='images/avatar/img-5.jpg' alt=''>";
+								};								 								
+								?>	
 								<span class="user__name"><?php echo $resultado['nome'] ?></span>
 								<i class="uil uil-angle-down"></i>
 							</a>
@@ -314,7 +323,7 @@
 								<a href="dashboard_my_orders.php" class="item channel_item"><i class="uil uil-box icon__1"></i>Ordens de compra</a>
 								<a href="dashboard_my_wallet.php" class="item channel_item"><i class="uil uil-usd-circle icon__1"></i>Carteira</a>
 								<a href="dashboard_my_addresses.php" class="item channel_item"><i class="uil uil-location-point icon__1"></i>Endereço</a>
-								<a href="faq.html" class="item channel_item"><i class="uil uil-info-circle icon__1"></i>Perguntas frequentes</a>
+								<a href="faq.php" class="item channel_item"><i class="uil uil-info-circle icon__1"></i>Perguntas frequentes</a>
 								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="item channel_item"><i class="uil uil-lock-alt icon__1"></i>Sair</a>
 							</div>
 						</li>
@@ -333,20 +342,20 @@
 						<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
 							<ul class="navbar-nav main_nav align-self-stretch">
 								<li class="nav-item"><a href="index.php" class="nav-link active" title="Home">Início</a></li>
-								<li class="nav-item"><a href="shop_grid.html" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
-								<li class="nav-item"><a href="shop_grid.html" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
+								<li class="nav-item"><a href="shop_grid.php" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
+								<li class="nav-item"><a href="shop_grid.php" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
 								<li class="nav-item">
 									<div class="ui icon top left dropdown nav__menu">
 										<a class="nav-link" title="Pages">Mais <i class="uil uil-angle-down"></i></a>
 										<div class="menu dropdown_page">
 											<a href="dashboard_overview.php" class="item channel_item page__links">Conta</a>
-											<a href="about_us.html" class="item channel_item page__links">Sobre nós</a>
+											<a href="about_us.php" class="item channel_item page__links">Sobre nós</a>
 											<a href="checkout.php" class="item channel_item page__links">Finalizar Pedido</a>
-											<a href="order_placed.html" class="item channel_item page__links">Pedidos Finalizados</a>
+											<a href="order_placed.php" class="item channel_item page__links">Pedidos Finalizados</a>
 										</div>
 									</div>
 								</li>
-								<li class="nav-item"><a href="contact_us.html" class="nav-link" title="Contact">Fale conosco</a></li>
+								<li class="nav-item"><a href="contact_us.php" class="nav-link" title="Contact">Fale conosco</a></li>
 							</ul>
 						</div>
 					</div>
@@ -410,7 +419,7 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-6">
                             <div class="product-item mb-30">
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
+                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">
                                     <img src="images/product/img-1.jpg" alt="">
                                     <div class="product-absolute-options">
                                         <span class="offer-badge-1">6% off</span>
@@ -434,7 +443,7 @@
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="product-item mb-30">
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
+                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">
                                     <img src="images/product/img-2.jpg" alt="">
                                     <div class="product-absolute-options">
                                         <span class="offer-badge-1">2% off</span>
@@ -458,7 +467,7 @@
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="product-item mb-30">
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
+                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">
                                     <img src="images/product/img-3.jpg" alt="">
                                     <div class="product-absolute-options">
                                         <span class="offer-badge-1">5% off</span>
@@ -482,7 +491,7 @@
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="product-item mb-30">
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
+                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">
                                     <img src="images/product/img-4.jpg" alt="">
                                     <div class="product-absolute-options">
                                         <span class="offer-badge-1">3% off</span>
@@ -506,7 +515,7 @@
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="product-item mb-30">
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
+                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">
                                     <img src="images/product/img-5.jpg" alt="">
                                     <div class="product-absolute-options">
                                         <span class="offer-badge-1">2% off</span>
@@ -530,7 +539,7 @@
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="product-item mb-30">
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
+                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">
                                     <img src="images/product/img-6.jpg" alt="">
                                     <div class="product-absolute-options">
                                         <span class="offer-badge-1">2% off</span>
@@ -554,7 +563,7 @@
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="product-item mb-30">
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
+                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">
                                     <img src="images/product/img-7.jpg" alt="">
                                     <div class="product-absolute-options">
                                         <span class="offer-badge-1">1% off</span>
@@ -578,7 +587,7 @@
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="product-item mb-30">
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
+                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">
                                     <img src="images/product/img-11.jpg" alt="">
                                     <div class="product-absolute-options">
                                         <span class="offer-badge-1">6% off</span>
@@ -602,7 +611,7 @@
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="product-item mb-30">
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
+                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">
                                     <img src="images/product/img-12.jpg" alt="">
                                     <div class="product-absolute-options">
                                         <span class="offer-badge-1">2% off</span>
@@ -626,7 +635,7 @@
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="product-item mb-30">
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
+                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">
                                     <img src="images/product/img-13.jpg" alt="">
                                     <div class="product-absolute-options">
                                         <span class="offer-badge-1">5% off</span>
@@ -650,7 +659,7 @@
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="product-item mb-30">
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
+                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">
                                     <img src="images/product/img-14.jpg" alt="">
                                     <div class="product-absolute-options">
                                         <span class="offer-badge-1">1% off</span>
@@ -674,7 +683,7 @@
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="product-item mb-30">
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.html" class="product-img">
+                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">
                                     <img src="images/product/img-8.jpg" alt="">
                                     <div class="product-absolute-options">
                                         <span class="offer-badge-1">3% off</span>
@@ -753,10 +762,10 @@
 						<div class="second-row-item">
 							<h4>Links Úteis</h4>
 							<ul>
-								<li><a href="about_us.html">Sobre Nós</a></li>
-								<li><a href="shop_grid.html">Produtos em Destaque</a></li>
-								<li><a href="faq.html">FAQ</a></li>
-								<li><a href="contact_us.html">Fale Conosco</a></li>
+								<li><a href="about_us.php">Sobre Nós</a></li>
+								<li><a href="shop_grid.php">Produtos em Destaque</a></li>
+								<li><a href="faq.php">FAQ</a></li>
+								<li><a href="contact_us.php">Fale Conosco</a></li>
 							</ul>
 						</div>
 					</div>
@@ -807,11 +816,11 @@
 					<div class="col-md-12">
 						<div class="footer-bottom-links">
 							<ul>
-								<li><a href="about_us.html">Sobre Nós</a></li>
-								<li><a href="contact_us.html">Contato</a></li>
-								<li><a href="privacy_policy.html">Política de Privacidade</a></li>
-								<li><a href="term_and_conditions.html">Termo e Condições</a></li>
-								<li><a href="refund_and_return_policy.html">Política de Reembolso e Devolução</a></li>
+								<li><a href="about_us.php">Sobre Nós</a></li>
+								<li><a href="contact_us.php">Contato</a></li>
+								<li><a href="privacy_policy.php">Política de Privacidade</a></li>
+								<li><a href="term_and_conditions.php">Termo e Condições</a></li>
+								<li><a href="refund_and_return_policy.php">Política de Reembolso e Devolução</a></li>
 							</ul>
 						</div>
 						<div class="copyright-text">

@@ -1,5 +1,11 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<?php
+	include('php/verificar_login.php');
+?>
+<!DOCTYPE html>
+<html lang="pt_BR">
+	<?php
+	include('php/dados_cliente.php');
+	?>
 
 	<head>
 		<meta charset="utf-8">
@@ -7,7 +13,7 @@
 		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
 		<meta name="description" content="Gambolthemes">
 		<meta name="author" content="Gambolthemes">		
-		<title>Mercado Pai D'égua - Termos e Condições de Uso</title>
+		<title>Mercado Pai D'égua - Política de Privacidade</title>
 		
 		<!-- Favicon Icon -->
 		<link rel="icon" type="image/png" href="images/logo-1.png">
@@ -291,11 +297,17 @@
 						<a href="#" class="offer-link"><i class="uil uil-phone-alt"></i>1800-000-000</a>
 					</li>
 					<li>
-						<a href="faq.html" class="offer-link"><i class="uil uil-question-circle"></i>Ajuda</a>
+						<a href="faq.php" class="offer-link"><i class="uil uil-question-circle"></i>Ajuda</a>
 					</li>
 					<li class="ui dropdown">
 						<a href="#" class="opts_account">
-							<img src="images/avatar/img-5.jpg" alt="">
+							<?php 
+							if(isset($resultado['foto'])){
+								echo "<img src=' ".$resultado['foto']." ' alt=''>";									
+							}else{
+								echo "<img src='images/avatar/img-5.jpg' alt=''>";
+							};								 								
+							?>	
 							<span class="user__name"><?php echo $resultado['nome'] ?></span>
 							<i class="uil uil-angle-down"></i>
 						</a>
@@ -312,7 +324,7 @@
 							<a href="dashboard_my_orders.php" class="item channel_item"><i class="uil uil-box icon__1"></i>Ordens de compra</a>
 							<a href="dashboard_my_wallet.php" class="item channel_item"><i class="uil uil-usd-circle icon__1"></i>Carteira</a>
 							<a href="dashboard_my_addresses.php" class="item channel_item"><i class="uil uil-location-point icon__1"></i>Endereço</a>
-							<a href="faq.html" class="item channel_item"><i class="uil uil-info-circle icon__1"></i>Perguntas frequentes</a>
+							<a href="faq.php" class="item channel_item"><i class="uil uil-info-circle icon__1"></i>Perguntas frequentes</a>
 							<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="item channel_item"><i class="uil uil-lock-alt icon__1"></i>Sair</a>
 						</div>
 					</li>
@@ -331,20 +343,20 @@
 					<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
 						<ul class="navbar-nav main_nav align-self-stretch">
 							<li class="nav-item"><a href="index.php" class="nav-link active" title="Home">Início</a></li>
-							<li class="nav-item"><a href="shop_grid.html" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
-							<li class="nav-item"><a href="shop_grid.html" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
+							<li class="nav-item"><a href="shop_grid.php" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
+							<li class="nav-item"><a href="shop_grid.php" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
 							<li class="nav-item">
 								<div class="ui icon top left dropdown nav__menu">
 									<a class="nav-link" title="Pages">Mais <i class="uil uil-angle-down"></i></a>
 									<div class="menu dropdown_page">
 										<a href="dashboard_overview.php" class="item channel_item page__links">Conta</a>
-										<a href="about_us.html" class="item channel_item page__links">Sobre nós</a>
+										<a href="about_us.php" class="item channel_item page__links">Sobre nós</a>
 										<a href="checkout.php" class="item channel_item page__links">Finalizar Pedido</a>
-										<a href="order_placed.html" class="item channel_item page__links">Pedidos Finalizados</a>
+										<a href="order_placed.php" class="item channel_item page__links">Pedidos Finalizados</a>
 									</div>
 								</div>
 							</li>
-							<li class="nav-item"><a href="contact_us.html" class="nav-link" title="Contact">Fale conosco</a></li>
+							<li class="nav-item"><a href="contact_us.php" class="nav-link" title="Contact">Fale conosco</a></li>
 						</ul>
 					</div>
 				</div>
@@ -361,7 +373,7 @@
 		</div>
 	</div>
 </header>
-	<!-- Header End -->
+<!-- header fim -->
 	<!-- Body Start -->
 	<div class="wrapper">
 		<div class="gambo-Breadcrumb">
@@ -371,7 +383,7 @@
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.php">Início</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Termos e Condições</li>
+								<li class="breadcrumb-item active" aria-current="page">Política de Privacidade</li>
 							</ol>
 						</nav>
 					</div>
@@ -383,85 +395,49 @@
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
 						<div class="job-main-dt">
-							<h2>Termos e Condições - Mercado Pai D'égua</h2>
-							<span>Estes Termos de Uso ("Termos") foram atualizados pela última vez em....</span>
+							<h2>Mercado Pai D'égua - Política de Privacidade</h2>
+							<span>Esta Política de Privacidade ("Privacidade") foi atualizada pela última vez em tal data.....</span>
 						</div>
 						<div class="job-des-dt142 policy-des-dt">
-							<h4>Personal Information</h4>
+							<h4>Informações pessoais</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum turpis vitae facilisis tempus. Donec in blandit risus, eget pretium mauris. Aliquam nec venenatis massa. Ut vel nulla id velit dictum rutrum nec vel ex. Phasellus sit amet faucibus massa, in feugiat augue. Maecenas eget dapibus turpis, a finibus justo. Suspendisse pretium lorem non lorem faucibus, non sagittis nisi finibus. Sed efficitur massa ac nibh condimentum interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse luctus, ex ut congue interdum, nibh turpis malesuada orci, vel vulputate arcu velit condimentum orci. Ut sed dictum lacus.</p>
 						</div>
 						<div class="job-des-dt142 policy-des-dt">
-							<h4>Services overview</h4>
+							<h4>Quais informações são, ou podem ser, coletadas de você?</h4>
 							<p>Donec maximus lorem vitae risus molestie sollicitudin. Ut sem lorem, consequat et tortor sit amet, viverra porttitor erat. Suspendisse aliquet arcu vel auctor maximus. Nunc in euismod purus. Aliquam non varius quam. Sed eros magna, tempus ullamcorper auctor vitae, pretium eu elit. Integer sagittis eu purus eget venenatis. Ut rhoncus tempor velit vitae consequat. Quisque consequat, enim eu cursus eleifend, velit mi viverra arcu, sed elementum dolor odio eget neque.</p>
 						</div>
 						<div class="job-des-dt142 policy-des-dt">
-							<h4>Eligibility</h4>
+							<h4>Como coletamos a informação?</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum turpis vitae facilisis tempus. Donec in blandit risus, eget pretium mauris. Aliquam nec venenatis massa. Ut vel nulla id velit dictum rutrum nec vel ex. Phasellus sit amet faucibus massa, in feugiat augue. Maecenas eget dapibus turpis, a finibus justo. Suspendisse pretium lorem non lorem faucibus, non sagittis nisi finibus. Sed efficitur massa ac nibh condimentum interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse luctus, ex ut congue interdum, nibh turpis malesuada orci, vel vulputate arcu velit condimentum orci. Ut sed dictum lacus.</p>
 						</div>
 						<div class="job-des-dt142 policy-des-dt">
-							<h4>License & Site access</h4>
+							<h4>Como a informação é usada?</h4>
 							<p>Donec maximus lorem vitae risus molestie sollicitudin. Ut sem lorem, consequat et tortor sit amet, viverra porttitor erat. Suspendisse aliquet arcu vel auctor maximus. Nunc in euismod purus. Aliquam non varius quam. Sed eros magna, tempus ullamcorper auctor vitae, pretium eu elit. Integer sagittis eu purus eget venenatis. Ut rhoncus tempor velit vitae consequat. Quisque consequat, enim eu cursus eleifend, velit mi viverra arcu, sed elementum dolor odio eget neque.</p>
 						</div>
 						<div class="job-des-dt142 policy-des-dt">
-							<h4>With whom your information will be shared</h4>
+							<h4>Com quem suas informações serão compartilhadas</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum turpis vitae facilisis tempus. Donec in blandit risus, eget pretium mauris. Aliquam nec venenatis massa. Ut vel nulla id velit dictum rutrum nec vel ex. Phasellus sit amet faucibus massa, in feugiat augue. Maecenas eget dapibus turpis, a finibus justo. Suspendisse pretium lorem non lorem faucibus, non sagittis nisi finibus. Sed efficitur massa ac nibh condimentum interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse luctus, ex ut congue interdum, nibh turpis malesuada orci, vel vulputate arcu velit condimentum orci. Ut sed dictum lacus.</p>
 						</div>
 						<div class="job-des-dt142 policy-des-dt">
-							<h4>Account & Registration Obligations</h4>
+							<h4>Que escolha está disponível para você em relação à coleta, uso e distribuição de suas informações?</h4>
 							<p>Donec maximus lorem vitae risus molestie sollicitudin. Ut sem lorem, consequat et tortor sit amet, viverra porttitor erat. Suspendisse aliquet arcu vel auctor maximus. Nunc in euismod purus. Aliquam non varius quam. Sed eros magna, tempus ullamcorper auctor vitae, pretium eu elit. Integer sagittis eu purus eget venenatis. Ut rhoncus tempor velit vitae consequat. Quisque consequat, enim eu cursus eleifend, velit mi viverra arcu, sed elementum dolor odio eget neque.</p>
 						</div>
 						<div class="job-des-dt142 policy-des-dt">
-							<h4>Pricing</h4>
+							<h4>Como você pode corrigir imprecisões nas informações?</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum turpis vitae facilisis tempus. Donec in blandit risus, eget pretium mauris. Aliquam nec venenatis massa. Ut vel nulla id velit dictum rutrum nec vel ex. Phasellus sit amet faucibus massa, in feugiat augue. Maecenas eget dapibus turpis, a finibus justo. Suspendisse pretium lorem non lorem faucibus, non sagittis nisi finibus. Sed efficitur massa ac nibh condimentum interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse luctus, ex ut congue interdum, nibh turpis malesuada orci, vel vulputate arcu velit condimentum orci. Ut sed dictum lacus.</p>
 						</div>
 						<div class="job-des-dt142 policy-des-dt">
-							<h4>Cancellation by Site / Customer</h4>
+							<h4>Atualizações de Políticas</h4>
 							<p>Donec maximus lorem vitae risus molestie sollicitudin. Ut sem lorem, consequat et tortor sit amet, viverra porttitor erat. Suspendisse aliquet arcu vel auctor maximus. Nunc in euismod purus. Aliquam non varius quam. Sed eros magna, tempus ullamcorper auctor vitae.</p>
 						</div>
 						<div class="job-des-dt142 policy-des-dt">
-							<h4>Return & Refunds</h4>
-							<p>Donec maximus lorem vitae risus molestie sollicitudin. Ut sem lorem, consequat et tortor sit amet, viverra porttitor erat. Suspendisse aliquet arcu vel auctor maximus. Nunc in euismod purus. Aliquam non varius quam. Sed eros magna, tempus ullamcorper auctor vitae.</p>
-						</div>
-						<div class="job-des-dt142 policy-des-dt">
-							<h4>You Agree and Confirm</h4>
-							<p>Donec maximus lorem vitae risus molestie sollicitudin. Ut sem lorem, consequat et tortor sit amet, viverra porttitor erat. Suspendisse aliquet arcu vel auctor maximus. Nunc in euismod purus. Aliquam non varius quam. Sed eros magna, tempus ullamcorper auctor vitae.</p>
-						</div>
-						<div class="job-des-dt142 policy-des-dt">
-							<h4>Contact Information</h4>
-							<ul class="joby-list-dt">
-								<li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
-								<li><p>Sed ut dui et tellus euismod accumsan.</p></li>
-								<li><p>Aenean sed neque vitae nisi commodo ultricies sed ut sapien.</p></li>
-								<li><p>Sed euismod urna vel lacus porta imperdiet.</p></li>
-								<li><p>Proin id neque condimentum, eleifend ipsum sed, luctus nisi.</p></li>
-								<li><p>Ut eu sem eget dolor bibendum tempor.</p></li>
-								<li><p>Sed scelerisque purus id nunc semper, in elementum quam fringilla.</p></li>
-								<li><p>Donec pulvinar enim vel convallis egestas.</p></li>
-							</ul>
-						</div>
-						<div class="job-des-dt142 policy-des-dt">
-							<h4>Modification of Terms & Conditions of Service</h4>
-							<p>Donec maximus lorem vitae risus molestie sollicitudin. Ut sem lorem, consequat et tortor sit amet, viverra porttitor erat. Suspendisse aliquet arcu vel auctor maximus. Nunc in euismod purus. Aliquam non varius quam. Sed eros magna, tempus ullamcorper auctor vitae.</p>
-						</div>
-						<div class="job-des-dt142 policy-des-dt">
-							<h4>Governing Law and Jurisdiction</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum turpis vitae facilisis tempus. Donec in blandit risus, eget pretium mauris. Aliquam nec venenatis massa. Ut vel nulla id velit dictum rutrum nec vel ex. Phasellus sit amet faucibus massa, in feugiat augue. Maecenas eget dapibus turpis, a finibus justo. Suspendisse pretium lorem non lorem faucibus, non sagittis nisi finibus. Sed efficitur massa ac nibh condimentum interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse luctus, ex ut congue interdum, nibh turpis malesuada orci, vel vulputate arcu velit condimentum orci. Ut sed dictum lacus.</p>
-						</div>
-						<div class="job-des-dt142 policy-des-dt">
-							<h4>Copyright & Trademark</h4>
-							<p>Donec maximus lorem vitae risus molestie sollicitudin. Ut sem lorem, consequat et tortor sit amet, viverra porttitor erat. Suspendisse aliquet arcu vel auctor maximus. Nunc in euismod purus. Aliquam non varius quam. Sed eros magna, tempus ullamcorper auctor vitae.</p>
-						</div>
-						<div class="job-des-dt142 policy-des-dt">
-							<h4>Objectionable Material</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum turpis vitae facilisis tempus. Donec in blandit risus, eget pretium mauris. Aliquam nec venenatis massa. Ut vel nulla id velit dictum rutrum nec vel ex. Phasellus sit amet faucibus massa, in feugiat augue. Maecenas eget dapibus turpis, a finibus justo. Suspendisse pretium lorem non lorem faucibus, non sagittis nisi finibus. Sed efficitur massa ac nibh condimentum interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse luctus, ex ut congue interdum, nibh turpis malesuada orci, vel vulputate arcu velit condimentum orci. Ut sed dictum lacus.</p>
-						</div>
-						<div class="job-des-dt142 policy-des-dt">
-							<h4>Indemnity</h4>
-							<p>Donec maximus lorem vitae risus molestie sollicitudin. Ut sem lorem, consequat et tortor sit amet, viverra porttitor erat. Suspendisse aliquet arcu vel auctor maximus. Nunc in euismod purus. Aliquam non varius quam. Sed eros magna, tempus ullamcorper auctor vitae.</p>
-						</div>
-						<div class="job-des-dt142 policy-des-dt">
-							<h4>Termination</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum turpis vitae facilisis tempus. Donec in blandit risus, eget pretium mauris. Aliquam nec venenatis massa. Ut vel nulla id velit dictum rutrum nec vel ex. Phasellus sit amet faucibus massa, in feugiat augue. Maecenas eget dapibus turpis, a finibus justo. Suspendisse pretium lorem non lorem faucibus, non sagittis nisi finibus. Sed efficitur massa ac nibh condimentum interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse luctus, ex ut congue interdum, nibh turpis malesuada orci, vel vulputate arcu velit condimentum orci. Ut sed dictum lacus.</p>
+							<h4>Informações de contato</h4>
+							<p>	
+								mercadin pai dégua Ltda,<br>
+								Rua, número, bairro, cidade,<br>
+								Tel.: (00) 00000-0000<br>
+								Email: info@mercadopaidegua.com<br>
+							</p>
 						</div>
 					</div>
 				</div>
@@ -515,10 +491,10 @@
 						<div class="second-row-item">
 							<h4>Links Úteis</h4>
 							<ul>
-								<li><a href="about_us.html">Sobre Nós</a></li>
-								<li><a href="shop_grid.html">Produtos em Destaque</a></li>
-								<li><a href="faq.html">FAQ</a></li>
-								<li><a href="contact_us.html">Fale Conosco</a></li>
+								<li><a href="about_us.php">Sobre Nós</a></li>
+								<li><a href="shop_grid.php">Produtos em Destaque</a></li>
+								<li><a href="faq.php">FAQ</a></li>
+								<li><a href="contact_us.php">Fale Conosco</a></li>
 							</ul>
 						</div>
 					</div>
@@ -569,11 +545,11 @@
 					<div class="col-md-12">
 						<div class="footer-bottom-links">
 							<ul>
-								<li><a href="about_us.html">Sobre Nós</a></li>
-								<li><a href="contact_us.html">Contato</a></li>
-								<li><a href="privacy_policy.html">Política de Privacidade</a></li>
-								<li><a href="term_and_conditions.html">Termo e Condições</a></li>
-								<li><a href="refund_and_return_policy.html">Política de Reembolso e Devolução</a></li>
+								<li><a href="about_us.php">Sobre Nós</a></li>
+								<li><a href="contact_us.php">Contato</a></li>
+								<li><a href="privacy_policy.php">Política de Privacidade</a></li>
+								<li><a href="term_and_conditions.php">Termo e Condições</a></li>
+								<li><a href="refund_and_return_policy.php">Política de Reembolso e Devolução</a></li>
 							</ul>
 						</div>
 						<div class="copyright-text">
