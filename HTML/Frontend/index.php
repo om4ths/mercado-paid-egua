@@ -59,13 +59,12 @@ include('php/func.php');
 							foreach($r_categoria as $key => $r_cat)
 							{	
 																
-							$caminhoCorretoImg = limpa_link($r_cat['cat_img']);
 																
 					?>
 						<li>
 							<a href="#" class="single-cat-item">
 								<div class="icon">
-									<?php echo "<img src=' ".$caminhoCorretoImg." ' alt='erro ao Carregar a imagem'>" ?>
+									<?php echo "<img src=' ".limpa_link($r_cat['cat_img'])." ' alt='erro ao Carregar a imagem'>" ?>
 								</div>
 								<?php echo "<div class='text'>".$r_cat['cat_nome']."</div>" ?>
 							</a>
@@ -493,13 +492,11 @@ include('php/func.php');
 							foreach($r_categoria as $key => $r_cat)
 							{	
 																
-							$caminhoCorretoImg = limpa_link($r_cat['cat_img']);
-																
 						?>	
 							<div class="item">
 								<a href="#" class="category-item">
 									<div class="cate-img">
-									<?php echo "<img src=' ".$caminhoCorretoImg." ' alt='Erro ao Carregar a imagem'>" ?>
+									<?php echo "<img src=' ".limpa_link($r_cat['cat_img'])." ' alt='Erro ao Carregar a imagem'>" ?>
 									</div>
 									<?php echo "<h4>".$r_cat['cat_nome']."</h4>" ?>
 								</a>
