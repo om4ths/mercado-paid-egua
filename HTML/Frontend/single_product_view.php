@@ -468,16 +468,24 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <p class="pp-descp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate, purus at tempor blandit, nulla felis dictum eros, sed volutpat odio sapien id lectus. Cras mollis massa ac congue posuere. Fusce viverra
-                                            mauris vel magna pretium aliquet. Nunc tincidunt, velit id tempus tristique, velit dolor hendrerit nibh, at scelerisque neque mauris sed ex.</p>
+                                        <?php echo "<p class='pp-descp'>".$r_view_pro['pro_desc']."</p>" ?>
                                         <div class="product-group-dt">
                                             <ul>
+                                            <?php if($r_view_pro['pro_desconto'] != $r_view_pro['pro_valor']){?>
                                                 <li>
-                                                    <div class="main-price color-discount">Com Desconto<span>$15</span></div>
+                                                    <?php echo "<div class='main-price color-discount'>Com Desconto<span>R$".formata_preco($r_view_pro['pro_desconto'])."</span></div>" ?>
                                                 </li>
                                                 <li>
-                                                    <div class="main-price mrp-price">Preço de Varejo<span>$18</span></div>
+                                                    <?php echo "<div class='main-price mrp-price'>Preço de Varejo<span>R$".formata_preco($r_view_pro['pro_valor'])."</span></div>" ?>
                                                 </li>
+                                            <?php
+                                            }else{
+                                            ?>
+                                                <li>
+                                                    <?php echo "<div class='main-price color-discount'>Preço<span>R$ ".$r_view_pro['pro_valor']."</span></div>" ?>
+                                                </li>
+                                            <?php } ?>
+
                                             </ul>
                                             <ul class="gty-wish-share">
                                                 <li>
@@ -624,8 +632,7 @@
                                 <div class="pdct-dts-1">
                                     <div class="pdct-dt-step">
                                         <h4>Descrição</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque posuere nunc in condimentum maximus. Integer interdum sem sollicitudin, porttitor felis in, mollis quam. Nunc gravida erat eu arcu interdum eleifend.
-                                            Cras tortor velit, dignissim sit amet hendrerit sed, ultricies eget est. Donec eget urna sed metus dignissim cursus.</p>
+                                        <?php echo "<p>".$r_view_pro['pro_desc']."</p>" ?>
                                     </div>
                                     <div class="pdct-dt-step">
                                         <h4>Benefícios</h4>
