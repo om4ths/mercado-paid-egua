@@ -542,7 +542,8 @@ include('php/func.php');
 
 							<div class="item">
 								<div class="product-item">
-									<a href="single_product_view.php" class="product-img">
+									<?php echo $r_pro['pro_id'] ?>
+									<?php echo "<a href='single_product_view.php?p_id=".$r_pro['pro_id']." ' class='product-img'></a>" ?>
 									    <?php echo "<img src=' ".limpa_link($r_pro['pro_img'])." ' alt='Erro ao Carregar a imagem'>" ?>
 										<div class="product-absolute-options">
 											<?php echo "<span class='offer-badge-1'>".porcentagemDesconto($r_pro['pro_valor'], $r_pro['pro_desconto'])."%</span>" ?>

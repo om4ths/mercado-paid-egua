@@ -5,6 +5,9 @@
 <html lang="pt_BR">
     <?php
 	include('php/dados_cliente.php');
+    include('php/func.php');
+    include('../Admin/php/exibe_produtos.php');
+    include('../Admin/php/ver_produto.php')
 	?>
 
 <head>
@@ -63,13 +66,13 @@
 							foreach($r_categoria as $key => $r_cat)
 							{	
 																
-							$caminhoCorretoImg = limpa_link($r_cat['cat_img']);
+							
 																
 					?>
 						<li>
 							<a href="#" class="single-cat-item">
 								<div class="icon">
-									<?php echo "<img src=' ".$caminhoCorretoImg." ' alt='erro ao Carregar a imagem'>" ?>
+									<?php echo "<img src=' ".limpa_link($r_cat['cat_img'])." ' alt='erro ao Carregar a imagem'>" ?>
 								</div>
 								<?php echo "<div class='text'>".$r_cat['cat_nome']."</div>" ?>
 							</a>
@@ -409,6 +412,7 @@
                                         <div class="item">
                                             <img src="images/product/isaacchavoso.jpg" alt="">
                                         </div>
+                                        <!--
                                         <div class="item">
                                             <img src="images/product/isaac1.jpg" alt="">
                                         </div>
@@ -418,7 +422,9 @@
                                         <div class="item">
                                             <img src="images/product/isaac3.jpg" alt="">
                                         </div>
+                                         -->
                                     </div>
+                                    <!--
                                     <div id="sync2" class="owl-carousel owl-theme">
                                         <div class="item">
                                             <img src="images/product/isaacchavoso.jpg" alt="">
@@ -433,10 +439,11 @@
                                             <img src="images/product/isaac3.jpg" alt="">
                                         </div>
                                     </div>
+                                    -->
                                 </div>
                                 <div class="col-lg-8 col-md-8">
                                     <div class="product-dt-right">
-                                        <h2>Nóia</h2>
+                                        <?php echo "<h2>".$r_view_pro['pro_nome']."</h2>" ?>
                                         <div class="no-stock">
                                             <p class="pd-no">Cód.<span>12345</span></p>
                                             <p class="stock-qty">Acessível<span>(Em Estoque)</span></p>
