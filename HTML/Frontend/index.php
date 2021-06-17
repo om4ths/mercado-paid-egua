@@ -266,6 +266,7 @@ include('php/func.php');
 			</div>
 		</div>
 	</div>
+
 	<!-- Carrnho sidebar fim-->
 	<!-- Header Start -->
 	<header class="header clearfix">
@@ -549,7 +550,6 @@ include('php/func.php');
 									    <?php echo "<img src=' ".limpa_link($r_pro['pro_img'])." ' alt='Erro ao Carregar a imagem'>" ?>
 										<div class="product-absolute-options">
 											<?php echo "<span class='offer-badge-1'>".porcentagemDesconto($r_pro['pro_valor'], $r_pro['pro_desconto'])."%</span>" ?>
-											<span class="like-icon" title="wishlist"></span>
 										</div>
 									</a>
 									<div class="product-text-dt">
@@ -753,7 +753,6 @@ include('php/func.php');
 										<img src="images/product/img-10.jpg" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">Novo</span>
-											<span class="like-icon" title="wishlist"></span>
 										</div>
 									</a>
 									<div class="product-text-dt">
@@ -777,7 +776,6 @@ include('php/func.php');
 										<img src="images/product/img-9.jpg" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">Novo</span>
-											<span class="like-icon" title="wishlist"></span>
 										</div>
 									</a>
 									<div class="product-text-dt">
@@ -801,7 +799,6 @@ include('php/func.php');
 										<img src="images/product/img-15.jpg" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">5% off</span>
-											<span class="like-icon" title="wishlist"></span>
 										</div>
 									</a>
 									<div class="product-text-dt">
@@ -825,7 +822,6 @@ include('php/func.php');
 										<img src="images/product/img-11.jpg" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">Novo</span>
-											<span class="like-icon" title="wishlist"></span>
 										</div>
 									</a>
 									<div class="product-text-dt">
@@ -849,7 +845,6 @@ include('php/func.php');
 										<img src="images/product/img-14.jpg" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">Novo</span>
-											<span class="like-icon" title="wishlist"></span>
 										</div>
 									</a>
 									<div class="product-text-dt">
@@ -873,7 +868,6 @@ include('php/func.php');
 										<img src="images/product/img-2.jpg" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">Novo</span>
-											<span class="like-icon" title="wishlist"></span>
 										</div>
 									</a>
 									<div class="product-text-dt">
@@ -897,7 +891,6 @@ include('php/func.php');
 										<img src="images/product/img-5.jpg" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">Novo</span>
-											<span class="like-icon" title="wishlist"></span>
 										</div>
 									</a>
 									<div class="product-text-dt">
@@ -921,7 +914,6 @@ include('php/func.php');
 										<img src="images/product/img-6.jpg" alt="">
 										<div class="product-absolute-options">
 											<span class="offer-badge-1">Novo</span>
-											<span class="like-icon" title="wishlist"></span>
 										</div>
 									</a>
 									<div class="product-text-dt">
