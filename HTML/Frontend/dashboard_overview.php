@@ -387,12 +387,14 @@ include('php/verificar_login.php');
 				</div>
 			</div>
 		</div>
+
 		<div class="dashboard-group">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="user-dt">
 							<div class="user-img">
+
 								<?php 
 								if(isset($resultado['foto'])){
 									echo "<img src=' ".$resultado['foto']." ' alt=''>";									
@@ -637,6 +639,7 @@ include('php/verificar_login.php');
 	<script src="js/offset_overlay.js"></script>
 	<script src="js/night-mode.js"></script>
 
+	<script src="js/imagem-perfil.js"></script>
 
 </body>
 
