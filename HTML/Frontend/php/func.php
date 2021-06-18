@@ -28,5 +28,9 @@
             return number_format($valor, 2, ',', '');
            
         }
+        function formataHora($valor){
+            return date("d/m/Y H:i:s", strtotime($valor));
+            
+        }
 
 	?>

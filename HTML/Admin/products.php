@@ -1,13 +1,7 @@
 <?php 
 		include('php/exibe_produtos.php');
 		include('php/conexao.php');
-
-		function limpa_link($valor){
-			$valor = trim($valor);
-			$valor = str_replace("../", "", $valor);
-			
-			return $valor;
-		   }
+		include('../Frontend/php/func.php');
 	?>
 
 <!DOCTYPE html>
@@ -159,7 +153,7 @@
 															{	
 																
 																$caminhoCorretoImg = limpa_link($r_pro['pro_img']);
-																
+																$dat = '17-03-2021'
 														?>
 
 													<tr>
@@ -172,7 +166,7 @@
 														</td>
 														<?php echo "<td>".$r_pro['pro_nome']."</td>" ?>
 														<td>Vegetables &amp; Fruits</td>
-														<td>8 hours ago</td>
+														<?php echo "<td>".formataHora($r_pro['pro_data_criado'])."</td>" ?>
 														<?php
 														if($r_pro['pro_ativo'] == 1)
 														{ 
