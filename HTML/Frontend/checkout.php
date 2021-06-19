@@ -479,7 +479,7 @@
                                                                                                        
                                                                     ?>                                                               
                                                                                                                                       
-                                                                    <?php echo" <li> <a for='tipo'>".$r_end['tipo']."</a> </li>" ?>                                                                
+                                                                    <?php echo" <li> <a href='checkout.php?id=".$r_end['id']."'>".$r_end['tipo']."</a> </li>" ?>                                                                
                                                                
                                                                 <?php
                                                                     };
