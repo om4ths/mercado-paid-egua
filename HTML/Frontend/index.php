@@ -310,7 +310,7 @@ include('php/func.php');
 									echo "<img src=' ".$resultado['foto']." ' alt=''>";									
 								}else{
 									echo "<img src='images/avatar/img-5.jpg' alt=''>";
-								};								 								
+								};	 							 								
 								?>
 								<span class="user__name"><?php echo $resultado['nome'] ?></span>
 								<i class="uil uil-angle-down"></i>
