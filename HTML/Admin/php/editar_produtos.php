@@ -57,7 +57,7 @@
         die();
       }
 
-    $pro_img = $_POST['p_img'];
+    /*$pro_img = $_POST['p_img'];
     if(isset($_POST['salvar_produto'])):
       $formatosPermitidos = array("png", "jpg", "jpeg");
       $extensao = pathinfo($_FILES['p_img']['name'], PATHINFO_EXTENSION);
@@ -65,7 +65,7 @@
       echo $extensao;
 
     endif;
-
+*/
     }
     
 ?>

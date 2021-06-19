@@ -193,7 +193,7 @@
 
 														<td class="action-btns">
 
-														<a  href="#" class='delete-btn' title='Apagar' data-confirm='Deseja realmente apagar o produto?'><i class='fas fa-trash-alt'></i></a>
+														<?php echo "<a  href='php/delete_pro.php?p_id=".$r_pro['pro_id']."' class='delete-btn' title='Apagar' data-confirm='Deseja realmente apagar o produto?'><i class='fas fa-trash-alt'></i></a>" ?>
 															<a href="product_view.php" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
 															<?php echo "<a href='view_editar_produtos.php?p_id=".$r_pro['pro_id']."' class='edit-btn' title='Edit'><i class='fas fa-edit'></i></a>" ?>
 														</td>
