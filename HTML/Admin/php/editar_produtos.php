@@ -2,6 +2,10 @@
 
     include('conexao.php');
 
+    
+    
+    if(isset($_POST['p_nome'])){
+
     $nomeArquivo = $_FILES['p_img']['name'];
     $caminhoAtualArquivo = $_FILES['p_img']['tmp_name'];
     chmod ("../images/product/", 0777);
@@ -11,7 +15,7 @@
     
     $pro_img = $caminhoSalvar;
 
-    $pro_id = $_GET['p_id'];
+    $pro_id = $_POST['p_id'];
     $pro_nome = $_POST['p_nome'];
     $pro_desc =  $_POST['p_desc'];
     $pro_cat = $_POST['p_cat'];
@@ -58,5 +62,6 @@
 
     endif;*/
 
+    }
     
 ?>

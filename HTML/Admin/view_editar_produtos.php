@@ -1,7 +1,7 @@
 <?php 
 		include('php/exibe_categoria.php');
 		include('php/conexao.php');
-        include('php/get_edit_pro.php');
+        include('php/editar_produtos.php');
 	?>
 
 <!DOCTYPE html>
@@ -115,7 +115,8 @@
 									<div class="card-body-table">
 										<div class="news-content-right pd-20">
 										<form method="POST" action="php/editar_produtos.php" enctype="multipart/form-data"> <!--FORMULARIO-->
-											<div class="form-group">
+											<?php echo"<input type='hidden' name='p_id' value='".$_GET['p_id']."' > </input>" ?>
+                                        <div class="form-group">
 												<label class="form-label">Nome*</label>
 												<input type="text" class="form-control" name="p_nome" placeholder="Nome do Produto">
 											</div>
