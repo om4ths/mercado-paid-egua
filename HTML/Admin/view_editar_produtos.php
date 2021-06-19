@@ -2,6 +2,7 @@
 		include('php/exibe_categoria.php');
 		include('php/conexao.php');
         include('php/editar_produtos.php');
+		include('php/exibir_editar_produto.php');
 	?>
 
 <!DOCTYPE html>
@@ -118,12 +119,12 @@
 											<?php echo"<input type='hidden' name='p_id' value='".$_GET['p_id']."' > </input>" ?>
                                         <div class="form-group">
 												<label class="form-label">Nome*</label>
-												<input type="text" class="form-control" name="p_nome" placeholder="Nome do Produto">
+												<?php echo "<input type='text' value='".$r_view_pro['pro_nome']."'class='form-control' name='p_nome' placeholder='Nome do Produto'>" ?>
 											</div>
 											<div class="form-group">
 												<label class="form-label">Categoria*</label>
 												<select id="categtory" name="p_cat" class="form-control">
-													<option selected>--Selecione a Categoria--</option>
+													<?php echo "<option value='".$r_view_pro['pro_cat']."' selected>--Selecione a Categoria--</option>" ?>
 												<?php
 												if(isset($r_categoria))
 														{	
@@ -138,11 +139,11 @@
 											</div>
 											<div class="form-group">
 												<label class="form-label">Preço*</label>
-												<input type="text" class="form-control" name="p_valor" placeholder="R$0">
+												<?php echo "<input type='text' value='".$r_view_pro['pro_valor']."' class='form-control' name='p_valor' placeholder='R$0'>" ?>
 											</div>
 											<div class="form-group">
 												<label class="form-label">Desconto*</label>
-												<input type="text" class="form-control" name="p_desconto" placeholder="R$0">
+												<?php echo "<input type='text' value='".$r_view_pro['pro_desconto']."' class='form-control' name='p_desconto' placeholder='R$0'>" ?>
 											</div>
 											<div class="form-group">
 												<label class="form-label">Status*</label>
@@ -151,10 +152,12 @@
 													<option value="0">Inativo</option>
 												</select>
 											</div>
-											<div class="form-group">
-												<label class="form-label">Descrição*</label>
-												<input type="text" class="form-control" name="p_desc" placeholder="Descrição do Produto">
-											</div>
+											<label class="form-label">Descrição*</label>
+												<div class="card card-editor">
+													<div class="content-editor">
+														<?php echo "<textarea name='p_desc' value='".$r_view_pro['pro_desc']."' class='text-control' placeholder='Insira a Descrição'></textarea>" ?>
+													</div>
+												</div>
 											<div class="form-group">
 												<label class="form-label">Imagem do Produto*</label>
 												<div class="input-group">

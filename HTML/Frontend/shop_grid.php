@@ -431,7 +431,7 @@
                         <div class="col-lg-3 col-md-6">
                             <div class="product-item mb-30">
                                 <?php echo "<a href='single_product_view.php?p_id=".$r_cat_pro['pro_id']." class='product-img'>" ?>
-                                    <?php echo "<img src=' ".limpa_link($r_cat_pro['pro_img'])." ' alt='Erro ao carregar a imagem'> " ?>
+                                    <?php echo "<img src=' ".limpa_link($r_cat_pro['pro_img'])." ' alt='Erro ao carregar a imagem' height='250' width='250'> " ?>
                                     <div class="product-absolute-options">
 									<?php if(porcentagemDesconto($r_cat_pro['pro_valor'], $r_cat_pro['pro_desconto']) != 0 and porcentagemDesconto($r_cat_pro['pro_valor'], $r_cat_pro['pro_desconto']) != 100) { ?>
                                         <?php echo "<span class='offer-badge-1'>".porcentagemDesconto($r_cat_pro['pro_valor'], $r_cat_pro['pro_desconto'])."% off</span>" ?>
