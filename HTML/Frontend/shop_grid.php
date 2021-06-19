@@ -5,6 +5,8 @@
 <html lang="pt_BR">
 	<?php
 	include('php/dados_cliente.php');
+	include('php/exibe_shop_grid.php');
+	include('php/func.php');
 	?>
 
 <head>
@@ -415,8 +417,10 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="product-list-view">
                     <div class="row">
+
                         <div class="col-lg-3 col-md-6">
                             <div class="product-item mb-30">
                                 <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">
@@ -441,6 +445,7 @@
                                 </div>
                             </div>
                         </div>
+						
                         <div class="col-lg-3 col-md-6">
                             <div class="product-item mb-30">
                                 <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">

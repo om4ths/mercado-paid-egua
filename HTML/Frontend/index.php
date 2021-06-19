@@ -494,7 +494,7 @@ include('php/func.php');
 																
 						?>	
 							<div class="item">
-								<a href="#" class="category-item">
+								<?php echo "<a href='shop_grid.php?c_id=".$r_cat['cat_id']." 'class='category-item'>" ?>
 									<div class="cate-img">
 									<?php echo "<img src=' ".limpa_link($r_cat['cat_img'])." ' alt='Erro ao Carregar a imagem'>" ?>
 									</div>
