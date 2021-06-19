@@ -305,7 +305,7 @@ body::-webkit-scrollbar-button {
 body::-webkit-scrollbar-corner {
     background-color: transparent;
 }
-body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb{
     height: 6px;
     border: 4px solid transparent;
     background-clip: padding-box;
@@ -2691,7 +2691,7 @@ img.download-btn {
     display: inline-block;
 }
 
-.product-now label,
+.product-now a,
 .product-now input {
 	display: block;
 	position: absolute;
@@ -2710,7 +2710,7 @@ img.download-btn {
 	background: #ff0404;
 }
 
-.product-now label {
+.product-now a {
 	padding: 5px;
     cursor: pointer;
     background: #c7c7c7;
@@ -2718,10 +2718,13 @@ img.download-btn {
     border-radius: 3px;
 	font-weight: 500;
     font-size: 12px;
+    margin-bottom:.5rem;
+    display: inline-block;
 }
 
-.product-now label:hover {
+.product-now a:hover {
 	background: #ff0404;
+    color: #fff!important;
 }
 
 .pp-descp {

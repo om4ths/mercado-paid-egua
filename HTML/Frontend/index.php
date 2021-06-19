@@ -63,7 +63,7 @@ include('../Admin/php/exibe_produtos.php');
 																
 					?>
 						<li>
-							<a href="#" class="single-cat-item">
+							<?php echo "<a href='shop_grid.php?c_id=".$r_cat['cat_id']."' class='single-cat-item'>" ?>
 								<div class="icon">
 									<?php echo "<img src=' ".limpa_link($r_cat['cat_img'])." ' alt='erro ao Carregar a imagem'>" ?>
 								</div>
@@ -348,7 +348,7 @@ include('../Admin/php/exibe_produtos.php');
 						<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
 							<ul class="navbar-nav main_nav align-self-stretch">
 								<li class="nav-item"><a href="index.php" class="nav-link active" title="Home">Início</a></li>
-								<li class="nav-item"><a href="shop_grid.php" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
+								<?php echo "<li class='nav-item'><a href='shop_grid.php' class='nav-link new_item' title='New Products'>Novos Produtos</a></li>" ?>
 								<li class="nav-item"><a href="shop_grid.php" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
 								<li class="nav-item">
 									<div class="ui icon top left dropdown nav__menu">
