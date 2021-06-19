@@ -262,7 +262,7 @@ include('../Admin/php/exibe_produtos.php');
 				<span>R$35</span>
 			</div>
 			<div class="checkout-cart">
-				<a href="#" class="cart-checkout-btn hover-btn">Finalizar</a>
+				<a href="checkout.php" class="cart-checkout-btn hover-btn">Finalizar</a>
 			</div>
 		</div>
 	</div>

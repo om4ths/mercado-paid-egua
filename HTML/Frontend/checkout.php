@@ -6,6 +6,7 @@
 <?php
 	include('php/dados_cliente.php');
     include('php/dados_endereco.php');
+    include('php/end_checkout.php');
 ?>
 
 <head>
@@ -35,10 +36,185 @@
     <link href="vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="vendor/semantic/semantic.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+
+        $(document).ready(function() {
+
+            function limpa_formulário_cep() {
+                // Limpa valores do formulário de cep.
+                $("#rua").val("");
+                $("#bairro").val("");
+                $("#cidade").val("");
+				$("#estado").val("");              
+            }
+            
+            //Quando o campo cep perde o foco.
+            $("#cep").blur(function() {
+
+                //Nova variável "cep" somente com dígitos.
+                var cep = $(this).val().replace(/\D/g, '');
+
+                //Verifica se campo cep possui valor informado.
+                if (cep != "") {
+
+                    //Expressão regular para validar o CEP.
+                    var validacep = /^[0-9]{8}$/;
+
+                    //Valida o formato do CEP.
+                    if(validacep.test(cep)) {
+
+                        //Preenche os campos com "..." enquanto consulta webservice.
+                        $("#rua").val("...");
+                        $("#bairro").val("...");
+                        $("#cidade").val("...");
+                        $("#uf").val("...");
+                        $("#ibge").val("...");
+
+                        //Consulta o webservice viacep.com.br/
+                        $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
+
+                            if (!("erro" in dados)) {
+                                //Atualiza os campos com os valores da consulta.
+                                $("#rua").val(dados.logradouro);
+                                $("#bairro").val(dados.bairro);
+                                $("#cidade").val(dados.localidade);
+                                $("#uf").val(dados.uf);
+                                $("#ibge").val(dados.ibge);
+                            } //end if.
+                            else {
+                                //CEP pesquisado não foi encontrado.
+                                limpa_formulário_cep();
+                                alert("CEP não encontrado.");
+                            }
+                        });
+                    } //end if.
+                    else {
+                        //cep é inválido.
+                        limpa_formulário_cep();
+                        alert("Formato de CEP inválido.");
+                    }
+                } //end if.
+                else {
+                    //cep sem valor, limpa formulário.
+                    limpa_formulário_cep();
+                }
+            });
+        });
+
+    </script>
+
+
 
 </head>
 
 <body>
+    <!-- adicionar endereço -->
+
+    <div id="address_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
+        
+		<div class="modal-dialog category-area" role="document">
+            <div class="category-area-inner">
+                <div class="modal-header">
+                    <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+						<i class="uil uil-multiply"></i>
+                    </button>
+                </div>
+                <div class="category-model-content modal-content"> 
+					<div class="cate-header">
+						<h4>Adicionar Endereço</h4>
+					</div>
+					<div class="add-address-form">
+						<div class="checout-address-step">
+							<div class="row">
+								<div class="col-lg-12">												
+									<form class="" method="POST" action="php/endereco_check.php">
+										<!-- Multiple Radios (inline) -->
+										<div class="form-group">
+											<div class="product-radio">
+												<ul class="product-now">
+													<li>
+														<input type="radio" id="ad1" name="tipo" value="1"checked>
+														<label for="ad1">Casa</label>
+													</li>
+													<li>
+														<input type="radio" id="ad2" name="tipo" value="2">
+														<label for="ad2">Trabalho</label>
+													</li>
+													<li>
+														<input type="radio" id="ad3" name="tipo" value="3">
+														<label for="ad3">Outros</label>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="address-fieldset">
+											
+											<div class="col-lg-6-cep col-md-12">
+												<div class="form-group">
+													<label class="control-label">CEP*</label>
+													<input id="cep" name="cep" type="tel" placeholder="" class="form-control input-md" data-mask="00000-000" required="">
+												</div>
+											</div>
+											<div class="row">
+												
+												
+												<div class="col-lg-6 col-md-12">
+													<div class="form-group">
+														<label class="control-label">Bairro*</label>
+														<input id="bairro" name="bairro" type="text" placeholder="" class="form-control input-md" maxlength="30" required="">
+													</div>
+												</div>
+												<div class="col-lg-6 col-md-12">
+														<div class="form-group">
+															<label class="control-label">Cidade*</label>
+															<input id="cidade" name="cidade" type="text" placeholder="" class="form-control input-md" maxlength="80"required="">
+														</div>
+													</div>	
+												<div class="col-lg-12 col-md-12">
+													<div class="form-group">
+														<label class="control-label">Rua / Avenida *</label>
+														<input id="rua" name="rua" type="text" placeholder="" class="form-control input-md" maxlength="200" required="">
+													</div>
+												</div>
+												<div class="col-lg-12 col-md-12">
+													<div class="form-group">
+														<label class="control-label"> Número*</label>
+														<input id="street" name="n_end" type="tel" placeholder="" class="form-control input-md" data-mask="0000000000000">
+													</div>
+												</div>
+												<div class="col-lg-12 col-md-12">
+													<div class="form-group">
+														<label class="control-label">Complemento/Ponto de referência</label>
+														<input id="complemento" name="complemento" type="text" placeholder="" class="form-control input-md" maxlength="100" required="">
+													</div>
+												</div>
+												
+											
+												
+												<div class="col-lg-12 col-md-12">
+													<div class="form-group mb-0">
+														<div class="address-btns">
+															<button class="save-btn14 hover-btn">Salvar</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- adicionar endereço fim-->
+
+
     <!-- modelo das categorias-->
 	<div id="category_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
 		<div class="modal-dialog category-area" role="document">
@@ -478,7 +654,7 @@
                                                                                                        
                                                                     ?>                                                               
                                                                                                                                       
-                                                                    <?php echo" <li> <label for='tipo'>".$r_end['tipo']."</label> </li>" ?>                                                                
+                                                                    <?php echo" <li> <a href='checkout.php?id=".$r_end['id']."'>".$r_end['tipo']."</a> </li>" ?>                                                                
                                                                
                                                                 <?php
                                                                     };
@@ -489,46 +665,44 @@
                                                                 </div>
                                                         <div class="address-fieldset">
                                                             <div class="row">
+                                                                
                                                                 <div class="col-lg-6 col-md-12">
                                                                     <div class="form-group">
-                                                                        <label class="control-label">Nome*</label>
-                                                                        <input id="name" name="name" readonly type="text" placeholder="Nome" class="form-control input-md" required="">
+                                                                        <label class="control-label">CEP</label>
+                                                                       <?php if(isset($r_endereco['cep'])){ echo "<input name='cep' readonly type='tel' placeholder='' value='".$r_endereco['cep']."' class='form-control input-md' data-mask='00000-000' required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md' data-mask='00000-000' required=''>";};    ?>
                                                                     </div>
+																</div>
+                                                                <div class="col-lg-12 col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Bairro</label>
+                                                                        <?php if(isset($r_endereco['bairro'])){ echo "<input name='cep' readonly type='tel' placeholder='' value='".$r_endereco['bairro']."' class='form-control input-md' data-mask='00000-000' required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md' data-mask='00000-000' required=''>";};    ?>                                                                    </div>
                                                                 </div>
-                                                                <div class="col-lg-6 col-md-12">
+																<div class="col-lg-6 col-md-12">
                                                                     <div class="form-group">
-                                                                        <label class="control-label">Endereço de E-mail*</label>
-                                                                        <input id="email1" name="email1"readonly type="text" placeholder="Endereço de E-mail" class="form-control input-md" required="">
-                                                                    </div>
+                                                                        <label class="control-label">Cidade</label>
+                                                                        <?php if(isset($r_endereco['cidade'])){ echo "<input name='cep' readonly type='tel' placeholder='' value='".$r_endereco['cidade']."' class='form-control input-md' data-mask='00000-000' required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md' data-mask='00000-000' required=''>";};    ?>                                                                    </div>
                                                                 </div>
                                                                 <div class="col-lg-12 col-md-12">
                                                                     <div class="form-group">
-                                                                        <label class="control-label">Nº do apartamento / casa / escritório*</label>
-                                                                        <input id="flat" name="flat" readonly type="text" placeholder="Número do Imóvel (Ex: 14)" class="form-control input-md" required="">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-12 col-md-12">
-                                                                    <div class="form-group">
-                                                                        <label class="control-label">Rua / Avenida / Logradouro*</label>
-                                                                        <input id="street" name="street" readonly type="text" placeholder="Endereço do Local (Ex: Rua 1° de Maio)" class="form-control input-md">
+                                                                        <label class="control-label">Rua / Avenida</label>
+                                                                        <?php if(isset($r_endereco['rua'])){echo "<input id='street' name='street' readonly type='text' placeholder='' value='".$r_endereco['rua']."' class='form-control input-md'>";}else{echo "<input id='street' name='street' readonly type='text' placeholder=' ' class='form-control input-md'>";}?>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-12">
                                                                     <div class="form-group">
-                                                                        <label class="control-label">Código Pin*</label>
-                                                                        <input id="pincode" name="pincode" readonly type="text" placeholder="Pin" class="form-control input-md" required="">
-                                                                    </div>
+                                                                        <label class="control-label">Número</label>
+                                                                        <?php if(isset($r_endereco['numero'])){ echo "<input name='cep' readonly type='tel' placeholder='' value='".$r_endereco['numero']."' class='form-control input-md' data-mask='00000-000' required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md' data-mask='00000-000' required=''>";};    ?>                                                                    </div>
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-12">
                                                                     <div class="form-group">
-                                                                        <label class="control-label">Cidade*</label>
-                                                                        <input id="Locality" name="locality" readonly type="text" placeholder="Inserir Cidade" class="form-control input-md" required="">
-                                                                    </div>
+                                                                        <label class="control-label">Complemento / Ponto de Referência</label>
+                                                                        <?php if(isset($r_endereco['complemento'])){ echo "<input name='cep' readonly type='tel' placeholder='' value='".$r_endereco['complemento']."' class='form-control input-md' data-mask='00000-000' required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md' data-mask='00000-000' required=''>";};    ?>                                                                    </div>
                                                                 </div>
+
                                                                 <div class="col-lg-12 col-md-12">
                                                                     <div class="form-group">
                                                                         <div class="address-btns">
-                                                                            <button class="save-btn14 hover-btn">Salvar</button>
+                                                                        <a href="#" style="margin-top:0; margin-left:0;" class="add-address hover-btn" data-toggle="modal" data-target="#address_model">Adicionar Novo Endereço</a>
                                                                             <a class="collapsed ml-auto next-btn16 hover-btn" role="button" data-toggle="collapse" data-parent="#checkout_wizard" href="#collapseThree"> Avançar </a>
                                                                         </div>
                                                                     </div>
