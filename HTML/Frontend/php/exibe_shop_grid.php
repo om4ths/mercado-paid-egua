@@ -26,4 +26,14 @@ include('conexao.php');
 	
 }
 
+if(isset($_GET['pesquisar'])){
+	$pesquisar = $_GET['pesquisar'];
+	$select_new = "SELECT * FROM produtos WHERE pro_nome LIKE '%$pesquisar%' LIMIT 10";   
+	$array_new = mysqli_query($conexao,$select_new);
+	while($r_prow_cat = mysqli_fetch_array($array_new)){
+		$r_produtos_cat[] = $r_prow_cat;		
+}
+
+}
+
 ?>

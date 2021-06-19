@@ -403,7 +403,9 @@
                                 <?php echo "<h2>".$r_view_shop_grid['cat_nome']."</h2>" ?>
                             </div>
 
-							<?php }else{ ?>
+							<?php }
+							if(isset($_GET['new_id'])){
+							?>
 
 								<li class='breadcrumb-item active' aria-current='page'>Novos Produtos</li>
 
@@ -422,7 +424,28 @@
                                 <h2>Novos Produtos</h2>
                             </div>
 
-							<?php } ?>
+							<?php }
+							if(isset($_GET['pesquisar'])){
+								?>
+	
+									<li class='breadcrumb-item active' aria-current='page'>Pesquisar</li>
+	
+								</ol>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="all-product-grid">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="product-top-dt">
+								<div class="product-left-title">
+									<h2>Resultado</h2>
+								</div>
+	
+								<?php } ?>
                             
                         </div>
                     </div>
