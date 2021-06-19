@@ -66,9 +66,9 @@ include('php/verificar_login.php');
 													<label for="click" class="close-btn"></label>
 
 															<button id="select-image" class="btn-modal hover-btn"> 
-															<input type="file" id="photo-file" name="imagem">
+															<input type="file" id="photo-file" name="c_img">
 														Carregar Foto
-										</button>	
+													</button>	
 												
 
 													<img id="photo-preview" draggable="false"
@@ -86,9 +86,15 @@ include('php/verificar_login.php');
 													</div>
 													
 
-												</div>
-												<div class="footer-modal">
-												<button id="crop-image">Salvar Foto</button>
+													</div>
+													<div class="footer-modal">
+											
+													<form method="POST" action="php/img_cliente.php" enctype="multipart/form-data">
+													<input type="file" name="c_img" id="file">
+
+													<input id="crop-image" type="submit" name="c_img" value="Cortar e salvar Foto">
+													</form >
+												
 
 
 
