@@ -305,7 +305,7 @@
 				<div class="header_right">
 					<ul>
 						<li>
-							<a href="#" class="offer-link"><i class="uil uil-phone-alt"></i>1800-000-000</a>
+							<a href="#" class="offer-link"><i class="uil uil-phone-alt"></i>(91) 9 8283-2055</a>
 						</li>
 						<li>
 							<a href="faq.php" class="offer-link"><i class="uil uil-question-circle"></i>Ajuda</a>
