@@ -3,6 +3,7 @@
 		include('php/conexao.php');
         include('php/editar_produtos.php');
 		include('php/exibir_editar_produto.php');
+		include('../Frontend/php/func.php');
 	?>
 
 <!DOCTYPE html>
@@ -142,7 +143,7 @@
 												<?php echo "<input type='text' value='".$r_view_pro['pro_valor']."' class='form-control' name='p_valor' placeholder='R$0'>" ?>
 											</div>
 											<div class="form-group">
-												<label class="form-label">Desconto*</label>
+												<label class="form-label">Preço com desconto*</label>
 												<?php echo "<input type='text' value='".$r_view_pro['pro_desconto']."' class='form-control' name='p_desconto' placeholder='R$0'>" ?>
 											</div>
 											<div class="form-group">
@@ -155,19 +156,19 @@
 											<label class="form-label">Descrição*</label>
 												<div class="card card-editor">
 													<div class="content-editor">
-														<?php echo "<textarea name='p_desc' value='".$r_view_pro['pro_desc']."' class='text-control' placeholder='Insira a Descrição'></textarea>" ?>
+														<?php echo "<textarea name='p_desc'  class='text-control' placeholder='".$r_view_pro['pro_desc']."'>".$r_view_pro['pro_desc']."</textarea>" ?>
 													</div>
 												</div>
 											<div class="form-group">
 												<label class="form-label">Imagem do Produto*</label>
 												<div class="input-group">
 													<div class="custom-file">
-														<input type="file" name="p_img" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+														<?php echo "<input type='file' name='p_img' class='custom-file-input' id='inputGroupFile04' aria-describedby='inputGroupFileAddon04'>" ?>
 														<label class="custom-file-label" for="inputGroupFile04">Selecione a Imagem</label>
 													</div>
 												</div>
 												<div class="add-cate-img-1">
-													<img src="images/product/img-11.jpg" alt="">
+													<?php echo "<img src=' ".limpa_link($r_view_pro['pro_img'])." ' alt=''>" ?>
 												</div>
 											</div>
 											

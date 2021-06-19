@@ -1,19 +1,23 @@
 <?php
 
     include('conexao.php');
+    session_start();
 
     
     
     if(isset($_POST['p_nome'])){
 
+    
     $nomeArquivo = $_FILES['p_img']['name'];
     $caminhoAtualArquivo = $_FILES['p_img']['tmp_name'];
     chmod ("../images/product/", 0777);
     $caminhoSalvar = '../images/product/'.$nomeArquivo;
-
+  
     move_uploaded_file($caminhoAtualArquivo , $caminhoSalvar);
     
     $pro_img = $caminhoSalvar;
+    
+
 
     $pro_id = $_POST['p_id'];
     $pro_nome = $_POST['p_nome'];
@@ -43,7 +47,7 @@
 
 
 
-    /*if($insert){
+    if($insert){
         $_SESSION['msg'] = "<p style='color:green;'>Produto adicionado com sucesso!</p>";
         header("Location: /mercado-paid-egua/HTML/admin/products.php");
         die();
@@ -60,7 +64,7 @@
 
       echo $extensao;
 
-    endif;*/
+    endif;
 
     }
     

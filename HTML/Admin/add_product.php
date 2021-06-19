@@ -139,7 +139,7 @@
 												<input type="text" class="form-control" name="p_valor" placeholder="R$0">
 											</div>
 											<div class="form-group">
-												<label class="form-label">Desconto*</label>
+												<label class="form-label">Preço com desconto*</label>
 												<input type="text" class="form-control" name="p_desconto" placeholder="R$0">
 											</div>
 											<div class="form-group">
