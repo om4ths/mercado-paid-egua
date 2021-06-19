@@ -71,7 +71,7 @@
 																
 					?>
 						<li>
-							<a href="#" class="single-cat-item">
+                                <?php echo "<a href='shop_grid.php?c_id=".$r_cat['cat_id']."' class='single-cat-item'>" ?>
 								<div class="icon">
 									<?php echo "<img src=' ".limpa_link($r_cat['cat_img'])." ' alt='erro ao Carregar a imagem'>" ?>
 								</div>
