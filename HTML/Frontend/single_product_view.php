@@ -7,7 +7,8 @@
 	include('php/dados_cliente.php');
     include('php/func.php');
     include('../Admin/php/exibe_produtos.php');
-    include('../Admin/php/ver_produto.php')
+    include('../Admin/php/ver_produto.php');
+    include('../Admin/php/exibe_categoria.php');
 	?>
 
 <head>
@@ -393,8 +394,8 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.php">Início</a></li>
-                                <li class="breadcrumb-item"><a href="shop_grid.php">Frutas e Vegetais</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Nome do Produto</li>
+                                <?php echo "<li class='breadcrumb-item'><a href='shop_grid.php?c_id=".$r_view_pro['pro_cat']."' >".$r_view_cat['cat_nome']."</a></li>" ?>
+                                <?php echo "<li class='breadcrumb-item active' aria-current='page'>".$r_view_pro['pro_nome']."</li>" ?>
                             </ol>
                         </nav>
                     </div>
@@ -445,7 +446,7 @@
                                     <div class="product-dt-right">
                                         <?php echo "<h2>".$r_view_pro['pro_nome']."</h2>" ?>
                                         <div class="no-stock">
-                                            <p class="pd-no">Cód.<span>12345</span></p>
+                                            <?php echo "<p class='pd-no'>Cód.<span>".$r_view_pro['pro_id']."</span></p>" ?>
                                             <p class="stock-qty">Acessível<span>(Em Estoque)</span></p>
                                         </div>
                                         <div class="product-radio">

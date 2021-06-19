@@ -5,6 +5,10 @@
 		$array_view_pro = mysqli_query($conexao,$select_view_pro);
 		$r_view_pro = mysqli_fetch_array($array_view_pro);
 
+        $view_id_cat = $r_view_pro['pro_cat'];
+		$select_view_cat = "SELECT * FROM categorias WHERE cat_id = '$view_id_cat' ";   
+		$array_view_cat = mysqli_query($conexao,$select_view_cat);
+		$r_view_cat = mysqli_fetch_array($array_view_cat);
 
         $view_pro_cat = $r_view_pro['pro_cat'];
         $select_pro_cat = "SELECT * FROM produtos WHERE pro_cat = '$view_pro_cat' order by pro_data_criado desc LIMIT 0, 3 ";   

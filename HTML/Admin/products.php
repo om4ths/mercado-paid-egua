@@ -151,9 +151,7 @@
 														{	
 															foreach($r_produtos as $key => $r_pro)
 															{	
-																
-																$caminhoCorretoImg = limpa_link($r_pro['pro_img']);
-																$dat = '17-03-2021'
+											
 														?>
 
 													<tr>
@@ -161,7 +159,7 @@
 														<?php echo "<td>".$r_pro['pro_id']."</td>" ?>
 														<td>
 															<div class="cate-img-5">
-																<?php echo "<img src=' ".$caminhoCorretoImg." ' alt='erro ao Carregar a imagem'>" ?>
+																<?php echo "<img src=' ".limpa_link($r_pro['pro_img'])." ' alt='erro ao Carregar a imagem'>" ?>
 															</div>
 														</td>
 														<?php echo "<td>".$r_pro['pro_nome']."</td>" ?>
