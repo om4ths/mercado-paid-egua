@@ -163,7 +163,7 @@
 															</div>
 														</td>
 														<?php echo "<td>".$r_pro['pro_nome']."</td>" ?>
-														<td>Vegetables &amp; Fruits</td>
+														<?php echo "<td>".$r_pro['cat_nome']."</td>" ?>
 														<?php echo "<td>".formataHora($r_pro['pro_data_criado'])."</td>" ?>
 														<?php
 														if($r_pro['pro_ativo'] == 1)
@@ -183,167 +183,14 @@
 														<a  href='php/deletephp?id_tel=" . $r_cliente['telefone'] . "' class='delete-btn' title='Apagar' data-confirm='Deseja realmente APAGAR O USUÁRIO'><i class='fas fa-trash-alt'></i></a>"?>;
 
 															<a href="product_view.php" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
-															<a href="#" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
+															<?php echo "<a href='view_editar_produtos.php?p_id=".$r_pro['pro_id']."' class='edit-btn' title='Edit'><i class='fas fa-edit'></i></a>" ?>
 														</td>
 													</tr>
 
 													<?php 
 													}}
 													?>
-													<!--
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="9"></td>
-														<td>2</td>
-														<td>
-															<div class="cate-img-5">
-																<img src="images/product/img-10.jpg" alt="">
-															</div>
-														</td>
-														<td>Product Name Here</td>
-														<td> Dairy &amp; Eggs </td>
-														<td>8 hours ago</td>
-														<td><span class="badge-item badge-status">Active</span></td>
-														<td class="action-btns">
-															<a href="product_view.php" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
-															<a href="#" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="8"></td>
-														<td>3</td>
-														<td>
-															<div class="cate-img-5">
-																<img src="images/product/img-3.jpg" alt="">
-															</div>
-														</td>
-														<td>Product Name Here</td>
-														<td>Vegetables &amp; Fruits</td>
-														<td>8 hours ago</td>
-														<td><span class="badge-item badge-status">Active</span></td>
-														<td class="action-btns">
-															<a href="product_view.html" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
-															<a href="#" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="7"></td>
-														<td>4</td>
-														<td>
-															<div class="cate-img-5">
-																<img src="images/product/img-4.jpg" alt="">
-															</div>
-														</td>
-														<td>Product Name Here</td>
-														<td>Vegetables &amp; Fruits</td>
-														<td>8 hours ago</td>
-														<td><span class="badge-item badge-status">Active</span></td>
-														<td class="action-btns">
-															<a href="product_view.html" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
-															<a href="#" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="6"></td>
-														<td>5</td>
-														<td>
-															<div class="cate-img-5">
-																<img src="images/product/img-15.jpg" alt="">
-															</div>
-														</td>
-														<td>Product Name Here</td>
-														<td>Dairy & Eggs</td>
-														<td>8 hours ago</td>
-														<td><span class="badge-item badge-status">Active</span></td>
-														<td class="action-btns">
-															<a href="product_view.html" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
-															<a href="#" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="5"></td>
-														<td>6</td>
-														<td>
-															<div class="cate-img-5">
-																<img src="images/product/img-6.jpg" alt="">
-															</div>
-														</td>
-														<td>Product Name Here</td>
-														<td>Vegetables &amp; Fruits</td>
-														<td>8 hours ago</td>
-														<td><span class="badge-item badge-status">Active</span></td>
-														<td class="action-btns">
-															<a href="product_view.html" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
-															<a href="#" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="4"></td>
-														<td>7</td>
-														<td>
-															<div class="cate-img-5">
-																<img src="images/product/img-7.jpg" alt="">
-															</div>
-														</td>
-														<td>Product Name Here</td>
-														<td>Vegetables &amp; Fruits</td>
-														<td>8 hours ago</td>
-														<td><span class="badge-item badge-status">Active</span></td>
-														<td class="action-btns">
-															<a href="product_view.html" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
-															<a href="#" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="3"></td>
-														<td>8</td>
-														<td>
-															<div class="cate-img-5">
-																<img src="images/product/img-8.jpg" alt="">
-															</div>
-														</td>
-														<td>Product Name Here</td>
-														<td>Vegetables &amp; Fruits</td>
-														<td>8 hours ago</td>
-														<td><span class="badge-item badge-status">Active</span></td>
-														<td class="action-btns">
-															<a href="product_view.html" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
-															<a href="#" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="2"></td>
-														<td>9</td>
-														<td>
-															<div class="cate-img-5">
-																<img src="images/product/img-9.jpg" alt="">
-															</div>
-														</td>
-														<td>Product Name Here</td>
-														<td>Vegetables &amp; Fruits</td>
-														<td>8 hours ago</td>
-														<td><span class="badge-item badge-status">Active</span></td>
-														<td class="action-btns">
-															<a href="product_view.html" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
-															<a href="#" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="1"></td>
-														<td>10</td>
-														<td>
-															<div class="cate-img-5">
-																<img src="images/product/img-14.jpg" alt="">
-															</div>
-														</td>
-														<td>Product Name Here</td>
-														<td>Vegetables &amp; Fruits</td>
-														<td>8 hours ago</td>
-														<td><span class="badge-item badge-status">Active</span></td>
-														<td class="action-btns">
-															<a href="product_view.php" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
-															<a href="#" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
-														</td>
-													</tr>-->
+													
 													<!--FIM DA EXIBIÇÃO DE PRODUTOS-->
 												</tbody>
 											</table>

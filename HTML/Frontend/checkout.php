@@ -668,39 +668,35 @@
                                                                 
                                                                 <div class="col-lg-6 col-md-12">
                                                                     <div class="form-group">
-                                                                        <label class="control-label">CEP*</label>
-                                                                        <input id="cep" name="cep" readonly type="tel" placeholder="digite seu CEP" class="form-control input-md" data-mask="00000-000" required="">
+                                                                        <label class="control-label">CEP</label>
+                                                                       <?php if(isset($r_endereco['cep'])){ echo "<input name='cep' readonly type='tel' placeholder='' value='".$r_endereco['cep']."' class='form-control input-md' data-mask='00000-000' required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md' data-mask='00000-000' required=''>";};    ?>
                                                                     </div>
 																</div>
                                                                 <div class="col-lg-12 col-md-12">
                                                                     <div class="form-group">
-                                                                        <label class="control-label">Bairro*</label>
-                                                                        <input id="bairro" name="bairro" readonly type="text" placeholder="" class="form-control input-md" maxlength="30" required="">
-                                                                    </div>
+                                                                        <label class="control-label">Bairro</label>
+                                                                        <?php if(isset($r_endereco['bairro'])){ echo "<input name='cep' readonly type='tel' placeholder='' value='".$r_endereco['bairro']."' class='form-control input-md' data-mask='00000-000' required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md' data-mask='00000-000' required=''>";};    ?>                                                                    </div>
                                                                 </div>
 																<div class="col-lg-6 col-md-12">
                                                                     <div class="form-group">
-                                                                        <label class="control-label">Cidade*</label>
-                                                                        <input id="cidade" name="cidade"readonly type="text" placeholder="" class="form-control input-md" maxlenght="50" required="">
-                                                                    </div>
+                                                                        <label class="control-label">Cidade</label>
+                                                                        <?php if(isset($r_endereco['cidade'])){ echo "<input name='cep' readonly type='tel' placeholder='' value='".$r_endereco['cidade']."' class='form-control input-md' data-mask='00000-000' required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md' data-mask='00000-000' required=''>";};    ?>                                                                    </div>
                                                                 </div>
                                                                 <div class="col-lg-12 col-md-12">
                                                                     <div class="form-group">
-                                                                        <label class="control-label">Rua / Avenida*</label>
-                                                                        <?php if(isset($r_endereco['rua'])){echo "<input id='street' name='street' readonly type='text' placeholder='".$r_endereco['rua']."' class='form-control input-md'>";}else{echo "<input id='street' name='street' readonly type='text' placeholder=' ' class='form-control input-md'>";}?>
+                                                                        <label class="control-label">Rua / Avenida</label>
+                                                                        <?php if(isset($r_endereco['rua'])){echo "<input id='street' name='street' readonly type='text' placeholder='' value='".$r_endereco['rua']."' class='form-control input-md'>";}else{echo "<input id='street' name='street' readonly type='text' placeholder=' ' class='form-control input-md'>";}?>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-12">
                                                                     <div class="form-group">
-                                                                        <label class="control-label">Número*</label>
-                                                                        <input id="street" name="n_end" readonly type="tel" placeholder="" class="form-control input-md" data-mask="000000000000000" required="">
-                                                                    </div>
+                                                                        <label class="control-label">Número</label>
+                                                                        <?php if(isset($r_endereco['numero'])){ echo "<input name='cep' readonly type='tel' placeholder='' value='".$r_endereco['numero']."' class='form-control input-md' data-mask='00000-000' required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md' data-mask='00000-000' required=''>";};    ?>                                                                    </div>
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label">Complemento / Ponto de Referência</label>
-                                                                        <input id="complemento" name="complemento" readonly type="text" placeholder="" class="form-control input-md" maxlength="100" required="">
-                                                                    </div>
+                                                                        <?php if(isset($r_endereco['complemento'])){ echo "<input name='cep' readonly type='tel' placeholder='' value='".$r_endereco['complemento']."' class='form-control input-md' data-mask='00000-000' required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md' data-mask='00000-000' required=''>";};    ?>                                                                    </div>
                                                                 </div>
 
                                                                 <div class="col-lg-12 col-md-12">

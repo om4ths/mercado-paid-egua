@@ -507,16 +507,7 @@ include('../Admin/php/exibe_produtos.php');
 							</div>
 
 						<?php }} ?>
-<!--
-							<div class="item">
-								<a href="#" class="category-item">
-									<div class="cate-img">
-										<img src="images/category/icon-2.svg" alt="">
-									</div>
-									<h4> Alimentos Básicos </h4>
-								</a>
-							</div>
--->											
+									
 						</div>
 					</div>
 				</div>
@@ -594,32 +585,7 @@ include('../Admin/php/exibe_produtos.php');
 								</div>
 							</div>
 							<?php }} ?>
-<!--
-							<div class="item">
-								<div class="product-item">
-									<a href="single_product_view.php" class="product-img">
-										<img src="images/product/img-2.jpg" alt="">
-										<div class="product-absolute-options">
-											<span class="offer-badge-1">2% off</span>
-											<span class="like-icon" title="wishlist"></span>
-										</div>
-									</a>
-									<div class="product-text-dt">
-										<p>Acessível<span>(Em Estoque)</span></p>
-										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">R$8 <span>R$10</span></div>
-										<div class="qty-cart">
-											<div class="quantity buttons_added">
-												<input type="button" value="-" class="minus minus-btn">
-												<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
-												<input type="button" value="+" class="plus plus-btn">
-											</div>
-											<span class="cart-icon"><i class="uil uil-shopping-cart-alt"></i></span>
-										</div>
-									</div>
-								</div>
-							</div>						
--->
+
 						</div>
 					</div>
 				</div>
@@ -665,78 +631,7 @@ include('../Admin/php/exibe_produtos.php');
 			</div>
 		</div>
 		<!-- Best Values Offers End -->
-		<!-- Vegetables and Fruits Start 
-		<div class="section145">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="main-title-tt">
-							<div class="main-title-left">
-								<span>Para Você</span>
-								<h2>Frutas e Vegetais Frescos</h2>
-							</div>
-							<a href="#" class="see-more-btn">Ver Tudo</a>
-						</div>
-					</div>
-					<div class="col-md-12">
-						<div class="owl-carousel featured-slider owl-theme">
-
-							<div class="item">
-								<div class="product-item">
-									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">
-										<img src="images/product/img-11.jpg" alt="">
-										<div class="product-absolute-options">
-											<span class="offer-badge-1">6% off</span>
-											<span class="like-icon" title="wishlist"></span>
-										</div>
-									</a>
-									<div class="product-text-dt">
-										<p>Acessível<span>(Em Estoque)</span></p>
-										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">R$8 <span>R$10</span></div>
-										<div class="qty-cart">
-											<div class="quantity buttons_added">
-												<input type="button" value="-" class="minus minus-btn">
-												<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
-												<input type="button" value="+" class="plus plus-btn">
-											</div>
-											<span class="cart-icon"><i class="uil uil-shopping-cart-alt"></i></span>
-										</div>
-									</div>
-								</div>
-							</div>
-						
-							<div class="item">
-								<div class="product-item">
-									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">
-										<img src="images/product/img-12.jpg" alt="">
-										<div class="product-absolute-options">
-											<span class="offer-badge-1">2% off</span>
-											<span class="like-icon" title="wishlist"></span>
-										</div>
-									</a>
-									<div class="product-text-dt">
-										<p>Acessível<span>(Em Estoque)</span></p>
-										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">R$8 <span>R$10</span></div>
-										<div class="qty-cart">
-											<div class="quantity buttons_added">
-												<input type="button" value="-" class="minus minus-btn">
-												<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
-												<input type="button" value="+" class="plus plus-btn">
-											</div>
-											<span class="cart-icon"><i class="uil uil-shopping-cart-alt"></i></span>
-										</div>
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		Vegetables and Fruits Products End -->
+		
 		<!-- New Products Start -->
 		<div class="section145">
 			<div class="container">
