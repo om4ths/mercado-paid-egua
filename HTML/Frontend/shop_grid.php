@@ -7,7 +7,7 @@
 	include('php/dados_cliente.php');
 	include('php/exibe_shop_grid.php');
 	include('php/func.php');
-	include('../Admin/php/exibe_categoria.php');
+	include('php/exibe_categoria_index.php');
 	?>
  
 <head>
@@ -345,7 +345,7 @@
 						<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
 							<ul class="navbar-nav main_nav align-self-stretch">
 								<li class="nav-item"><a href="index.php" class="nav-link active" title="Home">Início</a></li>
-								<li class="nav-item"><a href="shop_grid.php" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
+								<li class="nav-item"><a href="shop_grid.php?new_id=1" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
 								<li class="nav-item"><a href="shop_grid.php" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
 								<li class="nav-item">
 									<div class="ui icon top left dropdown nav__menu">
@@ -385,7 +385,9 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+								<?php if(isset($_GET['c_id'])){ ?>
                                 <?php echo "<li class='breadcrumb-item active' aria-current='page'>".$r_view_shop_grid['cat_nome']."</li>" ?>
+
                             </ol>
                         </nav>
                     </div>
@@ -400,21 +402,51 @@
                             <div class="product-left-title">
                                 <?php echo "<h2>".$r_view_shop_grid['cat_nome']."</h2>" ?>
                             </div>
-                            <a href="#" class="filter-btn pull-bs-canvas-right">Filtros</a>
-                            <div class="product-sort">
-                                <div class="ui selection dropdown vchrt-dropdown">
-                                    <input name="gender" type="hidden" value="default">
-                                    <i class="dropdown icon d-icon"></i>
-                                    <div class="text">Populares</div>
-                                    <div class="menu">
-                                        <div class="item" data-value="0">Populares</div>
-                                        <div class="item" data-value="1">Preço Crescente</div>
-                                        <div class="item" data-value="2">Preço Decrescente</div>
-                                        <div class="item" data-value="3">Alfabético</div>
-                                        <div class="item" data-value="4">Com Desconto - Crescente</div>
-                                    </div>
-                                </div>
+
+							<?php }
+							if(isset($_GET['new_id'])){
+							?>
+
+								<li class='breadcrumb-item active' aria-current='page'>Novos Produtos</li>
+
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="all-product-grid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="product-top-dt">
+                            <div class="product-left-title">
+                                <h2>Novos Produtos</h2>
                             </div>
+
+							<?php }
+							if(isset($_GET['pesquisar'])){
+								?>
+	
+									<li class='breadcrumb-item active' aria-current='page'>Pesquisar</li>
+	
+								</ol>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="all-product-grid">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="product-top-dt">
+								<div class="product-left-title">
+									<h2>Resultado</h2>
+								</div>
+	
+								<?php } ?>
+                            
                         </div>
                     </div>
                 </div>
@@ -436,7 +468,6 @@
 									<?php if(porcentagemDesconto($r_cat_pro['pro_valor'], $r_cat_pro['pro_desconto']) != 0 and porcentagemDesconto($r_cat_pro['pro_valor'], $r_cat_pro['pro_desconto']) != 100) { ?>
                                         <?php echo "<span class='offer-badge-1'>".porcentagemDesconto($r_cat_pro['pro_valor'], $r_cat_pro['pro_desconto'])."% off</span>" ?>
 									<?php } ?>
-                                        <span class="like-icon" title="wishlist"></span>
                                     </div>
                                 </a>
                                 <div class="product-text-dt">
@@ -461,11 +492,7 @@
                         </div>
 					<?php }}?>
                         
-                        <div class="col-md-12">
-                            <div class="more-product-btn">
-                                <button class="show-more-btn hover-btn" onclick="window.location.href = '#';">Ver Mais</button>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

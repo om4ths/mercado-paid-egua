@@ -8,7 +8,7 @@
     include('php/func.php');
     include('../Admin/php/exibe_produtos.php');
     include('../Admin/php/ver_produto.php');
-    include('../Admin/php/exibe_categoria.php');
+    include('php/exibe_categoria_index.php');
 	?>
 
 <head>
@@ -354,7 +354,7 @@
 						<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
 							<ul class="navbar-nav main_nav align-self-stretch">
 								<li class="nav-item"><a href="index.php" class="nav-link active" title="Home">Início</a></li>
-								<li class="nav-item"><a href="shop_grid.php" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
+								<li class="nav-item"><a href="shop_grid.php?new_id=1" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
 								<li class="nav-item"><a href="shop_grid.php" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
 								<li class="nav-item">
 									<div class="ui icon top left dropdown nav__menu">
@@ -498,7 +498,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li><span class="like-icon save-icon" title="wishlist"></span></li>
+                                                
                                             </ul>
                                             <ul class="ordr-crt-share">
                                                 <li><button class="add-cart-btn hover-btn"><i class="uil uil-shopping-cart-alt"></i>Adicionar ao Carrinho</button></li>

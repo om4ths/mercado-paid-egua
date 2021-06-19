@@ -6,6 +6,7 @@ include('php/verificar_login.php');
 
 <?php
 		include('php/dados_cliente.php');
+		//include('php/exibe_categoria_index.php');
 	?>
 
 <head>
