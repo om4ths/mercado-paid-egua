@@ -653,25 +653,6 @@
                                         <h4>Descrição</h4>
                                         <?php echo "<p>".$r_view_pro['pro_desc']."</p>" ?>
                                     </div>
-                                    <div class="pdct-dt-step">
-                                        <h4>Benefícios</h4>
-                                        <div class="product_attr">
-                                            Aliquam nec nulla accumsan, accumsan nisl in, rhoncus sapien.<br> In mollis lorem a porta congue.<br> Sed quis neque sit amet nulla maximus dignissim id mollis urna.<br> Cras non libero at lorem laoreet finibus
-                                            vel et turpis.<br> Mauris maximus ligula at sem lobortis congue.<br>
-                                        </div>
-                                    </div>
-                                    <div class="pdct-dt-step">
-                                        <h4>Como usar</h4>
-                                        <div class="product_attr">
-                                            The peeled, orange segments can be added to the daily fruit bowl, and its juice is a refreshing drink.
-                                        </div>
-                                    </div>
-
-                                    <div class="pdct-dt-step">
-                                        <h4>Aviso Legal</h4>
-                                        <p>Phasellus efficitur eu ligula consequat ornare. Nam et nisl eget magna aliquam consectetur. Aliquam quis tristique lacus. Donec eget nibh et quam maximus rutrum eget ut ipsum. Nam fringilla metus id dui sollicitudin,
-                                            sit amet maximus sapien malesuada.</p>
-                                    </div>
                                 </div>
                             </div>
                         </div>
