@@ -114,8 +114,14 @@
 								<div class="card card-static-2 mb-30">
 									<div class="card-body-table">
 										<div class="shopowner-content-left text-center pd-20">
-											<div class="customer_img">
-												<img src="images/avatar/img-1.jpg" alt="">
+											<div class="customer_img">												
+												<?php 
+													if(isset($r_view_cli['foto'])){
+														echo "<img src='../Frontend/".$r_view_cli['foto']." ' alt=''>";									
+													}else{
+														echo "<img src='images/avatar/img-5.jpg' alt=''>";
+													};								 								
+													?>	
 											</div>
 											<div class="shopowner-dt-left mt-4">
 												<h4><?php echo $r_view_cli['nome'];  ?></h4>
@@ -175,7 +181,9 @@
 														?>
 		 
 															<h4><?php echo $r_end['tipo'];?></h4>
+															<p><?php echo $r_end['bairro']?></p>
 															<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
+															<p><?php echo $r_end['complemento']?></p>
 															<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
 															<ul class="action-btns">
 																<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
@@ -203,9 +211,10 @@
 															?>
 		
 																<h4><?php echo $r_end['tipo'];?></h4>
+																<p><?php echo $r_end['bairro']?></p>
 																<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
-																<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
-																<ul class="action-btns">
+																<p><?php echo $r_end['complemento']?></p>
+																<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>																<ul class="action-btns">
 																	<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
 																	<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
 																</ul>
@@ -230,9 +239,10 @@
 															?>
 		
 																<h4><?php echo $r_end['tipo'];?></h4>
+																<p><?php echo $r_end['bairro']?></p>
 																<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
-																<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
-																<ul class="action-btns">
+																<p><?php echo $r_end['complemento']?></p>
+																<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>																<ul class="action-btns">
 																	<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
 																	<li><a href="#" class="action-btn"><i class="uil uil-trash-alt"></i></a></li>
 																</ul>
