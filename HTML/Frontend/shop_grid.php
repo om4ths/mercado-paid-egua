@@ -456,7 +456,7 @@
                                 </div>
                             </div>
                         </div>
-<!--					<?php }}?>
+					<?php }}?>
                         
                         <div class="col-md-12">
                             <div class="more-product-btn">
