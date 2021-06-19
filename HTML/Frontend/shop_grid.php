@@ -7,6 +7,7 @@
 	include('php/dados_cliente.php');
 	include('php/exibe_shop_grid.php');
 	include('php/func.php');
+	include('../Admin/php/exibe_categoria.php');
 	?>
  
 <head>
@@ -384,7 +385,7 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Vegetais e Frutas</li>
+                                <?php echo "<li class='breadcrumb-item active' aria-current='page'>".$r_view_shop_grid['cat_nome']."</li>" ?>
                             </ol>
                         </nav>
                     </div>
@@ -397,7 +398,7 @@
                     <div class="col-lg-12">
                         <div class="product-top-dt">
                             <div class="product-left-title">
-                                <h2>Vegetais e Frutas</h2>
+                                <?php echo "<h2>".$r_view_shop_grid['cat_nome']."</h2>" ?>
                             </div>
                             <a href="#" class="filter-btn pull-bs-canvas-right">Filtros</a>
                             <div class="product-sort">
@@ -429,10 +430,12 @@
 						?>	
                         <div class="col-lg-3 col-md-6">
                             <div class="product-item mb-30">
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">
-                                    <img src="images/product/img-1.jpg" alt="">
+                                <?php echo "<a href='single_product_view.php?p_id=".$r_cat_pro['pro_id']." class='product-img'>" ?>
+                                    <?php echo "<img src=' ".limpa_link($r_cat_pro['pro_img'])." ' alt='Erro ao carregar a imagem'> " ?>
                                     <div class="product-absolute-options">
-                                        <span class="offer-badge-1">6% off</span>
+									<?php if(porcentagemDesconto($r_cat_pro['pro_valor'], $r_cat_pro['pro_desconto']) != 0 and porcentagemDesconto($r_cat_pro['pro_valor'], $r_cat_pro['pro_desconto']) != 100) { ?>
+                                        <?php echo "<span class='offer-badge-1'>".porcentagemDesconto($r_cat_pro['pro_valor'], $r_cat_pro['pro_desconto'])."% off</span>" ?>
+									<?php } ?>
                                         <span class="like-icon" title="wishlist"></span>
                                     </div>
                                 </a>

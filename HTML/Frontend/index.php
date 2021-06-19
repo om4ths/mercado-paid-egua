@@ -1,7 +1,8 @@
 ﻿<?php
 include('php/verificar_login.php');
 include('php/func.php');
-
+include('../Admin/php/exibe_categoria.php');
+include('../Admin/php/exibe_produtos.php');
 ?>
 
 <!DOCTYPE html>

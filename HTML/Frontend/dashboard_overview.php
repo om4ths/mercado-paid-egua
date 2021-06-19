@@ -426,26 +426,33 @@ include('php/verificar_login.php');
 													<label for="click" class="close-btn"></label>
 
 															<button id="select-image" class="btn-modal hover-btn"> 
-															<input type="file" id="photo-file" name="imagem" onchange="previewImagem()">
+															<input type="file" id="photo-file" name="imagem">
 														Carregar Foto
-										</button>	
+													</button>	
 												
 
-													<img id="photo-preview"
+													<img id="photo-preview" draggable="false"
 																style=
 																"border-radius: 0; z-index:1;    
 																width:93%;
 																height:auto; 
 																border-radius: 0px !important;
 																border:0;
-																margin-top:-436px;">
+																margin-top:-415px;">
 
-													<div class="footer-modal">
+													<div id="selection-tool" > 
+
+													</div>
+
+													
+												
+												</div> 
+												<div class="footer-modal">
+												<button id="crop-image">Salvar Foto</button>
+
 
 
 													</div>
-												
-												</div> 
 											</div> 
 										</div>
 							<h4>

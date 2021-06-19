@@ -1,6 +1,4 @@
 <?php 
-		include('../Admin/php/exibe_categoria.php');
-		include('../Admin/php/exibe_produtos.php');
 
 		//FUNÇÃO PARA LIMPAR O INICIO DO LINK
 		function limpa_link($valor){

@@ -66,7 +66,7 @@ include('php/verificar_login.php');
 													<label for="click" class="close-btn"></label>
 
 															<button id="select-image" class="btn-modal hover-btn"> 
-															<input type="file" id="photo-file" name="imagem" onchange="previewImagem()">
+															<input type="file" id="photo-file" name="imagem">
 														Carregar Foto
 										</button>	
 												
@@ -84,12 +84,15 @@ include('php/verificar_login.php');
 														
 													
 													</div>
-													<div class="footer-modal">
+													
+
+												</div>
+												<div class="footer-modal">
+												<button id="crop-image">Salvar Foto</button>
 
 
-													</div>
-												
-												</div> 
+
+													</div> 
 											</div> 
 										</div>
 										
@@ -110,25 +113,7 @@ include('php/verificar_login.php');
 
     <!-- Javascripts -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script>
-		function previewImage(){
-			var imagem = document.querySelector('input[name=imagem]').files[0];
-			var preview = document.querySelector('img');
-
-			var reader = new FileReader();
-
-			reader.onloadend = function(){ 
-				preview.src = reader.result;
-			}
-			if(imagme){
-				reader.readAsDataURL(imagem);
-			}
-			else{
-				preview.src = "";
-			}
-		}
-
-	</script>
+	
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 		
