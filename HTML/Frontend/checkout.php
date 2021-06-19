@@ -478,7 +478,7 @@
                                                                                                        
                                                                     ?>                                                               
                                                                                                                                       
-                                                                    <?php echo" <li> <label for='tipo'>".$r_end['tipo']."</label> </li>" ?>                                                                
+                                                                    <?php echo" <li> <a for='tipo'>".$r_end['tipo']."</a> </li>" ?>                                                                
                                                                
                                                                 <?php
                                                                     };
