@@ -1,0 +1,147 @@
+.header-modal h2{
+    color: white;
+    padding-left: 0;
+    font-weight:500;
+    font-size: 20px;
+}
+.fa-times{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: white;
+    font-size:20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.content-modal{
+
+    z-index:1;
+    opacity: 0;
+    visibility: hidden;
+    width: 450px;
+    height:470px;
+    background:white;
+    border-radius: 3px;
+    transition: .2s ease-in;
+    box-shadow: 0 -3px 6px 0 rgba(0,0,0,.4);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: -175px;
+    margin-top: -92px;
+
+}
+#click:checked ~ .content-modal{
+    opacity: 1;
+    visibility: visible;
+}
+.header-modal{
+    margin: auto;
+    position: absolute;
+    width:450px;
+    height:60px;
+    background:#2b2f4c;
+    overflow:hidden;
+    border-radius: 3px 3px 0 0;
+    padding: 15px 20px;
+
+
+}
+.footer-modal{
+    margin-top: -24px;
+    position: absolute;
+    width:450px;
+    height:60px;
+    background:white;
+    overflow:hidden;
+    border-radius: 3px 3px 0 0;
+    padding: 15px 20px;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,.4);
+
+
+}
+#selection-tool{
+    position: fixed;
+    display:none;
+    border: 2px dashed #ff0404;
+    border-radius: 100%;
+    
+
+    top: 0;
+    left:0;
+    width:200px;
+    height:200px;
+
+}
+#click{
+    display: none;
+}
+.img-add {
+	display: block;
+}
+
+.img-add [type="file"] {
+	height: 0;
+	overflow: hidden;
+	width: 0;
+	float: left;
+}
+
+.img-add [type="checkbox"] + label {
+	cursor: pointer;
+	display: inline-block;
+	outline: none;
+	transition: all 0.3s;
+	vertical-align: middle;
+	margin: 0;
+	position: absolute;
+    bottom: 5px;
+    right: -5px;
+    background: #ff0404;
+    color: #fff;
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+	border: 1px solid #ffff;
+    font-size: 18px;
+    padding: 8px 5px;
+}
+
+.img-add [type="file"] + label:hover {
+	background: #ff0404;
+	color: #fff !important;
+	transition: all .2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), #ff0404);
+    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), #ff0404);
+}
+
+.btn-modal{
+
+        background-color: #ff0404;
+        border: none;
+        color: white;
+        padding: 12px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 214px 2px;
+        cursor: pointer;
+        border-radius:5px;
+        font-weight: 500;
+    }
+#photo-preview.preview img  {
+    z-index:1;    
+    width:100%;
+    height:auto; 
+    border-radius: 0px !important;
+
+}

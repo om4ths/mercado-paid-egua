@@ -303,7 +303,13 @@ include('php/verificar_login.php');
 						</li>
 						<li class="ui dropdown">
 							<a href="#" class="opts_account">
-								<img src="images/avatar/img-5.jpg" alt="">
+							<?php 
+								if(isset($resultado['foto'])){
+									echo "<img src=' ".$resultado['foto']." ' alt=''>";									
+								}else{
+									echo "<img src='images/avatar/img-5.jpg' alt=''>";
+								};								 								
+								?>								
 								<span class="user__name"><?php echo $resultado['nome'] ?></span>
 								<i class="uil uil-angle-down"></i>
 							</a>

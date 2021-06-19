@@ -29,6 +29,8 @@ include('php/verificar_login.php');
 		<link href="css/responsive.css" rel="stylesheet">
 		<link href="css/night-mode.css" rel="stylesheet">
 		<link href="css/step-wizard.css" rel="stylesheet">
+		<link href="css/modalfoto.css" rel="stylesheet">
+
 		
 		<!-- Vendor Stylesheets -->
 		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -477,7 +479,13 @@ include('php/verificar_login.php');
 						</li>
 						<li class="ui dropdown">
 							<a href="#" class="opts_account">
-								<img src="images/avatar/img-5.jpg" alt="">
+							<?php 
+								if(isset($resultado['foto'])){
+									echo "<img src=' ".$resultado['foto']." ' alt=''>";									
+								}else{
+									echo "<img src='images/avatar/img-5.jpg' alt=''>";
+								};								 								
+								?>								
 								<span class="user__name"><?php echo $resultado['nome'] ?></span>
 								<i class="uil uil-angle-down"></i>
 							</a>
@@ -565,7 +573,8 @@ include('php/verificar_login.php');
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="user-dt">
-						<div class="user-img">
+							<div class="user-img">
+
 								<?php 
 								if(isset($resultado['foto'])){
 									echo "<img src=' ".$resultado['foto']." ' alt=''>";									
@@ -573,16 +582,48 @@ include('php/verificar_login.php');
 									echo "<img src='images/avatar/img-5.jpg' alt=''>";
 								};								 								
 								?>
-								<div class="img-add">
-								<form method="POST" action="php/img_cliente.php" enctype="multipart/form-data"> 
-									<input type="file" name="c_img" id="file">
-									<label for="file"><i class="uil uil-camera-plus"></i></label>
-									<input type="submit" value="Enviar arquivo" />
-									</div>
-								</form > 
-							</div>
-							<h4><?php echo$resultado['nome']?></h4>
-							<p><?php echo$resultado['telefone']?><a href="#"><i class="uil uil-edit"></i></a></p>
+									<div class="img-add">
+												<input type="checkbox" id="click">
+												<label for="click" class="click-me-modal">
+													<i class="uil uil-camera-plus"></i>
+												</label>
+												<div class="content-modal"> 
+													<div class="header-modal">
+														<h2>Selecione a sua foto</h2>
+														<label for="click" class="fas fa-times"></label>
+													</div>
+													<label for="click" class="fas fa-check-modal"></label>
+													<label for="click" class="close-btn"></label>
+
+															<button id="select-image" class="btn-modal hover-btn"> 
+															<input type="file" id="photo-file" name="imagem" onchange="previewImagem()">
+														Carregar Foto
+										</button>	
+												
+
+													<img id="photo-preview"
+																style=
+																"border-radius: 0; z-index:1;    
+																width:93%;
+																height:auto; 
+																border-radius: 0px !important;
+																border:0;
+																margin-top:-436px;">
+
+													<div class="footer-modal">
+
+
+													</div>
+												
+												</div> 
+											</div> 
+										</div>
+							<h4>
+								<?php echo$resultado['nome']?>
+							</h4>
+							<p>
+								<?php echo$resultado['telefone']?><a href="#"><i class="uil uil-edit"></i></a>
+							</p>
 						</div>
 					</div>
 				</div>
@@ -860,6 +901,8 @@ include('php/verificar_login.php');
 		<script src="js/offset_overlay.js"></script>
 		<script src="js/night-mode.js"></script>
 		<script src="js/deleteconfirm.js"></script>
+		<script src="js/imagem-perfil.js"></script>
+
 
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 	

@@ -76,12 +76,15 @@ time, mark, audio, video{
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
-}
+} 
 ::-moz-selection { /* Code for Firefox */
 	background-color: #cce2ff;
     color: rgba(0,0,0,.87);
 }
-
+#click:checked ~
+#click:checked ~ body{
+    background-color: rgba(0,0,0,0.5);
+}
 ::selection {
 	background-color: #cce2ff;
     color: rgba(0,0,0,.87);
@@ -3625,48 +3628,9 @@ label.control-label {
     padding: 8px 5px;
 }
 
-.img-add {
-	display: block;
-}
+/* ---Lugar onde fica a modal --- */
 
-.img-add [type="file"] {
-	height: 0;
-	overflow: hidden;
-	width: 0;
-	float: left;
-}
-
-.img-add [type="file"] + label {
-	cursor: pointer;
-	display: inline-block;
-	outline: none;
-	transition: all 0.3s;
-	vertical-align: middle;
-	margin: 0;
-	position: absolute;
-    bottom: 5px;
-    right: -5px;
-    background: #ff0404;
-    color: #fff;
-    height: 35px;
-    width: 35px;
-    border-radius: 100%;
-	border: 1px solid #ffff;
-    font-size: 18px;
-    padding: 8px 5px;
-}
-
-.img-add [type="file"] + label:hover {
-	background: #ff0404;
-	color: #fff !important;
-	transition: all .2s ease-in-out;
-	-webkit-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), #ff0404);
-    background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), #ff0404);
-}
+/* ---Lugar onde fica a modal --- */
 
 .user-dt h4 {
     font-size: 24px;
