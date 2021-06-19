@@ -18,7 +18,7 @@ if($row == 1) {
 } else {
 	echo"<script language='javascript' type='text/javascript'>
       alert('Dados Incorretos');window.location.
-      href='/mercado-paid-egua/HTML/frontend/sign_in.html'</script>";
+      href='/mercado-paid-egua/HTML/frontend/sign_in.php'</script>";
       die();
 	exit();
 }
