@@ -2692,7 +2692,7 @@ img.download-btn {
 }
 
 .product-now a,
-.product-now input {
+.product-now input,.product-now label {
 	display: block;
 	position: absolute;
 	top: 0;
@@ -2723,6 +2723,23 @@ img.download-btn {
 }
 
 .product-now a:hover {
+	background: #ff0404;
+    color: #fff!important;
+}
+
+.product-now label {
+	padding: 5px;
+    cursor: pointer;
+    background: #c7c7c7;
+    color: #fff;
+    border-radius: 3px;
+	font-weight: 500;
+    font-size: 12px;
+    margin-bottom:.5rem;
+    display: inline-block;
+}
+
+.product-now label:hover {
 	background: #ff0404;
     color: #fff!important;
 }

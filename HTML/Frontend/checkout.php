@@ -39,6 +39,112 @@
 </head>
 
 <body>
+    <!-- adicionar endereço -->
+
+    <div id="address_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
+        
+		<div class="modal-dialog category-area" role="document">
+            <div class="category-area-inner">
+                <div class="modal-header">
+                    <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+						<i class="uil uil-multiply"></i>
+                    </button>
+                </div>
+                <div class="category-model-content modal-content"> 
+					<div class="cate-header">
+						<h4>Adicionar Endereço</h4>
+					</div>
+					<div class="add-address-form">
+						<div class="checout-address-step">
+							<div class="row">
+								<div class="col-lg-12">												
+									<form class="" method="POST" action="php/endereco.php">
+										<!-- Multiple Radios (inline) -->
+										<div class="form-group">
+											<div class="product-radio">
+												<ul class="product-now">
+													<li>
+														<input type="radio" id="ad1" name="tipo" value="1"checked>
+														<label for="ad1">Casa</label>
+													</li>
+													<li>
+														<input type="radio" id="ad2" name="tipo" value="2">
+														<label for="ad2">Trabalho</label>
+													</li>
+													<li>
+														<input type="radio" id="ad3" name="tipo" value="3">
+														<label for="ad3">Outros</label>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="address-fieldset">
+											
+											<div class="col-lg-6-cep col-md-12">
+												<div class="form-group">
+													<label class="control-label">CEP*</label>
+													<input id="cep" name="cep" type="tel" placeholder="" class="form-control input-md" data-mask="00000-000" required="">
+												</div>
+											</div>
+											<div class="row">
+												
+												
+												<div class="col-lg-6 col-md-12">
+													<div class="form-group">
+														<label class="control-label">Bairro*</label>
+														<input id="bairro" name="bairro" type="text" placeholder="" class="form-control input-md" maxlength="30" required="">
+													</div>
+												</div>
+												<div class="col-lg-6 col-md-12">
+														<div class="form-group">
+															<label class="control-label">Cidade*</label>
+															<input id="cidade" name="cidade" type="text" placeholder="" class="form-control input-md" maxlength="80"required="">
+														</div>
+													</div>	
+												<div class="col-lg-12 col-md-12">
+													<div class="form-group">
+														<label class="control-label">Rua / Avenida *</label>
+														<input id="rua" name="rua" type="text" placeholder="" class="form-control input-md" maxlength="200" required="">
+													</div>
+												</div>
+												<div class="col-lg-12 col-md-12">
+													<div class="form-group">
+														<label class="control-label"> Número*</label>
+														<input id="street" name="n_end" type="tel" placeholder="" class="form-control input-md" data-mask="0000000000000">
+													</div>
+												</div>
+												<div class="col-lg-12 col-md-12">
+													<div class="form-group">
+														<label class="control-label">Complemento/Ponto de referência</label>
+														<input id="complemento" name="complemento" type="text" placeholder="" class="form-control input-md" maxlength="100" required="">
+													</div>
+												</div>
+												
+											
+												
+												<div class="col-lg-12 col-md-12">
+													<div class="form-group mb-0">
+														<div class="address-btns">
+															<button class="save-btn14 hover-btn">Salvar</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- adicionar endereço fim-->
+
+
     <!-- modelo das categorias-->
 	<div id="category_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
 		<div class="modal-dialog category-area" role="document">
@@ -489,46 +595,48 @@
                                                                 </div>
                                                         <div class="address-fieldset">
                                                             <div class="row">
+                                                                
                                                                 <div class="col-lg-6 col-md-12">
                                                                     <div class="form-group">
-                                                                        <label class="control-label">Nome*</label>
-                                                                        <input id="name" name="name" readonly type="text" placeholder="Nome" class="form-control input-md" required="">
+                                                                        <label class="control-label">CEP*</label>
+                                                                        <input id="cep" name="cep" readonly type="tel" placeholder="digite seu CEP" class="form-control input-md" data-mask="00000-000" required="">
                                                                     </div>
-                                                                </div>
-                                                                <div class="col-lg-6 col-md-12">
-                                                                    <div class="form-group">
-                                                                        <label class="control-label">Endereço de E-mail*</label>
-                                                                        <input id="email1" name="email1"readonly type="text" placeholder="Endereço de E-mail" class="form-control input-md" required="">
-                                                                    </div>
-                                                                </div>
+																</div>
                                                                 <div class="col-lg-12 col-md-12">
                                                                     <div class="form-group">
-                                                                        <label class="control-label">Nº do apartamento / casa / escritório*</label>
-                                                                        <input id="flat" name="flat" readonly type="text" placeholder="Número do Imóvel (Ex: 14)" class="form-control input-md" required="">
+                                                                        <label class="control-label">Bairro*</label>
+                                                                        <input id="bairro" name="bairro" readonly type="text" placeholder="" class="form-control input-md" maxlength="30" required="">
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-lg-12 col-md-12">
-                                                                    <div class="form-group">
-                                                                        <label class="control-label">Rua / Avenida / Logradouro*</label>
-                                                                        <input id="street" name="street" readonly type="text" placeholder="Endereço do Local (Ex: Rua 1° de Maio)" class="form-control input-md">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-6 col-md-12">
-                                                                    <div class="form-group">
-                                                                        <label class="control-label">Código Pin*</label>
-                                                                        <input id="pincode" name="pincode" readonly type="text" placeholder="Pin" class="form-control input-md" required="">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-6 col-md-12">
+																<div class="col-lg-6 col-md-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label">Cidade*</label>
-                                                                        <input id="Locality" name="locality" readonly type="text" placeholder="Inserir Cidade" class="form-control input-md" required="">
+                                                                        <input id="cidade" name="cidade"readonly type="text" placeholder="" class="form-control input-md" maxlenght="50" required="">
                                                                     </div>
                                                                 </div>
+                                                                <div class="col-lg-12 col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Rua / Avenida*</label>
+                                                                        <input id="rua" name="rua" readonly type="text" placeholder="" class="form-control input-md" maxlenght="150" required="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6 col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Número*</label>
+                                                                        <input id="street" name="n_end" readonly type="tel" placeholder="" class="form-control input-md" data-mask="000000000000000" required="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6 col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Complemento / Ponto de Referência</label>
+                                                                        <input id="complemento" name="complemento" readonly type="text" placeholder="" class="form-control input-md" maxlength="100" required="">
+                                                                    </div>
+                                                                </div>
+
                                                                 <div class="col-lg-12 col-md-12">
                                                                     <div class="form-group">
                                                                         <div class="address-btns">
-                                                                            <button class="save-btn14 hover-btn">Salvar</button>
+                                                                        <a href="#" style="margin-top:0; margin-left:0;" class="add-address hover-btn" data-toggle="modal" data-target="#address_model">Adicionar Novo Endereço</a>
                                                                             <a class="collapsed ml-auto next-btn16 hover-btn" role="button" data-toggle="collapse" data-parent="#checkout_wizard" href="#collapseThree"> Avançar </a>
                                                                         </div>
                                                                     </div>
