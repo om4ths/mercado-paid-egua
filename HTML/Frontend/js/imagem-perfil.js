@@ -146,15 +146,6 @@ cropButton.onclick = () => {
     // atualizar o preview da imagem
     photoPreview.src = canvas.toDataURL()
 
-    // mostrar o botão de download
-    downloadButton.style.display = 'initial'
+    
 }
 
-// Download
-const downloadButton = document.getElementById('download')
-downloadButton.onclick = function() {
-    const a = document.createElement('a')
-    a.download = photoName + '-cropped.png';
-    a.href = canvas.toDataURL();
-    a.click()
-}

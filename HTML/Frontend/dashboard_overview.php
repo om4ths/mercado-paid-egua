@@ -448,11 +448,13 @@ include('php/verificar_login.php');
 												
 												</div> 
 												<div class="footer-modal">
-												<button id="crop-image">Salvar Foto</button>
+											
+													<form method="POST" action="php/img_cliente.php" enctype="multipart/form-data">
+													<input id="crop-image" type="submit" name="c_img" value="Cortar e salvar Foto">
+													</form >
+												
+													</div> 
 
-
-
-													</div>
 											</div> 
 										</div>
 							<h4>
