@@ -180,6 +180,8 @@
 														?>
 
 														<td class="action-btns">
+														<a  href='php/deletephp?id_tel=" . $r_cliente['telefone'] . "' class='delete-btn' title='Apagar' data-confirm='Deseja realmente APAGAR O USUÁRIO'><i class='fas fa-trash-alt'></i></a>"?>;
+
 															<a href="product_view.php" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
 															<a href="#" class="edit-btn" title="Edit"><i class="fas fa-edit"></i></a>
 														</td>
