@@ -617,13 +617,8 @@
                                                                 </div>
                                                                 <div class="col-lg-12 col-md-12">
                                                                     <div class="form-group">
-<<<<<<< HEAD
                                                                         <label class="control-label">Rua / Avenida*</label>
-                                                                        <input id="rua" name="rua" readonly type="text" placeholder="" class="form-control input-md" maxlenght="150" required="">
-=======
-                                                                        <label class="control-label">Rua / Avenida / Logradouro*</label>
                                                                         <?php if(isset($r_endereco['rua'])){echo "<input id='street' name='street' readonly type='text' placeholder='".$r_endereco['rua']."' class='form-control input-md'>";}else{echo "<input id='street' name='street' readonly type='text' placeholder=' ' class='form-control input-md'>";}?>
->>>>>>> ad179b1efcb0c775632ca908aa493f412568cf72
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-12">
