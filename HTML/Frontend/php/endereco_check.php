@@ -31,12 +31,12 @@ $insert_end = mysqli_query($conexao,$query_end);
 
 if($insert_end){
      echo"<script language='javascript' type='text/javascript'>
-     alert('Endereço cadastrado com sucesso!');</script>";
-     header('Location: /mercado-paid-egua/HTML/frontend/dashboard_my_addresses.php');
+     alert('Usuário cadastrado com sucesso!');</script>";
+     header('Location: /mercado-paid-egua/HTML/frontend/checkout.php');
       die();
     }else{
       echo"<script language='javascript' type='text/javascript'>
-      alert('Não foi possível cadastrar esse endereço');</script>";
+      alert('Não foi possível cadastrar esse usuário');</script>";
       die();
     }
 
