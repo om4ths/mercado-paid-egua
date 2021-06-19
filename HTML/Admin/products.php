@@ -19,6 +19,9 @@
 	<!-- Vendor Stylesheets -->
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 	
 </head>
 
@@ -180,7 +183,7 @@
 														?>
 
 														<td class="action-btns">
-														<a  href='php/deletephp?id_tel=" . $r_cliente['telefone'] . "' class='delete-btn' title='Apagar' data-confirm='Deseja realmente APAGAR O USUÁRIO'><i class='fas fa-trash-alt'></i></a>"?>;
+														<a  href="#" class='delete-btn' title='Apagar' data-confirm='Deseja realmente apagar o produto?'><i class='fas fa-trash-alt'></i></a>
 
 															<a href="product_view.php" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
 															<?php echo "<a href='view_editar_produtos.php?p_id=".$r_pro['pro_id']."' class='edit-btn' title='Edit'><i class='fas fa-edit'></i></a>" ?>
@@ -211,8 +214,14 @@
             </div>
         </div>
         <script src="js/jquery-3.4.1.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+
+
+        <script src="js/deletar_prod.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+		
        
     </body>
 </html>
