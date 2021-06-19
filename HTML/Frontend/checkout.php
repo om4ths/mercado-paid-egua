@@ -478,7 +478,7 @@
                                                                                                        
                                                                     ?>                                                               
                                                                                                                                       
-                                                                    <?php echo"   <li> <label>".$r_end['tipo']."</label> </li>" ?>                                                                
+                                                                    <?php echo" <li> <label for='tipo'>".$r_end['tipo']."</label> </li>" ?>                                                                
                                                                
                                                                 <?php
                                                                     };
@@ -492,37 +492,37 @@
                                                                 <div class="col-lg-6 col-md-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label">Nome*</label>
-                                                                        <input id="name" name="name" type="text" placeholder="Nome" class="form-control input-md" required="">
+                                                                        <input id="name" name="name" readonly type="text" placeholder="Nome" class="form-control input-md" required="">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label">Endereço de E-mail*</label>
-                                                                        <input id="email1" name="email1" type="text" placeholder="Endereço de E-mail" class="form-control input-md" required="">
+                                                                        <input id="email1" name="email1"readonly type="text" placeholder="Endereço de E-mail" class="form-control input-md" required="">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-12 col-md-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label">Nº do apartamento / casa / escritório*</label>
-                                                                        <input id="flat" name="flat" type="text" placeholder="Número do Imóvel (Ex: 14)" class="form-control input-md" required="">
+                                                                        <input id="flat" name="flat" readonly type="text" placeholder="Número do Imóvel (Ex: 14)" class="form-control input-md" required="">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-12 col-md-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label">Rua / Avenida / Logradouro*</label>
-                                                                        <input id="street" name="street" type="text" placeholder="Endereço do Local (Ex: Rua 1° de Maio)" class="form-control input-md">
+                                                                        <input id="street" name="street" readonly type="text" placeholder="Endereço do Local (Ex: Rua 1° de Maio)" class="form-control input-md">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label">Código Pin*</label>
-                                                                        <input id="pincode" name="pincode" type="text" placeholder="Pin" class="form-control input-md" required="">
+                                                                        <input id="pincode" name="pincode" readonly type="text" placeholder="Pin" class="form-control input-md" required="">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label">Cidade*</label>
-                                                                        <input id="Locality" name="locality" type="text" placeholder="Inserir Cidade" class="form-control input-md" required="">
+                                                                        <input id="Locality" name="locality" readonly type="text" placeholder="Inserir Cidade" class="form-control input-md" required="">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-12 col-md-12">
