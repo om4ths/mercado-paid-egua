@@ -5,6 +5,9 @@
 <html lang="pt_BR">
     <?php
 	include('php/dados_cliente.php');
+    include('php/func.php');
+    include('../Admin/php/exibe_produtos.php');
+    include('../Admin/php/ver_produto.php')
 	?>
 
 <head>
@@ -63,13 +66,13 @@
 							foreach($r_categoria as $key => $r_cat)
 							{	
 																
-							$caminhoCorretoImg = limpa_link($r_cat['cat_img']);
+							
 																
 					?>
 						<li>
 							<a href="#" class="single-cat-item">
 								<div class="icon">
-									<?php echo "<img src=' ".$caminhoCorretoImg." ' alt='erro ao Carregar a imagem'>" ?>
+									<?php echo "<img src=' ".limpa_link($r_cat['cat_img'])." ' alt='erro ao Carregar a imagem'>" ?>
 								</div>
 								<?php echo "<div class='text'>".$r_cat['cat_nome']."</div>" ?>
 							</a>
@@ -407,8 +410,9 @@
                                 <div class="col-lg-4 col-md-4">
                                     <div id="sync1" class="owl-carousel owl-theme">
                                         <div class="item">
-                                            <img src="images/product/isaacchavoso.jpg" alt="">
+                                            <?php echo "<img src=' ".limpa_link($r_view_pro['pro_img'])." ' alt=''>" ?>
                                         </div>
+                                        <!--
                                         <div class="item">
                                             <img src="images/product/isaac1.jpg" alt="">
                                         </div>
@@ -418,7 +422,9 @@
                                         <div class="item">
                                             <img src="images/product/isaac3.jpg" alt="">
                                         </div>
+                                         -->
                                     </div>
+                                    <!--
                                     <div id="sync2" class="owl-carousel owl-theme">
                                         <div class="item">
                                             <img src="images/product/isaacchavoso.jpg" alt="">
@@ -433,10 +439,11 @@
                                             <img src="images/product/isaac3.jpg" alt="">
                                         </div>
                                     </div>
+                                    -->
                                 </div>
                                 <div class="col-lg-8 col-md-8">
                                     <div class="product-dt-right">
-                                        <h2>Nóia</h2>
+                                        <?php echo "<h2>".$r_view_pro['pro_nome']."</h2>" ?>
                                         <div class="no-stock">
                                             <p class="pd-no">Cód.<span>12345</span></p>
                                             <p class="stock-qty">Acessível<span>(Em Estoque)</span></p>
@@ -461,16 +468,24 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <p class="pp-descp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate, purus at tempor blandit, nulla felis dictum eros, sed volutpat odio sapien id lectus. Cras mollis massa ac congue posuere. Fusce viverra
-                                            mauris vel magna pretium aliquet. Nunc tincidunt, velit id tempus tristique, velit dolor hendrerit nibh, at scelerisque neque mauris sed ex.</p>
+                                        <?php echo "<p class='pp-descp'>".$r_view_pro['pro_desc']."</p>" ?>
                                         <div class="product-group-dt">
                                             <ul>
+                                            <?php if($r_view_pro['pro_desconto'] != $r_view_pro['pro_valor'] and $r_view_pro['pro_desconto'] != 0){?>
                                                 <li>
-                                                    <div class="main-price color-discount">Com Desconto<span>$15</span></div>
+                                                    <?php echo "<div class='main-price color-discount'>Com Desconto<span>R$".formata_preco($r_view_pro['pro_desconto'])."</span></div>" ?>
                                                 </li>
                                                 <li>
-                                                    <div class="main-price mrp-price">Preço de Varejo<span>$18</span></div>
+                                                    <?php echo "<div class='main-price mrp-price'>Preço de Varejo<span>R$".formata_preco($r_view_pro['pro_valor'])."</span></div>" ?>
                                                 </li>
+                                            <?php
+                                            }else{
+                                            ?>
+                                                <li>
+                                                    <?php echo "<div class='main-price color-discount'>Preço<span>R$ ".$r_view_pro['pro_valor']."</span></div>" ?>
+                                                </li>
+                                            <?php } ?>
+
                                             </ul>
                                             <ul class="gty-wish-share">
                                                 <li>
@@ -503,13 +518,21 @@
                                 <h4>Você também vai gostar</h4>
                             </div>
                             <div class="pdpt-body scrollstyle_4">
+                            <?php
+                            if(isset($r_produtos_cat))
+								{	
+								foreach($r_produtos_cat as $key => $r_pro_cat)
+									{
+                            ?>
                                 <div class="cart-item border_radius">
-                                    <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="cart-product-img">
-                                        <img src="images/product/img-6.jpg" alt="">
-                                        <div class="offer-badge">4% OFF</div>
+                                    <?php echo "<a href='single_product_view.php?p_id=".$r_pro_cat['pro_id']."' class='cart-product-img'>" ?>
+                                        <?php echo "<img src=' ".limpa_link($r_pro_cat['pro_img'])." ' alt='Erro ao carregar a imagem'>" ?>
+                                        <?php if(porcentagemDesconto($r_pro_cat['pro_valor'], $r_pro_cat['pro_desconto']) != 0 and porcentagemDesconto($r_pro_cat['pro_valor'], $r_pro_cat['pro_desconto']) != 100) { ?>
+                                        <?php echo "<div class='offer-badge'>".porcentagemDesconto($r_pro_cat['pro_valor'], $r_pro_cat['pro_desconto'])."% OFF</div>" ?>
+                                        <?php } ?>
                                     </a>
                                     <div class="cart-text">
-                                        <h4>Nome do Produto Aqui</h4>
+                                        <?php echo "<h4>".$r_pro_cat['pro_nome']."</h4>" ?>
                                         <div class="cart-radio">
                                             <ul class="kggrm-now">
                                                 <li>
@@ -536,10 +559,19 @@
                                                 <input type="number" step="1" name="quantity" value="1" class="input-text qty text">
                                                 <input type="button" value="+" class="plus plus-btn">
                                             </div>
-                                            <div class="cart-item-price">R$12 <span>R$15</span></div>
+                                            <?php if($r_pro_cat['pro_desconto'] != $r_pro_cat['pro_valor'] and $r_pro_cat['pro_desconto'] != 0){?>
+                                            <?php echo "<div class='cart-item-price'>R$".formata_preco($r_pro_cat['pro_desconto'])."<span>R$".formata_preco($r_pro_cat['pro_valor'])."</span></div>" ?>
+                                            <?php 
+                                            }else{
+                                            ?>
+                                            <?php echo "<div class='cart-item-price'>R$".formata_preco($r_pro_cat['pro_valor'])."<span></span></div>" ?>
+                                            <?php } ?>
                                         </div>
                                     </div>
                                 </div>
+
+                                <?php }}?>
+<!--
                                 <div class="cart-item border_radius">
                                     <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="cart-product-img">
                                         <img src="images/product/img-2.jpg" alt="">
@@ -573,6 +605,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="cart-item border_radius">
                                     <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="cart-product-img">
                                         <img src="images/product/img-5.jpg" alt="">
@@ -605,6 +638,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                            -->
                             </div>
                         </div>
                     </div>
@@ -617,8 +651,7 @@
                                 <div class="pdct-dts-1">
                                     <div class="pdct-dt-step">
                                         <h4>Descrição</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque posuere nunc in condimentum maximus. Integer interdum sem sollicitudin, porttitor felis in, mollis quam. Nunc gravida erat eu arcu interdum eleifend.
-                                            Cras tortor velit, dignissim sit amet hendrerit sed, ultricies eget est. Donec eget urna sed metus dignissim cursus.</p>
+                                        <?php echo "<p>".$r_view_pro['pro_desc']."</p>" ?>
                                     </div>
                                     <div class="pdct-dt-step">
                                         <h4>Benefícios</h4>

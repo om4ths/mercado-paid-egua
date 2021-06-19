@@ -15,7 +15,22 @@
 			$valorDDesconto = $valorTotal - $valorCDesconto;
 			$porcentagemDesc = ($valorDDesconto * 100) / $valorTotal;
 
-			return $porcentagemDesc;
+			return round($porcentagemDesc);
 		}
+
+        function ponto_virgula($valor){
+			$valor = trim($valor);
+			$valor = str_replace(".", ",", $valor);
+			
+			return $valor;
+		   }
+        function formata_preco($valor){
+            return number_format($valor, 2, ',', '');
+           
+        }
+        function formataHora($valor){
+            return date("d/m/Y H:i:s", strtotime($valor));
+            
+        }
 
 	?>

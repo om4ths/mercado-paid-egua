@@ -6,6 +6,7 @@
 		<?php
 			include('php/dados_cliente.php');
 			include('php/dados_endereco.php');
+			
 		?>
 <head>
 	<meta charset="utf-8">
@@ -172,7 +173,7 @@
 															{
 																					
 														?>
-		
+		 
 															<h4><?php echo $r_end['tipo'];?></h4>
 															<p><?php echo $r_end['rua'], ', ',$r_end['numero'];?></p>
 															<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>

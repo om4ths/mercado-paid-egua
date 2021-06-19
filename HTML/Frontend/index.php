@@ -538,15 +538,19 @@ include('php/func.php');
 							if(isset($r_produtos))
 								{	
 								foreach($r_produtos as $key => $r_pro)
-									{							
+									{
+																
 						?>
 
 							<div class="item">
 								<div class="product-item">
-									<a href="single_product_view.php" class="product-img">
+									<?php echo "<a href='single_product_view.php?p_id=".$r_pro['pro_id']." ' class='product-img'>" ?>
 									    <?php echo "<img src=' ".limpa_link($r_pro['pro_img'])." ' alt='Erro ao Carregar a imagem'>" ?>
 										<div class="product-absolute-options">
+											<?php if(porcentagemDesconto($r_pro['pro_valor'], $r_pro['pro_desconto']) != 0 and porcentagemDesconto($r_pro['pro_valor'], $r_pro['pro_desconto']) != 100) { ?>
 											<?php echo "<span class='offer-badge-1'>".porcentagemDesconto($r_pro['pro_valor'], $r_pro['pro_desconto'])."%</span>" ?>
+											<?php } ?>
+
 										</div>
 									</a>
 									<div class="product-text-dt">
@@ -565,13 +569,13 @@ include('php/func.php');
 									?>
 										<?php echo "<h4>".$r_pro['pro_nome']."</h4>" ?>
 
-										<?php if($r_pro['pro_desconto'] != $r_pro['pro_valor']){?>
-										<?php echo "<div class='product-price'>".$r_pro['pro_desconto']."<span>".$r_pro['pro_valor']."</span></div>" ?>
+										<?php if($r_pro['pro_desconto'] != $r_pro['pro_valor'] and $r_pro['pro_desconto'] != 0){?>
+										<?php echo "<div class='product-price'>R$".formata_preco($r_pro['pro_desconto'])."<span>R$".formata_preco($r_pro['pro_valor'])."</span></div>" ?>
 										<?php
 										}
 										else{
 										?>
-										<?php echo "<div class='product-price'>".$r_pro['pro_valor']."</div>"; }?>
+										<?php echo "<div class='product-price'>R$".$r_pro['pro_valor']."</div>"; }?>
 
 
 										<div class="qty-cart">
