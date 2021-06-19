@@ -529,6 +529,7 @@ include('../Admin/php/exibe_produtos.php');
 					</div>
 					<div class="col-md-12">
 						<div class="owl-carousel featured-slider owl-theme">
+						<!-- Exibir Produtos destaque-->
 						<?php
 							if(isset($r_produtos))
 								{	
@@ -585,7 +586,7 @@ include('../Admin/php/exibe_produtos.php');
 								</div>
 							</div>
 							<?php }} ?>
-
+							<!-- FIM Exibir Produtos destaque-->
 						</div>
 					</div>
 				</div>
