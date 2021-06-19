@@ -288,7 +288,7 @@ include('../Admin/php/exibe_produtos.php');
 					</div>
 				</div>
 				<div class="search120">
-				<form method="POST" action="php/pesquisar.php" enctype="multipart/form-data">
+				<form method="GET" action="php/pesquisar.php" enctype="multipart/form-data">
 					<div class="ui search">
 						<div class="ui left icon input swdh10">
 							<input class="prompt srch10" type="search" name='pesquisar' placeholder="Pesquisar produtos ..">
@@ -301,7 +301,7 @@ include('../Admin/php/exibe_produtos.php');
 				<div class="header_right">
 					<ul>
 						<li>
-							<a href="#" class="offer-link"><i class="uil uil-phone-alt"></i>1800-000-000</a>
+							<a href="#" class="offer-link"><i class="uil uil-phone-alt"></i>(91) 9 8283-2055</a>
 						</li>
 						<li>
 							<a href="faq.php" class="offer-link"><i class="uil uil-question-circle"></i>Ajuda</a>
