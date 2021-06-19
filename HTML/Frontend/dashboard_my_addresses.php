@@ -624,7 +624,7 @@ include('php/verificar_login.php');
 								<?php echo$resultado['nome']?>
 							</h4>
 							<p>
-								<?php echo$resultado['telefone']?><a href="#"><i class="uil uil-edit"></i></a>
+								<?php echo$resultado['telefone']?><a href="#"></a>
 							</p>
 						</div>
 					</div>
@@ -690,7 +690,7 @@ include('php/verificar_login.php');
 													<p><?php echo $r_end['complemento']?></p>
 													<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
 													<ul class="action-btns">
-														<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
+														<li><a href="#" class="action-btn"></a></li>
 														<?php echo"<li><a href='php/delete_end.php?id=" . $r_end['id'] . "' class='action-btn' title='Apagar' data-confirm='Deseja realmente apagar esse endereço?'><i class='fas fa-trash-alt'></i></a></li>" ?>
 
 
@@ -723,7 +723,7 @@ include('php/verificar_login.php');
 														<p><?php echo $r_end['complemento']?></p>
 														<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
 														<ul class="action-btns">
-															<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
+															<li><a href="#" class="action-btn"></a></li>
 															<?php echo"<li><a href='php/delete_end.php?id=" . $r_end['id'] . "' class='action-btn' title='Apagar' data-confirm='Deseja realmente apagar esse endereço?'><i class='fas fa-trash-alt'></i></a></li>" ?>
 														</ul>
 														</div>
@@ -754,7 +754,7 @@ include('php/verificar_login.php');
 													<p><?php echo $r_end['complemento']?></p>
 													<p><?php echo $r_end['cidade'] , ', ',$r_end['cep'];?></p>
 														<ul class="action-btns">
-															<li><a href="#" class="action-btn"><i class="uil uil-edit"></i></a></li>
+															<li><a href="#" class="action-btn"></a></li>
 															<?php echo"<li><a href='php/delete_end.php?id=" . $r_end['id'] . "' class='action-btn' title='Apagar' data-confirm='Deseja realmente apagar esse endereço?'><i class='fas fa-trash-alt'></i></a></li>" ?>
 														</ul>
 														</div>

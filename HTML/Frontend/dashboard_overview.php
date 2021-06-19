@@ -461,7 +461,7 @@ include('php/verificar_login.php');
 								<?php echo$resultado['nome']?>
 							</h4>
 							<p>
-								<?php echo$resultado['telefone']?><a href="#"><i class="uil uil-edit"></i></a>
+								<?php echo$resultado['telefone']?><a href="#"></a>
 							</p>
 						</div>
 					</div>

@@ -413,7 +413,7 @@ include('php/verificar_login.php');
 								</form > 
 							</div>
 							<h4><?php echo$resultado['nome']?></h4>
-							<p><?php echo$resultado['telefone']?><a href="#"><i class="uil uil-edit"></i></a></p>
+							<p><?php echo$resultado['telefone']?><a href="#"></a></p>
 						</div>
 					</div>
 				</div>
