@@ -596,7 +596,7 @@ include('php/verificar_login.php');
 													<label for="click" class="close-btn"></label>
 
 															<button id="select-image" class="btn-modal hover-btn"> 
-															<input type="file" id="photo-file" name="imagem" onchange="previewImagem()">
+															<input type="file" id="photo-file" name="imagem">
 														Carregar Foto
 										</button>	
 												
