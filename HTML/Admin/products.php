@@ -2,6 +2,7 @@
 		include('php/exibe_produtos.php');
 		include('php/conexao.php');
 		include('../Frontend/php/func.php');
+		session_start();
 	?>
 
 <!DOCTYPE html>
@@ -95,7 +96,9 @@
                         <div class="row justify-content-between">
 							<div class="col-lg-12">
 								<a href="add_product.php" class="add-btn hover-btn">Adicionar Novo</a>
+								
 							</div>
+							
 							<div class="col-lg-3 col-md-4">
 								<div class="bulk-section mt-30">
 									<div class="input-group">
@@ -108,7 +111,13 @@
 										<div class="input-group-append">
 											<button class="status-btn hover-btn" type="submit">Aplicar</button>
 										</div>
+										<?php
+											if(isset($_SESSION['msg'])){
+												echo $_SESSION['msg'];	
+												unset($_SESSION['msg']);											
+											}?>
 									</div>
+									
 								</div>
 							</div>
 							<div class="col-lg-5 col-md-6">

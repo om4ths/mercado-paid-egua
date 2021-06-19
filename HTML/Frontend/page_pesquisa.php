@@ -3,6 +3,9 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<?php
+	include('php/dados_cliente.php');
+	?>
 
 <head>
     <meta charset="utf-8">
@@ -10,7 +13,7 @@
     <meta name="viewport" content="width=device-width, shrink-to-fit=9">
     <meta name="description" content="Gambolthemes">
     <meta name="author" content="Gambolthemes">
-    <title>Mercado Pai D'égua - Categorias</title>
+    <title>Busca</title>
 
     <!-- Favicon Icon -->
     <link rel="icon" type="image/png" href="images/logo-1.png">
@@ -296,11 +299,17 @@
 							<a href="faq.html" class="offer-link"><i class="uil uil-question-circle"></i>Ajuda</a>
 						</li>
 						<li class="ui dropdown">
-							<a href="#" class="opts_account">
-								<img src="images/avatar/img-5.jpg" alt="">
-								<span class="user__name"><?php echo $resultado['nome'] ?></span>
-								<i class="uil uil-angle-down"></i>
-							</a>
+						<a href="#" class="opts_account">
+							
+							<?php 
+							if(isset($resultado['foto'])){
+								echo "<img src=' ".$resultado['foto']." ' alt=''>";									
+							}else{
+								echo "<img src='images/avatar/img-5.jpg' alt=''>";
+							};	 							 								
+							?>
+							<span class="user__name"><?php echo $resultado['nome'] ?></span>
+							<i class="uil uil-angle-down"></i>
 							<div class="menu dropdown_account">
 								<div class="night_mode_switch__btn">
 									<a href="#" id="night-mode" class="btn-night-mode">
@@ -414,7 +423,6 @@
                                     <img src="images/product/img-1.jpg" alt="">
                                     <div class="product-absolute-options">
                                         <span class="offer-badge-1">6% off</span>
-                                        <span class="like-icon" title="wishlist"></span>
                                     </div>
                                 </a>
                                 <div class="product-text-dt">
@@ -438,7 +446,6 @@
                                     <img src="images/product/img-2.jpg" alt="">
                                     <div class="product-absolute-options">
                                         <span class="offer-badge-1">2% off</span>
-                                        <span class="like-icon" title="wishlist"></span>
                                     </div>
                                 </a>
                                 <div class="product-text-dt">
@@ -462,7 +469,6 @@
                                     <img src="images/product/img-3.jpg" alt="">
                                     <div class="product-absolute-options">
                                         <span class="offer-badge-1">5% off</span>
-                                        <span class="like-icon" title="wishlist"></span>
                                     </div>
                                 </a>
                                 <div class="product-text-dt">
@@ -486,7 +492,6 @@
                                     <img src="images/product/img-4.jpg" alt="">
                                     <div class="product-absolute-options">
                                         <span class="offer-badge-1">3% off</span>
-                                        <span class="like-icon" title="wishlist"></span>
                                     </div>
                                 </a>
                                 <div class="product-text-dt">
@@ -510,7 +515,6 @@
                                     <img src="images/product/img-5.jpg" alt="">
                                     <div class="product-absolute-options">
                                         <span class="offer-badge-1">2% off</span>
-                                        <span class="like-icon" title="wishlist"></span>
                                     </div>
                                 </a>
                                 <div class="product-text-dt">
@@ -534,7 +538,6 @@
                                     <img src="images/product/img-6.jpg" alt="">
                                     <div class="product-absolute-options">
                                         <span class="offer-badge-1">2% off</span>
-                                        <span class="like-icon" title="wishlist"></span>
                                     </div>
                                 </a>
                                 <div class="product-text-dt">
@@ -558,7 +561,6 @@
                                     <img src="images/product/img-7.jpg" alt="">
                                     <div class="product-absolute-options">
                                         <span class="offer-badge-1">1% off</span>
-                                        <span class="like-icon" title="wishlist"></span>
                                     </div>
                                 </a>
                                 <div class="product-text-dt">
@@ -582,7 +584,6 @@
                                     <img src="images/product/img-11.jpg" alt="">
                                     <div class="product-absolute-options">
                                         <span class="offer-badge-1">6% off</span>
-                                        <span class="like-icon" title="wishlist"></span>
                                     </div>
                                 </a>
                                 <div class="product-text-dt">
@@ -606,7 +607,6 @@
                                     <img src="images/product/img-12.jpg" alt="">
                                     <div class="product-absolute-options">
                                         <span class="offer-badge-1">2% off</span>
-                                        <span class="like-icon" title="wishlist"></span>
                                     </div>
                                 </a>
                                 <div class="product-text-dt">
@@ -630,7 +630,6 @@
                                     <img src="images/product/img-13.jpg" alt="">
                                     <div class="product-absolute-options">
                                         <span class="offer-badge-1">5% off</span>
-                                        <span class="like-icon" title="wishlist"></span>
                                     </div>
                                 </a>
                                 <div class="product-text-dt">
@@ -654,7 +653,6 @@
                                     <img src="images/product/img-14.jpg" alt="">
                                     <div class="product-absolute-options">
                                         <span class="offer-badge-1">1% off</span>
-                                        <span class="like-icon" title="wishlist"></span>
                                     </div>
                                 </a>
                                 <div class="product-text-dt">
@@ -678,7 +676,6 @@
                                     <img src="images/product/img-8.jpg" alt="">
                                     <div class="product-absolute-options">
                                         <span class="offer-badge-1">3% off</span>
-                                        <span class="like-icon" title="wishlist"></span>
                                     </div>
                                 </a>
                                 <div class="product-text-dt">
@@ -696,11 +693,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12">
-                            <div class="more-product-btn">
-                                <button class="show-more-btn hover-btn" onclick="window.location.href = '#';">Ver Mais</button>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
