@@ -5,6 +5,7 @@
 <html lang="en">
 <?php
 	include('php/dados_cliente.php');
+    include('php/dados_endereco.php');
 ?>
 
 <head>
@@ -465,25 +466,27 @@
                                             <div class="row">
                                                 <div class="col-lg-12">
                                                     <form class="">
-                                                        <!-- Multiple Radios (inline) -->
-                                                        <div class="form-group">
-                                                            <div class="product-radio">
-                                                                <ul class="product-now">
-                                                                    <li>
-                                                                        <input type="radio" id="ad1" name="address1" checked>
-                                                                        <label for="ad1">Casa</label>
-                                                                    </li>
-                                                                    <li>
-                                                                        <input type="radio" id="ad2" name="address1">
-                                                                        <label for="ad2">Empresa</label>
-                                                                    </li>
-                                                                    <li>
-                                                                        <input type="radio" id="ad3" name="address1">
-                                                                        <label for="ad3">Outros</label>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
+                                                        <!-- Multiple Radios (inline) -->    
+                                                        <div class="form-group"> 
+                                                        <div class="product-radio">
+                                                        <ul class="product-now">                                                   
+                                                          <?php 
+                                                            if(isset($r_end_casa))
+                                                             {	
+                                                                foreach($r_end_g as $key => $r_end)
+                                                                {          
+                                                                                                       
+                                                                    ?>                                                               
+                                                                                                                                      
+                                                                    <?php echo"   <li> <label>".$r_end['tipo']."</label> </li>" ?>                                                                
+                                                               
+                                                                <?php
+                                                                    };
+                                                                };
+                                                            ?>
+                                                          </ul>
+                                                                </div>
+                                                                </div>
                                                         <div class="address-fieldset">
                                                             <div class="row">
                                                                 <div class="col-lg-6 col-md-12">
