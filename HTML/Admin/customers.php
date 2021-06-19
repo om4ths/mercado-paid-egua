@@ -46,7 +46,7 @@ include('php/dados_cliente.php');
                                 Painel de Controle
 							</a>
                              		
-								
+								 
 							
 							<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCategories" aria-expanded="false" aria-controls="collapseCategories">
 								<div class="sb-nav-link-icon"><i class="fas fa-list"></i></div>
