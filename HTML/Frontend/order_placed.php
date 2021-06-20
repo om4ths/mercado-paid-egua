@@ -284,13 +284,16 @@
 				</div>
 			</div>
 			<div class="search120">
-				<div class="ui search">
-					<div class="ui left icon input swdh10">
-						<input class="prompt srch10" type="text" placeholder="Pesquisar produtos ..">
-						<i class='uil uil-search-alt icon icon1'></i>
+				<form method="GET" action="shop_grid.php" enctype="multipart/form-data">
+					<div class="ui search">
+						<div class="ui left icon input swdh10">
+							<input class="prompt srch10" type="search" name='pesquisar' placeholder="Pesquisar produtos ..">
+							<i class='uil uil-search-alt icon icon1'></i>
+							<input type="submit" class="pesquisar_prod" style="display:none">
+						</div>
 					</div>
+					</form> 
 				</div>
-			</div>
 			<div class="header_right">
 				<ul>
 					<li>
