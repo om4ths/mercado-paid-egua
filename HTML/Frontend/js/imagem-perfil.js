@@ -4,12 +4,6 @@ let image;
 let photoName;
 
 // Select & Preview image
-document.getElementById('select-image')
-.onclick = function() {
-    photoFile.click()
-            // mostrar o botão de corte
-    cropButton.style.display = 'initial'
-}
 
 window.addEventListener('DOMContentLoaded', () =>{
     photoFile.addEventListener('change', () => {
@@ -101,8 +95,4 @@ function onLoadImage() {
 
 }
 
-
-
-// Cortar imagem
-const cropButton = document.getElementsByClassName('crop-image')
-
+    

@@ -28,6 +28,8 @@ include('php/verificar_login.php');
 		<link href="css/responsive.css" rel="stylesheet">
 		<link href="css/night-mode.css" rel="stylesheet">
 		<link href="css/step-wizard.css" rel="stylesheet">
+		<link href="css/modalfoto.css" rel="stylesheet">
+
 		
 		<!-- Vendor Stylesheets -->
 		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -299,7 +301,7 @@ include('php/verificar_login.php');
 				<div class="header_right">
 					<ul>
 						<li>
-							<a href="#" class="offer-link"><i class="uil uil-phone-alt"></i>1800-000-000</a>
+							<a href="#" class="offer-link"><i class="uil uil-phone-alt"></i>(91) 9 8283-2055</a>
 						</li>
 						<li>
 							<a href="faq.php" class="offer-link"><i class="uil uil-question-circle"></i>Ajuda</a>
