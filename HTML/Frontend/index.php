@@ -181,7 +181,7 @@
 				</div>
 			</div>
 			<div class="side-cart-items">
-                
+<!-- INICIO EXIBIR ITENS NO CARRINHO -->               
 			<?php foreach($resultsCarts as $result) : ?>
 
 				<div class="cart-item">
@@ -204,7 +204,7 @@
 				</div>
 
 			<?php endforeach;?>
-
+<!-- FIM EXIBIR ITENS NO CARRINHO -->
 			</div>
 		</div>
 		<div class="bs-canvas-footer">
