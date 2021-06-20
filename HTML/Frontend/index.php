@@ -287,11 +287,7 @@ include('php/exibe_produtos_index.php');
 					</div>
 				</div>
 				<div class="search120">
-<<<<<<< HEAD
-				<form method="POST" action="php/pesquisar.php" enctype="multipart/form-data">
-=======
 				<form method="GET" action="shop_grid.php" enctype="multipart/form-data">
->>>>>>> 16c4d06d01e303044b2ae8d7b74a3cf78b5c2841
 					<div class="ui search">
 						<div class="ui left icon input swdh10">
 							<input class="prompt srch10" type="search" name='pesquisar' placeholder="Pesquisar produtos ..">
@@ -743,22 +739,7 @@ include('php/exibe_produtos_index.php');
 		<div class="footer-second-row">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-3 col-md-6 col-sm-6">
-						<div class="second-row-item">
-							<h4>Categorias</h4>
-							<ul>
-								<li><a href="#">Frutas e Vegetais</a></li>
-								<li><a href="#">Alimentos Básicos</a></li>
-								<li><a href="#">Ovos e Laticínios</a></li>
-								<li><a href="#">Bebidas</a></li>
-								<li><a href="#">Lanches</a></li>
-								<li><a href="#">Limpeza</a></li>
-								<li><a href="#">Macarrão e molhos</a></li>
-								<li><a href="#">Higiene</a></li>
-								<li><a href="#">Pets</a></li>
-							</ul>
-						</div>
-					</div>
+											
 					<div class="col-lg-3 col-md-6 col-sm-6">
 						<div class="second-row-item">
 							<h4>Links Úteis</h4>

@@ -67,13 +67,14 @@
 									<a class="nav-link sub_nav_link" href="add_product.html">Adicionar Produtos</a>
 								</nav>
                             </div>
-							<a class="nav-link" href="orders.html">
-								<div class="sb-nav-link-icon"><i class="fas fa-cart-arrow-down"></i></div>
-                                Ordens de compra
-							</a>
+							
 							<a class="nav-link" href="customers.php">
 								<div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Usuários
+							</a>
+							<a class="nav-link" href="mensagens.php">
+								<div class="sb-nav-link-icon"><i class="fas fa-envelope"></i></div>
+								Fale Conosco
 							</a>
 							
                         </div>
@@ -133,11 +134,8 @@
                 <footer class="py-4 bg-footer mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted-1">© 2020 <b>Gambo Supermarket</b>. by <a href="https://themeforest.net/user/gambolthemes">Gambolthemes</a></div>
-                            <div class="footer-links">
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/privacy_policy.html">Privacy Policy</a>
-                                <a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/term_and_conditions.html">Terms &amp; Conditions</a>
-                            </div>
+                            <div class="text-muted-1">© 2021 <b>Mercado Pai D'égua</b></div>
+                           
                         </div>
                     </div>
                 </footer>
