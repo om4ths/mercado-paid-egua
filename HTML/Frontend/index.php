@@ -4,10 +4,9 @@ include('php/func.php');
 include('php/exibe_categoria_index.php');
 include('php/exibe_produtos_index.php');
 require_once "php/functions/product.php";
+require_once "php/functions/cart.php";
+require_once "php/Carrinho.php";
 $pdoConnection = require_once "php/connection.php";
-$products = getProducts($pdoConnection);
-$resultsCarts = getContentCart($pdoConnection);
-$totalCarts  = getTotalCart($pdoConnection);
 ?>
 
 <!DOCTYPE html>
@@ -180,36 +179,19 @@ $totalCarts  = getTotalCart($pdoConnection);
 					<span>R$1</span>
 				</div>
 			</div>
-			<?php if($resultsCarts) : ?>
-			<form action="carrinho.php?acao=up" method="post">
-			<?php foreach($resultsCarts as $result) : ?>
+	
 			<div class="side-cart-items">
 				<div class="cart-item">
 					<div class="cart-product-img">
 						<img src="images/product/img-1.jpg" alt="">
 						<div class="offer-badge">6% OFF</div>
 					</div>
+					<?php if($resultsCarts) : ?>
+			<!--<form action="carrinho.php?acao=up" method="post"> -->
+		<?php foreach($resultsCarts as $result) : ?>
 					<div class="cart-text">
-						<h4><?php echo $result['nome']?></h4>
-						<div class="cart-radio">
-							<ul class="kggrm-now">
-								<li>
-									<input type="radio" id="a1" name="cart1">
-									<label for="a1">0.50</label>
-								</li>
-								<li>
-									<input type="radio" id="a2" name="cart1">
-									<label for="a2">1kg</label>
-								</li>
-								<li>
-									<input type="radio" id="a3" name="cart1">
-									<label for="a3">2kg</label>
-								</li>
-								<li>
-									<input type="radio" id="a4" name="cart1">
-									<label for="a4">3kg</label>
-								</li>
-							</ul>
+						<h4><?php echo $result['name']?></h4>
+						<div class="cart-radio">							
 						</div>
 						<div class="qty-group">
 							<div class="quantity buttons_added">
@@ -229,36 +211,7 @@ $totalCarts  = getTotalCart($pdoConnection);
 						<div class="offer-badge">6% OFF</div>
 					</div>
 					<?php endforeach;?>
-					<?php endif?>
-
-					<div class="cart-text">			
-						<h4>Nome do Produto Aqui</h4>
-						<div class="cart-radio">
-							<ul class="kggrm-now">
-								<li>
-									<input type="radio" id="a5" name="cart2">
-									<label for="a5">0.50</label>
-								</li>
-								<li>
-									<input type="radio" id="a6" name="cart2">
-									<label for="a6">1kg</label>
-								</li>
-								<li>
-									<input type="radio" id="a7" name="cart2">
-									<label for="a7">2kg</label>
-								</li>
-							</ul>
-						</div>
-						<div class="qty-group">
-							<div class="quantity buttons_added">
-								<input type="button" value="-" class="minus minus-btn">
-								<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
-								<input type="button" value="+" class="plus plus-btn">
-							</div>
-							<div class="cart-item-price">R$24 <span>R$30</span></div>
-						</div>
-						<button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button>
-					</div>
+					<?php endif?>					
 				</div>
 			</div>
 		</div>
@@ -589,7 +542,7 @@ $totalCarts  = getTotalCart($pdoConnection);
 												<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
 												<input type="button" value="+" class="plus plus-btn">
 											</div>
-											<a class="cart-icon" href="php/Carrinho.php?acao=add&id=<?php echo $product['pro_id']?>"><i class="uil uil-shopping-cart-alt"></i></a>
+											<a class="cart-icon" href="php/Carrinho.php?acao=add&id=<?php echo $r_pro_dec['pro_id']?>"><i class="uil uil-shopping-cart-alt"></i></a>
 										</div>
 									</div>
 								</div>

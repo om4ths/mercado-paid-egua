@@ -1,5 +1,5 @@
 <?php 
-	session_start();
+	
 	require_once "functions/product.php";
 	require_once "functions/cart.php";
 
@@ -22,7 +22,7 @@
 				}
 			}
 		} 
-		header('location: index.php');
+		header('location: ../index.php');
 	}
 
 	$resultsCarts = getContentCart($pdoConnection);

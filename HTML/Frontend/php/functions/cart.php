@@ -54,8 +54,8 @@ function getTotalCart($pdo) {
 	
 	$total = 0;
 
-	foreach(getContentCart($pdo) as $product) {
-		$total += $product['subtotal'];
-	} 
-	return $total;
+	//foreach(getContentCart($pdo) as $product) {
+		//$total += $product['subtotal'];
+	//} 
+	//return $total;
 }
