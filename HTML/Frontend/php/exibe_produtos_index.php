@@ -15,6 +15,12 @@
 			$r_produtos_dec[] = $r_prow_dec; 
 		}
 
+		$select_oferta = "SELECT * FROM produtos WHERE pro_ativo = 1 order by pro_desconto LIMIT 0, 3";   
+		$array_oferta = mysqli_query($conexao,$select_oferta);
+		while($r_ofertaw = mysqli_fetch_array($array_oferta)){
+			$r_oferta[] = $r_ofertaw; 
+		}
+
         
 
 

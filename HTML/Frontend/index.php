@@ -604,24 +604,34 @@ include('php/exibe_produtos_index.php');
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-6">
-						<a href="#" class="best-offer-item">
-							<img src="images/best-offers/offer-1.jpg" alt="">
-						</a>
-					</div>
+
+					<!--
 					<div class="col-lg-4 col-md-6">
 						<a href="#" class="best-offer-item">
 							<img src="images/best-offers/offer-2.jpg" alt="">
 						</a>
 					</div>
+					-->
+					<?php
+							if(isset($r_oferta))
+								{	
+								foreach($r_oferta as $key => $r_ofer)
+									{
+																
+						?>
 					<div class="col-lg-4 col-md-6">
 						<a href="#" class="best-offer-item offr-none">
-							<img src="images/best-offers/offer-3.jpg" alt="">
+							<img src="<?php echo limpa_link($r_ofer['pro_img']) ?>" alt="">
 							<div class="cmtk_dt">
-								<div class="product_countdown-timer offer-counter-text" data-countdown="2021/01/06"></div>
+								<?php echo "<h4>".$r_ofer['pro_nome']."</h4>" ?>
+								<div class=" offer-counter-text" data-countdown="2021/01/06">
+								<div class='product-price'>R$ <?php echo formata_preco($r_ofer['pro_desconto'])?><span>R$<?php echo formata_preco($r_ofer['pro_valor']) ?></span></div>
+								</div>
+							
 							</div>
 						</a>
 					</div>
+					<?php }} ?>
 					<div class="col-md-12">
 						<a href="#" class="code-offer-item">
 							<img src="images/best-offers/offer-4.jpg" alt="">
