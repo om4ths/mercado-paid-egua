@@ -1,50 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title></title>
-</head>
-<body>
->?php
-	$produtos = array(	['imagem'=>item1.png,'preco'=>'200'],
-				['imagem'=>item2.png,'preco'=>'200'],
-				['imagem'=>item3.png,'preco'=>'200']);
-foreach ($produtos as $key => value){
-?>
-
-	<div class="produto">
-		<img src="<?php echo $value[imagem] >?
-		<a href="?adicionar=<?php echo $key?> </a>
-	</div><!--produto-->
-
-<?php
-
-	if(isset($_GET['adicionar'])){
-		$idproduto = (int )$_GET['adicionar'];
-		if(isset($itens[$idproduto]){
-			if(isset($_SESSION['carrinho'][$idproduto])){
-				$_SESSION['carrinho'][$idproduto]['Quantidade']++;
-			}else{
-				$_SESSION['carrinho'][$idproduto] = array('quantidade'=>1,'nome'=>$produtos[$idprodutos]['nome'],'preco'=>$itens[$idproduto][preco]);
-			}
-
-			echo '<script>alert"(o item foi adicionado ao carrinho.");</script>';
+<?php 
 	
-		}else{
-			die('voce não pode adicionar um item que não existe.');
+	require_once "functions/product.php";
+	require_once "functions/cart.php";
+
+	$pdoConnection = require_once "connection.php";
+
+	if(isset($_GET['acao']) && in_array($_GET['acao'], array('add', 'del', 'up'))) {
+		
+		if($_GET['acao'] == 'add' && isset($_GET['id']) && preg_match("/^[0-9]+$/", $_GET['id'])){ 
+			addCart($_GET['id'], 1);
+						
 		}
-	}
-?>
 
-<h2 class="title">Carrinho:</h2>
+		if($_GET['acao'] == 'del' && isset($_GET['id']) && preg_match("/^[0-9]+$/", $_GET['id'])){ 
+			deleteCart($_GET['id']);
+		}
 
-<?php
-	foreach ($SESSION['carrinho'] as $key => $value) {
-		//NOMDE DO PRODUTO
-		//QUANTIDADE
-		//PREÇO
-		echo "<p>Nome: '.$value['nome']' | Quantidade: '.$value['nome']' |  Preço: '.$value['nome']*.$value['Quantidade']'</p>";
+		if($_GET['acao'] == 'up'){ 
+			if(isset($_POST['prod']) && is_array($_POST['prod'])){ 
+				foreach($_POST['prod'] as $id => $qtd){
+						updateCart($id, $qtd);
+				}
+			}
+		} 
+		header('location: ../index.php');
 	}
+
+	$resultsCarts = getContentCart($pdoConnection);
+	$totalCarts  = getTotalCart($pdoConnection);
+
+
 ?>
-</body>
-</html>

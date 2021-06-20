@@ -1,5 +1,10 @@
 ﻿<?php
+
 	include('php/verificar_login.php');
+    require_once "php/functions/product.php";
+	$pdoConnection = require_once "php/connection.php";
+	$products = getProducts($pdoConnection);
+
 ?>
 <!DOCTYPE html>
 <html lang="pt_BR">
@@ -504,7 +509,7 @@
                                             </ul>
                                             <ul class="ordr-crt-share">
                                                 <li><button class="add-cart-btn hover-btn"><i class="uil uil-shopping-cart-alt"></i>Adicionar ao Carrinho</button></li>
-                                                <li><button href="faq.php"class="order-btn hover-btn">Comprar Agora</button></li>
+                                                <li><a  class="order-btn hover-btn" href="php/carrinho.php?acao=add&id=<?php echo $r_view_pro['pro_id']?>" >Comprar Agora</a></li>
                                             </ul>
                                         </div>
 
