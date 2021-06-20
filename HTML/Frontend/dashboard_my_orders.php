@@ -327,7 +327,6 @@ include('php/verificar_login.php');
 								</div>
 								<a href="dashboard_overview.php" class="item channel_item"><i class="uil uil-apps icon__1"></i>Perfil</a>
 								<a href="dashboard_my_orders.php" class="item channel_item"><i class="uil uil-box icon__1"></i>Ordens de compra</a>
-								<a href="dashboard_my_wallet.php" class="item channel_item"><i class="uil uil-usd-circle icon__1"></i>Carteira</a>
 								<a href="dashboard_my_addresses.php" class="item channel_item"><i class="uil uil-location-point icon__1"></i>Endereço</a>
 								<a href="faq.php" class="item channel_item"><i class="uil uil-info-circle icon__1"></i>Perguntas frequentes</a>
 								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="item channel_item"><i class="uil uil-lock-alt icon__1"></i>Sair</a>
@@ -430,7 +429,6 @@ include('php/verificar_login.php');
 							<div class="dashboard-left-links">
 								<a href="dashboard_overview.php" class="user-item"><i class="uil uil-apps"></i>Visão geral</a>
 								<a href="dashboard_my_orders.php" class="user-item active"><i class="uil uil-box"></i>Ordens de compra</a>
-								<a href="dashboard_my_wallet.php" class="user-item"><i class="uil uil-wallet"></i>Carteira</a>
 								<a href="dashboard_my_addresses.php" class="user-item"><i class="uil uil-location-point"></i>Endereço</a>
 								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="user-item"><i class="uil uil-exit"></i>Sair</a>
 							</div>
