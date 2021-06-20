@@ -1,50 +1,96 @@
+<?php 
+	session_start();
+	require_once "functions/product.php";
+	require_once "functions/cart.php";
+
+	$pdoConnection = require_once "php/connection.php";
+
+	if(isset($_GET['acao']) && in_array($_GET['acao'], array('add', 'del', 'up'))) {
+		
+		if($_GET['acao'] == 'add' && isset($_GET['id']) && preg_match("/^[0-9]+$/", $_GET['id'])){ 
+			addCart($_GET['id'], 1);			
+		}
+
+		if($_GET['acao'] == 'del' && isset($_GET['id']) && preg_match("/^[0-9]+$/", $_GET['id'])){ 
+			deleteCart($_GET['id']);
+		}
+
+		if($_GET['acao'] == 'up'){ 
+			if(isset($_POST['prod']) && is_array($_POST['prod'])){ 
+				foreach($_POST['prod'] as $id => $qtd){
+						updateCart($id, $qtd);
+				}
+			}
+		} 
+		header('location: carrinho.php');
+	}
+
+	$resultsCarts = getContentCart($pdoConnection);
+	$totalCarts  = getTotalCart($pdoConnection);
+
+
+?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title></title>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
+
 </head>
 <body>
->?php
-	$produtos = array(	['imagem'=>item1.png,'preco'=>'200'],
-				['imagem'=>item2.png,'preco'=>'200'],
-				['imagem'=>item3.png,'preco'=>'200']);
-foreach ($produtos as $key => value){
-?>
+	<div class="container">
+		<div class="card mt-5">
+			 <div class="card-body">
+	    		<h4 class="card-title">Carrinho</h4>
+	    		<a href="index.php">Lista de Produtos</a>
+	    	</div>
+		</div>
 
-	<div class="produto">
-		<img src="<?php echo $value[imagem] >?
-		<a href="?adicionar=<?php echo $key?> </a>
-	</div><!--produto-->
+		<?php if($resultsCarts) : ?>
+			<form action="carrinho.php?acao=up" method="post">
+			<table class="table table-strip">
+				<thead>
+					<tr>
+						<th>Produto</th>
+						<th>Quantidade</th>
+						<th>Preço</th>
+						<th>Subtotal</th>
+						<th>Ação</th>
 
-<?php
+					</tr>				
+				</thead>
+				<tbody>
+				  <?php foreach($resultsCarts as $result) : ?>
+					<tr>
+						
+						<td><?php echo $result['name']?></td>
+						<td>
+							<input type="text" name="prod[<?php echo $result['id']?>]" value="<?php echo $result['quantity']?>" size="1" />
+														
+							</td>
+						<td>R$<?php echo number_format($result['price'], 2, ',', '.')?></td>
+						<td>R$<?php echo number_format($result['subtotal'], 2, ',', '.')?></td>
+						<td><a href="carrinho.php?acao=del&id=<?php echo $result['id']?>" class="btn btn-danger">Remover</a></td>
+						
+					</tr>
+				<?php endforeach;?>
+				 <tr>
+				 	<td colspan="3" class="text-right"><b>Total: </b></td>
+				 	<td>R$<?php echo number_format($totalCarts, 2, ',', '.')?></td>
+				 	<td></td>
+				 </tr>
+				</tbody>
+				
+			</table>
 
-	if(isset($_GET['adicionar'])){
-		$idproduto = (int )$_GET['adicionar'];
-		if(isset($itens[$idproduto]){
-			if(isset($_SESSION['carrinho'][$idproduto])){
-				$_SESSION['carrinho'][$idproduto]['Quantidade']++;
-			}else{
-				$_SESSION['carrinho'][$idproduto] = array('quantidade'=>1,'nome'=>$produtos[$idprodutos]['nome'],'preco'=>$itens[$idproduto][preco]);
-			}
+			<a class="btn btn-info" href="index.php">Continuar Comprando</a>
+			<button class="btn btn-primary" type="submit">Atualizar Carrinho</button>
 
-			echo '<script>alert"(o item foi adicionado ao carrinho.");</script>';
+			</form>
+	<?php endif?>
+		
+	</div>
 	
-		}else{
-			die('voce não pode adicionar um item que não existe.');
-		}
-	}
-?>
-
-<h2 class="title">Carrinho:</h2>
-
-<?php
-	foreach ($SESSION['carrinho'] as $key => $value) {
-		//NOMDE DO PRODUTO
-		//QUANTIDADE
-		//PREÇO
-		echo "<p>Nome: '.$value['nome']' | Quantidade: '.$value['nome']' |  Preço: '.$value['nome']*.$value['Quantidade']'</p>";
-	}
-?>
 </body>
 </html>
