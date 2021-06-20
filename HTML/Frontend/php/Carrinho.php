@@ -1,10 +1,6 @@
 <?php 
-<<<<<<< HEAD
 
 	require_once "verificar_login.php";
-=======
-		session_start();
->>>>>>> 19b7fadf6f17d462653301b03bb05130e6dcc508
 
 	require_once "functions/product.php";
 	require_once "functions/cart.php";
