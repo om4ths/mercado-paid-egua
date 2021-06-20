@@ -384,7 +384,7 @@
 					<div class="col-md-12">
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index.php">Home</a></li>
+								<li class="breadcrumb-item"><a href="index.php">Início</a></li>
 								<li class="breadcrumb-item active" aria-current="page">Refund & Return Policy</li>
 							</ol>
 						</nav>

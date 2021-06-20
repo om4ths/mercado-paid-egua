@@ -346,7 +346,7 @@
 						<button class="navbar-toggler menu_toggle_btn" type="button" data-target="#navbarSupportedContent"><i class="uil uil-bars"></i></button>
 						<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
 							<ul class="navbar-nav main_nav align-self-stretch">
-								<li class="nav-item"><a href="index.php" class="nav-link active" title="Home">Início</a></li>
+								<li class="nav-item"><a href="index.php" class="nav-link active" title="Início">Início</a></li>
 								<li class="nav-item"><a href="shop_grid.php?new_id=1" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
 								<li class="nav-item"><a href="shop_grid.php?destaque=2" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
 								<li class="nav-item">
@@ -386,7 +386,7 @@
                     <div class="col-md-12">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                                <li class="breadcrumb-item"><a href="index.php">Início</a></li>
 								<?php if(isset($_GET['c_id'])){ ?>
                                 <?php echo "<li class='breadcrumb-item active' aria-current='page'>".$r_view_shop_grid['cat_nome']."</li>" ?>
 

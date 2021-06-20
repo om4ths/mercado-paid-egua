@@ -66,19 +66,7 @@
 
 
 }
-#selection-tool{
-    position: fixed;
-    display:none;
-    border: 2px dashed #ff0404;
-    border-radius: 100%;
-    
 
-    top: 0;
-    left:0;
-    width:200px;
-    height:200px;
-
-}
 #click{
     display: none;
 }

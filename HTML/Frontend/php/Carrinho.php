@@ -1,5 +1,6 @@
 <?php 
-	
+		session_start();
+
 	require_once "functions/product.php";
 	require_once "functions/cart.php";
 
