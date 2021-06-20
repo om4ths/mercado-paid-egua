@@ -423,8 +423,8 @@
                             <div class="product-left-title">
                                 <h2>Novos Produtos</h2>
                             </div>
-
 							<?php }
+
 							if(isset($_GET['pesquisar'])){
 								?>
 	
@@ -445,7 +445,28 @@
 									<h2>Resultado</h2>
 								</div>
 	
-								<?php } ?>
+								<?php } 
+								if(isset($_GET['destaque'])){
+									?>
+		
+										<li class='breadcrumb-item active' aria-current='page'>Destaques</li>
+		
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="all-product-grid">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="product-top-dt">
+									<div class="product-left-title">
+										<h2>Produtos em Destaque</h2>
+									</div>
+		
+									<?php } ?>
                             
                         </div>
                     </div>

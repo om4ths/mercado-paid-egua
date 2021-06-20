@@ -59,7 +59,7 @@ include('php/exibe_produtos_index.php');
 						{	
 							foreach($r_categoria as $key => $r_cat)
 							{	
-												
+					
 					?>
 						<li>
 							<?php echo "<a href='shop_grid.php?c_id=".$r_cat['cat_id']."' class='single-cat-item'>" ?>
@@ -351,7 +351,7 @@ include('php/exibe_produtos_index.php');
 							<ul class="navbar-nav main_nav align-self-stretch">
 								<li class="nav-item"><a href="index.php" class="nav-link active" title="Home">Início</a></li>
 								<?php echo "<li class='nav-item'><a href='shop_grid.php?new_id=1' class='nav-link new_item' title='New Products'>Novos Produtos</a></li>" ?>
-								<li class="nav-item"><a href="shop_grid.php" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
+								<li class="nav-item"><a href="shop_grid.php?destaque=2" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
 								<li class="nav-item">
 									<div class="ui icon top left dropdown nav__menu">
 										<a class="nav-link" title="Pages">Mais <i class="uil uil-angle-down"></i></a>
@@ -523,7 +523,7 @@ include('php/exibe_produtos_index.php');
 								<span>Para Você</span>
 								<h2>Produtos e Destaque</h2>
 							</div>
-							<a href="#" class="see-more-btn">Ver Tudo</a>
+							<a href="shop_grid.php?destaque=2" class="see-more-btn">Ver Tudo</a>
 						</div>
 					</div>
 					<div class="col-md-12">
@@ -760,7 +760,7 @@ include('php/exibe_produtos_index.php');
 							<h4>Links Úteis</h4>
 							<ul>
 								<li><a href="about_us.php">Sobre Nós</a></li>
-								<li><a href="shop_grid.php">Produtos em Destaque</a></li>
+								<li><a href="shop_grid.php?destaque=2">Produtos em Destaque</a></li>
 								<li><a href="faq.php">FAQ</a></li>
 								<li><a href="contact_us.php">Fale Conosco</a></li>
 							</ul>
