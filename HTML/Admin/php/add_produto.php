@@ -19,6 +19,7 @@
     $pro_valor = $_POST['p_valor'];
     $pro_desconto = $_POST['p_desconto'];
     $pro_ativo = $_POST['p_status'];
+    $pro_porc_desconto = porcentagemDesconto($pro_valor,$pro_desconto);
  
     $query = "INSERT INTO produtos (pro_nome, pro_desc, pro_cat, pro_valor, pro_desconto, pro_ativo, pro_img)
               VALUES ('$pro_nome', '$pro_desc', '$pro_cat', '$pro_valor', '$pro_desconto', '$pro_ativo', '$pro_img')";
