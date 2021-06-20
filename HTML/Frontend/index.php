@@ -620,7 +620,7 @@ include('php/exibe_produtos_index.php');
 																
 						?>
 					<div class="col-lg-4 col-md-6">
-						<a href="#" class="best-offer-item offr-none">
+						<a href="single_product_view.php?p_id=<?php echo $r_ofer['pro_id'] ?>" class="best-offer-item offr-none">
 							<img src="<?php echo limpa_link($r_ofer['pro_img']) ?>" alt="">
 							<div class="cmtk_dt">
 								<?php echo "<h4>".$r_ofer['pro_nome']."</h4>" ?>
