@@ -1,9 +1,7 @@
 ﻿<?php
 
 	include('php/verificar_login.php');
-    include('php/carrinho.php');
 
-	$products = getProducts($pdoConnection);
 
 ?>
 <!DOCTYPE html>
@@ -190,11 +188,13 @@
 				</div>
 			</div>
 			<div class="side-cart-items">
+
 				<div class="cart-item">
 					<div class="cart-product-img">
 						<img src="images/product/img-1.jpg" alt="">
 						<div class="offer-badge">6% OFF</div>
 					</div>
+                    <!-- comeco -->
 					<div class="cart-text">
 						<h4>Nome do Produto Aqui</h4>
 						<div class="cart-radio">
@@ -229,6 +229,7 @@
 						<button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button>
 					</div>
 				</div>
+
 				<div class="cart-item">
 					<div class="cart-product-img">
 						<img src="images/product/img-2.jpg" alt="">
@@ -509,7 +510,7 @@
                                             </ul>
                                             <ul class="ordr-crt-share">
                                                 <li><button class="add-cart-btn hover-btn"><i class="uil uil-shopping-cart-alt"></i>Adicionar ao Carrinho</button></li>
-                                                <li><a  class="order-btn hover-btn" href="php/carrinho.php?acao=add&id=<?php echo $r_view_pro['pro_id']?>&page=single" >Comprar Agora</a></li>
+                                                <li><a  class="order-btn hover-btn" href="php/carrinho.php?acao=add&id=<?php echo $r_view_pro['pro_id']?>" >Comprar Agora</a></li>
                                             </ul>
                                         </div>
 

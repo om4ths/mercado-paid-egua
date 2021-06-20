@@ -1,5 +1,6 @@
 ﻿<?php
 
+
 	include('php/verificar_login.php');
 	include('php/func.php');
 	include('php/exibe_categoria_index.php');
