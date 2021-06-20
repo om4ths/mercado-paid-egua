@@ -1,8 +1,7 @@
 <?php 
-		session_start();
-
-	require_once "functions/product.php";
-	require_once "functions/cart.php";
+include("php/functions/products.php");
+include("php/functions/cart.php");
+		
 
 	$pdoConnection = require_once "connection.php";
 
