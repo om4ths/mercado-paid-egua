@@ -6,6 +6,8 @@ include('php/exibe_produtos_index.php');
 require_once "php/functions/product.php";
 $pdoConnection = require_once "php/connection.php";
 $products = getProducts($pdoConnection);
+$resultsCarts = getContentCart($pdoConnection);
+$totalCarts  = getTotalCart($pdoConnection);
 ?>
 
 <!DOCTYPE html>
@@ -178,6 +180,9 @@ $products = getProducts($pdoConnection);
 					<span>R$1</span>
 				</div>
 			</div>
+			<?php if($resultsCarts) : ?>
+			<form action="carrinho.php?acao=up" method="post">
+			<?php foreach($resultsCarts as $result) : ?>
 			<div class="side-cart-items">
 				<div class="cart-item">
 					<div class="cart-product-img">
@@ -185,7 +190,7 @@ $products = getProducts($pdoConnection);
 						<div class="offer-badge">6% OFF</div>
 					</div>
 					<div class="cart-text">
-						<h4>Nome do Produto Aqui</h4>
+						<h4><?php echo $result['nome']?></h4>
 						<div class="cart-radio">
 							<ul class="kggrm-now">
 								<li>
@@ -223,7 +228,10 @@ $products = getProducts($pdoConnection);
 						<img src="images/product/img-2.jpg" alt="">
 						<div class="offer-badge">6% OFF</div>
 					</div>
-					<div class="cart-text">
+					<?php endforeach;?>
+					<?php endif?>
+
+					<div class="cart-text">			
 						<h4>Nome do Produto Aqui</h4>
 						<div class="cart-radio">
 							<ul class="kggrm-now">
@@ -581,7 +589,7 @@ $products = getProducts($pdoConnection);
 												<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
 												<input type="button" value="+" class="plus plus-btn">
 											</div>
-											<span class="cart-icon"><i class="uil uil-shopping-cart-alt"></i></span>
+											<a class="cart-icon" href="php/Carrinho.php?acao=add&id=<?php echo $product['pro_id']?>"><i class="uil uil-shopping-cart-alt"></i></a>
 										</div>
 									</div>
 								</div>
