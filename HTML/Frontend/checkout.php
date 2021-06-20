@@ -1110,6 +1110,8 @@
     <!-- Footer End -->
 
     <!-- Javascripts -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/OwlCarousel/owl.carousel.js"></script>

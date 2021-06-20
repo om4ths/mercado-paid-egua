@@ -498,7 +498,6 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li><span class="like-icon save-icon" title="wishlist"></span></li>
                                             </ul>
                                             <ul class="ordr-crt-share">
                                                 <li><button class="add-cart-btn hover-btn"><i class="uil uil-shopping-cart-alt"></i>Adicionar ao Carrinho</button></li>
@@ -682,7 +681,6 @@
                                         <img src="images/product/img-1.jpg" alt="">
                                         <div class="product-absolute-options">
                                             <span class="offer-badge-1">6% off</span>
-                                            <span class="like-icon" title="wishlist"></span>
                                         </div>
                                     </a>
                                     <div class="product-text-dt">
@@ -706,7 +704,6 @@
                                         <img src="images/product/img-2.jpg" alt="">
                                         <div class="product-absolute-options">
                                             <span class="offer-badge-1">2% off</span>
-                                            <span class="like-icon" title="wishlist"></span>
                                         </div>
                                     </a>
                                     <div class="product-text-dt">
@@ -730,7 +727,6 @@
                                         <img src="images/product/img-3.jpg" alt="">
                                         <div class="product-absolute-options">
                                             <span class="offer-badge-1">5% off</span>
-                                            <span class="like-icon" title="wishlist"></span>
                                         </div>
                                     </a>
                                     <div class="product-text-dt">
@@ -754,7 +750,6 @@
                                         <img src="images/product/img-4.jpg" alt="">
                                         <div class="product-absolute-options">
                                             <span class="offer-badge-1">3% off</span>
-                                            <span class="like-icon" title="wishlist"></span>
                                         </div>
                                     </a>
                                     <div class="product-text-dt">
@@ -778,7 +773,6 @@
                                         <img src="images/product/img-5.jpg" alt="">
                                         <div class="product-absolute-options">
                                             <span class="offer-badge-1">2% off</span>
-                                            <span class="like-icon" title="wishlist"></span>
                                         </div>
                                     </a>
                                     <div class="product-text-dt">
@@ -802,7 +796,6 @@
                                         <img src="images/product/img-6.jpg" alt="">
                                         <div class="product-absolute-options">
                                             <span class="offer-badge-1">2% off</span>
-                                            <span class="like-icon" title="wishlist"></span>
                                         </div>
                                     </a>
                                     <div class="product-text-dt">
@@ -826,7 +819,6 @@
                                         <img src="images/product/img-7.jpg" alt="">
                                         <div class="product-absolute-options">
                                             <span class="offer-badge-1">1% off</span>
-                                            <span class="like-icon" title="wishlist"></span>
                                         </div>
                                     </a>
                                     <div class="product-text-dt">
@@ -850,7 +842,6 @@
                                         <img src="images/product/img-8.jpg" alt="">
                                         <div class="product-absolute-options">
                                             <span class="offer-badge-1">3% off</span>
-                                            <span class="like-icon" title="wishlist"></span>
                                         </div>
                                     </a>
                                     <div class="product-text-dt">

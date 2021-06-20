@@ -421,6 +421,7 @@
 
                 <div class="product-list-view">
                     <div class="row">
+
 					<?php
 						if(isset($r_produtos_cat))
 						{	
@@ -436,7 +437,6 @@
 									<?php if(porcentagemDesconto($r_cat_pro['pro_valor'], $r_cat_pro['pro_desconto']) != 0 and porcentagemDesconto($r_cat_pro['pro_valor'], $r_cat_pro['pro_desconto']) != 100) { ?>
                                         <?php echo "<span class='offer-badge-1'>".porcentagemDesconto($r_cat_pro['pro_valor'], $r_cat_pro['pro_desconto'])."% off</span>" ?>
 									<?php } ?>
-                                        <span class="like-icon" title="wishlist"></span>
                                     </div>
                                 </a>
                                 <div class="product-text-dt">

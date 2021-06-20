@@ -1,6 +1,5 @@
 <?php
 
-    include("conexao.php");
 
     $pesquisar = $_GET['pesquisar'];
     $result_seach = "SELECT * FROM produtos WHERE pro_nome LIKE '%$pesquisar%' LIMIT 5";
@@ -21,11 +20,7 @@
 
 
     																		
-	    
-
-
-
-
+	
     <?php
 		};
 	};
