@@ -186,7 +186,7 @@ $pdoConnection = require_once "php/connection.php";
 						<img src="images/product/img-1.jpg" alt="">
 						<div class="offer-badge">6% OFF</div>
 					</div>
-					<?php if($resultsCarts) : ?>
+		<?php if($resultsCarts) : ?>
 			<!--<form action="carrinho.php?acao=up" method="post"> -->
 		<?php foreach($resultsCarts as $result) : ?>
 					<div class="cart-text">
