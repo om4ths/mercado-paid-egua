@@ -1,11 +1,13 @@
 ﻿<?php
-include('php/verificar_login.php');
-include('php/func.php');
-include('php/exibe_categoria_index.php');
-include('php/exibe_produtos_index.php');
-require_once "php/functions/product.php";
-$pdoConnection = require_once "php/connection.php";
-$products = getProducts($pdoConnection);
+
+	include('php/verificar_login.php');
+	include('php/func.php');
+	include('php/exibe_categoria_index.php');
+	include('php/exibe_produtos_index.php');
+	require_once "php/functions/product.php";
+	$pdoConnection = require_once "php/connection.php";
+	$products = getProducts($pdoConnection);
+
 ?>
 
 <!DOCTYPE html>
