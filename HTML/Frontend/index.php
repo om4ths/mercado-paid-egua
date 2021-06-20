@@ -1,12 +1,12 @@
 ﻿<?php
-include('php/verificar_login.php');
-include('php/func.php');
-include('php/exibe_categoria_index.php');
-include('php/exibe_produtos_index.php');
-require_once "php/functions/product.php";
-require_once "php/functions/cart.php";
-require_once "php/Carrinho.php";
-$pdoConnection = require_once "php/connection.php";
+
+	include('php/verificar_login.php');
+	include('php/func.php');
+	include('php/exibe_categoria_index.php');
+	include('php/exibe_produtos_index.php');
+
+	include("php/carrinho.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -163,6 +163,7 @@ $pdoConnection = require_once "php/connection.php";
 	</div>
 	<!-- pesquisar produtos fim-->
 	<!-- Carrinho sidebar inicio-->
+
 	<div class="bs-canvas bs-canvas-left position-fixed bg-cart h-100">
 		<div class="bs-canvas-header side-cart-header p-3 ">
 			<div class="d-inline-block  main-cart-title">Meu Carrinho <span>(2 Itens)</span></div>
@@ -179,40 +180,31 @@ $pdoConnection = require_once "php/connection.php";
 					<span>R$1</span>
 				</div>
 			</div>
-	
 			<div class="side-cart-items">
+                
+			<?php foreach($resultsCarts as $result) : ?>
+
 				<div class="cart-item">
 					<div class="cart-product-img">
 						<img src="images/product/img-1.jpg" alt="">
 						<div class="offer-badge">6% OFF</div>
 					</div>
-		<?php if($resultsCarts) : ?>
-			<!--<form action="carrinho.php?acao=up" method="post"> -->
-		<?php foreach($resultsCarts as $result) : ?>
 					<div class="cart-text">
 						<h4><?php echo $result['name']?></h4>
-						<div class="cart-radio">							
-						</div>
 						<div class="qty-group">
 							<div class="quantity buttons_added">
 								<input type="button" value="-" class="minus minus-btn">
 								<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
 								<input type="button" value="+" class="plus plus-btn">
 							</div>
-							<div class="cart-item-price">$10 <span>$15</span></div>
+							<div class="cart-item-price">$10 <span>R$<?php echo number_format($result['price'], 2, ',', '.')?></span></div>
 						</div>
+						<a href="php/carrinho.php?acao=del&id=<?php echo $result['id']?>" type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></a>
+					</div>
+				</div>
 
-						<button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button>
-					</div>
-				</div>
-				<div class="cart-item">
-					<div class="cart-product-img">
-						<img src="images/product/img-2.jpg" alt="">
-						<div class="offer-badge">6% OFF</div>
-					</div>
-					<?php endforeach;?>
-					<?php endif?>					
-				</div>
+			<?php endforeach;?>
+
 			</div>
 		</div>
 		<div class="bs-canvas-footer">
@@ -225,7 +217,7 @@ $pdoConnection = require_once "php/connection.php";
 				<span>R$35</span>
 			</div>
 			<div class="checkout-cart">
-				<a href="checkout.php" class="cart-checkout-btn hover-btn">Finalizar</a>
+				<a href="#" class="cart-checkout-btn hover-btn">Finalizar</a>
 			</div>
 		</div>
 	</div>
@@ -671,7 +663,7 @@ $pdoConnection = require_once "php/connection.php";
 												<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
 												<input type="button" value="+" class="plus plus-btn">
 											</div>
-											<span class="cart-icon"><i class="uil uil-shopping-cart-alt"></i></span>
+											<a href="php/carrinho.php?acao=add&id=<?php echo $r_pro['pro_id']?>&page=single" class="cart-icon"><i class="uil uil-shopping-cart-alt"></i></a>
 										</div>
 									</div>
 								</div>

@@ -1,7 +1,7 @@
 <?php 
 	
-	require_once "functions/product.php";
-	require_once "functions/cart.php";
+	include("functions/product.php");
+	include("functions/cart.php");
 
 	$pdoConnection = require_once "connection.php";
 
@@ -22,8 +22,11 @@
 						updateCart($id, $qtd);
 				}
 			}
-		} 
+		}
+
+		
 		header('location: ../index.php');
+		
 	}
 
 	$resultsCarts = getContentCart($pdoConnection);
