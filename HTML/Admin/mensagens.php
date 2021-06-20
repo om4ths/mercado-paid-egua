@@ -91,7 +91,7 @@ include('php/dados_msg.php');
                         <h2 class="mt-30 page-title">Usuários</h2>
                         <ol class="breadcrumb mb-30">
                             <li class="breadcrumb-item"><a href="index.php">Painel</a></li>
-                            <li class="breadcrumb-item active">Usuários</li>
+                            <li class="breadcrumb-item active">Mensagens</li>
                         </ol>
                         <div class="row">
 							<div class="col-lg-12 col-md-12">
