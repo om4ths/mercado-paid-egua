@@ -6,6 +6,8 @@ include('php/verificar_login.php');
 
 	<?php		
 		include('php/dados_cliente.php');
+		include('php/func.php');
+		include('php/exibe_categoria_index.php');
 	?>
 	<head>
 		<meta charset="utf-8">
@@ -55,15 +57,12 @@ include('php/verificar_login.php');
 						if(isset($r_categoria))
 						{	
 							foreach($r_categoria as $key => $r_cat)
-							{	
-																
-							$caminhoCorretoImg = limpa_link($r_cat['cat_img']);
-																
+							{													
 					?>
 						<li>
-							<a href="#" class="single-cat-item">
+							<?php echo "<a href='shop_grid.php?c_id=".$r_cat['cat_id']."' class='single-cat-item'>" ?>
 								<div class="icon">
-									<?php echo "<img src=' ".$caminhoCorretoImg." ' alt='erro ao Carregar a imagem'>" ?>
+									<?php echo "<img src=' ".limpa_link($r_cat['cat_img'])." ' alt='erro ao Carregar a imagem'>" ?>
 								</div>
 								<?php echo "<div class='text'>".$r_cat['cat_nome']."</div>" ?>
 							</a>
@@ -285,12 +284,15 @@ include('php/verificar_login.php');
 					</div>
 				</div>
 				<div class="search120">
+				<form method="GET" action="shop_grid.php" enctype="multipart/form-data">
 					<div class="ui search">
 						<div class="ui left icon input swdh10">
-							<input class="prompt srch10" type="text" placeholder="Pesquisar produtos ..">
+							<input class="prompt srch10" type="search" name='pesquisar' placeholder="Pesquisar produtos ..">
 							<i class='uil uil-search-alt icon icon1'></i>
+							<input type="submit" class="pesquisar_prod" style="display:none">
 						</div>
 					</div>
+					</form> 
 				</div>
 				<div class="header_right">
 					<ul>
@@ -344,8 +346,8 @@ include('php/verificar_login.php');
 						<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
 							<ul class="navbar-nav main_nav align-self-stretch">
 								<li class="nav-item"><a href="index.php" class="nav-link active" title="Home">Início</a></li>
-								<li class="nav-item"><a href="shop_grid.php" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
-								<li class="nav-item"><a href="shop_grid.php" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
+								<li class="nav-item"><a href="shop_grid.php?new_id=1" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
+								<li class="nav-item"><a href="shop_grid.php?destaque=2" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
 								<li class="nav-item">
 									<div class="ui icon top left dropdown nav__menu">
 										<a class="nav-link" title="Pages">Mais <i class="uil uil-angle-down"></i></a>
@@ -413,7 +415,7 @@ include('php/verificar_login.php');
 								</form > 
 							</div>
 							<h4><?php echo$resultado['nome']?></h4>
-							<p><?php echo$resultado['telefone']?><a href="#"><i class="uil uil-edit"></i></a></p>
+							<p><?php echo$resultado['telefone']?><a href="#"></a></p>
 						</div>
 					</div>
 				</div>

@@ -1,8 +1,8 @@
 ﻿<?php
 include('php/verificar_login.php');
 include('php/func.php');
-include('../Admin/php/exibe_categoria.php');
-include('../Admin/php/exibe_produtos.php');
+include('php/exibe_categoria_index.php');
+include('php/exibe_produtos_index.php');
 ?>
 
 <!DOCTYPE html>
@@ -59,8 +59,7 @@ include('../Admin/php/exibe_produtos.php');
 						{	
 							foreach($r_categoria as $key => $r_cat)
 							{	
-																
-																
+					
 					?>
 						<li>
 							<?php echo "<a href='shop_grid.php?c_id=".$r_cat['cat_id']."' class='single-cat-item'>" ?>
@@ -288,7 +287,11 @@ include('../Admin/php/exibe_produtos.php');
 					</div>
 				</div>
 				<div class="search120">
+<<<<<<< HEAD
 				<form method="POST" action="php/pesquisar.php" enctype="multipart/form-data">
+=======
+				<form method="GET" action="shop_grid.php" enctype="multipart/form-data">
+>>>>>>> 16c4d06d01e303044b2ae8d7b74a3cf78b5c2841
 					<div class="ui search">
 						<div class="ui left icon input swdh10">
 							<input class="prompt srch10" type="search" name='pesquisar' placeholder="Pesquisar produtos ..">
@@ -351,8 +354,8 @@ include('../Admin/php/exibe_produtos.php');
 						<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
 							<ul class="navbar-nav main_nav align-self-stretch">
 								<li class="nav-item"><a href="index.php" class="nav-link active" title="Home">Início</a></li>
-								<?php echo "<li class='nav-item'><a href='shop_grid.php' class='nav-link new_item' title='New Products'>Novos Produtos</a></li>" ?>
-								<li class="nav-item"><a href="shop_grid.php" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
+								<li class="nav-item"><a href="shop_grid.php?new_id=1" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
+								<li class="nav-item"><a href="shop_grid.php?destaque=2" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
 								<li class="nav-item">
 									<div class="ui icon top left dropdown nav__menu">
 										<a class="nav-link" title="Pages">Mais <i class="uil uil-angle-down"></i></a>
@@ -524,11 +527,131 @@ include('../Admin/php/exibe_produtos.php');
 								<span>Para Você</span>
 								<h2>Produtos e Destaque</h2>
 							</div>
-							<a href="#" class="see-more-btn">Ver Tudo</a>
+							<a href="shop_grid.php?destaque=2" class="see-more-btn">Ver Tudo</a>
 						</div>
 					</div>
 					<div class="col-md-12">
 						<div class="owl-carousel featured-slider owl-theme">
+						<!-- Exibir Produtos destaque-->
+						<?php
+							if(isset($r_produtos))
+								{	
+								foreach($r_produtos as $key => $r_pro)
+									{
+																
+						?>
+
+							<div class="item">
+								<div class="product-item">
+									<?php echo "<a href='single_product_view.php?p_id=".$r_pro['pro_id']." ' class='product-img'>" ?>
+									    <?php echo "<img src=' ".limpa_link($r_pro['pro_img'])." ' alt='Erro ao Carregar a imagem'>" ?>
+										<div class="product-absolute-options">
+											<?php if(porcentagemDesconto($r_pro['pro_valor'], $r_pro['pro_desconto']) != 0 and porcentagemDesconto($r_pro['pro_valor'], $r_pro['pro_desconto']) != 100) { ?>
+											<?php echo "<span class='offer-badge-1'>".porcentagemDesconto($r_pro['pro_valor'], $r_pro['pro_desconto'])."%</span>" ?>
+											<?php } ?>
+
+										</div>
+									</a>
+									<div class="product-text-dt">
+									<?php
+									if($r_pro['pro_ativo'] == 1)
+									{ 
+									?>
+										<p>Acessível<span>(Em Estoque)</span></p>
+									<?php
+									}
+									else {
+									?>
+										<p>Esgotado<span>(Sem estoque)</span></p>
+									<?php
+									}
+									?>
+										<?php echo "<h4>".$r_pro['pro_nome']."</h4>" ?>
+
+										<?php if($r_pro['pro_desconto'] != $r_pro['pro_valor'] and $r_pro['pro_desconto'] != 0){?>
+										<?php echo "<div class='product-price'>R$".formata_preco($r_pro['pro_desconto'])."<span>R$".formata_preco($r_pro['pro_valor'])."</span></div>" ?>
+										<?php
+										}
+										else{
+										?>
+										<?php echo "<div class='product-price'>R$".$r_pro['pro_valor']."</div>"; }?>
+
+
+										<div class="qty-cart">
+											<div class="quantity buttons_added">
+												<input type="button" value="-" class="minus minus-btn">
+												<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
+												<input type="button" value="+" class="plus plus-btn">
+											</div>
+											<span class="cart-icon"><i class="uil uil-shopping-cart-alt"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<?php }} ?>
+							<!-- FIM Exibir Produtos destaque-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Featured Products End -->
+		<!-- Best Values Offers Start -->
+		<div class="section145">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="main-title-tt">
+							<div class="main-title-left">
+								<span>Ofertas</span>
+								<h2>Melhores Preços</h2>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<a href="#" class="best-offer-item">
+							<img src="images/best-offers/offer-1.jpg" alt="">
+						</a>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<a href="#" class="best-offer-item">
+							<img src="images/best-offers/offer-2.jpg" alt="">
+						</a>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<a href="#" class="best-offer-item offr-none">
+							<img src="images/best-offers/offer-3.jpg" alt="">
+							<div class="cmtk_dt">
+								<div class="product_countdown-timer offer-counter-text" data-countdown="2021/01/06"></div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-12">
+						<a href="#" class="code-offer-item">
+							<img src="images/best-offers/offer-4.jpg" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Best Values Offers End -->
+		
+		<!-- New Products Start -->
+		<div class="section145">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="main-title-tt">
+							<div class="main-title-left">
+								<span>Para Você</span>
+								<h2>Novidades</h2>
+							</div>
+							<?php echo "<a href='shop_grid.php?new_id=1' class='see-more-btn'>Ver Tudo</a>" ?>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="owl-carousel featured-slider owl-theme">
+
 						<?php
 							if(isset($r_produtos))
 								{	
@@ -591,251 +714,6 @@ include('../Admin/php/exibe_produtos.php');
 				</div>
 			</div>
 		</div>
-		<!-- Featured Products End -->
-		<!-- Best Values Offers Start -->
-		<div class="section145">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="main-title-tt">
-							<div class="main-title-left">
-								<span>Ofertas</span>
-								<h2>Melhores Preços</h2>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6">
-						<a href="#" class="best-offer-item">
-							<img src="images/best-offers/offer-1.jpg" alt="">
-						</a>
-					</div>
-					<div class="col-lg-4 col-md-6">
-						<a href="#" class="best-offer-item">
-							<img src="images/best-offers/offer-2.jpg" alt="">
-						</a>
-					</div>
-					<div class="col-lg-4 col-md-6">
-						<a href="#" class="best-offer-item offr-none">
-							<img src="images/best-offers/offer-3.jpg" alt="">
-							<div class="cmtk_dt">
-								<div class="product_countdown-timer offer-counter-text" data-countdown="2021/01/06"></div>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-12">
-						<a href="#" class="code-offer-item">
-							<img src="images/best-offers/offer-4.jpg" alt="">
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- Best Values Offers End -->
-		
-		<!-- New Products Start -->
-		<div class="section145">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="main-title-tt">
-							<div class="main-title-left">
-								<span>Para Você</span>
-								<h2>Novidades</h2>
-							</div>
-							<a href="#" class="see-more-btn">Ver Tudo</a>
-						</div>
-					</div>
-					<div class="col-md-12">
-						<div class="owl-carousel featured-slider owl-theme">
-							<div class="item">
-								<div class="product-item">
-									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">
-										<img src="images/product/img-10.jpg" alt="">
-										<div class="product-absolute-options">
-											<span class="offer-badge-1">Novo</span>
-										</div>
-									</a>
-									<div class="product-text-dt">
-										<p>Acessível<span>(Em Estoque)</span></p>
-										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">R$8 <span>R$8.75</span></div>
-										<div class="qty-cart">
-											<div class="quantity buttons_added">
-												<input type="button" value="-" class="minus minus-btn">
-												<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
-												<input type="button" value="+" class="plus plus-btn">
-											</div>
-											<span class="cart-icon"><i class="uil uil-shopping-cart-alt"></i></span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="product-item">
-									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">
-										<img src="images/product/img-9.jpg" alt="">
-										<div class="product-absolute-options">
-											<span class="offer-badge-1">Novo</span>
-										</div>
-									</a>
-									<div class="product-text-dt">
-										<p>Acessível<span>(Em Estoque)</span></p>
-										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">R$8 <span>R$8.75</span></div>
-										<div class="qty-cart">
-											<div class="quantity buttons_added">
-												<input type="button" value="-" class="minus minus-btn">
-												<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
-												<input type="button" value="+" class="plus plus-btn">
-											</div>
-											<span class="cart-icon"><i class="uil uil-shopping-cart-alt"></i></span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="product-item">
-									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">
-										<img src="images/product/img-15.jpg" alt="">
-										<div class="product-absolute-options">
-											<span class="offer-badge-1">5% off</span>
-										</div>
-									</a>
-									<div class="product-text-dt">
-										<p>Acessível<span>(Em Estoque)</span></p>
-										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">R$8 <span>R$8.75</span></div>
-										<div class="qty-cart">
-											<div class="quantity buttons_added">
-												<input type="button" value="-" class="minus minus-btn">
-												<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
-												<input type="button" value="+" class="plus plus-btn">
-											</div>
-											<span class="cart-icon"><i class="uil uil-shopping-cart-alt"></i></span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="product-item">
-									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">
-										<img src="images/product/img-11.jpg" alt="">
-										<div class="product-absolute-options">
-											<span class="offer-badge-1">Novo</span>
-										</div>
-									</a>
-									<div class="product-text-dt">
-										<p>Acessível<span>(Em Estoque)</span></p>
-										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">R$8 <span>R$8.75</span></div>
-										<div class="qty-cart">
-											<div class="quantity buttons_added">
-												<input type="button" value="-" class="minus minus-btn">
-												<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
-												<input type="button" value="+" class="plus plus-btn">
-											</div>
-											<span class="cart-icon"><i class="uil uil-shopping-cart-alt"></i></span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="product-item">
-									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">
-										<img src="images/product/img-14.jpg" alt="">
-										<div class="product-absolute-options">
-											<span class="offer-badge-1">Novo</span>
-										</div>
-									</a>
-									<div class="product-text-dt">
-										<p>Acessível<span>(Em Estoque)</span></p>
-										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">R$8 <span>R$8.75</span></div>
-										<div class="qty-cart">
-											<div class="quantity buttons_added">
-												<input type="button" value="-" class="minus minus-btn">
-												<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
-												<input type="button" value="+" class="plus plus-btn">
-											</div>
-											<span class="cart-icon"><i class="uil uil-shopping-cart-alt"></i></span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="product-item">
-									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">
-										<img src="images/product/img-2.jpg" alt="">
-										<div class="product-absolute-options">
-											<span class="offer-badge-1">Novo</span>
-										</div>
-									</a>
-									<div class="product-text-dt">
-										<p>Acessível<span>(Em Estoque)</span></p>
-										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">R$8 <span>R$8.75</span></div>
-										<div class="qty-cart">
-											<div class="quantity buttons_added">
-												<input type="button" value="-" class="minus minus-btn">
-												<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
-												<input type="button" value="+" class="plus plus-btn">
-											</div>
-											<span class="cart-icon"><i class="uil uil-shopping-cart-alt"></i></span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="product-item">
-									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">
-										<img src="images/product/img-5.jpg" alt="">
-										<div class="product-absolute-options">
-											<span class="offer-badge-1">Novo</span>
-										</div>
-									</a>
-									<div class="product-text-dt">
-										<p>Acessível<span>(Em Estoque)</span></p>
-										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">R$8 <span>R$8.75</span></div>
-										<div class="qty-cart">
-											<div class="quantity buttons_added">
-												<input type="button" value="-" class="minus minus-btn">
-												<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
-												<input type="button" value="+" class="plus plus-btn">
-											</div>
-											<span class="cart-icon"><i class="uil uil-shopping-cart-alt"></i></span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="product-item">
-									<a href="http://gambolthemes.net/html-items/gambo_supermarket_demo/single_product_view.php" class="product-img">
-										<img src="images/product/img-6.jpg" alt="">
-										<div class="product-absolute-options">
-											<span class="offer-badge-1">Novo</span>
-										</div>
-									</a>
-									<div class="product-text-dt">
-										<p>Acessível<span>(Em Estoque)</span></p>
-										<h4>Nome do Produto Aqui</h4>
-										<div class="product-price">R$8 <span>R$8.75</span></div>
-										<div class="qty-cart">
-											<div class="quantity buttons_added">
-												<input type="button" value="-" class="minus minus-btn">
-												<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
-												<input type="button" value="+" class="plus plus-btn">
-											</div>
-											<span class="cart-icon"><i class="uil uil-shopping-cart-alt"></i></span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 		<!-- Acaba os Novos Produtos-->
 	</div>
 	<!-- Fim do Body  -->
@@ -886,7 +764,7 @@ include('../Admin/php/exibe_produtos.php');
 							<h4>Links Úteis</h4>
 							<ul>
 								<li><a href="about_us.php">Sobre Nós</a></li>
-								<li><a href="shop_grid.php">Produtos em Destaque</a></li>
+								<li><a href="shop_grid.php?destaque=2">Produtos em Destaque</a></li>
 								<li><a href="faq.php">FAQ</a></li>
 								<li><a href="contact_us.php">Fale Conosco</a></li>
 							</ul>

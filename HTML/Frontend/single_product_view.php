@@ -8,7 +8,7 @@
     include('php/func.php');
     include('../Admin/php/exibe_produtos.php');
     include('../Admin/php/ver_produto.php');
-    include('../Admin/php/exibe_categoria.php');
+    include('php/exibe_categoria_index.php');
 	?>
 
 <head>
@@ -295,12 +295,15 @@
 					</div>
 				</div>
 				<div class="search120">
+				<form method="GET" action="shop_grid.php" enctype="multipart/form-data">
 					<div class="ui search">
 						<div class="ui left icon input swdh10">
-							<input class="prompt srch10" type="text" placeholder="Pesquisar produtos ..">
+							<input class="prompt srch10" type="search" name='pesquisar' placeholder="Pesquisar produtos ..">
 							<i class='uil uil-search-alt icon icon1'></i>
+							<input type="submit" class="pesquisar_prod" style="display:none">
 						</div>
 					</div>
+					</form> 
 				</div>
 				<div class="header_right">
 					<ul>
@@ -354,8 +357,8 @@
 						<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
 							<ul class="navbar-nav main_nav align-self-stretch">
 								<li class="nav-item"><a href="index.php" class="nav-link active" title="Home">Início</a></li>
-								<li class="nav-item"><a href="shop_grid.php" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
-								<li class="nav-item"><a href="shop_grid.php" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
+								<li class="nav-item"><a href="shop_grid.php?new_id=1" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
+								<li class="nav-item"><a href="shop_grid.php?destaque=2" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
 								<li class="nav-item">
 									<div class="ui icon top left dropdown nav__menu">
 										<a class="nav-link" title="Pages">Mais <i class="uil uil-angle-down"></i></a>
@@ -498,6 +501,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
+                                                
                                             </ul>
                                             <ul class="ordr-crt-share">
                                                 <li><button class="add-cart-btn hover-btn"><i class="uil uil-shopping-cart-alt"></i>Adicionar ao Carrinho</button></li>

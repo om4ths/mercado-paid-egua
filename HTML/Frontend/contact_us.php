@@ -284,12 +284,15 @@
 					</div>
 				</div>
 				<div class="search120">
+				<form method="GET" action="shop_grid.php" enctype="multipart/form-data">
 					<div class="ui search">
 						<div class="ui left icon input swdh10">
-							<input class="prompt srch10" type="text" placeholder="Pesquisar produtos ..">
+							<input class="prompt srch10" type="search" name='pesquisar' placeholder="Pesquisar produtos ..">
 							<i class='uil uil-search-alt icon icon1'></i>
+							<input type="submit" class="pesquisar_prod" style="display:none">
 						</div>
 					</div>
+					</form> 
 				</div>
 				<div class="header_right">
 					<ul>
@@ -343,8 +346,8 @@
 						<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
 							<ul class="navbar-nav main_nav align-self-stretch">
 								<li class="nav-item"><a href="index.php" class="nav-link active" title="Home">Início</a></li>
-								<li class="nav-item"><a href="shop_grid.php" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
-								<li class="nav-item"><a href="shop_grid.php" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
+								<li class="nav-item"><a href="shop_grid.php?new_id=1" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
+								<li class="nav-item"><a href="shop_grid.php?destaque=2" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
 								<li class="nav-item">
 									<div class="ui icon top left dropdown nav__menu">
 										<a class="nav-link" title="Pages">Mais <i class="uil uil-angle-down"></i></a>
@@ -386,7 +389,7 @@
                                 <li class="breadcrumb-item active" aria-current="page">Fale Conosco</li>
                             </ol>
                         </nav>
-                    </div>
+                    </div>					
                 </div>
             </div>
         </div>
@@ -418,16 +421,21 @@
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="contact-title">
+							<?php
+								if(isset($_SESSION['msg_c'])){
+								echo $_SESSION['msg_c'];	
+								unset($_SESSION['msg_c']);											
+							}?>
                             <h2>Enviar solicitação de atendimento ao cliente</h2>
                             <p>Se você tiver alguma dúvida sobre nosso serviço ou tiver um problema a relatar, envie uma solicitação e entraremos em contato com você o mais breve possível.</p>
                         </div>
                         <div class="contact-form">
-                            <form>
+                            <form method="POST" action="php/mensagem.php">
                                 <div class="form-group mt-1">
                                     <label class="control-label">Nome Completo*</label>
                                     <div class="ui search focus">
                                         <div class="ui left icon input swdh11 swdh19">
-                                            <input class="prompt srch_explore" type="text" name="sendername" id="sendername" required="" placeholder="Seu Nome Completo">
+                                            <input class="prompt srch_explore" type="text" name="nome" id="sendername" required="" placeholder="Seu Nome Completo">
                                         </div>
                                     </div>
                                 </div>
@@ -435,7 +443,7 @@
                                     <label class="control-label">E-mail*</label>
                                     <div class="ui search focus">
                                         <div class="ui left icon input swdh11 swdh19">
-                                            <input class="prompt srch_explore" type="email" name="emailaddress" id="emailaddress" required="" placeholder="Seu E-mail">
+                                            <input class="prompt srch_explore" type="email" name="email" id="emailaddress" required="" placeholder="Seu E-mail">
                                         </div>
                                     </div>
                                 </div>
@@ -443,14 +451,14 @@
                                     <label class="control-label">Assunto*</label>
                                     <div class="ui search focus">
                                         <div class="ui left icon input swdh11 swdh19">
-                                            <input class="prompt srch_explore" type="text" name="sendersubject" id="sendersubject" required="" placeholder="Assunto de E-mail">
+                                            <input class="prompt srch_explore" type="text" name="assunto" id="sendersubject" required="" placeholder="Assunto de E-mail">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group mt-1">
                                     <div class="field">
                                         <label class="control-label">Mensagem*</label>
-                                        <textarea rows="2" class="form-control" id="sendermessage" name="sendermessage" required="" placeholder="Escreva Aqui"></textarea>
+                                        <textarea rows="2" class="form-control" id="sendermessage" name="msg" required="" placeholder="Escreva Aqui"></textarea>
                                     </div>
                                 </div>
                                 <button class="next-btn16 hover-btn mt-3" type="submit" data-btntext-sending="Sending...">Enviar</button>
