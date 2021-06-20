@@ -408,14 +408,15 @@
                                 </div>
                                 <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion0" style="">
                                     <div class="panel-body">
-                                        Sede Castanhal:<br> Rod. Bernardo Sayão, 1270<br> Cristo Redentor, Castanhal - PA<br>
-                                        <div class="color-pink">Tel: 0000-000-000</div>
+                                        Sede Castanhal:<br> Rodovia BR-316, Km 60, S/n <br> Apeú, PA, 68740-420, Castanhal - PA<br>
+                                        <div class="color-pink">Tel: 0000-000-000	</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="panel panel-default">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7952392232783!2d-47.95772648475937!3d-1.2975538360057208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a5af2edb9f3f2d%3A0x45b89c0e638bce6a!2sRod.%20Bernardo%20Say%C3%A3o%2C%201270%2C%20Castanhal%20-%20PA!5e0!3m2!1spt-BR!2sbr!4v1622777183577!5m2!1spt-BR!2sbr"
-                                    width="550" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+							
+                            <div class="panel panel-default"> 
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7928190146126!2d-47.96110484900037!3d-1.2990877468274429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a5af28516e1437%3A0xc8f0b1aa6951d4e6!2sEst%C3%A1cio%20Castanhal!5e0!3m2!1spt-BR!2sbr!4v1624164613091!5m2!1spt-BR!2sbr"
+								 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                             </div>
                         </div>
                     </div>

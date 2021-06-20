@@ -464,7 +464,12 @@ input[type=text] {
     width: 100%;
 	padding-top: 0;
 }
-
+.main_logo-footer img {
+    margin-top:-200px;
+    width: 70%;
+    margin-left:100px;
+	padding-top: 0;
+}
 .res_main_logo {
 	display: none;
 	width: 45px;
@@ -474,6 +479,7 @@ input[type=text] {
     width: 100%;
 	padding-top: 3px;
 }
+
 
 .srch10 {
 	background: #f7f7f7 !important;
@@ -2215,7 +2221,7 @@ span.like-icon {
 }
 
 .footer-first-row {
-    padding: 20px 0;
+    padding: 10px 0;
 	    border-bottom: 1px solid #f5f5f5;
 }
 
@@ -2292,7 +2298,7 @@ span.like-icon {
 }
 
 .footer-second-row {
-    padding-bottom: 50px;
+    padding-bottom: 0px;
 	border-bottom: 1px solid #f5f5f5;
 }
 
