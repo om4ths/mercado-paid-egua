@@ -127,7 +127,7 @@
 
 .btn-modal{
 
-        background-color: #ff0404;
+        background-color: #2b2f4c;
         border: none;
         color: white;
         padding: 12px 32px;
@@ -136,6 +136,21 @@
         display: inline-block;
         font-size: 16px;
         margin: 214px 0px;
+        cursor: pointer;
+        border-radius:5px;
+        font-weight: 500;
+    }
+.btn-enviar-ft{
+
+        background-color: #ff0404;
+        border: none;
+        color: white;
+        padding: 5px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin:  0px;
         cursor: pointer;
         border-radius:5px;
         font-weight: 500;

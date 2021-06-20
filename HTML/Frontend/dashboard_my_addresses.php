@@ -601,7 +601,7 @@ include('php/verificar_login.php');
 
 														
 													<form method="POST" action="php/img_cliente.php" style="display:inline-grid;" enctype="multipart/form-data">
-													<label id="select-image" class="btn-modal hover-btn"> 
+													<label id="select-image" class="btn-modal hover-btn-modal"> 
 															<input type="file" id="photo-file" name="c_img">
 														Carregar Foto
 													</label>	
@@ -610,12 +610,14 @@ include('php/verificar_login.php');
 
 														<div class="footer-modal">
 
-														<label>
-														<input type="submit" value="Cortar e salvar Foto"></label>
+														<label class="btn-enviar-ft hover-btn">
+														Salvar como perfil
 
+														<input type="submit" style="display:none;"></label>
+														</form >
 													</div> 
 													
-														</form >
+														
 											
 															
 													</div>
