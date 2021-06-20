@@ -7,6 +7,8 @@ include('php/verificar_login.php');
 		
 		include('php/dados_cliente.php');
 		include('php/dados_endereco.php');
+		include('php/exibe_categoria_index.php');
+		include('php/func.php');
 	?>
 	<head>
 
@@ -234,14 +236,12 @@ include('php/verificar_login.php');
 						{	
 							foreach($r_categoria as $key => $r_cat)
 							{	
-																
-							$caminhoCorretoImg = limpa_link($r_cat['cat_img']);
-																
+												
 					?>
 						<li>
-							<a href="#" class="single-cat-item">
+							<?php echo "<a href='shop_grid.php?c_id=".$r_cat['cat_id']."' class='single-cat-item'>" ?>
 								<div class="icon">
-									<?php echo "<img src=' ".$caminhoCorretoImg." ' alt='erro ao Carregar a imagem'>" ?>
+									<?php echo "<img src=' ".limpa_link($r_cat['cat_img'])." ' alt='erro ao Carregar a imagem'>" ?>
 								</div>
 								<?php echo "<div class='text'>".$r_cat['cat_nome']."</div>" ?>
 							</a>

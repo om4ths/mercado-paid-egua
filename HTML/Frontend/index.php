@@ -59,8 +59,7 @@ include('php/exibe_produtos_index.php');
 						{	
 							foreach($r_categoria as $key => $r_cat)
 							{	
-							if($r_cat['cat_ativo'] = 1){									
-																
+												
 					?>
 						<li>
 							<?php echo "<a href='shop_grid.php?c_id=".$r_cat['cat_id']."' class='single-cat-item'>" ?>
@@ -71,7 +70,7 @@ include('php/exibe_produtos_index.php');
 							</a>
 						</li>
 					
-					<?php }}}	?>
+					<?php }}	?>
 							</a>
 						</li>
 					</ul>
