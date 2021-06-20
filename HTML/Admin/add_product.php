@@ -91,6 +91,10 @@
 								<div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Usuários
 							</a>
+							<a class="nav-link" href="mensagens.php">
+								<div class="sb-nav-link-icon"><i class="fas fa-envelope"></i></div>
+								Fale Conosco
+							</a>
 						
                         </div>
                     </div>
@@ -139,7 +143,7 @@
 												<input type="text" class="form-control" name="p_valor" placeholder="R$0">
 											</div>
 											<div class="form-group">
-												<label class="form-label">Desconto*</label>
+												<label class="form-label">Preço com desconto*</label>
 												<input type="text" class="form-control" name="p_desconto" placeholder="R$0">
 											</div>
 											<div class="form-group">
@@ -149,10 +153,12 @@
 													<option value="0">Inativo</option>
 												</select>
 											</div>
-											<div class="form-group">
-												<label class="form-label">Descrição*</label>
-												<input type="text" class="form-control" name="p_desc" placeholder="Descrição do Produto">
-											</div>
+											<label class="form-label">Descrição*</label>
+												<div class="card card-editor">
+													<div class="content-editor">
+														<textarea name="p_desc" class="text-control" placeholder="Insira a Descrição"></textarea>
+													</div>
+												</div>
 											<div class="form-group">
 												<label class="form-label">Imagem do Produto*</label>
 												<div class="input-group">
@@ -165,39 +171,7 @@
 													<img src="images/product/img-11.jpg" alt="">
 												</div>
 											</div>
-											<!--
-											<div class="form-group">
-												<label class="form-label">Mais Imagens*</label>
-												<div class="input-group">
-													<div class="custom-file">
-														<input type="file" class="custom-file-input" id="inputGroupFile05" aria-describedby="inputGroupFileAddon05">
-														<label class="custom-file-label" for="inputGroupFile05">Selecione a Imagem</label>
-													</div>
-												</div>
-												<ul class="add-produc-imgs">
-													<li>
-														<div class="add-cate-img-1">
-															<img src="images/product/big-1.jpg" alt="">
-														</div>
-													</li>
-													<li>
-														<div class="add-cate-img-1">
-															<img src="images/product/big-2.jpg" alt="">
-														</div>
-													</li>
-													<li>
-														<div class="add-cate-img-1">
-															<img src="images/product/big-3.jpg" alt="">
-														</div>
-													</li>
-													<li>
-														<div class="add-cate-img-1">
-															<img src="images/product/big-4.jpg" alt="">
-														</div>
-													</li>
-												</ul>
-											</div>
-															-->
+											
 											<button class="save-btn hover-btn" name="salvar_produto" type="submit">Adicionar Produto</button>
 										</form><!--FIM DO FORMULARIO-->
 										</div> 

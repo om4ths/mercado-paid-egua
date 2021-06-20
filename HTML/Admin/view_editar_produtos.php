@@ -2,6 +2,8 @@
 		include('php/exibe_categoria.php');
 		include('php/conexao.php');
         include('php/editar_produtos.php');
+		include('php/exibir_editar_produto.php');
+		include('../Frontend/php/func.php');
 	?>
 
 <!DOCTYPE html>
@@ -92,6 +94,10 @@
 								<div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Usuários
 							</a>
+							<a class="nav-link" href="mensagens.php">
+								<div class="sb-nav-link-icon"><i class="fas fa-envelope"></i></div>
+								Fale Conosco
+							</a>
 						
                         </div>
                     </div>
@@ -118,12 +124,12 @@
 											<?php echo"<input type='hidden' name='p_id' value='".$_GET['p_id']."' > </input>" ?>
                                         <div class="form-group">
 												<label class="form-label">Nome*</label>
-												<input type="text" class="form-control" name="p_nome" placeholder="Nome do Produto">
+												<?php echo "<input type='text' value='".$r_view_pro['pro_nome']."'class='form-control' name='p_nome' placeholder='Nome do Produto'>" ?>
 											</div>
 											<div class="form-group">
 												<label class="form-label">Categoria*</label>
 												<select id="categtory" name="p_cat" class="form-control">
-													<option selected>--Selecione a Categoria--</option>
+													<?php echo "<option value='".$r_view_pro['pro_cat']."' selected>--Selecione a Categoria--</option>" ?>
 												<?php
 												if(isset($r_categoria))
 														{	
@@ -138,11 +144,11 @@
 											</div>
 											<div class="form-group">
 												<label class="form-label">Preço*</label>
-												<input type="text" class="form-control" name="p_valor" placeholder="R$0">
+												<?php echo "<input type='text' value='".$r_view_pro['pro_valor']."' class='form-control' name='p_valor' placeholder='R$0'>" ?>
 											</div>
 											<div class="form-group">
-												<label class="form-label">Desconto*</label>
-												<input type="text" class="form-control" name="p_desconto" placeholder="R$0">
+												<label class="form-label">Preço com desconto*</label>
+												<?php echo "<input type='text' value='".$r_view_pro['pro_desconto']."' class='form-control' name='p_desconto' placeholder='R$0'>" ?>
 											</div>
 											<div class="form-group">
 												<label class="form-label">Status*</label>
@@ -151,20 +157,22 @@
 													<option value="0">Inativo</option>
 												</select>
 											</div>
-											<div class="form-group">
-												<label class="form-label">Descrição*</label>
-												<input type="text" class="form-control" name="p_desc" placeholder="Descrição do Produto">
-											</div>
+											<label class="form-label">Descrição*</label>
+												<div class="card card-editor">
+													<div class="content-editor">
+														<?php echo "<textarea name='p_desc'  class='text-control' placeholder='".$r_view_pro['pro_desc']."'>".$r_view_pro['pro_desc']."</textarea>" ?>
+													</div>
+												</div>
 											<div class="form-group">
 												<label class="form-label">Imagem do Produto*</label>
 												<div class="input-group">
 													<div class="custom-file">
-														<input type="file" name="p_img" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+														<?php echo "<input type='file' name='p_img' class='custom-file-input' id='inputGroupFile04' aria-describedby='inputGroupFileAddon04'>" ?>
 														<label class="custom-file-label" for="inputGroupFile04">Selecione a Imagem</label>
 													</div>
 												</div>
 												<div class="add-cate-img-1">
-													<img src="images/product/img-11.jpg" alt="">
+													<?php echo "<img src=' ".limpa_link($r_view_pro['pro_img'])." ' alt=''>" ?>
 												</div>
 											</div>
 											

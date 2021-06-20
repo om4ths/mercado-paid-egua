@@ -7,7 +7,7 @@
 	include('php/dados_cliente.php');
 	include('php/exibe_shop_grid.php');
 	include('php/func.php');
-	include('../Admin/php/exibe_categoria.php');
+	include('php/exibe_categoria_index.php');
 	?>
  
 <head>
@@ -286,17 +286,20 @@
 					</div>
 				</div>
 				<div class="search120">
+				<form method="GET" action="shop_grid.php" enctype="multipart/form-data">
 					<div class="ui search">
 						<div class="ui left icon input swdh10">
-							<input class="prompt srch10" type="text" placeholder="Pesquisar produtos ..">
+							<input class="prompt srch10" type="search" name='pesquisar' placeholder="Pesquisar produtos ..">
 							<i class='uil uil-search-alt icon icon1'></i>
+							<input type="submit" class="pesquisar_prod" style="display:none">
 						</div>
 					</div>
+					</form> 
 				</div>
 				<div class="header_right">
 					<ul>
 						<li>
-							<a href="#" class="offer-link"><i class="uil uil-phone-alt"></i>1800-000-000</a>
+							<a href="#" class="offer-link"><i class="uil uil-phone-alt"></i>(91) 9 8283-2055</a>
 						</li>
 						<li>
 							<a href="faq.php" class="offer-link"><i class="uil uil-question-circle"></i>Ajuda</a>
@@ -345,8 +348,8 @@
 						<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
 							<ul class="navbar-nav main_nav align-self-stretch">
 								<li class="nav-item"><a href="index.php" class="nav-link active" title="Home">Início</a></li>
-								<li class="nav-item"><a href="shop_grid.php" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
-								<li class="nav-item"><a href="shop_grid.php" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
+								<li class="nav-item"><a href="shop_grid.php?new_id=1" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
+								<li class="nav-item"><a href="shop_grid.php?destaque=2" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
 								<li class="nav-item">
 									<div class="ui icon top left dropdown nav__menu">
 										<a class="nav-link" title="Pages">Mais <i class="uil uil-angle-down"></i></a>
@@ -385,7 +388,9 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+								<?php if(isset($_GET['c_id'])){ ?>
                                 <?php echo "<li class='breadcrumb-item active' aria-current='page'>".$r_view_shop_grid['cat_nome']."</li>" ?>
+
                             </ol>
                         </nav>
                     </div>
@@ -400,27 +405,79 @@
                             <div class="product-left-title">
                                 <?php echo "<h2>".$r_view_shop_grid['cat_nome']."</h2>" ?>
                             </div>
-                            <a href="#" class="filter-btn pull-bs-canvas-right">Filtros</a>
-                            <div class="product-sort">
-                                <div class="ui selection dropdown vchrt-dropdown">
-                                    <input name="gender" type="hidden" value="default">
-                                    <i class="dropdown icon d-icon"></i>
-                                    <div class="text">Populares</div>
-                                    <div class="menu">
-                                        <div class="item" data-value="0">Populares</div>
-                                        <div class="item" data-value="1">Preço Crescente</div>
-                                        <div class="item" data-value="2">Preço Decrescente</div>
-                                        <div class="item" data-value="3">Alfabético</div>
-                                        <div class="item" data-value="4">Com Desconto - Crescente</div>
-                                    </div>
-                                </div>
+
+							<?php }
+							if(isset($_GET['new_id'])){
+							?>
+
+								<li class='breadcrumb-item active' aria-current='page'>Novos Produtos</li>
+
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="all-product-grid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="product-top-dt">
+                            <div class="product-left-title">
+                                <h2>Novos Produtos</h2>
                             </div>
+							<?php }
+
+							if(isset($_GET['pesquisar'])){
+								?>
+	
+									<li class='breadcrumb-item active' aria-current='page'>Pesquisar</li>
+	
+								</ol>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="all-product-grid">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="product-top-dt">
+								<div class="product-left-title">
+									<h2>Resultado</h2>
+								</div>
+	
+								<?php } 
+								if(isset($_GET['destaque'])){
+									?>
+		
+										<li class='breadcrumb-item active' aria-current='page'>Destaques</li>
+		
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="all-product-grid">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="product-top-dt">
+									<div class="product-left-title">
+										<h2>Produtos em Destaque</h2>
+									</div>
+		
+									<?php } ?>
+                            
                         </div>
                     </div>
                 </div>
 
                 <div class="product-list-view">
                     <div class="row">
+
 					<?php
 						if(isset($r_produtos_cat))
 						{	
@@ -431,12 +488,11 @@
                         <div class="col-lg-3 col-md-6">
                             <div class="product-item mb-30">
                                 <?php echo "<a href='single_product_view.php?p_id=".$r_cat_pro['pro_id']." class='product-img'>" ?>
-                                    <?php echo "<img src=' ".limpa_link($r_cat_pro['pro_img'])." ' alt='Erro ao carregar a imagem'> " ?>
+                                    <?php echo "<img src=' ".limpa_link($r_cat_pro['pro_img'])." ' alt='Erro ao carregar a imagem' height='250' width='250'> " ?>
                                     <div class="product-absolute-options">
 									<?php if(porcentagemDesconto($r_cat_pro['pro_valor'], $r_cat_pro['pro_desconto']) != 0 and porcentagemDesconto($r_cat_pro['pro_valor'], $r_cat_pro['pro_desconto']) != 100) { ?>
                                         <?php echo "<span class='offer-badge-1'>".porcentagemDesconto($r_cat_pro['pro_valor'], $r_cat_pro['pro_desconto'])."% off</span>" ?>
 									<?php } ?>
-                                        <span class="like-icon" title="wishlist"></span>
                                     </div>
                                 </a>
                                 <div class="product-text-dt">
@@ -459,13 +515,9 @@
                                 </div>
                             </div>
                         </div>
-					<?php }}?>
+					<?php }}else{echo "oi";}?>
                         
-                        <div class="col-md-12">
-                            <div class="more-product-btn">
-                                <button class="show-more-btn hover-btn" onclick="window.location.href = '#';">Ver Mais</button>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

@@ -2,6 +2,7 @@
 		include('php/exibe_produtos.php');
 		include('php/conexao.php');
 		include('../Frontend/php/func.php');
+		session_start();
 	?>
 
 <!DOCTYPE html>
@@ -79,6 +80,10 @@
 								<div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Usuários
 							</a>
+							<a class="nav-link" href="mensagens.php">
+								<div class="sb-nav-link-icon"><i class="fas fa-envelope"></i></div>
+								Fale Conosco
+							</a>
 							
                         </div>
                     </div>
@@ -95,7 +100,9 @@
                         <div class="row justify-content-between">
 							<div class="col-lg-12">
 								<a href="add_product.php" class="add-btn hover-btn">Adicionar Novo</a>
+								
 							</div>
+							
 							<div class="col-lg-3 col-md-4">
 								<div class="bulk-section mt-30">
 									<div class="input-group">
@@ -108,7 +115,13 @@
 										<div class="input-group-append">
 											<button class="status-btn hover-btn" type="submit">Aplicar</button>
 										</div>
+										<?php
+											if(isset($_SESSION['msg'])){
+												echo $_SESSION['msg'];	
+												unset($_SESSION['msg']);											
+											}?>
 									</div>
+									
 								</div>
 							</div>
 							<div class="col-lg-5 col-md-6">
@@ -183,9 +196,9 @@
 														?>
 
 														<td class="action-btns">
-														<a  href="#" class='delete-btn' title='Apagar' data-confirm='Deseja realmente apagar o produto?'><i class='fas fa-trash-alt'></i></a>
 
-															<a href="product_view.php" class="view-shop-btn" title="View"><i class="fas fa-eye"></i></a>
+														<?php echo "<a  href='php/delete_pro.php?p_id=".$r_pro['pro_id']."' class='delete-btn' title='Apagar' data-confirm='Deseja realmente apagar o produto?'><i class='fas fa-trash-alt'></i></a>" ?>
+															<?php echo "<a href='product_view.php?p_id=".$r_pro['pro_id']."' class='view-shop-btn' title='View'><i class='fas fa-eye'></i></a> "?>
 															<?php echo "<a href='view_editar_produtos.php?p_id=".$r_pro['pro_id']."' class='edit-btn' title='Edit'><i class='fas fa-edit'></i></a>" ?>
 														</td>
 													</tr>

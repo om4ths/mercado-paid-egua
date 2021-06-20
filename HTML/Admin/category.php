@@ -85,6 +85,10 @@
 								<div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Usuários
 							</a>
+							<a class="nav-link" href="mensagens.php">
+								<div class="sb-nav-link-icon"><i class="fas fa-envelope"></i></div>
+								Fale Conosco
+							</a>
 							
                         </div>
                     </div>
@@ -190,165 +194,13 @@
 														?>
 
 														<td class="action-btns">
-															<a href="#" class="edit-btn"><i class="fas fa-edit"></i> Edit</a>
-															<a  href="#" class='delete-btn' title='Apagar' data-confirm='Deseja realmente APAGAR A CATEGORIA??'><i class='fas fa-trash-alt'></i></a>
+															<?php echo "<a  href='php/delete_category.php?c_id=".$r_cat['cat_id']."' class='delete-btn' title='Apagar' data-confirm='Deseja realmente APAGAR A CATEGORIA??'><i class='fas fa-trash-alt'></i></a>" ?>
 
 														</td>
 
 													</tr>
 												<?php }}	?>
-													<!--
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="10"></td>
-														<td>2</td>
-														<td>
-															<div class="cate-img">
-																<img src="images/category/icon-2.svg" alt="">
-															</div>
-														</td>
-														<td>Grocery & Staples</td>
-														<td></td>
-														<td><span class="badge-item badge-status">Active</span></td>
-														<td class="action-btns">
-															<a href="#" class="edit-btn"><i class="fas fa-edit"></i> Edit</a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="9"></td>
-														<td>3</td>
-														<td>
-															<div class="cate-img">
-																<img src="images/category/icon-3.svg" alt="">
-															</div>
-														</td>
-														<td>Dairy & Eggs</td>
-														<td></td>
-														<td><span class="badge-item badge-status">Active</span></td>
-														<td class="action-btns">
-															<a href="#" class="edit-btn"><i class="fas fa-edit"></i> Edit</a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="8"></td>
-														<td>4</td>
-														<td>
-															<div class="cate-img">
-																<img src="images/category/icon-4.svg" alt="">
-															</div>
-														</td>
-														<td>Beverages</td>
-														<td></td>
-														<td><span class="badge-item badge-status">Active</span></td>
-														<td class="action-btns">
-															<a href="#" class="edit-btn"><i class="fas fa-edit"></i> Edit</a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="7"></td>
-														<td>5</td>
-														<td>
-															<div class="cate-img">
-																<img src="images/category/icon-5.svg" alt="">
-															</div>
-														</td>
-														<td>Snacks</td>
-														<td></td>
-														<td><span class="badge-item badge-status">Active</span></td>
-														<td class="action-btns">
-															<a href="#" class="edit-btn"><i class="fas fa-edit"></i> Edit</a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="6"></td>
-														<td>6</td>
-														<td>
-															<div class="cate-img">
-																<img src="images/category/icon-6.svg" alt="">
-															</div>
-														</td>
-														<td>Home Care</td>
-														<td></td>
-														<td><span class="badge-item badge-status">Active</span></td>
-														<td class="action-btns">
-															<a href="#" class="edit-btn"><i class="fas fa-edit"></i> Edit</a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="5"></td>
-														<td>7</td>
-														<td>
-															<div class="cate-img">
-																<img src="images/category/icon-7.svg" alt="">
-															</div>
-														</td>
-														<td>Noodles & Sauces</td>
-														<td></td>
-														<td><span class="badge-item badge-status">Active</span></td>
-														<td class="action-btns">
-															<a href="#" class="edit-btn"><i class="fas fa-edit"></i> Edit</a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="4"></td>
-														<td>8</td>
-														<td>
-															<div class="cate-img">
-																<img src="images/category/icon-8.svg" alt="">
-															</div>
-														</td>
-														<td>Personal Care</td>
-														<td></td>
-														<td><span class="badge-item badge-status">Active</span></td>
-														<td class="action-btns">
-															<a href="#" class="edit-btn"><i class="fas fa-edit"></i> Edit</a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="3"></td>
-														<td>9</td>
-														<td>
-															<div class="cate-img">
-																<img src="images/category/icon-9.svg" alt="">
-															</div>
-														</td>
-														<td>Pet Care</td>
-														<td></td>
-														<td><span class="badge-item badge-status">Active</span></td>
-														<td class="action-btns">
-															<a href="#" class="edit-btn"><i class="fas fa-edit"></i> Edit</a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="2"></td>
-														<td>10</td>
-														<td>
-															<div class="cate-img">
-																<img src="images/category/icon-10.svg" alt="">
-															</div>
-														</td>
-														<td>Meat & Seafood</td>
-														<td></td>
-														<td><span class="badge-item badge-status">Active</span></td>
-														<td class="action-btns">
-															<a href="#" class="edit-btn"><i class="fas fa-edit"></i> Edit</a>
-														</td>
-													</tr>
-													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="1"></td>
-														<td>11</td>
-														<td>
-															<div class="cate-img">
-																<img src="images/category/icon-11.svg" alt="">
-															</div>
-														</td>
-														<td>Electronics</td>
-														<td></td>
-														<td><span class="badge-item badge-status">Active</span></td>
-														<td class="action-btns">
-															<a href="#" class="edit-btn"><i class="fas fa-edit"></i> Edit</a>
-														</td>
-													</tr>
-													-->
+													
 													<!--FIM EXIBIR CATEGORIAS-->
 												</tbody>
 											</table>
