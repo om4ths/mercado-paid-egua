@@ -1,42 +1,42 @@
 ﻿<?php
-	include('php/verificar_login.php');
+include('php/verificar_login.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt_BR">
-	<?php
-	include('php/dados_cliente.php');
-	?>
+<?php
+include('php/dados_cliente.php');
+?>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, shrink-to-fit=9">
-    <meta name="description" content="Gambolthemes">
-    <meta name="author" content="Gambolthemes">
-    <title>Mercado Pai D'égua - Sobre Nós</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=9">
+	<meta name="description" content="Gambolthemes">
+	<meta name="author" content="Gambolthemes">
+	<title>Mercado Pai D'égua - Sobre Nós</title>
 
-    <!-- Favicon Icon -->
-    <link rel="icon" type="image/png" href="images/logo-1.png">
+	<!-- Favicon Icon -->
+	<link rel="icon" type="image/png" href="images/logo-1.png">
 
-    <!-- Stylesheets -->
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href='vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
-    <link href="css/night-mode.css" rel="stylesheet">
-    <link href="css/step-wizard.css" rel="stylesheet">
+	<!-- Stylesheets -->
+	<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link href='vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+	<link href="css/night-mode.css" rel="stylesheet">
+	<link href="css/step-wizard.css" rel="stylesheet">
 
-    <!-- Vendor Stylesheets -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
-    <link href="vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="vendor/semantic/semantic.min.css">
+	<!-- Vendor Stylesheets -->
+	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+	<link href="vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
+	<link href="vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="vendor/semantic/semantic.min.css">
 
 </head>
 
 <body>
-    <!-- modelo das categorias-->
+	<!-- modelo das categorias-->
 	<div id="category_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
 		<div class="modal-dialog category-area" role="document">
 			<div class="category-area-inner">
@@ -50,26 +50,25 @@
 						<h4>Selecionar Categoria </h4>
 					</div>
 					<ul class="category-by-cat">
-					<?php
-						if(isset($r_categoria))
-						{	
-							foreach($r_categoria as $key => $r_cat)
-							{	
-																
-							$caminhoCorretoImg = limpa_link($r_cat['cat_img']);
-																
-					?>
-						<li>
-							<a href="#" class="single-cat-item">
-								<div class="icon">
-									<?php echo "<img src=' ".$caminhoCorretoImg." ' alt='erro ao Carregar a imagem'>" ?>
-								</div>
-								<?php echo "<div class='text'>".$r_cat['cat_nome']."</div>" ?>
-							</a>
-						</li>
-					
-					<?php }}	?>
-							</a>
+						<?php
+						if (isset($r_categoria)) {
+							foreach ($r_categoria as $key => $r_cat) {
+
+								$caminhoCorretoImg = limpa_link($r_cat['cat_img']);
+
+						?>
+								<li>
+									<a href="#" class="single-cat-item">
+										<div class="icon">
+											<?php echo "<img src=' " . $caminhoCorretoImg . " ' alt='erro ao Carregar a imagem'>" ?>
+										</div>
+										<?php echo "<div class='text'>" . $r_cat['cat_nome'] . "</div>" ?>
+									</a>
+								</li>
+
+						<?php }
+						}	?>
+						</a>
 						</li>
 					</ul>
 				</div>
@@ -301,13 +300,13 @@
 						</li>
 						<li class="ui dropdown">
 							<a href="#" class="opts_account">
-								<?php 
-								if(isset($resultado['foto'])){
-									echo "<img src=' ".$resultado['foto']." ' alt=''>";									
-								}else{
+								<?php
+								if (isset($resultado['foto'])) {
+									echo "<img src=' " . $resultado['foto'] . " ' alt=''>";
+								} else {
 									echo "<img src='images/avatar/img-5.jpg' alt=''>";
-								};								 								
-								?>								<span class="user__name"><?php echo $resultado['nome'] ?></span>
+								};
+								?> <span class="user__name"><?php echo $resultado['nome'] ?></span>
 								<i class="uil uil-angle-down"></i>
 							</a>
 							<div class="menu dropdown_account">
@@ -372,219 +371,216 @@
 			</div>
 		</div>
 	</header>
-    <!-- Header End -->
-    <!-- Body Start -->
-    <div class="wrapper">
-        <div class="default-dt">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12">
-                        <div class="title129">
-                            <h2>About Us</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="life-gambo">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="default-title left-text">
-                            <h2>About Gambo</h2>
-                            <p>Customers Deserve Better</p>
-                            <img src="images/line.svg" alt="">
-                        </div>
-                        <div class="about-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac sodales sapien. Sed pellentesque, quam in ornare tincidunt, magna augue placerat nunc, ut facilisis nibh ipsum non ipsum. Cras ac eros non neque viverra
-                                consequat sed at est. Fusce efficitur, lacus nec dignissim tincidunt, diam sapien rhoncus neque, at tristique sapien nibh sed neque. Proin in neque in purus luctus facilisis. Donec viverra ligula quis lorem viverra consequat.
-                                Aliquam condimentum id enim volutpat rutrum. Donec semper iaculis convallis. Praesent quis elit eget ligula facilisis mattis. Praesent sed euismod dui. Suspendisse imperdiet vel quam nec venenatis. Suspendisse dictum blandit
-                                quam, vitae auctor enim gravida et. Sed id dictum nibh. Proin egestas massa sit amet tincidunt aliquet.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="about-img">
-                            <img src="images/about.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="about-steps-group white-bg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="about-step">
-                            <div class="about-step-img">
-                                <img src="images/about/icon-1.svg" alt="">
-                            </div>
-                            <h4>400+</h4>
-                            <p>People have joined the Gambo team in the past six months</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="about-step">
-                            <div class="about-step-img">
-                                <img src="images/about/icon-2.svg" alt="">
-                            </div>
-                            <h4>2x</h4>
-                            <p>Rate of growth in our monthly user base</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="about-step">
-                            <div class="about-step-img">
-                                <img src="images/about/icon-3.svg" alt="">
-                            </div>
-                            <h4>10 days</h4>
-                            <p>Time taken to launch in 8 cities across India</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="about-step">
-                            <div class="about-step-img">
-                                <img src="images/about/icon-4.svg" alt="">
-                            </div>
-                            <h4>95k</h4>
-                            <p>App downloads on iOS and Android</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="life-gambo">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="default-title">
-                            <h2>Our Team</h2>
-                            <p>Teamwork Makes the Dream Work</p>
-                            <img src="images/line.svg" alt="">
-                        </div>
-                        <div class="dd-content">
-                            <div class="owl-carousel team-slider owl-theme">
-                                <div class="item">
-                                    <div class="team-item">
-                                        <div class="team-img">
-                                            <img src="images/team/img-1.jpg" alt="">
-                                        </div>
-                                        <h4>Joginder Singh</h4>
-                                        <span>CEO & Co-Founder</span>
-                                        <ul class="team-social">
-                                            <li><a href="#" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="team-item">
-                                        <div class="team-img">
-                                            <img src="images/team/img-2.jpg" alt="">
-                                        </div>
-                                        <h4>John Doe</h4>
-                                        <span>CTO & Senior Developer</span>
-                                        <ul class="team-social">
-                                            <li><a href="#" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="team-item">
-                                        <div class="team-img">
-                                            <img src="images/team/img-3.jpg" alt="">
-                                        </div>
-                                        <h4>Jassica William</h4>
-                                        <span>HR Manager</span>
-                                        <ul class="team-social">
-                                            <li><a href="#" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="team-item">
-                                        <div class="team-img">
-                                            <img src="images/team/img-4.jpg" alt="">
-                                        </div>
-                                        <h4>Zoena Singh</h4>
-                                        <span>Senior Sales Manager</span>
-                                        <ul class="team-social">
-                                            <li><a href="#" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="how-order-gambo">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="default-title">
-                            <h2>How Do I Order?</h2>
-                            <p>How Do I order on Gambo</p>
-                            <img src="images/line.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="how-order-steps">
-                            <div class="how-order-icon">
-                                <i class="uil uil-search"></i>
-                            </div>
-                            <h4>Browse gambo.com for products or use the search feature</h4>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="how-order-steps">
-                            <div class="how-order-icon">
-                                <i class="uil uil-shopping-basket"></i>
-                            </div>
-                            <h4>Add item to your shopping Basket</h4>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="how-order-steps">
-                            <div class="how-order-icon">
-                                <i class="uil uil-stopwatch"></i>
-                            </div>
-                            <h4>Choose a convenient delivery time from our 5 Slots* a day</h4>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="how-order-steps">
-                            <div class="how-order-icon">
-                                <i class="uil uil-money-bill"></i>
-                            </div>
-                            <h4>Select suitable payment option(Cash, Master, Credit Card, Discover)</h4>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="how-order-steps">
-                            <div class="how-order-icon">
-                                <i class="uil uil-truck"></i>
-                            </div>
-                            <h4>Your products will be home-delivered as per your order.</h4>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="how-order-steps">
-                            <div class="how-order-icon">
-                                <i class="uil uil-smile"></i>
-                            </div>
-                            <h4>Happy Curstomers</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Body End -->
-    <!-- Footer Start -->
+	<!-- Header End -->
+	<!-- Body Start -->
+	<div class="wrapper">
+		<div class="default-dt">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12">
+						<div class="title129">
+							<h2>Sobre Nós</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="life-gambo">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="default-title left-text">
+							<h2>Sobre o Mercado Pai D'égua</h2>
+							<p>Os clientes merecem o melhor</p>
+							<img src="images/line.svg" alt="">
+						</div>
+						<div class="about-content">
+							<p>Temos unidades em todos os estados e possuímos mais de 200 lojas espalhadas de norte a sul do país. Segundo o ranking do Valor Econômico, somos a primeira entre as empresas de comércio varejista do Brasil. Também estamos entre as maiores, as que mais vendem e as que mais empregam.</p>
+							<p>Valorizamos a parceria com nossos clientes e nosso time, que conta com mais de 50 mil colaboradores, treinados e capacitados, sempre a postos para atender a todos. Estamos presentes em todos os Estados do Brasil e somos a maior rede atacadista do País. Somos o lugar certo para você comprar barato, seja para o seu negócio ou sua casa.</p>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="about-img">
+							<img src="images/about.svg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="about-steps-group white-bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="about-step">
+							<div class="about-step-img">
+								<img src="images/about/icon-1.svg" alt="">
+							</div>
+							<h4>400+</h4>
+							<p>Pessoas se juntaram à equipe Pai D'égua nos últimos seis meses</p>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="about-step">
+							<div class="about-step-img">
+								<img src="images/about/icon-2.svg" alt="">
+							</div>
+							<h4>2x</h4>
+							<p>Taxa de crescimento em nossa base de usuários mensal</p>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="about-step">
+							<div class="about-step-img">
+								<img src="images/about/icon-3.svg" alt="">
+							</div>
+							<h4>10 dias</h4>
+							<p>Tempo restante para lançamento de nossa nova unidade</p>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="about-step">
+							<div class="about-step-img">
+								<img src="images/about/icon-4.svg" alt="">
+							</div>
+							<h4>95k</h4>
+							<p>Downloads de aplicativos no iOS e Android</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="life-gambo">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="default-title">
+							<h2>Nosso time</h2>
+							<p>Trabalho em equipe faz o sonho funcionar</p>
+							<img src="images/line.svg" alt="">
+						</div>
+						<div class="dd-content">
+							<div class="owl-carousel team-slider owl-theme">
+								<div class="item">
+									<div class="team-item">
+										<div class="team-img">
+											<img src="images/team/img-1.jpg" alt="">
+										</div>
+										<h4>Sebastian Müller</h4>
+										<span>CEO e Cofundador</span>
+										<ul class="team-social">
+											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
+											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="item">
+									<div class="team-item">
+										<div class="team-img">
+											<img src="images/team/img-2.jpg" alt="">
+										</div>
+										<h4>Ricardo Velasquez</h4>
+										<span>CTO e Desenvolvedor Pleno</span>
+										<ul class="team-social">
+											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
+											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="item">
+									<div class="team-item">
+										<div class="team-img">
+											<img src="images/team/img-3.jpg" alt="">
+										</div>
+										<h4>Jéssica Magalhães</h4>
+										<span>Gerente de RH</span>
+										<ul class="team-social">
+											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
+											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="item">
+									<div class="team-item">
+										<div class="team-img">
+											<img src="images/team/img-4.jpg" alt="">
+										</div>
+										<h4>Francisco Moreira</h4>
+										<span>Gerente Sênior de Vendas</span>
+										<ul class="team-social">
+											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
+											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="how-order-gambo">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="default-title">
+							<h2>Como faço para solicitar?</h2>
+							<img src="images/line.svg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="how-order-steps">
+							<div class="how-order-icon">
+								<i class="fas fa-search"></i>
+							</div>
+							<h4>Procure produtos em nosso site ou use o recurso de pesquisa.</h4>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="how-order-steps">
+							<div class="how-order-icon">
+								<i class="fas fa-cart-plus"></i>
+							</div>
+							<h4>Adicione o item ao seu carrinho de compras.</h4>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="how-order-steps">
+							<div class="how-order-icon">
+								<i class="fas fa-clock"></i>
+							</div>
+							<h4>Escolha um horário de entrega.</h4>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="how-order-steps">
+							<div class="how-order-icon">
+								<i class="fas fa-hand-holding-usd"></i>
+							</div>
+							<h4>Selecione a opção de pagamento adequada (Dinheiro, Master, Cartão de Crédito, Pix).</h4>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="how-order-steps">
+							<div class="how-order-icon">
+								<i class="fas fa-truck"></i>
+							</div>
+							<h4>Seus produtos serão entregues em casa de acordo com seu pedido.</h4>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="how-order-steps">
+							<div class="how-order-icon">
+								<i class="fas fa-smile-wink"></i>
+							</div>
+							<h4>Clientes Felizes</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Body End -->
+	<!-- Footer Start -->
 	<footer class="footer">
 		<div class="footer-first-row">
 			<div class="container">
@@ -672,11 +668,11 @@
 								</ul>
 							</div>
 						</div>
-						
-						</div>
+
 					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 		<div class="footer-last-row">
 			<div class="container">
@@ -699,19 +695,18 @@
 			</div>
 		</div>
 	</footer>
-    <!-- Footer End -->
+	<!-- Footer End -->
 
-    <!-- Javascripts -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/OwlCarousel/owl.carousel.js"></script>
-    <script src="vendor/semantic/semantic.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/product.thumbnail.slider.js"></script>
-    <script src="js/offset_overlay.js"></script>
-    <script src="js/night-mode.js"></script>
-
+	<!-- Javascripts -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="vendor/OwlCarousel/owl.carousel.js"></script>
+	<script src="vendor/semantic/semantic.min.js"></script>
+	<script src="js/jquery.countdown.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/product.thumbnail.slider.js"></script>
+	<script src="js/offset_overlay.js"></script>
+	<script src="js/night-mode.js"></script>
 
 </body>
 
