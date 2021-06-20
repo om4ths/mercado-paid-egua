@@ -535,7 +535,7 @@
 												<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
 												<input type="button" value="+" class="plus plus-btn">
 											</div>
-											<a class="cart-icon" href="php/Carrinho.php?acao=add&id=<?php echo $r_pro_dec['pro_id']?>"><i class="uil uil-shopping-cart-alt"></i></a>
+											<a class="cart-icon" href="php/carrinho.php?acao=add&id=<?php echo $r_pro_dec['pro_id']?>"><i class="uil uil-shopping-cart-alt"></i></a>
 										</div>
 									</div>
 								</div>
