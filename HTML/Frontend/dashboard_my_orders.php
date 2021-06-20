@@ -407,13 +407,42 @@ include('php/verificar_login.php');
 								};								 								
 								?>
 								<div class="img-add">
-								<form method="POST" action="php/img_cliente.php" enctype="multipart/form-data"> 
-									<input type="file" name="c_img" id="file">
-									<label for="file"><i class="uil uil-camera-plus"></i></label>
-									<input type="submit" value="Enviar arquivo" />
-									</div>
-								</form > 
-							</div>
+												<input type="checkbox" id="click">
+												<label for="click" class="click-me-modal">
+													<i class="uil uil-camera-plus"></i>
+												</label>
+												<div  id="content-modal"> 
+													<div class="header-modal">
+														<h2>Selecione a sua foto</h2>
+														<label for="click" class="fas fa-times"></label>
+													</div>
+													<label for="click" class="fas fa-check-modal"></label>
+													<label for="click" class="close-btn"></label>
+														
+
+														
+													<form method="POST" action="php/img_cliente.php" style="display:inline-grid;" enctype="multipart/form-data">
+													<label id="select-image" class="btn-modal hover-btn"> 
+															<input type="file" id="photo-file" name="c_img">
+														Carregar Foto
+													</label>	
+														
+														
+
+														<div class="footer-modal">
+
+														<label>
+														<input type="submit" value="Cortar e salvar Foto"></label>
+
+													</div> 
+													
+														</form >
+											
+															
+													</div>
+													
+											</div> 
+										</div>
 							<h4><?php echo$resultado['nome']?></h4>
 							<p><?php echo$resultado['telefone']?><a href="#"></a></p>
 						</div>

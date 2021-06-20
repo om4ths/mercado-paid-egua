@@ -514,7 +514,7 @@
                                 </div>
                             </div>
                         </div>
-					<?php }}else{echo "oi";}?>
+					<?php }}else{echo "<h1 style='color:red; margin-left:50px;'>Nenhum produto encontrado com esse nome :(</h1>";}?>
                         
                         
                     </div>

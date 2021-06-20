@@ -57,48 +57,46 @@ include('php/verificar_login.php');
 												<label for="click" class="click-me-modal">
 													<i class="uil uil-camera-plus"></i>
 												</label>
-												<div class="content-modal"> 
+												<div id="content-modal" > 
 													<div class="header-modal">
 														<h2>Selecione a sua foto</h2>
 														<label for="click" class="fas fa-times"></label>
 													</div>
 													<label for="click" class="fas fa-check-modal"></label>
 													<label for="click" class="close-btn"></label>
+														
 
-															<button id="select-image" class="btn-modal hover-btn"> 
+														
+													<form method="POST" action="php/img_cliente.php" style="display:inline-grid;" enctype="multipart/form-data">
+													<label id="select-image" style="max-width:200px;" class="btn-modal hover-btn"> 
 															<input type="file" id="photo-file" name="c_img">
 														Carregar Foto
-													</button>	
-												
+													</label>	
 
 													<img id="photo-preview" draggable="false"
 																style=
 																"border-radius: 0; z-index:1;    
-																width:93%;
+																width:auto;
 																height:auto; 
 																border-radius: 0px !important;
 																border:0;
-																margin-top:-436px;">
-													
-													<div id="selection-tool" > 
+																margin-top:-420px;
+																margin-left:15px;">
 														
-													
-													</div>
-													
+														
 
-													</div>
-													<div class="footer-modal">
-											
-													<form method="POST" action="php/img_cliente.php" enctype="multipart/form-data">
-													<input type="file" name="c_img" id="file">
+														<div class="footer-modal">
 
-													<input id="crop-image" type="submit" name="c_img" value="Cortar e salvar Foto">
-													</form >
-												
-
-
+														<label>
+														<input type="submit" value="Cortar e salvar Foto"></label>
 
 													</div> 
+													
+														</form >
+											
+															
+													</div>
+													
 											</div> 
 										</div>
 										
@@ -118,7 +116,6 @@ include('php/verificar_login.php');
 
 
     <!-- Javascripts -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
@@ -134,7 +131,6 @@ include('php/verificar_login.php');
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 	
 		<script src="js/night-mode.js"></script>
-		<script src="js/recortar-foto.js"></script>
 
 		
 

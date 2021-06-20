@@ -504,7 +504,7 @@
                                             </ul>
                                             <ul class="ordr-crt-share">
                                                 <li><button class="add-cart-btn hover-btn"><i class="uil uil-shopping-cart-alt"></i>Adicionar ao Carrinho</button></li>
-                                                <li><button class="order-btn hover-btn">Comprar Agora</button></li>
+                                                <li><button href="faq.php"class="order-btn hover-btn">Comprar Agora</button></li>
                                             </ul>
                                         </div>
 

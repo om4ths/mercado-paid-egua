@@ -590,36 +590,36 @@ include('php/verificar_login.php');
 												<label for="click" class="click-me-modal">
 													<i class="uil uil-camera-plus"></i>
 												</label>
-												<div class="content-modal"> 
+												<div  id="content-modal"> 
 													<div class="header-modal">
 														<h2>Selecione a sua foto</h2>
 														<label for="click" class="fas fa-times"></label>
 													</div>
 													<label for="click" class="fas fa-check-modal"></label>
 													<label for="click" class="close-btn"></label>
+														
 
-															<button id="select-image" class="btn-modal hover-btn"> 
+														
+													<form method="POST" action="php/img_cliente.php" style="display:inline-grid;" enctype="multipart/form-data">
+													<label id="select-image" class="btn-modal hover-btn"> 
 															<input type="file" id="photo-file" name="c_img">
 														Carregar Foto
-													</button>	
-												
+													</label>	
+														
+														
 
-													<img id="photo-preview" draggable="false"
-																style=
-																"border-radius: 0; z-index:1;    
-																width:93%;
-																height:auto; 
-																border-radius: 0px !important;
-																border:0;
-																margin-top:-436px;">
-												
+														<div class="footer-modal">
+
+														<label>
+														<input type="submit" value="Cortar e salvar Foto"></label>
+
 													</div> 
-													<div class="footer-modal">
-															<form method="POST" action="php/img_cliente.php" enctype="multipart/form-data">
-														<input id="crop-image" type="submit" name="c_img" value="Cortar e salvar Foto">
-														</form >	
-
-														</div>
+													
+														</form >
+											
+															
+													</div>
+													
 											</div> 
 										</div>
 							<h4>
