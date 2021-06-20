@@ -477,6 +477,7 @@
 
                 <div class="product-list-view">
                     <div class="row">
+
 					<?php
 						if(isset($r_produtos_cat))
 						{	
