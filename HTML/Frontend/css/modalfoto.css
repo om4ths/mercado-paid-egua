@@ -14,14 +14,14 @@
     cursor: pointer;
 }
 
-.content-modal{
+#content-modal{
     
     overflow: auto;
     z-index:1;
     opacity: 0;
     visibility: hidden;
     width: 450px;
-    height:490px;
+    height:500px;
     background:white;
     border-radius: 3px;
     transition: .2s ease-in;
@@ -32,14 +32,11 @@
     margin-top: -190px;
 
 }
-#click:checked ~ .content-modal{
+#click:checked ~ #content-modal{
     opacity: 1;
     visibility: visible;
 }
-#click:checked ~ .footer-modal{
-    opacity: 1;
-    visibility: visible;
-}
+
 .header-modal{
     margin: auto;
     position: fixed;
@@ -53,11 +50,10 @@
 
 }
 .footer-modal{
-    z-index:1;
-    opacity: 0;
-    visibility: hidden;
-    margin-top: 297px;
-    margin-left: -175px;
+    
+    margin-top: 480px;
+    margin-left: -147px;
+    
 
     position: fixed;
     width:450px;
@@ -139,7 +135,7 @@
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
-        margin: 214px 2px;
+        margin: 214px 0px;
         cursor: pointer;
         border-radius:5px;
         font-weight: 500;
@@ -150,6 +146,6 @@
     height:auto; 
     border-radius: 0px !important;
 }
-#crop-image{
+.crop-image{
     display:none;
 }
