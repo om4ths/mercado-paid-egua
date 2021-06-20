@@ -22,8 +22,6 @@
     
     $pro_img = $caminhoSalvar;
     
-
-
     $pro_id = $_POST['p_id'];
     $pro_nome = $_POST['p_nome'];
     $pro_desc =  $_POST['p_desc'];
