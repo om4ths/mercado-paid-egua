@@ -334,7 +334,6 @@ include('php/verificar_login.php');
 								</div>
 								<a href="dashboard_overview.php" class="item channel_item"><i class="uil uil-apps icon__1"></i>Perfil</a>
 								<a href="dashboard_my_orders.php" class="item channel_item"><i class="uil uil-box icon__1"></i>Ordens de compra</a>
-								<a href="dashboard_my_wallet.php" class="item channel_item"><i class="uil uil-usd-circle icon__1"></i>Carteira</a>
 								<a href="dashboard_my_addresses.php" class="item channel_item"><i class="uil uil-location-point icon__1"></i>Endereço</a>
 								<a href="faq.php" class="item channel_item"><i class="uil uil-info-circle icon__1"></i>Perguntas frequentes</a>
 								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="item channel_item"><i class="uil uil-lock-alt icon__1"></i>Sair</a>
@@ -483,8 +482,7 @@ include('php/verificar_login.php');
 										class="uil uil-apps"></i>Visão geral</a>
 								<a href="dashboard_my_orders.php" class="user-item"><i class="uil uil-box"></i>Ordens de
 									compra</a>
-								<a href="dashboard_my_wallet.php" class="user-item"><i
-										class="uil uil-wallet"></i>Carteira</a>
+								
 								<a href="dashboard_my_addresses.php" class="user-item"><i
 										class="uil uil-location-point"></i>Endereço</a>
 								<a href="/mercado-paid-egua/HTML/frontend/php/logout.php" class="user-item"><i
@@ -509,52 +507,17 @@ include('php/verificar_login.php');
 								<div class="col-lg-6 col-md-12">
 									<div class="pdpt-bg">
 										<div class="pdpt-title">
-											<h4>Minhas ordens</h4>
+											<h4>Meus Pedidos</h4>
 										</div>
 										<div class="ddsh-body">
 											<h2>2 Compras recentes</h2>
-											<ul class="order-list-145">
-												<li>
-													<div class="smll-history">
-														<div class="order-title">2 Items <span data-inverted=""
-																data-tooltip="2kg broccoli, 1kg Apple"
-																data-position="top center">?</span></div>
-														<div class="order-status">A caminho</div>
-														<p>$22</p>
-													</div>
-												</li>
-											</ul>
+											
 										</div>
 										<a href="dashboard_my_orders.php" class="more-link14">Todos os pedidos <i
 												class="uil uil-angle-double-right"></i></a>
 									</div>
 								</div>
-								<div class="col-lg-12 col-md-12">
-									<div class="pdpt-bg">
-										<div class="pdpt-title">
-											<h4>Carteira</h4>
-										</div>
-										<div class="wllt-body">
-											<h2>Creditos $100</h2>
-											<ul class="wallet-list">
-												<li>
-													<a href="#" class="wallet-links14"><i
-															class="uil uil-card-atm"></i>Metodos de pagamento</a>
-												</li>
-												<li>
-													<a href="#" class="wallet-links14"><i class="uil uil-gift"></i>3
-														oferece Ativo</a>
-												</li>
-												<li>
-													<a href="#" class="wallet-links14"><i
-															class="uil uil-coins"></i>Ganhando pontos</a>
-												</li>
-											</ul>
-										</div>
-										<a href="#" class="more-link14">Recompensas e detalhes <i
-												class="uil uil-angle-double-right"></i></a>
-									</div>
-								</div>
+								
 							</div>
 						</div>
 					</div>
@@ -562,6 +525,7 @@ include('php/verificar_login.php');
 			</div>
 		</div>
 	</div>
+	
 	<!-- Body End -->
 	<!-- Footer Start -->
 	<footer class="footer">
@@ -570,7 +534,7 @@ include('php/verificar_login.php');
 				<div class="row">
 					<div class="col-md-6 col-sm-6">
 						<ul class="call-email-alt">
-							<li><a href="#" class="callemail"><i class="uil uil-dialpad-alt"></i>(91)982832-2055</a></li>
+							<li><a href="#" class="callemail"><i class="uil uil-dialpad-alt"></i>(91) 9 82832-2055</a></li>
 							<li><a href="#" class="callemail"><i class="uil uil-envelope-alt"></i>mercadopaidegua@gmail.com</a></li>
 						</ul>
 					</div>
