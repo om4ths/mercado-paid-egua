@@ -3,7 +3,7 @@
 	require_once "functions/product.php";
 	require_once "functions/cart.php";
 
-	$pdoConnection = require_once "php/connection.php";
+	$pdoConnection = require_once "connection.php";
 
 	if(isset($_GET['acao']) && in_array($_GET['acao'], array('add', 'del', 'up'))) {
 		
