@@ -914,6 +914,17 @@ i.icon1 {
 	background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), #ff0404);
     background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), #ff0404);
 }
+.hover-btn-modal:hover {
+	background: #2b2f4c;
+	color: #fff !important;
+	transition: all .2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+	background-image: -webkit-linear-gradient(left, rgba(69, 92, 110, 0.9), #2b2f4c);
+    background-image: linear-gradient(to right, rgba(69, 92, 110, 0.9), #2b2f4c);
+}
 
 .cart__btn ins {
     color: #fff !important;
