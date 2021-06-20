@@ -459,48 +459,14 @@
 							<li><a href="#" class="callemail"><i class="uil uil-envelope-alt"></i>mercadopaidegua@gmail.com</a></li>
 						</ul>
 					</div>
-					<div class="col-md-6 col-sm-6">
-						<div class="social-links-footer">
-							<ul>
-								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-								<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-							</ul>
-						</div>
-					</div>
+						
 				</div>
 			</div>
 		</div>
 		<div class="footer-second-row">
 			<div class="container">
-				<div class="row">
-					<div class="col-lg-3 col-md-6 col-sm-6">
-						<div class="second-row-item">
-							<h4>Categorias</h4>
-							<ul>
-								<li><a href="#">Frutas e Vegetais</a></li>
-								<li><a href="#">Alimentos Básicos</a></li>
-								<li><a href="#">Ovos e Laticínios</a></li>
-								<li><a href="#">Bebidas</a></li>
-								<li><a href="#">Lanches</a></li>
-								<li><a href="#">Limpeza</a></li>
-								<li><a href="#">Macarrão e molhos</a></li>
-								<li><a href="#">Higiene</a></li>
-								<li><a href="#">Pets</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6 col-sm-6">
-						<div class="second-row-item">
-							<h4>Links Úteis</h4>
-							<ul>
-								<li><a href="about_us.php">Sobre Nós</a></li>
-								<li><a href="shop_grid.php">Produtos em Destaque</a></li>
-								<li><a href="faq.php">FAQ</a></li>
-								<li><a href="contact_us.php">Fale Conosco</a></li>
-							</ul>
-						</div>
-					</div>
+				<div class="row-index">
+				
 					<div class="col-lg-3 col-md-6 col-sm-6">
 						<div class="second-row-item">
 							<h4>Onde Atendemos</h4>
@@ -512,57 +478,64 @@
 					</div>
 					<div class="col-lg-3 col-md-6 col-sm-6">
 						<div class="second-row-item-app">
-
 						</div>
 						<div class="second-row-item-payment">
 							<h4>Métodos de Pagamento</h4>
 							<div class="footer-payments">
 								<ul id="paypal-gateway" class="financial-institutes">
-									<li class="financial-institutes__logo">
-										<img alt="Visa" title="Visa" src="images/footer-icons/pyicon-6.svg">
-									</li>
+									
 									<li class="financial-institutes__logo">
 										<img alt="Visa" title="Visa" src="images/footer-icons/pyicon-1.svg">
 									</li>
 									<li class="financial-institutes__logo">
 										<img alt="MasterCard" title="MasterCard" src="images/footer-icons/pyicon-2.svg">
 									</li>
-									<li class="financial-institutes__logo">
-										<img alt="American Express" title="American Express" src="images/footer-icons/pyicon-3.svg">
-									</li>
-									<li class="financial-institutes__logo">
-										<img alt="Discover" title="Discover" src="images/footer-icons/pyicon-4.svg">
-									</li>
+									
 								</ul>
 							</div>
 						</div>
 						
 						</div>
-					</div>
+						<div class="col-lg-3 col-md-6 col-sm-6">
+						<div class="second-row-item">
+							
+						<div class="main_logo-footer" id="logo">
+					<img src="images/logo.png" alt="">
+					<img class="logo-inverse" src="images/dark-logo.png" alt="">
 				</div>
+
+
+					</div>
+					
+
+							</div>
+					</div>
+
+				</div>
+
 			</div>
 		</div>
 		<div class="footer-last-row">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<div class="footer-bottom-links">
+						<div class="footer-bottom-links" style="text-align-last:center;">
 							<ul>
 								<li><a href="about_us.php">Sobre Nós</a></li>
 								<li><a href="contact_us.php">Contato</a></li>
-								<li><a href="privacy_policy.php">Política de Privacidade</a></li>
-								<li><a href="term_and_conditions.php">Termo e Condições</a></li>
-								<li><a href="refund_and_return_policy.php">Política de Reembolso e Devolução</a></li>
+								<li><a href="faq.php">Perguntas Frequentes</a></li>
+
 							</ul>
 						</div>
 						<div class="copyright-text">
-							<i class="uil uil-copyright"></i>Copyright 2020 <b>Mercado Pai D'égua</b> . All rights reserved
+							<i class="uil uil-copyright"></i>Copyright 2021 <b>Mercado Pai D'égua</b> . All rights reserved
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</footer>
+
 	<!-- Footer End -->
 
 	<!-- Javascripts -->
