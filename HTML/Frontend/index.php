@@ -734,15 +734,7 @@ include('php/exibe_produtos_index.php');
 							<li><a href="#" class="callemail"><i class="uil uil-envelope-alt"></i>mercadopaidegua@gmail.com</a></li>
 						</ul>
 					</div>
-					<div class="col-md-6 col-sm-6">
-						<div class="social-links-footer">
-							<ul>
-								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-								<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-							</ul>
-						</div>
-					</div>	
+						
 				</div>
 			</div>
 		</div>
@@ -802,7 +794,7 @@ include('php/exibe_produtos_index.php');
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<div class="footer-bottom-links">
+						<div class="footer-bottom-links" style="text-align-last:center;">
 							<ul>
 								<li><a href="about_us.php">Sobre Nós</a></li>
 								<li><a href="contact_us.php">Contato</a></li>
