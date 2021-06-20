@@ -530,27 +530,27 @@ include('php/exibe_produtos_index.php');
 						<div class="owl-carousel featured-slider owl-theme">
 						<!-- Exibir Produtos destaque-->
 						<?php
-							if(isset($r_produtos))
+							if(isset($r_produtos_dec))
 								{	
-								foreach($r_produtos as $key => $r_pro)
+								foreach($r_produtos_dec as $key => $r_pro_dec)
 									{
 																
 						?>
 
 							<div class="item">
 								<div class="product-item">
-									<?php echo "<a href='single_product_view.php?p_id=".$r_pro['pro_id']." ' class='product-img'>" ?>
-									    <?php echo "<img src=' ".limpa_link($r_pro['pro_img'])." ' alt='Erro ao Carregar a imagem'>" ?>
+									<?php echo "<a href='single_product_view.php?p_id=".$r_pro_dec['pro_id']." ' class='product-img'>" ?>
+									    <?php echo "<img src=' ".limpa_link($r_pro_dec['pro_img'])." ' alt='Erro ao Carregar a imagem'>" ?>
 										<div class="product-absolute-options">
-											<?php if(porcentagemDesconto($r_pro['pro_valor'], $r_pro['pro_desconto']) != 0 and porcentagemDesconto($r_pro['pro_valor'], $r_pro['pro_desconto']) != 100) { ?>
-											<?php echo "<span class='offer-badge-1'>".porcentagemDesconto($r_pro['pro_valor'], $r_pro['pro_desconto'])."%</span>" ?>
+											<?php if(porcentagemDesconto($r_pro_dec['pro_valor'], $r_pro_dec['pro_desconto']) != 0 and porcentagemDesconto($r_pro_dec['pro_valor'], $r_pro_dec['pro_desconto']) != 100) { ?>
+											<?php echo "<span class='offer-badge-1'>".porcentagemDesconto($r_pro_dec['pro_valor'], $r_pro_dec['pro_desconto'])."%</span>" ?>
 											<?php } ?>
 
 										</div>
 									</a>
 									<div class="product-text-dt">
 									<?php
-									if($r_pro['pro_ativo'] == 1)
+									if($r_pro_dec['pro_ativo'] == 1)
 									{ 
 									?>
 										<p>Acessível<span>(Em Estoque)</span></p>
@@ -562,15 +562,15 @@ include('php/exibe_produtos_index.php');
 									<?php
 									}
 									?>
-										<?php echo "<h4>".$r_pro['pro_nome']."</h4>" ?>
+										<?php echo "<h4>".$r_pro_dec['pro_nome']."</h4>" ?>
 
-										<?php if($r_pro['pro_desconto'] != $r_pro['pro_valor'] and $r_pro['pro_desconto'] != 0){?>
-										<?php echo "<div class='product-price'>R$".formata_preco($r_pro['pro_desconto'])."<span>R$".formata_preco($r_pro['pro_valor'])."</span></div>" ?>
+										<?php if($r_pro_dec['pro_desconto'] != $r_pro_dec['pro_valor'] and $r_pro_dec['pro_desconto'] != 0){?>
+										<?php echo "<div class='product-price'>R$".formata_preco($r_pro_dec['pro_desconto'])."<span>R$".formata_preco($r_pro_dec['pro_valor'])."</span></div>" ?>
 										<?php
 										}
 										else{
 										?>
-										<?php echo "<div class='product-price'>R$".$r_pro['pro_valor']."</div>"; }?>
+										<?php echo "<div class='product-price'>R$".$r_pro_dec['pro_valor']."</div>"; }?>
 
 
 										<div class="qty-cart">
@@ -739,22 +739,7 @@ include('php/exibe_produtos_index.php');
 		<div class="footer-second-row">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-3 col-md-6 col-sm-6">
-						<div class="second-row-item">
-							<h4>Categorias</h4>
-							<ul>
-								<li><a href="#">Frutas e Vegetais</a></li>
-								<li><a href="#">Alimentos Básicos</a></li>
-								<li><a href="#">Ovos e Laticínios</a></li>
-								<li><a href="#">Bebidas</a></li>
-								<li><a href="#">Lanches</a></li>
-								<li><a href="#">Limpeza</a></li>
-								<li><a href="#">Macarrão e molhos</a></li>
-								<li><a href="#">Higiene</a></li>
-								<li><a href="#">Pets</a></li>
-							</ul>
-						</div>
-					</div>
+											
 					<div class="col-lg-3 col-md-6 col-sm-6">
 						<div class="second-row-item">
 							<h4>Links Úteis</h4>

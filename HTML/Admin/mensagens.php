@@ -76,6 +76,10 @@ include('php/dados_msg.php');
 								<div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Usuários
 							</a>
+							<a class="nav-link" href="mensagens.php">
+								<div class="sb-nav-link-icon"><i class="fas fa-envelope"></i></div>
+								Fale Conosco
+							</a>
 						
                         </div>
                     </div>

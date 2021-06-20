@@ -3,7 +3,12 @@
     include('conexao.php');
     session_start();
 
-    
+    function porcentagemDescontoedit($valorTotal, $valorCDesconto){
+			$valorDDesconto = $valorTotal - $valorCDesconto;
+			$porcentagemDesc = ($valorDDesconto * 100) / $valorTotal;
+
+			return round($porcentagemDesc);
+		}
     
     if(isset($_POST['p_nome'])){
 
@@ -26,6 +31,7 @@
     $pro_valor = $_POST['p_valor'];
     $pro_desconto = $_POST['p_desconto'];
     $pro_ativo = $_POST['p_status'];
+    $pro_porc_desconto = porcentagemDescontoedit($pro_valor,$pro_desconto);
  
     $query = "UPDATE produtos SET 
                 pro_nome = '$pro_nome', 
@@ -34,7 +40,8 @@
                 pro_valor = '$pro_valor', 
                 pro_desconto = '$pro_desconto', 
                 pro_ativo = '$pro_ativo', 
-                pro_img = '$pro_img' 
+                pro_img = '$pro_img',
+                pro_porc_desconto = '$pro_porc_desconto'
                 WHERE pro_id = '$pro_id'";
 
      $insert = mysqli_query($conexao,$query);
