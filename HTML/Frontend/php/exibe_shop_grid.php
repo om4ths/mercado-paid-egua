@@ -36,4 +36,12 @@ if(isset($_GET['pesquisar'])){
 
 }
 
+if(isset($_GET['destaque'])){
+	$select_pro_dec = "SELECT * FROM produtos WHERE pro_ativo = 1 order by pro_porc_desconto desc";   
+	$array_pro_dec = mysqli_query($conexao,$select_pro_dec);
+	while($r_prow_dec = mysqli_fetch_array($array_pro_dec)){
+		$r_produtos_cat[] = $r_prow_dec; 
+	}
+}
+
 ?>
