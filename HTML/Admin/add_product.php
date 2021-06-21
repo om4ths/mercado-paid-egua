@@ -168,7 +168,8 @@
 													</div>
 												</div>
 												<div class="add-cate-img-1">
-													<img src="images/product/img-11.jpg" alt="">
+												<img id="preview-img" src="" alt="">
+
 												</div>
 											</div>
 											
@@ -192,6 +193,8 @@
         </div>
 		
 		<!-- Javascripts -->
+		<script src="js/preview-img.js"></script>
+
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
