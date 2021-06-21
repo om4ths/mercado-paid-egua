@@ -982,11 +982,11 @@ i.icon1 {
     z-index: 999;
 }
 
-/* --- Category Model --- */
+/* --- Category Model 
 .main-gambo-model {
     background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), #ff0404);
     background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), #ff0404);
-}
+}--- */
 
 .category-area-inner .modal-header {
 	border-bottom: 0;

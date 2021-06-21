@@ -412,8 +412,7 @@
                                                 
                                             </ul>
                                             <ul class="ordr-crt-share">
-                                                <li><a type="submit" href="php/carrinho.php?acao=add&id=<?php echo $r_view_pro['pro_id']?>" class="add-cart-btn hover-btn"><i class="uil uil-shopping-cart-alt"></i>Adicionar ao Carrinho</a></li>
-                                                <li><button  href="checkout.php" class="order-btn hover-btn"  >Comprar Agora</button></li>
+                                                <li><button type="submit" href="php/carrinho.php?acao=add&id=<?php echo $r_view_pro['pro_id']?>" class="add-cart-btn hover-btn"><i class="uil uil-shopping-cart-alt"></i>Adicionar ao Carrinho</button></li>
                                             </ul>
                                         </div>
 
