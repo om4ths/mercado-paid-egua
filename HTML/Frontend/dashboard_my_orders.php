@@ -498,6 +498,11 @@ include("php/exibe_my_orders.php");
 													</div>
 												</div>
 											</div>
+											
+											<div class="call-bill">
+												<div class="delivery-man">
+													Entregador - <a href="contact_us.php"><i class="uil uil-phone"></i> Ligue para nós</a>
+												</div>
 
 											<div class="call-bill">
 												<div class="delivery-man">
