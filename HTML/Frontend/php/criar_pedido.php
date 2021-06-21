@@ -50,9 +50,10 @@ echo "<br><br><br>";
                         VALUES ( '$id_pedido', '$id_produto', '$id_cliente', '$quantidade', '$total_prod',  '$valor_total',  '$desconto',     '$pagamento',    '$data_entrega', '$hora_entrega')";
 
 
-    $insert = mysqli_query($conexao,$query);
+    //$insert = mysqli_query($conexao,$query);
 
     echo $query;
+    echo "<br><br><br>";
 
 endforeach;
 }else{
