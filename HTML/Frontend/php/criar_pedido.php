@@ -28,7 +28,6 @@ foreach($resultsCarts as $result) :
 echo "id_usuario: <br>".$id_cliente;
 echo "<br>id_endereco: <br>".$id_end;
 echo "<br>id_pedido: <br>".$id_pedido;
-echo "<br>Forma de Pagamento: <br>".$pagamento;
 echo "<br>Data de Entrega: <br>".$data_entrega;
 echo "<br>Hora da Entrega: <br>".$hora_entrega;
 echo "<br>Valor total: <br>".$valor_total;
@@ -43,17 +42,16 @@ echo "<br>Quantidade: <br>".$quantidade = $result['quantity'];
 echo "<br>Valor com desconto: <br>".$desconto = $result['discount'];
 echo "<br>Valor sem Desconto <br>".$result['price'];
 echo "<br><br><br>";
-echo "<br>Metodo de pagamento: <br>".$metodo_pagamento = 1;
-echo "<br>data da entrega <br>".$data_entrega = date ('d/m/Y');
-echo "<br>id_pedido: <br>".$hora_entrega = "cdfggd";
-
-    $query = "INSERT INTO pedidos (pedido_id,   produto_id ,   cliente_id ,   quantidade , total_produtos,  valor_predido ,   metodo_pagamento , data_entrega, hora_entrega)
-                        VALUES ( '$id_pedido', '$id_produto', '$id_cliente', '$quantidade', '$total_prod',   '$desconto',  '$metodo_pagamento', '$data_entrega', '$hora_entrega')";
+echo "<br>Metodo de pagamento: <br>".$pagamento;
 
 
-    $insert = mysqli_query($conexao,$query);
+    //$query = "INSERT INTO pedidos (pedido_id,   produto_id ,   cliente_id ,   quantidade , total_produtos,  valor_predido ,   metodo_pagamento , data_entrega, hora_entrega)
+                        //VALUES ( '$id_pedido', '$id_produto', '$id_cliente', '$quantidade', '$total_prod',   '$desconto',  '$pagamento', '$data_entrega', '$hora_entrega')";
 
-    echo $query;
+
+    //$insert = mysqli_query($conexao,$query);
+
+    //echo $query;
 
 endforeach;
 }else{
