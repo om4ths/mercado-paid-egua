@@ -32,8 +32,10 @@
 	}
 
 	$resultsCarts = getContentCart($pdoConnection);
+	$cont_itens = conta_produtos($pdoConnection);
 	$totalCarts  = getTotalCart($pdoConnection);
 	$totalCfrete  = getTotalfrete($pdoConnection);
 	$totaldesc  = getTotaldesc($pdoConnection);
+	$frete = getfrete($pdoConnection);
 
 ?>
