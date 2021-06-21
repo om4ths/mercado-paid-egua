@@ -54,6 +54,24 @@ function getContentCart($pdo) {
 	return $results;
 }
 
+function conta_produtos($pdo) {
+	
+	$cont_itens = 0;
+	$results = array();
+	
+	if($_SESSION['carrinho']) {
+		
+		$cart = $_SESSION['carrinho'];
+		$products =  getProductsByIds($pdo, implode(',', array_keys($cart)));
+
+		foreach($products as $product) {
+			$cont_itens = $cont_itens + 1;			
+		}
+	}
+	
+	return $cont_itens;
+}
+
 function getTotalCart($pdo) {
 	
 	$total = 0;
@@ -65,15 +83,36 @@ function getTotalCart($pdo) {
 }
 
 function getTotalfrete($pdo) {
-	$frete = 5;
+	$frete = 6;
 	$total = 0;
 
 	foreach(getContentCart($pdo) as $product) {
 		$total += $product['subtotal'];
-	} 
-	$total = $total + $frete;
-	return $total;
+	}
+	if($total >100){
+		$frete = 0;		
+		return $total;
+	}else{
+		$total = $total + $frete;
+		return $total;
+	}	
 }
+
+function getfrete($pdo) {
+	$frete = 6;
+	$total = 0;
+
+	foreach(getContentCart($pdo) as $product) {
+		$total += $product['subtotal'];
+	}
+	if($total >100){
+		$frete = 0;		
+		return $frete;
+	}else{		
+		return $frete;
+	}	
+}
+
 
 function getTotaldesc($pdo) {
 	$desc = 0;
