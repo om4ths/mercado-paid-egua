@@ -306,7 +306,6 @@
 											<a href="dashboard_overview.php" class="item channel_item page__links">Conta</a>
 											<a href="about_us.php" class="item channel_item page__links">Sobre nós</a>
 											<a href="checkout.php" class="item channel_item page__links">Finalizar Pedido</a>
-											<a href="order_placed.php" class="item channel_item page__links">Pedidos Finalizados</a>
 										</div>
 									</div>
 								</li>
