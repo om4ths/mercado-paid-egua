@@ -91,41 +91,7 @@ include('php/verificar_login.php');
                             
 
 						<div class="row justify-content-between">
-							<div class="col-lg-3 col-md-4">
-								<div class="bulk-section mb-30">
-									<div class="input-group">
-										<select id="action" name="action" class="form-control">
-											<option selected>Modificar em Massa</option>
-											<option value="1">Pendente</option>
-											<option value="2">Cancelar</option>
-											<option value="3">Processar</option>
-											<option value="4">Finalizar</option>
-											<option value="5">Deletar</option>
-										</select>
-										<div class="input-group-append">
-											<button class="status-btn hover-btn" type="submit">Aplicar</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-5 col-md-6">
-								<div class="bulk-section mb-30">
-									<div class="search-by-name-input">
-										<input type="text" class="form-control" placeholder="Pesquisar">
-									</div>
-									<div class="input-group">
-										<select id="categeory" name="categeory" class="form-control">
-											<option value="1">Pendente</option>
-											<option value="2">Cancelada</option>
-											<option value="3">Processada</option>
-											<option value="4">Finalizada</option>
-										</select>
-										<div class="input-group-append">
-											<button class="status-btn hover-btn" type="submit">Pesquisar Ordem</button>
-										</div>
-									</div>
-								</div>
-							</div>
+						
 							<div class="col-lg-12 col-md-12">
 								<div class="card card-static-2 mb-30">
 									<div class="card-title-2">
@@ -136,7 +102,6 @@ include('php/verificar_login.php');
 											<table class="table ucp-table table-hover">
 												<thead>
 													<tr>
-														<th style="width:60px"><input type="checkbox" class="check-all"></th>
 														<th style="width:130px">Order ID</th>
 														<th>Item</th>
 														<th style="width:200px">Data</th>
@@ -148,7 +113,6 @@ include('php/verificar_login.php');
 												</thead>
 												<tbody>
 													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="4"></td>
 														<td>ORDER12345</td>
 														<td>
 															<a href="#" target="_blank">Product Title Here</a>
@@ -168,7 +132,6 @@ include('php/verificar_login.php');
 														</td>
 													</tr>
 													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="3"></td>
 														<td>ORDER12346</td>
 														<td>
 															<a href="#" target="_blank">Product Title Here</a>
@@ -188,7 +151,6 @@ include('php/verificar_login.php');
 														</td>
 													</tr>
 													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="2"></td>
 														<td>ORDER12347</td>
 														<td>
 															<a href="#" target="_blank">Product Title Here</a>
@@ -208,7 +170,6 @@ include('php/verificar_login.php');
 														</td>
 													</tr>
 													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="1"></td>
 														<td>ORDER12348</td>
 														<td>
 															<a href="#" target="_blank">Product Title Here</a>

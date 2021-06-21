@@ -75,10 +75,6 @@
 									<a class="nav-link sub_nav_link" href="add_product.php">Adicionar Produtos</a>
 								</nav>
                             </div>
-<<<<<<< HEAD
-							
-=======
->>>>>>> f8e3f58b859791d7cd186e9e2d1b0a7560da467b
 							<a class="nav-link" href="customers.php">
 								<div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Usuários
