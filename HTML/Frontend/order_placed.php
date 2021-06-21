@@ -5,6 +5,8 @@
 <html lang="pt_BR">
 	<?php
 	include('php/dados_cliente.php');
+	include('php/func.php');
+	include('php/exibe_categoria_index.php');
 	?>
 
 <head>
@@ -38,44 +40,42 @@
 <body>
    <!-- modelo das categorias-->
    <div id="category_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
-	<div class="modal-dialog category-area" role="document">
-		<div class="category-area-inner">
-			<div class="modal-header">
-				<button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
-					<i class="uil uil-multiply"></i>
-				</button>
-			</div>
-			<div class="category-model-content modal-content">
-				<div class="cate-header">
-					<h4>Selecionar Categoria </h4>
+		<div class="modal-dialog category-area" role="document">
+			<div class="category-area-inner">
+				<div class="modal-header">
+					<button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+						<i class="uil uil-multiply"></i>
+					</button>
 				</div>
-				<ul class="category-by-cat">
-				<?php
-					if(isset($r_categoria))
-					{	
-						foreach($r_categoria as $key => $r_cat)
+				<div class="category-model-content modal-content">
+					<div class="cate-header">
+						<h4>Selecionar Categoria </h4>
+					</div>
+					<ul class="category-by-cat">
+					<?php
+						if(isset($r_categoria))
 						{	
-															
-						$caminhoCorretoImg = limpa_link($r_cat['cat_img']);
-															
-				?>
-					<li>
-						<a href="#" class="single-cat-item">
-							<div class="icon">
-								<?php echo "<img src=' ".$caminhoCorretoImg." ' alt='erro ao Carregar a imagem'>" ?>
-							</div>
-							<?php echo "<div class='text'>".$r_cat['cat_nome']."</div>" ?>
-						</a>
-					</li>
-				
-				<?php }}	?>
-						</a>
-					</li>
-				</ul>
+							foreach($r_categoria as $key => $r_cat)
+							{	
+					
+					?>
+						<li>
+							<?php echo "<a href='shop_grid.php?c_id=".$r_cat['cat_id']."' class='single-cat-item'>" ?>
+								<div class="icon">
+									<?php echo "<img src=' ".limpa_link($r_cat['cat_img'])." ' alt='erro ao Carregar a imagem'>" ?>
+								</div>
+								<?php echo "<div class='text'>".$r_cat['cat_nome']."</div>" ?>
+							</a>
+						</li>
+					
+					<?php }}	?>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 <!-- Categoria fim-->
 <!-- pesquisar produtos inicio-->
 <div id="search_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
