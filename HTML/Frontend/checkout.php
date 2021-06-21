@@ -393,6 +393,11 @@
 
 	<!-- Carrnho sidebar fim-->
 	<!-- Header Start -->
+    <?php
+		if(isset($_SESSION['msg_check'])){
+			echo $_SESSION['msg_check'];	
+			unset($_SESSION['msg_check']);											
+	}?>
 	<header class="header clearfix">
 		<div class="top-header-group">
 			<div class="top-header">
@@ -571,34 +576,34 @@
                                                                 <div class="col-lg-6 col-md-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label">CEP</label>
-                                                                       <?php if(isset($r_endereco['cep'])){ echo "<input  readonly type='tel' placeholder='' value='".$r_endereco['cep']."' class='form-control input-md'  required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md'  required=''>";};    ?>
+                                                                       <?php if(isset($r_endereco['cep'])){ echo "<input  readonly type='tel' placeholder='' value='".$r_endereco['cep']."' class='form-control input-md'  required=''>"; } else{ echo"<input  readonly type='tel' placeholder='' class='form-control input-md'  required=''>";};    ?>
                                                                     </div>
 																</div>
                                                                 <div class="col-lg-12 col-md-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label">Bairro</label>
-                                                                        <?php if(isset($r_endereco['bairro'])){ echo "<input  readonly type='tel' placeholder='' value='".$r_endereco['bairro']."' class='form-control input-md'  required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md' required=''>";};    ?>                                                                    </div>
+                                                                        <?php if(isset($r_endereco['bairro'])){ echo "<input  readonly type='tel' placeholder='' value='".$r_endereco['bairro']."' class='form-control input-md'  required=''>"; } else{ echo"<input  readonly type='tel' placeholder='' class='form-control input-md' required=''>";};    ?>                                                                    </div>
                                                                 </div>
 																<div class="col-lg-6 col-md-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label">Cidade</label>
-                                                                        <?php if(isset($r_endereco['cidade'])){ echo "<input  readonly type='tel' placeholder='' value='".$r_endereco['cidade']."' class='form-control input-md'  required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md'  required=''>";};    ?>                                                                    </div>
+                                                                        <?php if(isset($r_endereco['cidade'])){ echo "<input  readonly type='tel' placeholder='' value='".$r_endereco['cidade']."' class='form-control input-md'  required=''>"; } else{ echo"<input  readonly type='tel' placeholder='' class='form-control input-md'  required=''>";};    ?>                                                                    </div>
                                                                 </div>
                                                                 <div class="col-lg-12 col-md-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label">Rua / Avenida</label>
-                                                                        <?php if(isset($r_endereco['rua'])){echo "<input id='street'  readonly type='text' placeholder='' value='".$r_endereco['rua']."' class='form-control input-md'>";}else{echo "<input id='street' name='street' readonly type='text' placeholder=' ' class='form-control input-md'>";}?>
+                                                                        <?php if(isset($r_endereco['rua'])){echo "<input id='street'  readonly type='text' placeholder='' value='".$r_endereco['rua']."' class='form-control input-md'>";}else{echo "<input id='street'  readonly type='text' placeholder=' ' class='form-control input-md'>";}?>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label">Número</label>
-                                                                        <?php if(isset($r_endereco['numero'])){ echo "<input  readonly type='tel' placeholder='' value='".$r_endereco['numero']."' class='form-control input-md'  required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md'  required=''>";};    ?>                                                                    </div>
+                                                                        <?php if(isset($r_endereco['numero'])){ echo "<input  readonly type='tel' placeholder='' value='".$r_endereco['numero']."' class='form-control input-md'  required=''>"; } else{ echo"<input  readonly type='tel' placeholder='' class='form-control input-md'  required=''>";};    ?>                                                                    </div>
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label">Complemento / Ponto de Referência</label>
-                                                                        <?php if(isset($r_endereco['complemento'])){ echo "<input  readonly type='tel' placeholder='' value='".$r_endereco['complemento']."' class='form-control input-md' required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md' required=''>";};    ?>                                                                    </div>
+                                                                        <?php if(isset($r_endereco['complemento'])){ echo "<input  readonly type='tel' placeholder='' value='".$r_endereco['complemento']."' class='form-control input-md' required=''>"; } else{ echo"<input  readonly type='tel' placeholder='' class='form-control input-md' required=''>";};    ?>                                                                    </div>
                                                                 </div>
 
                                                                 <div class="col-lg-12 col-md-12">
