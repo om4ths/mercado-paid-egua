@@ -1,3 +1,9 @@
+<?php
+include('php/verificar_login.php');
+include('php/dados_pedidos.php');
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -91,62 +97,67 @@
 								<div class="card card-static-2 mb-30">
 									<div class="card-title-2">
 										<h2 class="title1458">Fatura</h2>
-										<span class="order-id">Ordem #ORDR-123456</span> 
+										<span class="order-id">Ordem:<?php echo $r_view_ped['pedido_id'] ?></span> 
 									</div>
 									<div class="invoice-content">
 										<div class="row">
 											<div class="col-lg-6 col-sm-6">
 												<div class="ordr-date">
-													<b>Data da Ordem:</b> 29 May 2020
+													<b>Data da Ordem:</b> <?php echo $r_view_ped['data_pedido'] ?>
 												</div>
 											</div>
 											<div class="col-lg-6 col-sm-6">
 												<div class="ordr-date right-text">
-													<b>Data da Ordem:</b><br>
-													#0000, St No. 8,<br>
-													Shahid Karnail Singh Nagar,<br>
-													MBD Mall,<br>
-													Frozpur road,<br>
-													Ludhiana,<br>
-													141001<br>
+													<b>Endereço:</b>
+													<?php  echo $r_view_end['tipo'],"<br>", $r_view_end['bairro'],"<br>",$r_view_end['rua'],",",$r_view_end['numero'],"<br>",$r_view_end['complemento'],	$r_view_end['cep'],"<br>",	$r_view_end['cidade']; ?> </td>
+										
 												</div>
 											</div>
 											<div class="col-lg-12">
 												<div class="card card-static-2 mb-30 mt-30">
 													<div class="card-title-2">
-														<h4>Ordens Recentes</h4>
+														<h4>Produtos</h4>
 													</div>
 													<div class="card-body-table">
 														<div class="table-responsive">
 															<table class="table ucp-table table-hover">
 																<thead>
 																	<tr>
-																		<th style="width:130px">#</th>
-																		<th>Item</th>
+																		<th style="width:130px">ID</th>
+																		<th>Nome</th>
 																		<th style="width:150px" class="text-center">Preço</th>
 																		<th style="width:150px" class="text-center">Qtd</th>
 																		<th style="width:100px" class="text-center">Total</th>
 																	</tr>
 																</thead>
 																<tbody>
+																<?php 
+														
+														if(isset($r_pro))
+														{	
+															foreach($r_pro as $key => $r_pro_ord)
+															{																			
+														?>
 																	<tr>
-																		<td>1</td>
+																	<?php  
+																		$id_pro = $r_pro_ord['produto_id']; 
+																		$select_view_end ="SELECT * FROM produtos WHERE pro_id='$id_pro'";
+																		$array_view_end = mysqli_query($conexao,$select_view_end);
+																		$r_view_prod = mysqli_fetch_array($array_view_end);													
+																		
+																	?>
+																		<td><?php echo $r_view_prod['pro_id'] ?></td>
 																		<td>
-																			<a href="#" target="_blank">Product Title Here</a>
+																			<?php echo $r_view_prod['pro_nome'] ?>
 																		</td>
 																		<td class="text-center">$15</td>
 																		<td class="text-center">1</td>
 																		<td class="text-center">$15</td>
-																	</tr>
-																	<tr>
-																		<td>2</td>
-																		<td>
-																			<a href="#" target="_blank">Product Title Here</a>
-																		</td>
-																		<td class="text-center">$12</td>
-																		<td class="text-center">1</td>
-																		<td class="text-center">$12</td>
-																	</tr>
+																	</tr>																	
+																	<?php
+															};
+														};
+													?>
 																</tbody>
 															</table>
 														</div>
