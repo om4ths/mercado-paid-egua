@@ -206,7 +206,8 @@ include('php/dados_pedidos.php');
 											<div class="col-lg-5">
 												<div class="select-status">
 													<label for="status">Status*</label>
-													<form action="POST" action="#">
+													<form method="GET" action="php/update_orders.php">
+													<input type="hidden"  name="id_pedido" value="<?php echo $r_view_ped['pedido_id']  ?>" > 
 													<div class="input-group">
 														<select id="status" name="status" class="custom-select">
 															<option name="status" value="Pendente">Pendente</option>
