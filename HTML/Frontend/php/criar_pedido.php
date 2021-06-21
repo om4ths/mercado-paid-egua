@@ -30,7 +30,7 @@ $data_entrega = implode('-', array_reverse(explode('/', $data_entrega)));
 $id_produto = $result['id'];
 $quantidade = $result['quantity'];
 $desconto = $result['discount'];
-$valor_p_s_desc= $result['discount2'];
+$valor_p_s_desc= $result['price'];
 
 
 
