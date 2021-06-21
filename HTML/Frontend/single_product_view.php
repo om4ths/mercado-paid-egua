@@ -107,64 +107,6 @@
 							<button type="submit"><i class="uil uil-search"></i></button>
 						</form>
 					</div>
-					<div class="search-by-cat">
-						<a href="#" class="single-cat">
-							<div class="icon">
-								<img src="images/category/icon-1.svg" alt="">
-							</div>
-							<div class="text">
-								Frutas e Vegetais
-							</div>
-						</a>
-						<a href="#" class="single-cat">
-							<div class="icon">
-								<img src="images/category/icon-2.svg" alt="">
-							</div>
-							<div class="text"> Alimentos Básicos </div>
-						</a>
-						<a href="#" class="single-cat">
-							<div class="icon">
-								<img src="images/category/icon-3.svg" alt="">
-							</div>
-							<div class="text"> Ovos e Laticínios </div>
-						</a>
-						<a href="#" class="single-cat">
-							<div class="icon">
-								<img src="images/category/icon-4.svg" alt="">
-							</div>
-							<div class="text"> Bebidas </div>
-						</a>
-						<a href="#" class="single-cat">
-							<div class="icon">
-								<img src="images/category/icon-5.svg" alt="">
-							</div>
-							<div class="text"> Lanches </div>
-						</a>
-						<a href="#" class="single-cat">
-							<div class="icon">
-								<img src="images/category/icon-6.svg" alt="">
-							</div>
-							<div class="text"> Limpeza </div>
-						</a>
-						<a href="#" class="single-cat">
-							<div class="icon">
-								<img src="images/category/icon-7.svg" alt="">
-							</div>
-							<div class="text"> Macarrão e molhos </div>
-						</a>
-						<a href="#" class="single-cat">
-							<div class="icon">
-								<img src="images/category/icon-8.svg" alt="">
-							</div>
-							<div class="text"> Higiene </div>
-						</a>
-						<a href="#" class="single-cat">
-							<div class="icon">
-								<img src="images/category/icon-9.svg" alt="">
-							</div>
-							<div class="text"> Pets </div>
-						</a>
-					</div>
 				</div>
 			</div>
 		</div>
