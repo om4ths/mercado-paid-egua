@@ -18,13 +18,13 @@
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript">
 	$(document).ready(function(){
-		$(p_valor).mask("999.999.990,00", {reverse: true})
+		$(p_valor).mask("999.999.990.00", {reverse: true})
 
 	})
 	</script>
 	<script type="text/javascript">
 	$(document).ready(function(){
-		$(p_desconto).mask("999.999.990,00", {reverse: true})
+		$(p_desconto).mask("999.999.990.00", {reverse: true})
 
 	})
 	</script>
