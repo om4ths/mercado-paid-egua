@@ -115,6 +115,11 @@
 									<div class="card-title-2">
 										<h4>Adicionar Novo Produto</h4>
 									</div>
+									<?php
+											if(isset($_SESSION['msg'])){
+												echo $_SESSION['msg'];	
+												unset($_SESSION['msg']);											
+											}?>
 									<div class="card-body-table">
 										<div class="news-content-right pd-20">
 										<form method="POST" action="php/add_produto.php" enctype="multipart/form-data"> <!--FORMULARIO-->

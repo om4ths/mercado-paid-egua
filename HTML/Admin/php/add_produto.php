@@ -2,6 +2,7 @@
 
     include('conexao.php');
 
+    
     function porcentagemDescontoadd($valorTotal, $valorCDesconto){
 			$valorDDesconto = $valorTotal - $valorCDesconto;
 			$porcentagemDesc = ($valorDDesconto * 100) / $valorTotal;
