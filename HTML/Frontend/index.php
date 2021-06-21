@@ -523,7 +523,7 @@
 										}
 										else{
 										?>
-										<?php echo "<div class='product-price'>R$".$r_pro_dec['pro_valor']."</div>"; }?>
+										<?php echo "<div class='product-price'>R$".formata_preco($r_pro_dec['pro_valor'])."</div>"; }?>
 
 										
 										<div class="qty-cart">
@@ -656,7 +656,7 @@
 										}
 										else{
 										?>
-										<?php echo "<div class='product-price'>R$".$r_pro['pro_valor']."</div>"; }?>
+										<?php echo "<div class='product-price'>R$".formata_preco($r_pro['pro_valor'])."</div>"; }?>
 
 
 										<div class="qty-cart">

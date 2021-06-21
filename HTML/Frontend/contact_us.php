@@ -407,7 +407,7 @@
                                 <div class="form-group mt-1">
                                     <div class="field">
                                         <label class="control-label">Mensagem*</label>
-                                        <textarea rows="2" class="form-control" id="sendermessage" name="msg" maxlength="500" required="" placeholder="Escreva Aqui"></textarea>
+                                        <textarea rows="2" class="form-control" id="sendermessage" name="msg" maxlength="500" required="" placeholder="Escreva Aqui"><br></textarea>
                                     </div>
                                 </div>
                                 <button class="next-btn16 hover-btn mt-3" type="submit" data-btntext-sending="Sending...">Enviar</button>

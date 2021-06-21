@@ -50,9 +50,10 @@ $query = "INSERT INTO pedidos (pedido_id,   produto_id ,   cliente_id ,   quanti
                     VALUES ( '$id_pedido', '$id_produto', '$id_cliente', '$quantidade', '$total_prod',  '$valor_total',  '$desconto',     '$pagamento',    '$data_entrega', '$hora_entrega')";
 
 
-    $insert = mysqli_query($conexao,$query);
+    //$insert = mysqli_query($conexao,$query);
 
     echo $query;
+    echo "<br><br><br>";
 
 endforeach;
 

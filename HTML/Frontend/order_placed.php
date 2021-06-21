@@ -410,25 +410,24 @@
                             <div class="delivery-address-bg">
                                 <div class="title585">
                                     <div class="pln-icon"><i class="uil uil-telegram-alt"></i></div>
-                                    <h4>Your order will be sent to this address</h4>
+                                    <h4>Seu pedido será enviado para esse endereço</h4>
                                 </div>
                                 <ul class="address-placed-dt1">
                                     <li>
-                                        <p><i class="uil uil-map-marker-alt"></i>Address :<span>#000, St 8, Sks Nagar, Near Pakhowal Road, Ldh, 141001</span></p>
+                                        <p><i class="uil uil-map-marker-alt"></i>Endereço :<span>#000, St 8, Sks Nagar, Near Pakhowal Road, Ldh, 141001</span></p>
                                     </li>
                                     <li>
-                                        <p><i class="uil uil-phone-alt"></i>Phone Number :<span>+919999999999</span></p>
+                                        <p><i class="uil uil-phone-alt"></i>Número de telefone :<span>+919999999999</span></p>
                                     </li>
                                     <li>
-                                        <p><i class="uil uil-envelope"></i>Email Address :<span>johndoe@example.com</span></p>
+                                        <p><i class="uil uil-envelope"></i>Endereço de e-mail :<span>johndoe@example.com</span></p>
                                     </li>
                                     <li>
                                         <p><i class="uil uil-card-atm"></i>Payment Method :<span><?php echo $r_view_pedido['metodo_pagamento'] ?></span></p>
                                     </li>
                                 </ul>
                                 <div class="stay-invoice">
-                                    <div class="st-hm">Stay Home<i class="uil uil-smile"></i></div>
-                                    <a href="#" class="invc-link hover-btn">invoice</a>
+                                    <div class="st-hm">Fique em casa<i class="uil uil-smile"></i></div>
                                 </div>
                                 <div class="placed-bottom-dt">
                                     The payment of <span>R$<?php echo 	number_format($r_view_pedido['valor_pedido'], 2, ',', '.') ?></span> you'll make when the deliver arrives with your order.
