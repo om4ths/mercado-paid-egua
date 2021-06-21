@@ -406,21 +406,21 @@
                         <div class="order-placed-dt">
                             <i class="uil uil-check-circle icon-circle"></i>
                             <h2>Pedido concluído com Sucesso #<?php echo $r_view_pedido['pedido_id'] ?></h2>
-                            <p>Obrigado pelo seu pedido! Será entregue:  <span>(Hoje, <?php echo $r_view_pedido['hora_entrega'] ?>)</span></p>
-                            <div class="delivery-address-bg">
+                            <p>Obrigado pelo seu pedido! Será entregue:  <span>(<?php echo $data_entrega = implode('/', array_reverse(explode('-', $r_view_pedido['data_entrega']))); ?>, <?php echo $r_view_pedido['hora_entrega'] ?>)</span></p>
+                            <div class="delivery-address-bg">      
                                 <div class="title585">
                                     <div class="pln-icon"><i class="uil uil-telegram-alt"></i></div>
-                                    <h4>Seu pedido será enviado para esse endereço</h4>
+                                    <h4>Seu pedido será enviado para esse endereço:</h4>
                                 </div>
                                 <ul class="address-placed-dt1">
                                     <li>
-                                        <p><i class="uil uil-map-marker-alt"></i>Endereço :<span>#000, St 8, Sks Nagar, Near Pakhowal Road, Ldh, 141001</span></p>
+                                        <p><i class="uil uil-map-marker-alt"></i>Endereço :<span><?php echo $r_view_end['tipo'] ?>, <?php echo $r_view_end['rua'] ?>, Nº <?php echo $r_view_end['numero'] ?> - <?php echo $r_view_end['bairro'] ?>, <?php echo $r_view_end['cidade'] ?>, PA</span></p>
                                     </li>
                                     <li>
-                                        <p><i class="uil uil-phone-alt"></i>Número de telefone :<span>+919999999999</span></p>
+                                        <p><i class="uil uil-phone-alt"></i>Número de telefone :<span><?php echo $view_telefone ?></span></p>
                                     </li>
                                     <li>
-                                        <p><i class="uil uil-envelope"></i>Endereço de e-mail :<span>johndoe@example.com</span></p>
+                                        <p><i class="uil uil-envelope"></i>Endereço de e-mail :<span><?php echo $resultado['email'] ?></span></p>
                                     </li>
                                     <li>
                                         <p><i class="uil uil-card-atm"></i>Método de pagamento :<span><?php echo $r_view_pedido['metodo_pagamento'] ?></span></p>
@@ -430,7 +430,7 @@
                                     <div class="st-hm">Fique em casa<i class="uil uil-smile"></i></div>
                                 </div>
                                 <div class="placed-bottom-dt">
-                                    O pagamento de <span>R$<?php echo 	number_format($r_view_pedido['valor_pedido'], 2, ',', '.') ?></span> será feito quando o entregador chegar com o seu pedido.
+                                    O pagamento de <span>R$<?php echo 	number_format($r_view_pedido['total_produtos'], 2, ',', '.') ?></span> será feito quando o entregador chegar com o seu pedido.
                                 </div>
                             </div>
                         </div>
