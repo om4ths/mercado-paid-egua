@@ -1331,7 +1331,7 @@ i.icon1 {
 }
 
 .cart-item {
-	display: block;
+	display: flex;
 	padding: 20px;
 	background: #fff;
 	border-bottom: 1px solid #efefef;

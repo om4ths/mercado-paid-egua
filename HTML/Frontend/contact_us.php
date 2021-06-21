@@ -377,7 +377,11 @@
 							}?>
                             <h2>Enviar solicitação de atendimento ao cliente</h2>
                             <p>Se você tiver alguma dúvida sobre nosso serviço ou tiver um problema a relatar, envie uma solicitação e entraremos em contato com você o mais breve possível.</p>
-                        </div>
+							<ul>
+							<li style="margin-top:6px;margin-bottom:7px;"><a href="#" class="callemail"><i class="uil uil-dialpad-alt"></i>(91)982832-2055</a></li>
+							<li style="margin-bottom:-20px;"><a href="#" class="callemail"><i class="uil uil-envelope-alt"></i>mercadopaidegua@gmail.com</a></li>
+						</ul>
+						</div>
                         <div class="contact-form">
                             <form method="POST" action="php/mensagem.php">
                                 <div class="form-group mt-1">
@@ -421,19 +425,7 @@
     <!-- Body End -->
     <!-- Footer Start -->
 	<footer class="footer">
-		<div class="footer-first-row">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-sm-6">
-						<ul class="call-email-alt">
-							<li><a href="#" class="callemail"><i class="uil uil-dialpad-alt"></i>(91)982832-2055</a></li>
-							<li><a href="#" class="callemail"><i class="uil uil-envelope-alt"></i>mercadopaidegua@gmail.com</a></li>
-						</ul>
-					</div>
-						
-				</div>
-			</div>
-		</div>
+		
 		<div class="footer-second-row">
 			<div class="container">
 				<div class="row-index">
