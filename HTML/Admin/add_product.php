@@ -1,6 +1,8 @@
 <?php 
 		include('php/exibe_categoria.php');
 		include('php/conexao.php');
+		include('php/add_produto.php');
+
 	?>
 
 <!DOCTYPE html>
@@ -14,14 +16,6 @@
 	<title>Mercado Pai D'égua - admin</title>
 	<link href="css/styles.css" rel="stylesheet">
 	<link href="css/admin-style.css" rel="stylesheet">
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
-
-
-	<script src="js/jquery-3.4.1.min.js"></script>
-
-
 
 	<!-- Vendor Stylesheets -->
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -139,7 +133,7 @@
 											</div>
 											<div class="form-group">
 												<label class="form-label">Preço*</label>
-												<input type="text" id="p_valor" class="form-control" name="p_valor" placeholder="R$0">
+												<input type="text" class="form-control" data-mask="000000000" name="p_valor" placeholder="R$0">
 											</div>
 											<div class="form-group">
 												<label class="form-label">Preço com desconto*</label>
@@ -155,7 +149,7 @@
 											<label class="form-label">Descrição*</label>
 												<div class="card card-editor">
 													<div class="content-editor">
-														<textarea name="p_desc" class="text-control" max-length="1500" placeholder="Insira a Descrição"></textarea>
+														<textarea name="p_desc" class="text-control" placeholder="Insira a Descrição"></textarea>
 													</div>
 												</div>
 											<div class="form-group">
@@ -196,6 +190,7 @@
 
 		<script src="js/preview-img.js"></script>
 
+        <script src="js/jquery-3.4.1.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
 		

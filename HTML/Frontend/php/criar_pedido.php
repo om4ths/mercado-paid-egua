@@ -41,8 +41,9 @@ echo "<br>Produto Nome: <br>".$result['name'];
 echo "<br>Quantidade: <br>".$quantidade = $result['quantity'];
 echo "<br>Valor com desconto: <br>".$desconto = $result['discount'];
 echo "<br>Valor sem Desconto <br>".$result['price'];
-echo "<br><br><br>";
+echo "<br>";
 echo "<br>Metodo de pagamento: <br>".$pagamento;
+echo "<br><br><br>";
 
 
     $query = "INSERT INTO pedidos (pedido_id,   produto_id ,   cliente_id ,   quantidade , total_produtos, valor_total_pro,  valor_pedido ,   metodo_pagamento , data_entrega, hora_entrega)

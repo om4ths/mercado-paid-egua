@@ -106,37 +106,7 @@
 							<div class="col-lg-12">
 								<a href="add_category.php" class="add-btn hover-btn">Adicionar Nova</a>
 							</div>
-							<div class="col-lg-3 col-md-4">
-								<div class="bulk-section mt-30">
-									<div class="input-group">
-										<select id="action" name="action" class="form-control">
-											<option selected>Modificar em Massa</option>
-											<option value="1">Ativa</option>
-											<option value="2">Inativa</option>
-											<option value="3">Deletar</option>
-										</select>
-										<div class="input-group-append">
-											<button class="status-btn hover-btn" type="submit">Aplicar</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-5 col-md-6">
-								<div class="bulk-section mt-30">
-									<div class="search-by-name-input">
-										<input type="text" class="form-control" placeholder="Pesquisar">
-									</div>
-									<div class="input-group">
-										<select id="categeory" name="categeory" class="form-control">
-											<option selected>Ativa</option>
-											<option value="1">Inativa</option>
-										</select>
-										<div class="input-group-append">
-											<button class="status-btn hover-btn" type="submit">Pesquisar Categoria</button>
-										</div>
-									</div>
-								</div>
-							</div>
+						
 							<div class="col-lg-12 col-md-12">
 								<div class="card card-static-2 mt-30 mb-30">
 									<div class="card-title-2">
@@ -147,7 +117,6 @@
 											<table class="table ucp-table table-hover">
 												<thead>
 													<tr>
-														<th style="width:60px"><input type="checkbox" class="check-all"></th>
 														<th style="width:60px">ID</th>
 														<th style="width:130px">Imagem</th>
 														<th>Nome</th>
@@ -168,7 +137,6 @@
 																
 														?>
 													<tr>
-														<td><input type="checkbox" class="check-item" name="ids[]" value="11"></td>
 														<?php echo "<td>".$r_cat['cat_id']."</td>" ?>
 														<td>
 															<div class="cate-img">
