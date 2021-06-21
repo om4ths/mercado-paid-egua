@@ -1,6 +1,7 @@
 ﻿<?php 
 include('php/verificar_login.php');
 include("php/carrinho.php");
+include("php/exibe_my_orders.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -393,7 +394,7 @@ include("php/carrinho.php");
 											
 															
 													</div>
-													
+
 											</div> 
 										</div>
 							<h4><?php echo$resultado['nome']?></h4>
@@ -421,10 +422,22 @@ include("php/carrinho.php");
 							<div class="row">
 								<div class="col-md-12">
 									<div class="main-title-tab">
-										<h4><i class="uil uil-box"></i>Minhas Ordens</h4>
+										<h4><i class="uil uil-box"></i>Meus Pedidos</h4>
 									</div>
 								</div>
 								<div class="col-lg-12 col-md-12">
+
+								<!-- EXIBIR PEDIDOS -->
+								
+								<?php
+									if(isset($r_pedidos))
+									{	
+										foreach($r_pedidos as $key => $r_ped)
+										{
+					
+									?>
+
+
 									<div class="pdpt-bg">
 										<div class="pdpt-title">
 											<h6>Prazo de entrega 10 de maio, 15h00 - 18h00</h6>
@@ -488,80 +501,21 @@ include("php/carrinho.php");
 											
 											<div class="call-bill">
 												<div class="delivery-man">
-													Entregador - <a href="#"><i class="uil uil-phone"></i> Ligue para nós</a>
+													Entregador - <a href="contact_us.php"><i class="uil uil-phone"></i> Ligue para nós</a>
 												</div>
 
-											</div>
-										</div>
-									</div>
-									<div class="pdpt-bg">
-										<div class="pdpt-title">
-											<h6>Prazo de entrega 10 de maio, 15h00 - 18h00</h6>
-										</div> 
-										<div class="order-body10">
-											<ul class="order-dtsll">
-												<li>
-													<div class="order-dt-img">
-														<img src="images/groceries.svg" alt="">
-													</div>
-												</li>
-												<li>
-													<div class="order-dt47">
-														<h4>Gambo - Ludhiana</h4>
-														<p>Entregue</p>
-														<div class="order-title">2 Items <span data-inverted="" data-tooltip="2kg broccoli, 1kg Apple" data-position="top center">?</span></div>
-													</div>
-												</li>
-											</ul>
-											<div class="total-dt">
-												<div class="total-checkout-group">
-													<div class="cart-total-dil">
-														<h4>Sub Total</h4>
-														<span>$25</span>
-													</div>
-													<div class="cart-total-dil pt-3">
-														<h4>Taxas de entrega</h4>
-														<span>Gratis</span>
-													</div>
-												</div>
-												<div class="main-total-cart">
-													<h2>Total</h2>
-													<span>$25</span>
-												</div>
-											</div>
-											<div class="track-order">
-												<h4>Acompanhar Pedido</h4>
-												<div class="bs-wizard" style="border-bottom:0;">   
-													<div class="bs-wizard-step complete">
-														<div class="text-center bs-wizard-stepnum">Colocado</div>
-														<div class="progress"><div class="progress-bar"></div></div>
-														<a href="#" class="bs-wizard-dot"></a>
-													</div>
-													<div class="bs-wizard-step complete"><!-- complete -->
-														<div class="text-center bs-wizard-stepnum">Embalado</div>
-														<div class="progress"><div class="progress-bar"></div></div>
-														<a href="#" class="bs-wizard-dot"></a>
-													</div>
-													<div class="bs-wizard-step complete"><!-- complete -->
-														<div class="text-center bs-wizard-stepnum">A caminho</div>
-														<div class="progress"><div class="progress-bar"></div></div>
-														<a href="#" class="bs-wizard-dot"></a>
-													</div>
-													<div class="bs-wizard-step complete"><!-- complete -->
-														<div class="text-center bs-wizard-stepnum">Entregue</div>
-														<div class="progress"><div class="progress-bar"></div></div>
-														<a href="#" class="bs-wizard-dot"></a>
-													</div>
-												</div>
-											</div>
 											<div class="call-bill">
 												<div class="delivery-man">
-													<a href="#"><i class="uil uil-rss"></i>Comentários</a>
+													Entregador - <a href="#"><i class="uil uil-phone"></i> Ligue para nós</a>
 												</div>
-												
 											</div>
+
 										</div>
 									</div>
+
+									<?php }} ?>
+
+								<!-- FIM EXIBIR PEDIDOS -->
 								</div>								
 							</div>
 						</div>
