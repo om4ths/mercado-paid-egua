@@ -463,19 +463,36 @@ include('php/dados_cliente.php');
 											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
 										</ul>
 									</div>
+								</div>
 									<div class="item">
 									<div class="team-item">
 										<div class="team-img">
 											<img src="images/team/charles.jpg" alt="">
 										</div>
-										<h4>Charle Correa</h4>
+										<h4>Charles Correa</h4>
 										<span>Dev Frontend</span>
 										<ul class="team-social">
 											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
 											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
 										</ul>
+										</div>
 									</div>
-								</div>
+									<div class="item">
+									<div class="team-item">
+										<div class="team-img">
+											<img src="images/team/iago.jpg" alt="">
+										</div>
+										<h4>Iago Davi</h4>
+										<span>Dev Frontend</span>
+										<ul class="team-social">
+											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
+											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
+										</ul>
+										</div>
+									</div>
+
+									<!--COLOCAR AQUI O PRÓXIMO -->
+
 								</div>
 								
 							</div>
@@ -489,7 +506,7 @@ include('php/dados_cliente.php');
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="default-title">
-							<h2>Como faço para solicitar?</h2>
+							<h2>Como faço para fazer um pedido?</h2>
 							<img src="images/line.svg" alt="">
 						</div>
 					</div>
@@ -522,7 +539,7 @@ include('php/dados_cliente.php');
 							<div class="how-order-icon">
 								<i class="fas fa-hand-holding-usd"></i>
 							</div>
-							<h4>Selecione a opção de pagamento adequada (Dinheiro, Master, Cartão de Crédito, Pix).</h4>
+							<h4>Selecione a forma de pagamento (Dinheiro ou Cartão de Crédito/Débito na hora).</h4>
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-6">

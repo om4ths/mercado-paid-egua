@@ -378,26 +378,7 @@
                                             <?php echo "<p class='pd-no'>Cód.<span>".$r_view_pro['pro_id']."</span></p>" ?>
                                             <p class="stock-qty">Acessível<span>(Em Estoque)</span></p>
                                         </div>
-                                        <div class="product-radio">
-                                            <ul class="product-now">
-                                                <li>
-                                                    <input type="radio" id="p1" name="product1">
-                                                    <label for="p1">500g</label>
-                                                </li>
-                                                <li>
-                                                    <input type="radio" id="p2" name="product1">
-                                                    <label for="p2">1kg</label>
-                                                </li>
-                                                <li>
-                                                    <input type="radio" id="p3" name="product1">
-                                                    <label for="p3">2kg</label>
-                                                </li>
-                                                <li>
-                                                    <input type="radio" id="p4" name="product1">
-                                                    <label for="p4">3kg</label>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        
                                         <?php echo "<p class='pp-descp'>".$r_view_pro['pro_desc']."</p>" ?>
                                         <div class="product-group-dt">
                                             <ul>
@@ -417,6 +398,7 @@
                                             <?php } ?>
 
                                             </ul>
+											
                                             <ul class="gty-wish-share">
                                                 <li>
                                                     <div class="qty-product">
@@ -430,8 +412,8 @@
                                                 
                                             </ul>
                                             <ul class="ordr-crt-share">
-                                                <li><button class="add-cart-btn hover-btn"><i class="uil uil-shopping-cart-alt"></i>Adicionar ao Carrinho</button></li>
-                                                <li><a  class="order-btn hover-btn" href="php/carrinho.php?acao=add&id=<?php echo $r_view_pro['pro_id']?>" >Comprar Agora</a></li>
+                                                <li><a type="submit" href="php/carrinho.php?acao=add&id=<?php echo $r_view_pro['pro_id']?>" class="add-cart-btn hover-btn"><i class="uil uil-shopping-cart-alt"></i>Adicionar ao Carrinho</a></li>
+                                                <li><button  href="checkout.php" class="order-btn hover-btn"  >Comprar Agora</button></li>
                                             </ul>
                                         </div>
 
@@ -458,17 +440,12 @@
                                     <?php echo "<a href='single_product_view.php?p_id=".$r_pro_cat['pro_id']."' class='cart-product-img'>" ?>
                                         <?php echo "<img src=' ".limpa_link($r_pro_cat['pro_img'])." ' alt='Erro ao carregar a imagem'>" ?>
                                         <?php if(porcentagemDesconto($r_pro_cat['pro_valor'], $r_pro_cat['pro_desconto']) != 0 and porcentagemDesconto($r_pro_cat['pro_valor'], $r_pro_cat['pro_desconto']) != 100) { ?>
-                                        <?php echo "<div class='offer-badge'>".porcentagemDesconto($r_pro_cat['pro_valor'], $r_pro_cat['pro_desconto'])."% OFF</div>" ?>
                                         <?php } ?>
                                     </a>
                                     <div class="cart-text">
                                         <?php echo "<h4>".$r_pro_cat['pro_nome']."</h4>" ?>
                                         <div class="qty-group">
-                                            <div class="quantity buttons_added">
-                                                <input type="button" value="-" class="minus minus-btn">
-                                                <input type="number" step="1" name="quantity" value="1" class="input-text qty text">
-                                                <input type="button" value="+" class="plus plus-btn">
-                                            </div>
+                                            
                                             <?php if($r_pro_cat['pro_desconto'] != $r_pro_cat['pro_valor'] and $r_pro_cat['pro_desconto'] != 0){?>
                                             <?php echo "<div class='cart-item-price'>R$".formata_preco($r_pro_cat['pro_desconto'])."<span>R$".formata_preco($r_pro_cat['pro_valor'])."</span></div>" ?>
                                             <?php 
