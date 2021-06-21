@@ -583,7 +583,7 @@
 											</div>
 											<input type="hidden" name="acao" value="add"></input>
 											<input type="hidden" name="id" value="<?php echo $r_pro_dec['pro_id']?>"></input>
-											<button type="submit" class="cart-icon" ><i class="uil uil-shopping-cart-alt"></i></button>
+											<button type="submit" class="cart-icon" style="display:contents;" ><i class="uil uil-shopping-cart-alt"></i></button>
 											</form>
 											<!--<a class="cart-icon" href="php/carrinho.php?acao=add&id=<?php // echo $r_pro_dec['pro_id']?>"><i class="uil uil-shopping-cart-alt"></i></a> -->
 										</div>
@@ -599,7 +599,7 @@
 		</div>
 		<!-- Featured Products End -->
 		<!-- Best Values Offers Start -->
-		<div class="section145">
+		<!--<div class="section145">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -611,13 +611,13 @@
 						</div>
 					</div>
 
-					<!--
+				
 					<div class="col-lg-4 col-md-6">
 						<a href="#" class="best-offer-item">
 							<img src="images/best-offers/offer-2.jpg" alt="">
 						</a>
 					</div>
-					-->
+					
 					<?php
 							if(isset($r_oferta))
 								{	
@@ -646,7 +646,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- Best Values Offers End -->
+		 Fim das OFERTAS -->
 		
 		<!-- New Products Start -->
 		<div class="section145">
@@ -709,12 +709,19 @@
 
 
 										<div class="qty-cart">
+										<form action="php/carrinho.php" method="GET">
 											<div class="quantity buttons_added">
-												<input type="button" value="-" class="minus minus-btn">
-												<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
+											<input type="button" value="-" class="minus minus-btn">
+												<input type="number" step="1" name="quant" value="1" class="input-text qty text">
 												<input type="button" value="+" class="plus plus-btn">
 											</div>
+											<input type="hidden" name="acao" value="add"></input>
+											<input type="hidden" name="id" value="<?php echo $r_pro_dec['pro_id']?>"></input>
+											<button type="submit" class="cart-icon" style="display:contents;" ><i class="uil uil-shopping-cart-alt"></i></button>
+											</form>
+											<!--	
 											<a href="php/carrinho.php?acao=add&id=<?php echo $r_pro['pro_id']?>&page=single" class="cart-icon"><i class="uil uil-shopping-cart-alt"></i></a>
+										-->
 										</div>
 									</div>
 								</div>

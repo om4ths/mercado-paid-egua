@@ -415,7 +415,7 @@
 							
                             <div class="panel panel-default"> 
 							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7928190146126!2d-47.96110484900037!3d-1.2990877468274429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a5af28516e1437%3A0xc8f0b1aa6951d4e6!2sEst%C3%A1cio%20Castanhal!5e0!3m2!1spt-BR!2sbr!4v1624164613091!5m2!1spt-BR!2sbr"
-								 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+								 width="570" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                             </div>
                         </div>
                     </div>
@@ -435,7 +435,7 @@
                                     <label class="control-label">Nome Completo*</label>
                                     <div class="ui search focus">
                                         <div class="ui left icon input swdh11 swdh19">
-                                            <input class="prompt srch_explore" type="text" name="nome" id="sendername" required="" placeholder="Seu Nome Completo">
+                                            <input class="prompt srch_explore" type="text" name="nome" id="sendername" maxlength="100" required="" placeholder="Seu Nome Completo">
                                         </div>
                                     </div>
                                 </div>
@@ -443,7 +443,7 @@
                                     <label class="control-label">E-mail*</label>
                                     <div class="ui search focus">
                                         <div class="ui left icon input swdh11 swdh19">
-                                            <input class="prompt srch_explore" type="email" name="email" id="emailaddress" required="" placeholder="Seu E-mail">
+                                            <input class="prompt srch_explore" type="email" name="email" id="emailaddress" maxlength="100" required="" placeholder="Seu E-mail">
                                         </div>
                                     </div>
                                 </div>
@@ -451,14 +451,14 @@
                                     <label class="control-label">Assunto*</label>
                                     <div class="ui search focus">
                                         <div class="ui left icon input swdh11 swdh19">
-                                            <input class="prompt srch_explore" type="text" name="assunto" id="sendersubject" required="" placeholder="Assunto de E-mail">
+                                            <input class="prompt srch_explore" type="text" name="assunto" id="sendersubject" maxlength="30" required="" placeholder="Assunto de E-mail">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group mt-1">
                                     <div class="field">
                                         <label class="control-label">Mensagem*</label>
-                                        <textarea rows="2" class="form-control" id="sendermessage" name="msg" required="" placeholder="Escreva Aqui"></textarea>
+                                        <textarea rows="2" class="form-control" id="sendermessage" name="msg" maxlength="500" required="" placeholder="Escreva Aqui"></textarea>
                                     </div>
                                 </div>
                                 <button class="next-btn16 hover-btn mt-3" type="submit" data-btntext-sending="Sending...">Enviar</button>

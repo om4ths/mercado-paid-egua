@@ -1479,6 +1479,7 @@ i.icon1 {
 }
 
 .quantity.buttons_added {
+    padding-right: 70px;
 	 text-align: left;
 	 position: relative;
 	 white-space: nowrap;
