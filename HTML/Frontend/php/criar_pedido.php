@@ -45,13 +45,13 @@ echo "<br><br><br>";
 echo "<br>Metodo de pagamento: <br>".$pagamento;
 
 
-    //$query = "INSERT INTO pedidos (pedido_id,   produto_id ,   cliente_id ,   quantidade , total_produtos,  valor_predido ,   metodo_pagamento , data_entrega, hora_entrega)
-                        //VALUES ( '$id_pedido', '$id_produto', '$id_cliente', '$quantidade', '$total_prod',   '$desconto',  '$pagamento', '$data_entrega', '$hora_entrega')";
+    $query = "INSERT INTO pedidos (pedido_id,   produto_id ,   cliente_id ,   quantidade , total_produtos, valor_total_pro,  valor_pedido ,   metodo_pagamento , data_entrega, hora_entrega)
+                        VALUES ( '$id_pedido', '$id_produto', '$id_cliente', '$quantidade', '$total_prod',  '$valor_total',  '$desconto',     '$pagamento',    '$data_entrega', '$hora_entrega')";
 
 
-    //$insert = mysqli_query($conexao,$query);
+    $insert = mysqli_query($conexao,$query);
 
-    //echo $query;
+    echo $query;
 
 endforeach;
 }else{
