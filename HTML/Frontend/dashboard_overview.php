@@ -230,7 +230,7 @@ include("php/carrinho.php");
 				</div>
 				<div class="main_logo" id="logo">
 					<a href="index.php"><img src="images/logo.png" alt=""></a>
-					<a href="indexphp"><img class="logo-inverse" src="images/dark-logo.png" alt=""></a>
+					<a href="index.php"><img class="logo-inverse" src="images/dark-logo.png" alt=""></a>
 				</div>
 				<div class="select_location">
 					<div class="ui inline dropdown loc-title">

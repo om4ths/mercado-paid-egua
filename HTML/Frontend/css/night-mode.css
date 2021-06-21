@@ -688,6 +688,25 @@ Night Mood
     background: #333;
     box-shadow: 0 1px 2px 0 #242424;
 }
+.night-mode .card-body-table{
+    background: #333;
+    box-shadow: 0 1px 2px 0 #242424;
+
+}
+
+.night-mode .left-dt{
+    color:white;
+
+}
+.night-mode .right-dt{
+    color:white;
+}
+.night-mode .shopowner-dts {
+    border: 1px solid #242424;
+}
+.night-mode .shopowner-dt-list {
+    border-bottom:1px solid #242424;
+}
 
 .night-mode .custom-control-label {
     color: #fff !important;
