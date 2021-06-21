@@ -1,6 +1,7 @@
 ﻿<?php
 	include('php/verificar_login.php');
 	include("php/carrinho.php");
+	include('php/exibe_pedidos.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt_BR">
@@ -404,8 +405,8 @@
                     <div class="col-lg-6 col-md-8">
                         <div class="order-placed-dt">
                             <i class="uil uil-check-circle icon-circle"></i>
-                            <h2>Order Successfully Placed</h2>
-                            <p>Thank you for your order! will received order timing - <span>(Today, 3.00PM - 5.00PM)</span></p>
+                            <h2>Order Successfully Placed #<?php echo $r_view_pedido['pedido_id'] ?></h2>
+                            <p>Thank you for your order! will received order timing - <span>(Today, <?php echo $r_view_pedido['hora_entrega'] ?>)</span></p>
                             <div class="delivery-address-bg">
                                 <div class="title585">
                                     <div class="pln-icon"><i class="uil uil-telegram-alt"></i></div>
@@ -422,7 +423,7 @@
                                         <p><i class="uil uil-envelope"></i>Email Address :<span>johndoe@example.com</span></p>
                                     </li>
                                     <li>
-                                        <p><i class="uil uil-card-atm"></i>Payment Method :<span>Cash on Delivery</span></p>
+                                        <p><i class="uil uil-card-atm"></i>Payment Method :<span><?php echo $r_view_pedido['metodo_pagamento'] ?></span></p>
                                     </li>
                                 </ul>
                                 <div class="stay-invoice">
@@ -430,7 +431,7 @@
                                     <a href="#" class="invc-link hover-btn">invoice</a>
                                 </div>
                                 <div class="placed-bottom-dt">
-                                    The payment of <span>$16</span> you'll make when the deliver arrives with your order.
+                                    The payment of <span>R$<?php echo 	number_format($r_view_pedido['valor_pedido'], 2, ',', '.') ?></span> you'll make when the deliver arrives with your order.
                                 </div>
                             </div>
                         </div>
