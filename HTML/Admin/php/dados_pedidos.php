@@ -23,16 +23,20 @@
 		$select_view_cli = "SELECT * FROM endereco WHERE id = '$view_id'  ";   
 		$array_view_cli = mysqli_query($conexao,$select_view_cli);
 		$r_view_end = mysqli_fetch_array($array_view_cli);
-		}
-
-
-
+		
 		$select_cli = "SELECT * FROM pedidos WHERE pedido_id='$view_id_p' ";   
 		$array_cli = mysqli_query($conexao,$select_cli);		
 		while($r_cliw = mysqli_fetch_array($array_cli)){
 			$r_pro[] = $r_cliw;
 
 		}
+	
+	
+		}
+
+
+
+		
 
 
 

@@ -1,3 +1,8 @@
+<?php
+include('php/verificar_login.php');
+include('php/dados_pedidos.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,69 +89,85 @@
                         <h2 class="mt-30 page-title">Ordens</h2>
                         <ol class="breadcrumb mb-30">
                             <li class="breadcrumb-item"><a href="index.php">Painel</a></li>
-                            <li class="breadcrumb-item active">Editar Ordem</li>
+                            <li class="breadcrumb-item active">Visualizar Ordem</li>
                         </ol>
                         <div class="row">
 							<div class="col-xl-12 col-md-12">
 								<div class="card card-static-2 mb-30">
 									<div class="card-title-2">
-										<h2 class="title1458">Fatura</h2>
-										<span class="order-id">Ordem #ORDR-123456</span> 
+										<h2 class="title1458">PEDIDO</h2>
+										<span class="order-id">COD:<?php echo $r_view_ped['pedido_id'] ?></span> 
 									</div>
 									<div class="invoice-content">
 										<div class="row">
 											<div class="col-lg-6 col-sm-6">
 												<div class="ordr-date">
-													<b>Data da Ordem:</b> 29 May 2020
+													<b>Data do Pedido:</b> <?php echo $r_view_ped['data_pedido'] ?>
 												</div>
 											</div>
 											<div class="col-lg-6 col-sm-6">
 												<div class="ordr-date right-text">
-													<b>Order Date :</b><br>
-													#0000, St No. 8,<br>
-													Shahid Karnail Singh Nagar,<br>
-													MBD Mall,<br>
-													Frozpur road,<br>
-													Ludhiana,<br>
-													141001<br>
+													<b>Endereço:</b>
+													<?php  echo $r_view_end['tipo'],"<br>", $r_view_end['bairro'],"<br>",$r_view_end['rua'],", ",$r_view_end['numero'],"<br>",$r_view_end['complemento'],	$r_view_end['cep'],"<br>",	$r_view_end['cidade']; ?> </td>
+										
 												</div>
 											</div>
 											<div class="col-lg-12">
 												<div class="card card-static-2 mb-30 mt-30">
 													<div class="card-title-2">
-														<h4>Ordens Recentes</h4>
+														<h4>Produtos</h4>
 													</div>
 													<div class="card-body-table">
 														<div class="table-responsive">
 															<table class="table ucp-table table-hover">
 																<thead>
 																	<tr>
-																		<th style="width:130px">#</th>
-																		<th>Item</th>
-																		<th style="width:150px" class="text-center">Preços</th>
-																		<th style="width:150px" class="text-center">Qtd</th>
-																		<th style="width:100px" class="text-center">Total</th>
+																		<th>ID</th>
+																		<th>Nome</th>
+																		<th>Qtd</th>
+																		<th>Preço Unit S/Desconto</th>
+																		<th>Preço Unit C/Desconto</th>																		
+																		<th>Total</th>
 																	</tr>
 																</thead>
 																<tbody>
+																<?php 
+														
+														if(isset($r_pro))
+														{	
+															foreach($r_pro as $key => $r_pro_ord)
+															{																			
+														?>
 																	<tr>
-																		<td>1</td>
+																	<?php  
+																		$id_pro = $r_pro_ord['produto_id']; 
+																		$select_view_end ="SELECT * FROM produtos WHERE pro_id='$id_pro'";
+																		$array_view_end = mysqli_query($conexao,$select_view_end);
+																		$r_view_prod = mysqli_fetch_array($array_view_end);													
+																		
+
+																	?>
+																		<td><?php echo $r_view_prod['pro_id'] ?></td>
 																		<td>
-																			<a href="#" target="_blank">Product Title Here</a>
+																			<?php echo $r_view_prod['pro_nome'] ?>
 																		</td>
-																		<td class="text-center">$15</td>
-																		<td class="text-center">1</td>
-																		<td class="text-center">$15</td>
-																	</tr>
-																	<tr>
-																		<td>2</td>
 																		<td>
-																			<a href="#" target="_blank">Product Title Here</a>
+																			<?php echo $r_pro_ord['quantidade'] ?>
 																		</td>
-																		<td class="text-center">$12</td>
-																		<td class="text-center">1</td>
-																		<td class="text-center">$12</td>
-																	</tr>
+																		<td>
+																			<?php echo $r_pro_ord['valor_sem_desconto']  ?>
+																		</td>
+																		<td>
+																			<?php echo $r_pro_ord['valor_pedido']  ?>
+																		</td>
+																		<td>
+																			<?php echo $r_pro_ord['quantidade'] * $r_pro_ord['valor_pedido'] ?>
+																		</td>
+																	</tr>																	
+																	<?php
+															};
+														};
+													?>
 																</tbody>
 															</table>
 														</div>
@@ -160,7 +181,7 @@
 														Sub Total
 													</div>
 													<div class="order-total-right-text">
-														$27
+													<?php echo $r_view_ped['total_produtos'] - $r_view_ped['valor_frete'] ?>
 													</div>
 												</div>
 												<div class="order-total-dt">
@@ -168,7 +189,7 @@
 														Taxas de Entrega
 													</div>
 													<div class="order-total-right-text">
-														$0
+													<?php echo $r_view_ped['valor_frete'] ?>
 													</div>
 												</div>
 												<div class="order-total-dt">
@@ -176,7 +197,8 @@
 														Total
 													</div>
 													<div class="order-total-right-text fsz-18">
-														$27
+													<?php echo $r_view_ped['total_produtos'] + $r_view_ped['valor_frete'] ?>
+
 													</div>
 												</div>
 											</div>
@@ -184,16 +206,18 @@
 											<div class="col-lg-5">
 												<div class="select-status">
 													<label for="status">Status*</label>
+													<form action="POST" action="#">
 													<div class="input-group">
 														<select id="status" name="status" class="custom-select">
-															<option selected>Pendente</option>
-															<option value="1">Cancelada</option>
-															<option value="2">Processada</option>
-															<option value="3">Completeda</option>
+															<option name="status" value="Pendente">Pendente</option>
+															<option name="status" value="Separação">Separação</option>
+															<option name="status" value="Saindo para Entrega">Saindo para Entrega</option>
+															<option name="status" value="Finalizada">Finalizada</option>
 														</select>
 														<div class="input-group-append">
 															<button class="status-btn hover-btn" type="submit">Enviar</button>
 														</div>
+													</form>	
 													</div>
 												</div>
 											</div>

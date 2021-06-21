@@ -96,20 +96,20 @@ include('php/dados_pedidos.php');
 							<div class="col-xl-12 col-md-12">
 								<div class="card card-static-2 mb-30">
 									<div class="card-title-2">
-										<h2 class="title1458">Fatura</h2>
-										<span class="order-id">Ordem:<?php echo $r_view_ped['pedido_id'] ?></span> 
+										<h2 class="title1458">PEDIDO</h2>
+										<span class="order-id">COD:<?php echo $r_view_ped['pedido_id'] ?></span> 
 									</div>
 									<div class="invoice-content">
 										<div class="row">
 											<div class="col-lg-6 col-sm-6">
 												<div class="ordr-date">
-													<b>Data da Ordem:</b> <?php echo $r_view_ped['data_pedido'] ?>
+													<b>Data do Pedido:</b> <?php echo $r_view_ped['data_pedido'] ?>
 												</div>
 											</div>
 											<div class="col-lg-6 col-sm-6">
 												<div class="ordr-date right-text">
 													<b>Endereço:</b>
-													<?php  echo $r_view_end['tipo'],"<br>", $r_view_end['bairro'],"<br>",$r_view_end['rua'],",",$r_view_end['numero'],"<br>",$r_view_end['complemento'],	$r_view_end['cep'],"<br>",	$r_view_end['cidade']; ?> </td>
+													<?php  echo $r_view_end['tipo'],"<br>", $r_view_end['bairro'],"<br>",$r_view_end['rua'],", ",$r_view_end['numero'],"<br>",$r_view_end['complemento'],	$r_view_end['cep'],"<br>",	$r_view_end['cidade']; ?> </td>
 										
 												</div>
 											</div>
@@ -123,11 +123,12 @@ include('php/dados_pedidos.php');
 															<table class="table ucp-table table-hover">
 																<thead>
 																	<tr>
-																		<th style="width:130px">ID</th>
+																		<th>ID</th>
 																		<th>Nome</th>
-																		<th style="width:150px" class="text-center">Preço</th>
-																		<th style="width:150px" class="text-center">Qtd</th>
-																		<th style="width:100px" class="text-center">Total</th>
+																		<th>Qtd</th>
+																		<th>Preço Unit S/Desconto</th>
+																		<th>Preço Unit C/Desconto</th>																		
+																		<th>Total</th>
 																	</tr>
 																</thead>
 																<tbody>
@@ -145,14 +146,24 @@ include('php/dados_pedidos.php');
 																		$array_view_end = mysqli_query($conexao,$select_view_end);
 																		$r_view_prod = mysqli_fetch_array($array_view_end);													
 																		
+
 																	?>
 																		<td><?php echo $r_view_prod['pro_id'] ?></td>
 																		<td>
 																			<?php echo $r_view_prod['pro_nome'] ?>
 																		</td>
-																		<td class="text-center">$15</td>
-																		<td class="text-center">1</td>
-																		<td class="text-center">$15</td>
+																		<td>
+																			<?php echo $r_pro_ord['quantidade'] ?>
+																		</td>
+																		<td>
+																			<?php echo $r_pro_ord['valor_sem_desconto']  ?>
+																		</td>
+																		<td>
+																			<?php echo $r_pro_ord['valor_pedido']  ?>
+																		</td>
+																		<td>
+																			<?php echo $r_pro_ord['quantidade'] * $r_pro_ord['valor_pedido'] ?>
+																		</td>
 																	</tr>																	
 																	<?php
 															};
@@ -171,7 +182,7 @@ include('php/dados_pedidos.php');
 														Sub Total
 													</div>
 													<div class="order-total-right-text">
-														$27
+													<?php echo $r_view_ped['total_produtos'] - $r_view_ped['valor_frete'] ?>
 													</div>
 												</div>
 												<div class="order-total-dt">
@@ -179,24 +190,25 @@ include('php/dados_pedidos.php');
 														Taxas de Entrega
 													</div>
 													<div class="order-total-right-text">
-														$0
+													<?php echo $r_view_ped['valor_frete'] ?>
 													</div>
 												</div>
 												<div class="order-total-dt">
 													<div class="order-total-left-text fsz-18">
-														Total=
+														Total
 													</div>
 													<div class="order-total-right-text fsz-18">
-														$27
+													<?php echo $r_view_ped['total_produtos'] + $r_view_ped['valor_frete'] ?>
+
 													</div>
 												</div>
 											</div>
 											<div class="col-lg-7"></div>
 											<div class="col-lg-5">
 												<div class="select-status">
-													<label for="status">Status*</label>
+													<label for="status">Status</label>
 													<div class="status-active">
-														Pendente
+													<?php echo $r_view_ped['ped_status']?>
 													</div>
 												</div>
 											</div>
