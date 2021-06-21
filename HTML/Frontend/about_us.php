@@ -284,7 +284,7 @@ include('php/dados_cliente.php');
 						<button class="navbar-toggler menu_toggle_btn" type="button" data-target="#navbarSupportedContent"><i class="uil uil-bars"></i></button>
 						<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
 							<ul class="navbar-nav main_nav align-self-stretch">
-								<li class="nav-item"><a href="index.php" class="nav-link" title="Home">Início</a></li>
+								<li class="nav-item"><a href="index.php" class="nav-link active" title="Home">Início</a></li>
 								<li class="nav-item"><a href="shop_grid.php?new_id=1" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
 								<li class="nav-item"><a href="shop_grid.php?destaque=2" class="nav-link" title="Featured Products">Produtos em Destaque</a></li>
 								<li class="nav-item">
@@ -412,7 +412,7 @@ include('php/dados_cliente.php');
 								<div class="item">
 									<div class="team-item">
 										<div class="team-img">
-											<img src="images/team/img-1.jpg" alt="">
+											<img src="images/team/chavoso.png" alt="">
 										</div>
 										<h4>Sebastian Müller</h4>
 										<span>CEO e Cofundador</span>
@@ -425,12 +425,12 @@ include('php/dados_cliente.php');
 								<div class="item">
 									<div class="team-item">
 										<div class="team-img">
-											<img src="images/team/img-2.jpg" alt="">
+											<img src="images/team/matheus.jpg" alt="">
 										</div>
-										<h4>Ricardo Velasquez</h4>
-										<span>CTO e Desenvolvedor Pleno</span>
+										<h4>Matheus Siqueira</h4>
+										<span>Dev Frontend</span>
 										<ul class="team-social">
-											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
+											<li><a href="https://www.facebook.com/matheus.batista.7106670" target="_blank" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
 											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
 										</ul>
 									</div>
@@ -438,12 +438,12 @@ include('php/dados_cliente.php');
 								<div class="item">
 									<div class="team-item">
 										<div class="team-img">
-											<img src="images/team/img-3.jpg" alt="">
+											<img src="images/team/c_daniel.jpg" alt="">
 										</div>
-										<h4>Jéssica Magalhães</h4>
-										<span>Gerente de RH</span>
+										<h4>Carlos Daniel</h4>
+										<span>Dev Backend</span>
 										<ul class="team-social">
-											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
+											<li><a href="https://www.facebook.com/profile.php?id=100014015853220" target="_blank" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
 											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
 										</ul>
 									</div>
@@ -451,12 +451,12 @@ include('php/dados_cliente.php');
 								<div class="item">
 									<div class="team-item">
 										<div class="team-img">
-											<img src="images/team/img-4.jpg" alt="">
+											<img src="images/team/jonatas.jpg" alt="">
 										</div>
-										<h4>Francisco Moreira</h4>
-										<span>Gerente Sênior de Vendas</span>
+										<h4>Jônatas Alves</h4>
+										<span>Dev Backend</span>
 										<ul class="team-social">
-											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
+											<li><a href="https://www.facebook.com/jonatas.alves.984/photos_by" target="_blank" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
 											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
 										</ul>
 									</div>
