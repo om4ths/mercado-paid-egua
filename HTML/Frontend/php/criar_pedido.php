@@ -32,8 +32,8 @@ $quantidade = $result['quantity'];
 $desconto = $result['discount'];
 
 
-$query = "INSERT INTO pedidos (pedido_id,  ped_status, produto_id ,   cliente_id ,   quantidade , total_produtos, valor_total_pro,  valor_pedido ,   metodo_pagamento , data_entrega, hora_entrega)
-                    VALUES ( '$id_pedido','$status_p' ,'$id_produto', '$id_cliente', '$quantidade', '$total_prod',  '$valor_total',  '$desconto',     '$pagamento',    '$data_entrega', '$hora_entrega')";
+$query = "INSERT INTO pedidos (pedido_id,  ped_status, produto_id ,   cliente_id ,   quantidade , total_produtos, valor_total_pro,  valor_pedido ,   metodo_pagamento , data_entrega, hora_entrega, id_endereco)
+                    VALUES ( '$id_pedido','$status_p' ,'$id_produto', '$id_cliente', '$quantidade', '$total_prod',  '$valor_total',  '$desconto',     '$pagamento',    '$data_entrega', '$hora_entrega', '$id_end')";
 
 
     $insert = mysqli_query($conexao,$query);
