@@ -14,6 +14,17 @@
 		$array_view_end = mysqli_query($conexao,$select_view_end);
 		$r_view_end = mysqli_fetch_array($array_view_end);
 
+		
+		$r_view_end['bairro'];
+		$r_view_end['rua'];		
+		$r_view_end['numero'];
+		$r_view_end['complemento'];
+		$r_view_end['cep'];
+		$r_view_end['cidade'];
+		$r_view_end['tipo'];
+
+
+
 
 
 ?>
