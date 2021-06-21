@@ -704,7 +704,7 @@
 				<div class="row-index">
 				
 					<div class="col-lg-3 col-md-6 col-sm-6">
-						<div class="second-row-item">
+						<div class="second-row-item" style="margin-top:47px;">
 							<h4>Onde Atendemos</h4>
 							<ul>
 								<li><a href="#">Castanhal</a></li>

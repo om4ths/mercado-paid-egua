@@ -46,7 +46,7 @@ $query = "INSERT INTO pedidos (pedido_id,  ped_status, produto_id ,   cliente_id
 
 endforeach;
 
-//header("Location: /mercado-paid-egua/HTML/frontend/order_placed.php?id_f_p=".$id_pedido."");
+header("Location: /mercado-paid-egua/HTML/frontend/order_placed.php?id_f_p=".$id_pedido."");
 
 }else{
     $_SESSION['msg_check'] = "<script language='javascript' type='text/javascript'>

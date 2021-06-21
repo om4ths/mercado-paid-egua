@@ -468,7 +468,7 @@ input[type=text] {
 	padding-top: 0;
 }
 .main_logo-footer img {
-    width: 50%;
+    width: 64%;
 	padding-top: 0;
 }
 .res_main_logo {
@@ -982,11 +982,11 @@ i.icon1 {
     z-index: 999;
 }
 
-/* --- Category Model --- */
+/* --- Category Model 
 .main-gambo-model {
     background-image: -webkit-linear-gradient(left, rgba(230, 92, 91, 0.9), #ff0404);
     background-image: linear-gradient(to right, rgba(230, 92, 91, 0.9), #ff0404);
-}
+}--- */
 
 .category-area-inner .modal-header {
 	border-bottom: 0;
@@ -1334,7 +1334,7 @@ i.icon1 {
 }
 
 .cart-item {
-	display: flex;
+	display: block;
 	padding: 20px;
 	background: #fff;
 	border-bottom: 1px solid #efefef;
@@ -2314,7 +2314,7 @@ span.like-icon {
 }
 
 .second-row-item {
-    margin-top: 47px;
+    margin-top: 32px;
 }
 
 .second-row-item h4 {
