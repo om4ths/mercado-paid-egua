@@ -789,6 +789,7 @@
 
 								?>
                                 <div class="cart-item border_radius">
+									<!-- resumo aqui -->
                                     <div class="cart-product-img">
                                         <img src="<?php echo limpa_link($result['image'])?>" alt="">
                                         <div class="offer-badge"><?php echo number_format($result['porc'], 0, ',', '.')?>% OFF</div>
