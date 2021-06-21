@@ -784,36 +784,24 @@
                                 <h4>Resumo do pedido</h4>
                             </div>
                             <div class="pdpt-body-checkout scrollstyle_4">
+							
+							<?php foreach($resultsCarts as $result) : 
+
+								?>
                                 <div class="cart-item border_radius">
                                     <div class="cart-product-img">
-                                        <img src="images/product/img-11.jpg" alt="">
-                                        <div class="offer-badge">4% Desconto</div>
+                                        <img src="<?php echo limpa_link($result['image'])?>" alt="">
+                                        <div class="offer-badge"><?php echo number_format($result['porc'], 0, ',', '.')?>% OFF</div>
                                     </div>
                                     <div class="cart-text">
-                                        <h4>Nome do Produto Aqui</h4>
-                                        <div class="cart-item-price">R$15 <span>R$18</span></div>
+                                        <h4><?php echo $result['name']?></h4>
+                                        <div class="cart-item-price">R$<?php echo number_format($result['discount'], 2, ',', '.')?><span>R$<?php echo number_format($result['price'], 2, ',', '.')?></span></div>
                                         <button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button>
                                     </div>
-									<div class="cart-product-img">
-                                        <img src="images/product/img-11.jpg" alt="">
-                                        <div class="offer-badge">4% Desconto</div>
-                                    </div>
-                                    <div class="cart-text">
-                                        <h4>Nome do Produto Aqui</h4>
-                                        <div class="cart-item-price">R$15 <span>R$18</span></div>
-                                        <button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button>
-                                    </div>
-									<div class="cart-product-img">
-                                        <img src="images/product/img-11.jpg" alt="">
-                                        <div class="offer-badge">4% Desconto</div>
-                                    </div>
-                                    <div class="cart-text">
-                                        <h4>Nome do Produto Aqui</h4>
-                                        <div class="cart-item-price">R$15 <span>R$18</span></div>
-                                        <button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button>
-                                    </div>
-
                                 </div>
+								
+							<?php endforeach;?>
+
                             </div>
 							
                             <div class="total-checkout-group">
