@@ -453,11 +453,7 @@ include("php/carrinho.php");
 									<div class="pdpt-bg">
 										<div class="pdpt-title">
 											<h4>Meus Pedidos</h4>
-										</div>
-										<div class="ddsh-body">
-											<h2>2 Compras recentes</h2>
-											
-										</div>
+										</div>										
 										<a href="dashboard_my_orders.php" class="more-link14">Todos os pedidos <i
 												class="uil uil-angle-double-right"></i></a>
 									</div>
