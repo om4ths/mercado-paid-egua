@@ -317,7 +317,7 @@
 
 				?>
 
-				<div class="cart-item">
+				<div class="cart-item-checkout">
 					<div class="cart-product-img">
 						<img src="<?php echo limpa_link($result['image'])?>" alt="Erro ao carregar imagem!">
 						<?php if($result['porc'] > 0){ ?>
