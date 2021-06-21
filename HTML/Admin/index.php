@@ -132,7 +132,7 @@ include('php/dados_pedidos.php');
 														</td>
 														<td> <?php  echo $r_view_end['tipo'],"<br>", $r_view_end['bairro'],"<br>",$r_view_end['rua'],",",$r_view_end['numero'],"<br>",$r_view_end['complemento'],	$r_view_end['cep'],"<br>",	$r_view_end['cidade']; ?> </td>
 														<td>
-															<span class="badge-item badge-status">Pending</span>
+															<span class="badge-item badge-status"><?php echo $r_orders['ped_status'] ?></span>
 														</td>
 														<td>$90</td>
 														<td class="action-btns">
