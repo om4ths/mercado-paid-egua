@@ -166,6 +166,7 @@
 	<!-- Carrinho sidebar inicio-->
 
 	<div class="bs-canvas bs-canvas-left position-fixed bg-cart h-100">
+	<?php if($resultsCarts) { ?>
 		<div class="bs-canvas-header side-cart-header p-3 ">
 			<div class="d-inline-block  main-cart-title">Meu Carrinho <span>(2 Itens)</span></div>
 			<button type="button" class="bs-canvas-close close" aria-label="Close"><i class="uil uil-multiply"></i></button>
@@ -182,7 +183,9 @@
 				</div>
 			</div>
 			<div class="side-cart-items">
-<!-- INICIO EXIBIR ITENS NO CARRINHO -->               
+
+<!-- INICIO EXIBIR ITENS NO CARRINHO -->  
+
 			<?php foreach($resultsCarts as $result) : ?>
 
 				<div class="cart-item">
@@ -198,14 +201,16 @@
 								<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
 								<input type="button" value="+" class="plus plus-btn">
 							</div>
-							<div class="cart-item-price">$10 <span>R$<?php echo number_format($result['price'], 2, ',', '.')?></span></div>
+							<div class="cart-item-price">R$<?php echo number_format($result['discount'], 2, ',', '.')?> <span>R$<?php echo number_format($result['price'], 2, ',', '.')?></span></div>
 						</div>
 						<a href="php/carrinho.php?acao=del&id=<?php echo $result['id']?>" type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></a>
 					</div>
 				</div>
 
 			<?php endforeach;?>
+
 <!-- FIM EXIBIR ITENS NO CARRINHO -->
+
 			</div>
 		</div>
 		<div class="bs-canvas-footer">
@@ -215,12 +220,46 @@
 			</div>
 			<div class="main-total-cart">
 				<h2>Total</h2>
-				<span>R$35</span>
+				<span>R$<?php echo number_format($result['subtotal'], 2, ',', '.')?></span>
 			</div>
 			<div class="checkout-cart">
 				<a href="#" class="cart-checkout-btn hover-btn">Finalizar</a>
 			</div>
 		</div>
+		<?php }else { ?>
+
+			<div class="bs-canvas-header side-cart-header p-3 ">
+			<div class="d-inline-block  main-cart-title">Meu Carrinho <span>(0 Itens)</span></div>
+			<button type="button" class="bs-canvas-close close" aria-label="Close"><i class="uil uil-multiply"></i></button>
+		</div>
+		<div class="bs-canvas-body">
+			<div class="cart-top-total">
+				<div class="cart-total-dil">
+					<h4>Mercado Pai D'égua</h4>
+					<span>R$0</span>
+				</div>
+				<div class="cart-total-dil pt-2">
+					<h4>Taxas de entrega</h4>
+					<span>R$0</span>
+				</div>
+			</div>
+		</div>
+			<div class="bs-canvas-footer">
+			<div class="cart-total-dil saving-total ">
+				<h4>Total Economizado</h4>
+				<span>R$0</span>
+			</div>
+			<div class="main-total-cart">
+				<h2>Total</h2>
+				<span>R$0</span>
+			</div>
+			<div class="checkout-cart">
+				<a href="#" class="cart-checkout-btn hover-btn">Finalizar</a>
+			</div>
+		</div>	
+
+			<?php } ?>
+
 	</div>
 
 	<!-- Carrnho sidebar fim-->
@@ -328,7 +367,13 @@
 					<a href="#" class="cate__btn" data-toggle="modal" data-target="#category_model" title="Categories"><i class="uil uil-apps"></i></a>
 				</div>
 				<div class="header_cart order-1">
-					<a href="#" class="cart__btn hover-btn pull-bs-canvas-left" title="Cart"><i class="uil uil-shopping-cart-alt"></i><span>Carrinho</span><ins>2</ins><i class="uil uil-angle-down"></i></a>
+				<!-- MOSTRAR A QUANTIDADE NO CARRINHO -->
+					<?php if($resultsCarts) { ?>
+						<a href="#" class="cart__btn hover-btn pull-bs-canvas-left" title="Cart"><i class="uil uil-shopping-cart-alt"></i><span>Carrinho</span><ins>2</ins><i class="uil uil-angle-down"></i></a>
+					<?php }else{ ?>
+						<a href="#" class="cart__btn hover-btn pull-bs-canvas-left" title="Cart"><i class="uil uil-shopping-cart-alt"></i><span>Carrinho</span><ins>0</ins><i class="uil uil-angle-down"></i></a>
+					<?php } ?>
+
 				</div>
 				<div class="search__icon order-1">
 					<a href="#" class="search__btn hover-btn" data-toggle="modal" data-target="#search_model" title="Search"><i class="uil uil-search"></i></a>

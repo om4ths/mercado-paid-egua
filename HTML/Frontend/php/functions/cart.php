@@ -41,8 +41,9 @@ function getContentCart($pdo) {
 							  'id' => $product['pro_id'],
 							  'name' => $product['pro_nome'],
 							  'price' => $product['pro_valor'],
+							  'discount' => $product['pro_desconto'],
 							  'quantity' => $cart[$product['pro_id']],
-							  'subtotal' => $cart[$product['pro_id']] * $product['pro_valor'],
+							  'subtotal' => $cart[$product['pro_id']] * $product['pro_valor_venda'],
 						);
 		}
 	}

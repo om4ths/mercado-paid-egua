@@ -8,6 +8,22 @@
 
 			return round($porcentagemDesc);
 		}
+    function valorVenda($valorSemDesconto, $valorComDesconto){
+
+			$valorVenda = 0;
+			$preco = $valorSemDesconto;
+			$desconto = $valorComDesconto;
+
+			if($preco > $desconto){
+				return $desconto;;
+			}
+			elseif($preco < $desconto){
+				return $desconto;
+			}elseif($desconto = 0){
+        return $preco;
+      }
+
+		}
 
 
     $nomeArquivo = $_FILES['p_img']['name'];
@@ -26,9 +42,10 @@
     $pro_desconto = $_POST['p_desconto'];
     $pro_ativo = $_POST['p_status'];
     $pro_porc_desconto = porcentagemDescontoadd($pro_valor,$pro_desconto);
+    $pro_valor_venda = valorVenda($pro_valor,$pro_desconto);
  
-    $query = "INSERT INTO produtos (pro_nome, pro_desc, pro_cat, pro_valor, pro_desconto, pro_ativo, pro_img, pro_porc_desconto)
-              VALUES ('$pro_nome', '$pro_desc', '$pro_cat', '$pro_valor', '$pro_desconto', '$pro_ativo', '$pro_img', '$pro_porc_desconto')";
+    $query = "INSERT INTO produtos (pro_nome, pro_desc, pro_cat, pro_valor, pro_desconto, pro_ativo, pro_img, pro_porc_desconto, pro_valor_venda)
+              VALUES ('$pro_nome', '$pro_desc', '$pro_cat', '$pro_valor', '$pro_desconto', '$pro_ativo', '$pro_img', '$pro_porc_desconto', $pro_valor_venda)";
 
      $insert = mysqli_query($conexao,$query);
 
