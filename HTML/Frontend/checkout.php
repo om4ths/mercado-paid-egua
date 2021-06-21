@@ -573,6 +573,7 @@
                                                         <div class="address-fieldset">
                                                             <div class="row">
                                                             <input type="hidden" name="id_end" value="<?php echo $r_end['id']?>" > </input>
+															<input type="hidden" name="status" value="Pendente" > </input>
                                                                 <div class="col-lg-6 col-md-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label">CEP</label>
