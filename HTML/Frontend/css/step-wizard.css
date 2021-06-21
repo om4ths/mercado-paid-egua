@@ -27,7 +27,7 @@
 
 .checkout-step-number {
     border-radius: 50%;
-    border: 1px solid #f55d2c;
+    border: 1px solid #ff0404;
     display: inline-block;
     font-size: 14px;
     font-weight: 600;
@@ -37,7 +37,7 @@
     text-align: center;
     width: 32px;
     color: #fff;
-    background: #f55d2c;
+    background: #ff0404;
 }
 
 .checkout-step-title{ 

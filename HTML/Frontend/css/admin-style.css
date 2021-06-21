@@ -1,0 +1,134 @@
+
+.shop_img img {
+    width: 100%;
+}
+
+.shop-dt-left {
+    margin-left: 20px;
+}
+
+.shop-dt-left h4 {
+    color: #2b2f4c;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 7px;
+    text-align: left;
+}
+
+.shop-dt-left span {
+    color: #3e3f5e;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.shopowner-dt-left {
+    margin-left: 0;
+	text-align: center;
+}
+
+.shopowner-dt-left h4 {
+    color: #2b2f4c;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+
+.shopowner-dt-left span {
+    color: #3e3f5e;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.shopowner-dts {
+    margin-top: 20px;
+    border: 1px solid #efefef;
+    border-radius: 3px;
+}
+
+.shopowner-dt-list {
+    display: flex;
+    align-items: start;
+    padding: 10px;
+    border-bottom: 1px solid #efefef;
+	width: 100%;
+}
+
+.shopowner-dt-list:last-child {
+    border-bottom: 0;
+}
+
+.left-dt {
+    color: #2b2f4c;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 0;
+    text-align: left;
+	width: 50%;
+}
+
+.right-dt {
+    color: #3e3f5e;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-left: auto;
+    text-align: right;
+	width: 50%;
+}
+
+.product-dt-purchases {
+    list-style: none;
+    border: 1px solid #efefef;
+    border-radius: 3px;
+    margin-top: 20px;
+	padding-left: 0;
+}
+
+.product-dt-purchases  li {
+	border-right: 1px solid #efefef;
+	display: inline-block;
+    text-align: center;
+    width: 50%;
+    margin-left: -3px;
+    padding: 10px;
+}
+
+.product-dt-purchases  li:last-child {
+	border-right: 0;
+}
+
+.product-status {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2b2f4c;
+    text-align: center;
+}
+
+.badge-item-2 {
+    display: inline-block;
+    padding: .40em .5em;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 3px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.cate-img-6 {
+    border: 1px solid #efefef;
+    border-radius: 100%;
+    text-align: center;
+    padding: 3px 0; 
+    background: #f9f9f9;
+    width: 70px;
+}
+
+.cate-img-6 img {
+    width: 60px;
+	border-radius: 100%;
+}

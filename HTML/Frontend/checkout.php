@@ -525,7 +525,7 @@
 							<ul class="navbar-nav main_nav align-self-stretch">
 								<li class="nav-item"><a href="index.php" class="nav-link active" title="Home">Início</a></li>
 								<li class="nav-item"><a href="shop_grid.php?new_id=1" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
-								<li class="nav-item"><a href="shop_grid.php?destaque=2" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
+								<li class="nav-item"><a href="shop_grid.php?destaque=2" class="nav-link" title="Featured Products">Produtos em Destaque</a></li>
 								<li class="nav-item">
 									<div class="ui icon top left dropdown nav__menu">
 										<a class="nav-link" title="Pages">Mais <i class="uil uil-angle-down"></i></a>
@@ -576,64 +576,10 @@
                 <div class="row">
                     <div class="col-lg-8 col-md-7">
                         <div id="checkout_wizard" class="checkout accordion left-chck145">
-                            <div class="checkout-step">
-                                <div class="checkout-card" id="headingOne">
-                                    <span class="checkout-step-number">1</span>
-                                    <h4 class="checkout-step-title">
-                                        <button class="wizard-btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Verificação do Número de Telefone</button>
-                                    </h4>
-                                </div>
-                                <div id="collapseOne" class="collapse in show" data-parent="#checkout_wizard">
-                                    <div class="checkout-step-body">
-                                        <p>Precisamos do seu número de telefone para que possamos informá-lo sobre qualquer atraso ou problema.</p>
-                                        <p class="phn145">Enviar Código de 4 Dígitos para  <span> (91)98100-0000</span><a class="edit-no-btn hover-btn" data-toggle="collapse" href="#edit-number">Editar</a></p>
-                                        <div class="collapse" id="edit-number">
-                                            <div class="row">
-                                                <div class="col-lg-8">
-                                                    <div class="checkout-login">
-                                                        <form>
-                                                            <div class="login-phone">
-                                                                <input type="text" class="form-control" placeholder="Phone Number">
-                                                            </div>
-                                                            <a class="chck-btn hover-btn" role="button" data-toggle="collapse" href="#otp-verifaction">Enviar Código</a>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="otp-verifaction">
-                                            <div class="row">
-                                                <div class="col-lg-12">
-                                                    <div class="form-group mb-0">
-                                                        <label class="control-label">Inserir Código</label>
-                                                        <ul class="code-alrt-inputs">
-                                                            <li>
-                                                                <input id="code[1]" name="number" type="text" placeholder="" class="form-control input-md" required="">
-                                                            </li>
-                                                            <li>
-                                                                <input id="code[2]" name="number" type="text" placeholder="" class="form-control input-md" required="">
-                                                            </li>
-                                                            <li>
-                                                                <input id="code[3]" name="number" type="text" placeholder="" class="form-control input-md" required="">
-                                                            </li>
-                                                            <li>
-                                                                <input id="code[4]" name="number" type="text" placeholder="" class="form-control input-md" required="">
-                                                            </li>
-                                                            <li>
-                                                                <a class="collapsed chck-btn hover-btn" role="button" data-toggle="collapse" data-parent="#checkout_wizard" href="#collapseTwo">Avançar</a>
-                                                            </li>
-                                                        </ul>
-                                                        <a href="#" class="resend-link">Reenviar Código</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="checkout-step">
+
+                             <div class="checkout-step">
                                 <div class="checkout-card" id="headingTwo">
-                                    <span class="checkout-step-number">2</span>
+                                    <span class="checkout-step-number">1</span>
                                     <h4 class="checkout-step-title">
                                         <button class="wizard-btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Endereço de Entrega</button>
                                     </h4>
@@ -720,7 +666,7 @@
                             </div>
                             <div class="checkout-step">
                                 <div class="checkout-card" id="headingThree">
-                                    <span class="checkout-step-number">3</span>
+                                    <span class="checkout-step-number">2</span>
                                     <h4 class="checkout-step-title">
                                         <button class="wizard-btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Hora e Data de Entrega </button>
                                     </h4>
@@ -748,37 +694,37 @@
                                                             <div class="item">
                                                                 <div class="date-now">
                                                                     <input type="radio" id="dd3" name="address1">
-                                                                    <label for="dd3">10 de Junho 2021</label>
+                                                                    <label id="label1" for="dd3"></label>
                                                                 </div>
                                                             </div>
                                                             <div class="item">
                                                                 <div class="date-now">
                                                                     <input type="radio" id="dd4" name="address1">
-                                                                    <label for="dd4">11 de Junho 2021</label>
+                                                                    <label id="label2" for="dia"></label>
                                                                 </div>
                                                             </div>
                                                             <div class="item">
                                                                 <div class="date-now">
                                                                     <input type="radio" id="dd5" name="address1">
-                                                                    <label for="dd5">12 de Junho 2021</label>
+                                                                    <label id="label3" for="dd5">12 de Junho 2021</label>
                                                                 </div>
                                                             </div>
                                                             <div class="item">
                                                                 <div class="date-now">
                                                                     <input type="radio" id="dd6" name="address1">
-                                                                    <label for="dd6">13 de Junho 2021</label>
+                                                                    <label id="label4" for="dd6">13 de Junho 2021</label>
                                                                 </div>
                                                             </div>
                                                             <div class="item">
                                                                 <div class="date-now">
                                                                     <input type="radio" id="dd7" name="address1">
-                                                                    <label for="dd7">14 de Junho 2021</label>
+                                                                    <label id="label5" for="dd7">14 de Junho 2021</label>
                                                                 </div>
                                                             </div>
                                                             <div class="item">
                                                                 <div class="date-now">
                                                                     <input type="radio" id="dd8" name="address1">
-                                                                    <label for="dd8">15 de Junho 2021</label>
+                                                                    <label id="label6" for="dd8">15 de Junho 2021</label>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -828,7 +774,7 @@
                             </div>
                             <div class="checkout-step">
                                 <div class="checkout-card" id="headingFour">
-                                    <span class="checkout-step-number">4</span>
+                                    <span class="checkout-step-number">3</span>
                                     <h4 class="checkout-step-title">
                                         <button class="wizard-btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Pagamento</button>
                                     </h4>
@@ -1095,6 +1041,9 @@
     <script src="js/product.thumbnail.slider.js"></script>
     <script src="js/offset_overlay.js"></script>
     <script src="js/night-mode.js"></script>
+
+    <script src="js/dataehora.js"></script>
+
 
 
 </body>

@@ -337,7 +337,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 input[type=text] {
-	color: #2b2f4c !important;
+	color: #2b2f4c;
 }
 
 

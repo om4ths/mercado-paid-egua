@@ -356,7 +356,7 @@
 							<ul class="navbar-nav main_nav align-self-stretch">
 								<li class="nav-item"><a href="index.php" class="nav-link active" title="Home">Início</a></li>
 								<li class="nav-item"><a href="shop_grid.php?new_id=1" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
-								<li class="nav-item"><a href="shop_grid.php?destaque=2" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
+								<li class="nav-item"><a href="shop_grid.php?destaque=2" class="nav-link" title="Featured Products">Produtos em Destaque</a></li>
 								<li class="nav-item">
 									<div class="ui icon top left dropdown nav__menu">
 										<a class="nav-link" title="Pages">Mais <i class="uil uil-angle-down"></i></a>
@@ -532,7 +532,7 @@
 						<div class="main-title-tt">
 							<div class="main-title-left">
 								<span>Para Você</span>
-								<h2>Produtos e Destaque</h2>
+								<h2>Produtos em Destaque</h2>
 							</div>
 							<a href="shop_grid.php?destaque=2" class="see-more-btn">Ver Tudo</a>
 						</div>
