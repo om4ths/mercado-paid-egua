@@ -21,6 +21,8 @@
 				return $desconto;
 			}elseif($desconto = 0){
         return $preco;
+      }elseif($desconto = $preco){
+        return $preco;
       }
 
 		}
