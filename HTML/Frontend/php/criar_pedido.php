@@ -1,6 +1,7 @@
 <?php 
 include('func.php');
 include("carrinho.php");
+include("conexao.php");
 
 $id_cliente = $_SESSION['telefone'];
 $id_pedido = random_int(1, 9999) ;
@@ -31,15 +32,30 @@ echo "<br>Valor total: <br>".$valor_total;
 echo "<br>Valor do Frete: <br>".$frete;
 echo "<br>Valor Total do Desconto: <br>".$valor_total_desc;
 echo "<br>Total de Produtos: <br>".$total_prod;
+echo "<br>";
 echo "<br>id_pedido: <br>".$id_pedido;
-echo "<br>Produto ID: <br>".$result['id'];
+echo "<br>Produto ID: <br>".$id_produto = $result['id'];
 echo "<br>Produto Nome: <br>".$result['name'];
-echo "<br>Quantidade: <br>".$result['quantity'];
-echo "<br>Valor com desconto: <br>".$result['discount'];
+echo "<br>Quantidade: <br>".$quantidade = $result['quantity'];
+echo "<br>Valor com desconto: <br>".$desconto = $result['discount'];
 echo "<br>Valor sem Desconto <br>".$result['price'];
 echo "<br><br><br>";
+echo "<br>Metodo de pagamento: <br>".$metodo_pagamento = 1;
+echo "<br>data da entrega <br>".$data_entrega = date ('d/m/Y');
+echo "<br>id_pedido: <br>".$hora_entrega = "cdfggd";
+
+    $query = "INSERT INTO pedidos (pedido_id,   produto_id ,   cliente_id ,   quantidade , total_produtos,  valor_predido ,   metodo_pagamento , data_entrega, hora_entrega)
+                        VALUES ( '$id_pedido', '$id_produto', '$id_cliente', '$quantidade', '$total_prod',   '$desconto',  '$metodo_pagamento', '$data_entrega', '$hora_entrega')";
+
+
+    $insert = mysqli_query($conexao,$query);
+
+    echo $query;
+
 endforeach;
 }
+
+
 
 
 ?>
