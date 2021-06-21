@@ -645,42 +645,8 @@
                                                                     <label for="dd2">Amanhã</label>
                                                                 </div>
                                                             </div>
-                                                            <div class="item">
-                                                                <div class="date-now">
-                                                                    <input type="radio" id="dd3" name="address1">
-                                                                    <label id="label1" for="dd3"></label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="item">
-                                                                <div class="date-now">
-                                                                    <input type="radio" id="dd4" name="address1">
-                                                                    <label id="label2" for="dia"></label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="item">
-                                                                <div class="date-now">
-                                                                    <input type="radio" id="dd5" name="address1">
-                                                                    <label id="label3" for="dd5">12 de Junho 2021</label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="item">
-                                                                <div class="date-now">
-                                                                    <input type="radio" id="dd6" name="address1">
-                                                                    <label id="label4" for="dd6">13 de Junho 2021</label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="item">
-                                                                <div class="date-now">
-                                                                    <input type="radio" id="dd7" name="address1">
-                                                                    <label id="label5" for="dd7">14 de Junho 2021</label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="item">
-                                                                <div class="date-now">
-                                                                    <input type="radio" id="dd8" name="address1">
-                                                                    <label id="label6" for="dd8">15 de Junho 2021</label>
-                                                                </div>
-                                                            </div>
+                                                            
+
                                                         </div>
                                                     </div>
                                                     <div class="time-radio">
