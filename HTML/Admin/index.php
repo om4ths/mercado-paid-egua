@@ -1,5 +1,6 @@
 <?php
 include('php/verificar_login.php');
+include('php/dados_pedidos.php');
 ?>
 
 <!DOCTYPE html>
@@ -102,8 +103,7 @@ include('php/verificar_login.php');
 											<table class="table ucp-table table-hover">
 												<thead>
 													<tr>
-														<th style="width:130px">Order ID</th>
-														<th>Item</th>
+														<th style="width:130px">Pedido n°</th>														
 														<th style="width:200px">Data</th>
 														<th style="width:300px">Endereço</th>
 														<th style="width:130px">Status</th>
@@ -112,16 +112,25 @@ include('php/verificar_login.php');
 													</tr>
 												</thead>
 												<tbody>
+												<?php 														
+												if(isset($r_cli))
+												{	
+												foreach($r_cli as $key => $r_orders)
+												{																			
+												?>	
 													<tr>
-														<td>ORDER12345</td>
+														<td><?php echo $r_orders['pedido_id'] ?></td>
+														<?php  
+														$id_end_p = $r_orders['id_endereco']; 
+														$select_view_end ="SELECT * FROM endereco WHERE id='$id_end_p'";
+														$array_view_end = mysqli_query($conexao,$select_view_end);
+														$r_view_end = mysqli_fetch_array($array_view_end);													
+														
+														?>
 														<td>
-															<a href="#" target="_blank">Product Title Here</a>
+															<span class="delivery-time"><?php echo $r_orders['data_pedido']?></span>															
 														</td>
-														<td>
-															<span class="delivery-time">15/06/2020</span>
-															<span class="delivery-time">4:00PM - 6.00PM</span>
-														</td>
-														<td>#0000, St No. 8, Shahid Karnail Singh Nagar, MBD Mall, Frozpur road, Ludhiana, 141001</td>
+														<td> <?php  echo $r_view_end['tipo'],"<br>", $r_view_end['bairro'],"<br>",$r_view_end['rua'],",",$r_view_end['numero'],"<br>",$r_view_end['complemento'],	$r_view_end['cep'],"<br>",	$r_view_end['cidade']; ?> </td>
 														<td>
 															<span class="badge-item badge-status">Pending</span>
 														</td>
@@ -131,63 +140,11 @@ include('php/verificar_login.php');
 															<a href="order_edit.php" class="edit-btn"><i class="fas fa-edit"></i></a>
 														</td>
 													</tr>
-													<tr>
-														<td>ORDER12346</td>
-														<td>
-															<a href="#" target="_blank">Product Title Here</a>
-														</td>
-														<td>
-															<span class="delivery-time">13/06/2020</span>
-															<span class="delivery-time">2:00PM - 4.00PM</span>
-														</td>
-														<td>#0000, St No. 8, Shahid Karnail Singh Nagar, MBD Mall, Frozpur road, Ludhiana, 141001</td>
-														 <td>
-															<span class="badge-item badge-status">Pending</span>
-														</td>
-														<td>$105</td>
-														<td class="action-btns">
-															<a href="order_view.php" class="views-btn"><i class="fas fa-eye"></i></a>
-															<a href="order_edit.php" class="edit-btn"><i class="fas fa-edit"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td>ORDER12347</td>
-														<td>
-															<a href="#" target="_blank">Product Title Here</a>
-														</td>
-														<td>
-															<span class="delivery-time">13/6/2020</span>
-															<span class="delivery-time">5:00PM - 7.00PM</span>
-														</td>
-														<td>#0000, St No. 8, Shahid Karnail Singh Nagar, MBD Mall, Frozpur road, Ludhiana, 141001</td>
-														<td>
-															<span class="badge-item badge-status">Pending</span>
-														</td>
-														<td>$60</td>
-														<td class="action-btns">
-															<a href="order_view.php" class="views-btn"><i class="fas fa-eye"></i></a>
-															<a href="order_edit.php" class="edit-btn"><i class="fas fa-edit"></i></a>
-														</td>
-													</tr>
-													<tr>
-														<td>ORDER12348</td>
-														<td>
-															<a href="#" target="_blank">Product Title Here</a>
-														</td>
-														<td>
-															<span class="delivery-time">12/06/2020</span>
-															<span class="delivery-time">01:00PM - 3.00PM</span>
-														</td>
-														<td>#0000, St No. 8, Shahid Karnail Singh Nagar, MBD Mall, Frozpur road, Ludhiana, 141001</td>
-														<td>
-															<span class="badge-item badge-status">Pending</span>
-														</td>
-														<td>$120</td>
-														<td class="action-btns">
-															<a href="order_view.php" class="views-btn"><i class="fas fa-eye"></i></a>
-															<a href="order_edit.php" class="edit-btn"><i class="fas fa-edit"></i></a>
-														</td>
-													</tr>
+													
+													<?php
+															};
+														};
+													?> 	
 												</tbody>
 											</table>
 										</div>
