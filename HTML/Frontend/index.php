@@ -175,11 +175,11 @@
 			<div class="cart-top-total">
 				<div class="cart-total-dil">
 					<h4>Mercado Pai D'égua</h4>
-					<span>R$34</span>
+					<span>R$<?php echo number_format($totalCarts, 2, ',', '.')?></span>
 				</div>
 				<div class="cart-total-dil pt-2">
 					<h4>Taxas de entrega</h4>
-					<span>R$1</span>
+					<span>R$5</span>
 				</div>
 			</div>
 			<div class="side-cart-items">
@@ -190,23 +190,23 @@
 
 				<div class="cart-item">
 					<div class="cart-product-img">
-						<img src="images/product/img-1.jpg" alt="">
-						<div class="offer-badge">6% OFF</div>
+						<img src="<?php echo limpa_link($result['image'])?>" alt="Erro ao carregar imagem!">
+						<?php if($result['porc'] > 0){ ?>
+						<div class="offer-badge"><?php echo number_format($result['porc'], 0, ',', '.')?>% OFF</div>
+						<?php } ?>
 					</div>
 					<div class="cart-text">
 						<h4><?php echo $result['name']?></h4>
 						<div class="qty-group">
-							<div class="quantity buttons_added">
-								<input type="button" value="-" class="minus minus-btn">
-								<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
-								<input type="button" value="+" class="plus plus-btn">
+							<div class="quantity buttons_added">								
+								<input type="number" step="1" name="quantity" value="<?php echo $result['quantity']?>" class="input-text qty text">								
 							</div>
 							<div class="cart-item-price">R$<?php echo number_format($result['discount'], 2, ',', '.')?> <span>R$<?php echo number_format($result['price'], 2, ',', '.')?></span></div>
 						</div>
 						<a href="php/carrinho.php?acao=del&id=<?php echo $result['id']?>" type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></a>
 					</div>
 				</div>
-
+				
 			<?php endforeach;?>
 
 <!-- FIM EXIBIR ITENS NO CARRINHO -->
@@ -215,12 +215,12 @@
 		</div>
 		<div class="bs-canvas-footer">
 			<div class="cart-total-dil saving-total ">
-				<h4>Total Economizado</h4>
-				<span>R$11</span>
+				<h4>Total Economizado</h4> 
+				<span>R$<?php echo number_format($totaldesc, 2, ',', '.')?></span>
 			</div>
 			<div class="main-total-cart">
 				<h2>Total</h2>
-				<span>R$<?php echo number_format($result['subtotal'], 2, ',', '.')?></span>
+				<span>R$<?php echo number_format($totalCfrete, 2, ',', '.')?></span>
 			</div>
 			<div class="checkout-cart">
 				<a href="#" class="cart-checkout-btn hover-btn">Finalizar</a>
@@ -573,14 +573,19 @@
 										?>
 										<?php echo "<div class='product-price'>R$".$r_pro_dec['pro_valor']."</div>"; }?>
 
-
+										
 										<div class="qty-cart">
+											<form action="php/carrinho.php" method="GET">
 											<div class="quantity buttons_added">
-												<input type="button" value="-" class="minus minus-btn">
-												<input type="number" step="1" name="quantity" value="1" class="input-text qty text">
+											<input type="button" value="-" class="minus minus-btn">
+												<input type="number" step="1" name="quant" value="1" class="input-text qty text">
 												<input type="button" value="+" class="plus plus-btn">
 											</div>
-											<a class="cart-icon" href="php/carrinho.php?acao=add&id=<?php echo $r_pro_dec['pro_id']?>"><i class="uil uil-shopping-cart-alt"></i></a>
+											<input type="hidden" name="acao" value="add"></input>
+											<input type="hidden" name="id" value="<?php echo $r_pro_dec['pro_id']?>"></input>
+											<button type="submit" class="cart-icon" ><i class="uil uil-shopping-cart-alt"></i></button>
+											</form>
+											<!--<a class="cart-icon" href="php/carrinho.php?acao=add&id=<?php // echo $r_pro_dec['pro_id']?>"><i class="uil uil-shopping-cart-alt"></i></a> -->
 										</div>
 									</div>
 								</div>

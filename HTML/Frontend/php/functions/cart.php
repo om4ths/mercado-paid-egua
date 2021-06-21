@@ -40,8 +40,11 @@ function getContentCart($pdo) {
 			$results[] = array(
 							  'id' => $product['pro_id'],
 							  'name' => $product['pro_nome'],
+							  'image' => $product['pro_img'],
+							  'porc' => $product['pro_porc_desconto'],
 							  'price' => $product['pro_valor'],
 							  'discount' => $product['pro_desconto'],
+							  'discount2' => $cart[$product['pro_id']] * $product['pro_valor'],
 							  'quantity' => $cart[$product['pro_id']],
 							  'subtotal' => $cart[$product['pro_id']] * $product['pro_valor_venda'],
 						);
@@ -58,5 +61,28 @@ function getTotalCart($pdo) {
 	foreach(getContentCart($pdo) as $product) {
 		$total += $product['subtotal'];
 	} 
+	return $total;
+}
+
+function getTotalfrete($pdo) {
+	$frete = 5;
+	$total = 0;
+
+	foreach(getContentCart($pdo) as $product) {
+		$total += $product['subtotal'];
+	} 
+	$total = $total + $frete;
+	return $total;
+}
+
+function getTotaldesc($pdo) {
+	$desc = 0;
+	$total = 0;
+
+	foreach(getContentCart($pdo) as $product) {
+		$total += $product['subtotal'];
+		$desc += $product['discount2'];
+	} 
+	$total = $desc - $total;
 	return $total;
 }
