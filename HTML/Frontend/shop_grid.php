@@ -348,7 +348,7 @@
 							<ul class="navbar-nav main_nav align-self-stretch">
 								<li class="nav-item"><a href="index.php" class="nav-link active" title="Início">Início</a></li>
 								<li class="nav-item"><a href="shop_grid.php?new_id=1" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
-								<li class="nav-item"><a href="shop_grid.php?destaque=2" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
+								<li class="nav-item"><a href="shop_grid.php?destaque=2" class="nav-link" title="Featured Products">Produtos em Destaque</a></li>
 								<li class="nav-item">
 									<div class="ui icon top left dropdown nav__menu">
 										<a class="nav-link" title="Pages">Mais <i class="uil uil-angle-down"></i></a>
@@ -451,7 +451,7 @@
 								if(isset($_GET['destaque'])){
 									?>
 		
-										<li class='breadcrumb-item active' aria-current='page'>Destaques</li>
+										<li class='breadcrumb-item active' aria-current='page'>Destaque</li>
 		
 									</ol>
 								</nav>

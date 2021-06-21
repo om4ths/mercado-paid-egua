@@ -8,6 +8,8 @@ include('php/verificar_login.php');
 <?php
 		include('php/exibe_categoria_index.php');
 		include('php/dados_cliente.php');
+		include('php/dados_endereco.php');
+
 		include('php/func.php');
 		
 		
@@ -34,6 +36,7 @@ include('php/verificar_login.php');
 	<link href="css/step-wizard.css" rel="stylesheet">
 	<link href="css/modalfoto.css" rel="stylesheet">
 
+	<link href="css/admin-style.css" rel="stylesheet">
 
 	
 
@@ -355,7 +358,7 @@ include('php/verificar_login.php');
 							<ul class="navbar-nav main_nav align-self-stretch">
 								<li class="nav-item"><a href="index.php" class="nav-link active" title="Home">Início</a></li>
 								<li class="nav-item"><a href="shop_grid.php?new_id=1" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
-								<li class="nav-item"><a href="shop_grid.php?destaque=2" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
+								<li class="nav-item"><a href="shop_grid.php?destaque=2" class="nav-link" title="Featured Products">Produtos em Destaque</a></li>
 								<li class="nav-item">
 									<div class="ui icon top left dropdown nav__menu">
 										<a class="nav-link" title="Pages">Mais <i class="uil uil-angle-down"></i></a>
@@ -486,7 +489,7 @@ include('php/verificar_login.php');
 					</div>
 					<div class="col-lg-9 col-md-8">
 						<div class="dashboard-right">
-							<div class="row">
+							<div class="row" style="margin-bottom:50px;">
 								<div class="col-md-12">
 									<div class="main-title-tab">
 										<h4><i class="uil uil-apps"></i>Visão geral</h4>
@@ -511,6 +514,30 @@ include('php/verificar_login.php');
 												class="uil uil-angle-double-right"></i></a>
 									</div>
 								</div>
+
+								<div class="card card-static-2 mb-30" style="width:50%;height:183px;margin-top:29px;">
+									<div class="card-body-table">
+										<div class="shopowner-content-left text-center pd-20" style="padding:18px;margin-top:-6px;">
+										
+
+											<div class="shopowner-dts">
+							
+												<div class="shopowner-dt-list">
+													<span class="left-dt">Email</span>
+													<span class="right-dt"><?php echo $resultado['email'];  ?></span>
+												</div>
+												<div class="shopowner-dt-list">
+													<span class="left-dt">Telefone</span>
+													<span class="right-dt"><?php echo $resultado['telefone'];  ?></span>
+												</div>
+												<div class="shopowner-dt-list">
+													<span class="left-dt">Data de Nascimento</span>
+													<span class="right-dt"><?php  $date =$resultado['data_nascimento']; echo $date= implode("/",array_reverse(explode("-",$date))); ?></span>
+												</div>												
+											</div>
+										</div>
+
+
 								
 							</div>
 						</div>
@@ -522,6 +549,7 @@ include('php/verificar_login.php');
 	
 	<!-- Body End -->
 	<!-- Footer Start -->
+	
 		<footer class="footer">
 		<div class="footer-first-row">
 			<div class="container">
