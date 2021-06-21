@@ -726,7 +726,7 @@
 											</div>
 											<input type="hidden" name="acao" value="add"></input>
 											<input type="hidden" name="id" value="<?php echo $r_pro['pro_id']?>"></input>
-											<button type="submit" class="cart-icon" ><i class="uil uil-shopping-cart-alt"></i></button>
+											<button type="submit" class="cart-icon" style="display:contents;" ><i class="uil uil-shopping-cart-alt"></i></button>
 											</form>
 										</div>
 									</div>
