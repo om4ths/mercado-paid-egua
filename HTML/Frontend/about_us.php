@@ -414,23 +414,24 @@ include('php/dados_cliente.php');
 								<div class="item">
 									<div class="team-item">
 										<div class="team-img">
-											<img src="images/team/chavoso.png" alt="">
+											<img src="images/team/matheus.jpg" alt="">
 										</div>
-										<h4>Sebastian Müller</h4>
-										<span>CEO e Cofundador</span>
+										<h4>Matheus Siqueira</h4>
+										<span>Dev Frontend</span>
 										<ul class="team-social">
 											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
 											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
 										</ul>
 									</div>
 								</div>
+								
 								<div class="item">
 									<div class="team-item">
 										<div class="team-img">
-											<img src="images/team/matheus.jpg" alt="">
+											<img src="images/team/ton.jpg" alt="">
 										</div>
-										<h4>Matheus Siqueira</h4>
-										<span>Dev Frontend</span>
+										<h4>Wellington Sena</h4>
+										<span>Gerente de Projetos</span>
 										<ul class="team-social">
 											<li><a href="https://www.facebook.com/matheus.batista.7106670" target="_blank" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
 											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
@@ -462,7 +463,21 @@ include('php/dados_cliente.php');
 											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
 										</ul>
 									</div>
+									<div class="item">
+									<div class="team-item">
+										<div class="team-img">
+											<img src="images/team/charles.jpg" alt="">
+										</div>
+										<h4>Charle Correa</h4>
+										<span>Dev Frontend</span>
+										<ul class="team-social">
+											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
+											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
+										</ul>
+									</div>
 								</div>
+								</div>
+								
 							</div>
 						</div>
 					</div>
