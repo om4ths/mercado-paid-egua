@@ -336,7 +336,7 @@
 	<!-- Header End -->
 	<!-- Body Start -->
 	<div class="wrapper">
-		<!-- Offers Start -->
+		<!-- Offers Carrosel Start 
 		<div class="main-banner-slider">
 			<div class="container">
 				<div class="row">
@@ -427,7 +427,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- Offers End -->
+		 Offers  Carrosel End -->
 		<!-- Categories Start -->
 		<div class="section145">
 			<div class="container">

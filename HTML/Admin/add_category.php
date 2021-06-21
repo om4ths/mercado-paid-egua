@@ -113,11 +113,13 @@
 												<div class="input-group">
 													<div class="custom-file">
 														<input type="file" name="c_img" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+														
 														<label class="custom-file-label" for="inputGroupFile04">Escolher Imagem</label>
-													</div>
+z													</div>
 												</div>
 												<div class="add-cate-img">
-													<img src="images/category/icon-1.svg" alt="">
+												<img id="preview-img" src="" alt="">
+
 												</div>
 											</div>
 											<div class="form-group">
@@ -148,6 +150,8 @@
         </div>
 		
 		<!-- Javascripts -->
+		<script src="js/preview-img.js"></script>
+
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
