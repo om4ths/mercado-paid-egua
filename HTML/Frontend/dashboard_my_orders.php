@@ -476,7 +476,7 @@ include("php/exibe_my_orders.php");
 												<div class="total-checkout-group">
 													<div class="cart-total-dil">
 														<h4>Sub Total</h4>
-														<span>R$<?php echo $r_ped['valor_total_pro'] ?></span>
+														<span>R$<?php echo $r_ped['total_produtos'] ?></span>
 													</div>
 													<div class="cart-total-dil pt-3">
 														<h4>Taxas de entrega</h4>
@@ -485,31 +485,14 @@ include("php/exibe_my_orders.php");
 												</div>
 												<div class="main-total-cart">
 													<h2>Total</h2>
-													<span>R$<?php echo $r_ped['valor_pedido'] ?></span>
+													<span>R$<?php echo $r_ped['total_produtos'] + $r_ped['valor_frete'] ?></span>
 												</div>
 											</div>
 											<div class="track-order">
 												<h4>Acompanhar Pedido</h4>
 												<div class="bs-wizard" style="border-bottom:0;">   
 													<div class="bs-wizard-step complete">
-														<div class="text-center bs-wizard-stepnum">Colocado</div>
-														<div class="progress"><div class="progress-bar"></div></div>
-														<a href="#" class="bs-wizard-dot"></a>
-													</div>
-													<div class="bs-wizard-step complete"><!-- complete -->
-														<div class="text-center bs-wizard-stepnum">Embalado</div>
-														<div class="progress"><div class="progress-bar"></div></div>
-														<a href="#" class="bs-wizard-dot"></a>
-													</div>
-													<div class="bs-wizard-step active"><!-- complete -->
-														<div class="text-center bs-wizard-stepnum">A caminho</div>
-														<div class="progress"><div class="progress-bar"></div></div>
-														<a href="#" class="bs-wizard-dot"></a>
-													</div>
-													<div class="bs-wizard-step disabled"><!-- active -->
-														<div class="text-center bs-wizard-stepnum">Entregue</div>
-														<div class="progress"><div class="progress-bar"></div></div>
-														<a href="#" class="bs-wizard-dot"></a>
+														<div class="text-center bs-wizard-stepnum">Status do pedido: <?php echo $r_ped['ped_status']?> </div>
 													</div>
 												</div>
 											</div>
