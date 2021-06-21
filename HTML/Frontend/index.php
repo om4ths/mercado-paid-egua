@@ -535,7 +535,7 @@
 											</div>
 											<input type="hidden" name="acao" value="add"></input>
 											<input type="hidden" name="id" value="<?php echo $r_pro_dec['pro_id']?>"></input>
-											<button type="submit" class="cart-icon" ><i class="uil uil-shopping-cart-alt"></i></button>
+											<button type="submit" class="cart-icon" style="display:contents;" ><i class="uil uil-shopping-cart-alt"></i></button>
 											</form>
 										</div>
 									</div>
@@ -550,7 +550,7 @@
 		</div>
 		<!-- Featured Products End -->
 		<!-- Best Values Offers Start -->
-		<div class="section145">
+		<!--<div class="section145">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -562,13 +562,13 @@
 						</div>
 					</div>
 
-					<!--
+				
 					<div class="col-lg-4 col-md-6">
 						<a href="#" class="best-offer-item">
 							<img src="images/best-offers/offer-2.jpg" alt="">
 						</a>
 					</div>
-					-->
+					
 					<?php
 							if(isset($r_oferta))
 								{	
@@ -597,7 +597,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- Best Values Offers End -->
+		 Fim das OFERTAS -->
 		
 		<!-- New Products Start -->
 		<div class="section145">
@@ -668,7 +668,7 @@
 											</div>
 											<input type="hidden" name="acao" value="add"></input>
 											<input type="hidden" name="id" value="<?php echo $r_pro['pro_id']?>"></input>
-											<button type="submit" class="cart-icon" ><i class="uil uil-shopping-cart-alt"></i></button>
+											<button type="submit" class="cart-icon" style="display:contents;" ><i class="uil uil-shopping-cart-alt"></i></button>
 											</form>
 										</div>
 									</div>
