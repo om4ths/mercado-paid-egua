@@ -344,8 +344,9 @@ include('php/dados_cliente.php');
 							<img src="images/line.svg" alt="">
 						</div>
 						<div class="about-content">
-							<p>Temos unidades em todos os estados e possuímos mais de 200 lojas espalhadas de norte a sul do país. Segundo o ranking do Valor Econômico, somos a primeira entre as empresas de comércio varejista do Brasil. Também estamos entre as maiores, as que mais vendem e as que mais empregam.</p>
-							<p>Valorizamos a parceria com nossos clientes e nosso time, que conta com mais de 50 mil colaboradores, treinados e capacitados, sempre a postos para atender a todos. Estamos presentes em todos os Estados do Brasil e somos a maior rede atacadista do País. Somos o lugar certo para você comprar barato, seja para o seu negócio ou sua casa.</p>
+							<p>Somos um projeto que surgiu durante a faculdade, uma ideia para facilitar o dia a dia das pessoas. Num mundo onde pessoas precisam ser cada vez mais ágeis, o Mercado Pai D'égua se torna a solução para isso.</p>
+							<p>Escolhemos esse nome para valorizar a cultura da nossa terra, o maravilhoso Pará. Pretendemos expandir para mais cidades e quem sabe para o País, mas, no momento, atendemos apenas a cidade de Castanhal.</p>
+							<p>Somos o lugar certo para você comprar barato, seja para o seu negócio ou sua casa.</p>
 						</div>
 					</div>
 					<div class="col-lg-6">
@@ -360,11 +361,12 @@ include('php/dados_cliente.php');
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-3">
+						<!--
 						<div class="about-step">
 							<div class="about-step-img">
 								<img src="images/about/icon-1.svg" alt="">
 							</div>
-							<h4>400+</h4>
+							<h4>5+</h4>
 							<p>Pessoas se juntaram à equipe Pai D'égua nos últimos seis meses</p>
 						</div>
 					</div>
@@ -374,7 +376,7 @@ include('php/dados_cliente.php');
 								<img src="images/about/icon-2.svg" alt="">
 							</div>
 							<h4>2x</h4>
-							<p>Taxa de crescimento em nossa base de usuários mensal</p>
+							<p>Taxa de crescimento em nossa base de usuários mensal</p> 
 						</div>
 					</div>
 					<div class="col-lg-3">
@@ -394,7 +396,7 @@ include('php/dados_cliente.php');
 							<h4>95k</h4>
 							<p>Downloads de aplicativos no iOS e Android</p>
 						</div>
-					</div>
+					</div>-->
 				</div>
 			</div>
 		</div>
