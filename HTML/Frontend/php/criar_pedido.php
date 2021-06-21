@@ -28,7 +28,7 @@ foreach($resultsCarts as $result) :
 echo "id_usuario: <br>".$id_cliente;
 echo "<br>id_endereco: <br>".$id_end;
 echo "<br>id_pedido: <br>".$id_pedido;
-echo "<br>Data de Entrega: <br>".$data_entrega;
+echo "<br>Data de Entrega: <br>".$data_entrega = implode('-', array_reverse(explode('/', $data_entrega)));
 echo "<br>Hora da Entrega: <br>".$hora_entrega;
 echo "<br>Valor total: <br>".$valor_total;
 echo "<br>Valor do Frete: <br>".$frete;
