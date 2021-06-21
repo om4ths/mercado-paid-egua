@@ -9,7 +9,6 @@
 	<?php
 	include('php/dados_cliente.php');
 	include('php/exibe_shop_grid.php');
-	include('php/exibe_categoria_index.php');
 	?>
  
 <head>

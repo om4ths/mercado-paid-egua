@@ -92,14 +92,20 @@ function getTotalfrete($pdo) {
 	if($total >100){
 		$frete = 0;		
 		return $total;
-	}else{
+	}
+	if($total == 0){
+		$frete = 0;
+		$total = $total + $frete;
+		return $total;
+	}
+	else{
 		$total = $total + $frete;
 		return $total;
 	}	
 }
 
 function getfrete($pdo) {
-	$frete = 6;
+	$frete = 0;
 	$total = 0;
 
 	foreach(getContentCart($pdo) as $product) {
@@ -109,11 +115,12 @@ function getfrete($pdo) {
 		$frete = 0;		
 		return $frete;
 	}
-	if($total < 0){		
+	if($total == 0){		
 		$frete = 0;
 		return $frete;
 	}
 	else{
+		$frete = 6;
 		return $frete;
 	}	
 }
