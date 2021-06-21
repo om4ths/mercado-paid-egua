@@ -79,6 +79,7 @@ include('php/dados_cliente.php');
 		</div>
 	</div>
 	<!-- Categoria fim-->
+	
 	<!-- pesquisar produtos inicio-->
 	<div id="search_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
 		<div class="modal-dialog search-ground-area" role="document">
@@ -87,72 +88,6 @@ include('php/dados_cliente.php');
 					<button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
 						<i class="uil uil-multiply"></i>
 					</button>
-				</div>
-				<div class="category-model-content modal-content">
-					<div class="search-header">
-						<form action="#">
-							<input type="search" placeholder="Search for products...">
-							<button type="submit"><i class="uil uil-search"></i></button>
-						</form>
-					</div>
-					<div class="search-by-cat">
-						<a href="#" class="single-cat">
-							<div class="icon">
-								<img src="images/category/icon-1.svg" alt="">
-							</div>
-							<div class="text">
-								Frutas e Vegetais
-							</div>
-						</a>
-						<a href="#" class="single-cat">
-							<div class="icon">
-								<img src="images/category/icon-2.svg" alt="">
-							</div>
-							<div class="text"> Alimentos Básicos </div>
-						</a>
-						<a href="#" class="single-cat">
-							<div class="icon">
-								<img src="images/category/icon-3.svg" alt="">
-							</div>
-							<div class="text"> Ovos e Laticínios </div>
-						</a>
-						<a href="#" class="single-cat">
-							<div class="icon">
-								<img src="images/category/icon-4.svg" alt="">
-							</div>
-							<div class="text"> Bebidas </div>
-						</a>
-						<a href="#" class="single-cat">
-							<div class="icon">
-								<img src="images/category/icon-5.svg" alt="">
-							</div>
-							<div class="text"> Lanches </div>
-						</a>
-						<a href="#" class="single-cat">
-							<div class="icon">
-								<img src="images/category/icon-6.svg" alt="">
-							</div>
-							<div class="text"> Limpeza </div>
-						</a>
-						<a href="#" class="single-cat">
-							<div class="icon">
-								<img src="images/category/icon-7.svg" alt="">
-							</div>
-							<div class="text"> Macarrão e molhos </div>
-						</a>
-						<a href="#" class="single-cat">
-							<div class="icon">
-								<img src="images/category/icon-8.svg" alt="">
-							</div>
-							<div class="text"> Higiene </div>
-						</a>
-						<a href="#" class="single-cat">
-							<div class="icon">
-								<img src="images/category/icon-9.svg" alt="">
-							</div>
-							<div class="text"> Pets </div>
-						</a>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -372,7 +307,12 @@ include('php/dados_cliente.php');
 					<a href="#" class="cate__btn" data-toggle="modal" data-target="#category_model" title="Categories"><i class="uil uil-apps"></i></a>
 				</div>
 				<div class="header_cart order-1">
-					<a href="#" class="cart__btn hover-btn pull-bs-canvas-left" title="Cart"><i class="uil uil-shopping-cart-alt"></i><span>Carrinho</span><ins>2</ins><i class="uil uil-angle-down"></i></a>
+				<!-- MOSTRAR A QUANTIDADE NO CARRINHO -->
+				<?php if($cont_itens >= 1) { ?>
+						<a href="#" class="cart__btn hover-btn pull-bs-canvas-left" title="Cart"><i class="uil uil-shopping-cart-alt"></i><span>Carrinho</span><ins><?php echo $cont_itens ?></ins><i class="uil uil-angle-down"></i></a>
+					<?php }else{ ?>
+						<a href="#" class="cart__btn hover-btn pull-bs-canvas-left" title="Cart"><i class="uil uil-shopping-cart-alt"></i><span>Carrinho</span><ins>0</ins><i class="uil uil-angle-down"></i></a>
+					<?php } ?>
 				</div>
 				<div class="search__icon order-1">
 					<a href="#" class="search__btn hover-btn" data-toggle="modal" data-target="#search_model" title="Search"><i class="uil uil-search"></i></a>
