@@ -785,6 +785,7 @@
                             </div>
                             <div class="pdpt-body-checkout scrollstyle_4">
                                 <div class="cart-item border_radius">
+									<!-- resumo aqui -->
                                     <div class="cart-product-img">
                                         <img src="images/product/img-11.jpg" alt="">
                                         <div class="offer-badge">4% Desconto</div>
@@ -794,6 +795,11 @@
                                         <div class="cart-item-price">R$15 <span>R$18</span></div>
                                         <button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button>
                                     </div>
+
+									<div class="line" style="height:8px;margin-bottom:10px;widht:100%;border-bottom:1px solid #f3f3f3;"></div>
+
+									<!-- finaliza aqui -->
+
 									<div class="cart-product-img">
                                         <img src="images/product/img-11.jpg" alt="">
                                         <div class="offer-badge">4% Desconto</div>
@@ -803,6 +809,8 @@
                                         <div class="cart-item-price">R$15 <span>R$18</span></div>
                                         <button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button>
                                     </div>
+									<div class="line" style="height:8px; margin-bottom:10px;widht:100%;border-bottom:1px solid #f3f3f3;"></div>
+
 									<div class="cart-product-img">
                                         <img src="images/product/img-11.jpg" alt="">
                                         <div class="offer-badge">4% Desconto</div>
