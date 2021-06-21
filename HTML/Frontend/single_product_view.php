@@ -2,7 +2,7 @@
 
 	include('php/verificar_login.php');
     include("php/carrinho.php");
-
+ 
 ?>
 <!DOCTYPE html>
 <html lang="pt_BR">
