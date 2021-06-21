@@ -2,6 +2,7 @@
 include('php/verificar_login.php');
 include('php/func.php');
 include("php/carrinho.php");
+include('php/exibe_categoria_index.php');
 
 ?>
 <!DOCTYPE html>
@@ -53,25 +54,24 @@ include('php/dados_cliente.php');
 						<h4>Selecionar Categoria </h4>
 					</div>
 					<ul class="category-by-cat">
-						<?php
-						if (isset($r_categoria)) {
-							foreach ($r_categoria as $key => $r_cat) {
-
-								$caminhoCorretoImg = limpa_link($r_cat['cat_img']);
-
-						?>
-								<li>
-									<a href="#" class="single-cat-item">
-										<div class="icon">
-											<?php echo "<img src=' " . $caminhoCorretoImg . " ' alt='erro ao Carregar a imagem'>" ?>
-										</div>
-										<?php echo "<div class='text'>" . $r_cat['cat_nome'] . "</div>" ?>
-									</a>
-								</li>
-
-						<?php }
-						}	?>
-						</a>
+					<?php
+						if(isset($r_categoria))
+						{	
+							foreach($r_categoria as $key => $r_cat)
+							{	
+					
+					?>
+						<li>
+							<?php echo "<a href='shop_grid.php?c_id=".$r_cat['cat_id']."' class='single-cat-item'>" ?>
+								<div class="icon">
+									<?php echo "<img src=' ".limpa_link($r_cat['cat_img'])." ' alt='erro ao Carregar a imagem'>" ?>
+								</div>
+								<?php echo "<div class='text'>".$r_cat['cat_nome']."</div>" ?>
+							</a>
+						</li>
+					
+					<?php }}	?>
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -79,7 +79,7 @@ include('php/dados_cliente.php');
 		</div>
 	</div>
 	<!-- Categoria fim-->
-	
+
 	<!-- pesquisar produtos inicio-->
 	<div id="search_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
 		<div class="modal-dialog search-ground-area" role="document">
