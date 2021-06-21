@@ -108,7 +108,12 @@ function getfrete($pdo) {
 	if($total >100){
 		$frete = 0;		
 		return $frete;
-	}else{		
+	}
+	if($total < 0){		
+		$frete = 0;
+		return $frete;
+	}
+	else{
 		return $frete;
 	}	
 }
