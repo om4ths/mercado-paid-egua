@@ -529,7 +529,7 @@
                 </div>
             </div>
         </div>
-<form action="checkoutt.php" method="GET">        
+<form action="php/criar_pedido.php" method="GET">        
         <div class="all-product-grid">
             <div class="container">
                 <div class="row">
@@ -640,13 +640,13 @@
                                                         <div class="owl-carousel date-slider owl-theme">
                                                             <div class="item">
                                                                 <div class="date-now">
-                                                                    <input type="radio" id="dd1" name="address1" checked="">
+                                                                    <input type="radio" id="dd1" name="dia_entrega" value="<?php $hoje = date('d/m/Y'); echo $hoje; ?>" checked="">
                                                                     <label for="dd1">Hoje</label>
                                                                 </div>
                                                             </div>
                                                             <div class="item">
                                                                 <div class="date-now">
-                                                                    <input type="radio" id="dd2" name="address1">
+                                                                    <input type="radio" id="dd2" name="dia_entrega" value="<?php $nextWeek = time() + (24 * 60 * 60); $hoje = date('d/m/Y', $nextWeek); echo $hoje; ?>" name="dia_entrega">
                                                                     <label for="dd2">Amanhã</label>
                                                                 </div>
                                                             </div>
@@ -659,31 +659,31 @@
                                                             <div class="grouped fields">
                                                                 <div class="field">
                                                                     <div class="ui radio checkbox chck-rdio">
-                                                                        <input type="radio" name="fruit" checked="" tabindex="0" class="hidden">
+                                                                        <input type="radio" name="hora_entrega" value="08:00 - 10:00" checked="" tabindex="0" class="hidden">
                                                                         <label>08:00 - 10:00</label>
                                                                     </div>
                                                                 </div>
                                                                 <div class="field">
                                                                     <div class="ui radio checkbox chck-rdio">
-                                                                        <input type="radio" name="fruit" tabindex="0" class="hidden">
+                                                                        <input type="radio" name="hora_entrega" value="10:00 - 12:00" tabindex="0" class="hidden">
                                                                         <label>10:00 - 12:00</label>
                                                                     </div>
                                                                 </div>
                                                                 <div class="field">
                                                                     <div class="ui radio checkbox chck-rdio">
-                                                                        <input type="radio" name="fruit" tabindex="0" class="hidden">
+                                                                        <input type="radio" name="hora_entrega" value="12:00 - 14:00" tabindex="0" class="hidden">
                                                                         <label>12:00 - 14:00</label>
                                                                     </div>
                                                                 </div>
                                                                 <div class="field">
                                                                     <div class="ui radio checkbox chck-rdio">
-                                                                        <input type="radio" name="fruit" tabindex="0" class="hidden">
+                                                                        <input type="radio" name="hora_entrega" value="14:00 - 16:00" tabindex="0" class="hidden">
                                                                         <label>14:00 - 16:00</label>
                                                                     </div>
                                                                 </div>
                                                                 <div class="field">
                                                                     <div class="ui radio checkbox chck-rdio">
-                                                                        <input type="radio" name="fruit" tabindex="0" class="hidden">
+                                                                        <input type="radio" name="hora_entrega" value="16:00 - 18:00" tabindex="0" class="hidden">
                                                                         <label>16:00 - 18:00</label>
                                                                     </div>
                                                                 </div>
@@ -713,13 +713,13 @@
                                                         <ul class="radio--group-inline-container_1">
                                                             <li>
                                                                 <div class="radio-item_1">
-                                                                    <input id="cashondelivery1" value="cashondelivery" name="paymentmethod" type="radio" data-minimum="50.0">
+                                                                    <input id="cashondelivery1" value="Dinheiro no momento da entrega" name="pagamento" type="radio" data-minimum="50.0">
                                                                     <label for="cashondelivery1" class="radio-label_1">Dinheiro na entrega</label>
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div class="radio-item_1">
-                                                                    <input id="card1" value="card" name="paymentmethod" type="radio" data-minimum="50.0">
+                                                                    <input id="card1" value="Cartão no momento da entrega" name="pagamento" type="radio" data-minimum="50.0">
                                                                     <label for="card1" class="radio-label_1">Cartão de Crédito / Débito</label>
                                                                 </div>
                                                             </li>
