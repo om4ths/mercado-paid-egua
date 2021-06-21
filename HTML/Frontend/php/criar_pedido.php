@@ -34,11 +34,11 @@ echo "<br>Quantidade: <br>".$quantidade = $result['quantity'];
 echo "<br>Valor com desconto: <br>".$desconto = $result['discount'];
 echo "<br>Valor sem Desconto <br>".$result['price'];
 echo "<br><br><br>";
-echo "<br>Metodo de pagamento: <br>".$metodo_pagamento = 1;
+echo "<br>Metodo de pagamento: <br>".$metodo_pagamento = "metdo";
 echo "<br>data da entrega <br>".$data_entrega = date ('d/m/Y');
 echo "<br>id_pedido: <br>".$hora_entrega = "cdfggd";
 
-    $query = "INSERT INTO pedidos (pedido_id,   produto_id ,   cliente_id ,   quantidade , total_produtos,  valor_predido ,   metodo_pagamento , data_entrega, hora_entrega)
+    $query = "INSERT INTO pedidos (pedido_id,   produto_id ,   cliente_id ,   quantidade , total_produtos,  valor_pedido ,   metodo_pagamento , data_entrega, hora_entrega)
                         VALUES ( '$id_pedido', '$id_produto', '$id_cliente', '$quantidade', '$total_prod',   '$desconto',  '$metodo_pagamento', '$data_entrega', '$hora_entrega')";
 
 
