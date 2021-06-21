@@ -7,6 +7,8 @@ include('php/verificar_login.php');
 <html lang="pt_BR">
 	<?php
 	include('php/dados_cliente.php');
+	include('php/func.php');
+	include('php/exibe_categoria_index.php');
 	?>
 
 	<head>
@@ -39,45 +41,43 @@ include('php/verificar_login.php');
 
 <body>
 <!-- modelo das categorias-->
-<div id="category_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
-	<div class="modal-dialog category-area" role="document">
-		<div class="category-area-inner">
-			<div class="modal-header">
-				<button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
-					<i class="uil uil-multiply"></i>
-				</button>
-			</div>
-			<div class="category-model-content modal-content">
-				<div class="cate-header">
-					<h4>Selecionar Categoria </h4>
+	<div id="category_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
+		<div class="modal-dialog category-area" role="document">
+			<div class="category-area-inner">
+				<div class="modal-header">
+					<button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+						<i class="uil uil-multiply"></i>
+					</button>
 				</div>
-				<ul class="category-by-cat">
-				<?php
-					if(isset($r_categoria))
-					{	
-						foreach($r_categoria as $key => $r_cat)
+				<div class="category-model-content modal-content">
+					<div class="cate-header">
+						<h4>Selecionar Categoria </h4>
+					</div>
+					<ul class="category-by-cat">
+					<?php
+						if(isset($r_categoria))
 						{	
-															
-						$caminhoCorretoImg = limpa_link($r_cat['cat_img']);
-															
-				?>
-					<li>
-						<a href="#" class="single-cat-item">
-							<div class="icon">
-								<?php echo "<img src=' ".$caminhoCorretoImg." ' alt='erro ao Carregar a imagem'>" ?>
-							</div>
-							<?php echo "<div class='text'>".$r_cat['cat_nome']."</div>" ?>
-						</a>
-					</li>
-				
-				<?php }}	?>
-						</a>
-					</li>
-				</ul>
+							foreach($r_categoria as $key => $r_cat)
+							{	
+					
+					?>
+						<li>
+							<?php echo "<a href='shop_grid.php?c_id=".$r_cat['cat_id']."' class='single-cat-item'>" ?>
+								<div class="icon">
+									<?php echo "<img src=' ".limpa_link($r_cat['cat_img'])." ' alt='erro ao Carregar a imagem'>" ?>
+								</div>
+								<?php echo "<div class='text'>".$r_cat['cat_nome']."</div>" ?>
+							</a>
+						</li>
+					
+					<?php }}	?>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 <!-- Categoria fim-->
 <!-- pesquisar produtos inicio-->
 <div id="search_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
@@ -94,64 +94,6 @@ include('php/verificar_login.php');
 						<input type="search" placeholder="Search for products...">
 						<button type="submit"><i class="uil uil-search"></i></button>
 					</form>
-				</div>
-				<div class="search-by-cat">
-					<a href="#" class="single-cat">
-						<div class="icon">
-							<img src="images/category/icon-1.svg" alt="">
-						</div>
-						<div class="text">
-							Frutas e Vegetais
-						</div>
-					</a>
-					<a href="#" class="single-cat">
-						<div class="icon">
-							<img src="images/category/icon-2.svg" alt="">
-						</div>
-						<div class="text"> Alimentos Básicos </div>
-					</a>
-					<a href="#" class="single-cat">
-						<div class="icon">
-							<img src="images/category/icon-3.svg" alt="">
-						</div>
-						<div class="text"> Ovos e Laticínios </div>
-					</a>
-					<a href="#" class="single-cat">
-						<div class="icon">
-							<img src="images/category/icon-4.svg" alt="">
-						</div>
-						<div class="text"> Bebidas </div>
-					</a>
-					<a href="#" class="single-cat">
-						<div class="icon">
-							<img src="images/category/icon-5.svg" alt="">
-						</div>
-						<div class="text"> Lanches </div>
-					</a>
-					<a href="#" class="single-cat">
-						<div class="icon">
-							<img src="images/category/icon-6.svg" alt="">
-						</div>
-						<div class="text"> Limpeza </div>
-					</a>
-					<a href="#" class="single-cat">
-						<div class="icon">
-							<img src="images/category/icon-7.svg" alt="">
-						</div>
-						<div class="text"> Macarrão e molhos </div>
-					</a>
-					<a href="#" class="single-cat">
-						<div class="icon">
-							<img src="images/category/icon-8.svg" alt="">
-						</div>
-						<div class="text"> Higiene </div>
-					</a>
-					<a href="#" class="single-cat">
-						<div class="icon">
-							<img src="images/category/icon-9.svg" alt="">
-						</div>
-						<div class="text"> Pets </div>
-					</a>
 				</div>
 			</div>
 		</div>

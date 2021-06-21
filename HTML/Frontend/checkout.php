@@ -846,7 +846,7 @@
                             <div class="pdpt-title">
                                 <h4>Resumo do pedido</h4>
                             </div>
-                            <div class="right-cart-dt-body">
+                            <div class="pdpt-body-checkout scrollstyle_4">
                                 <div class="cart-item border_radius">
                                     <div class="cart-product-img">
                                         <img src="images/product/img-11.jpg" alt="">
@@ -857,8 +857,28 @@
                                         <div class="cart-item-price">R$15 <span>R$18</span></div>
                                         <button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button>
                                     </div>
+									<div class="cart-product-img">
+                                        <img src="images/product/img-11.jpg" alt="">
+                                        <div class="offer-badge">4% Desconto</div>
+                                    </div>
+                                    <div class="cart-text">
+                                        <h4>Nome do Produto Aqui</h4>
+                                        <div class="cart-item-price">R$15 <span>R$18</span></div>
+                                        <button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button>
+                                    </div>
+									<div class="cart-product-img">
+                                        <img src="images/product/img-11.jpg" alt="">
+                                        <div class="offer-badge">4% Desconto</div>
+                                    </div>
+                                    <div class="cart-text">
+                                        <h4>Nome do Produto Aqui</h4>
+                                        <div class="cart-item-price">R$15 <span>R$18</span></div>
+                                        <button type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></button>
+                                    </div>
+
                                 </div>
                             </div>
+							
                             <div class="total-checkout-group">
                                 <div class="cart-total-dil">
                                     <h4>Mercado Pai D'égua</h4>

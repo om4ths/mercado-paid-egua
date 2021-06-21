@@ -1331,7 +1331,7 @@ i.icon1 {
 }
 
 .cart-item {
-	display: flex;
+	display: block;
 	padding: 20px;
 	background: #fff;
 	border-bottom: 1px solid #efefef;
@@ -3021,7 +3021,10 @@ span.save-icon {
     height: 451px;
     overflow-y: auto;
 }
-
+.pdpt-body-checkout {
+    height: 451px;
+    overflow-y: auto;
+}
 .pdct-dts-1 {
 	padding: 0 30px 30px;
 }
