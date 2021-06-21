@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include('conexao.php');
 
 $status_id = $_GET['status'];
