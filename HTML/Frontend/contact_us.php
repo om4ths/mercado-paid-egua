@@ -242,7 +242,7 @@
 				<div class="header_right">
 					<ul>
 						<li>
-							<a href="#" class="offer-link"><i class="uil uil-phone-alt"></i>1800-000-000</a>
+							<a href="#" class="offer-link"><i class="uil uil-phone-alt"></i>(91) 9 8283-2055</a>
 						</li>
 						<li>
 							<a href="faq.php" class="offer-link"><i class="uil uil-question-circle"></i>Ajuda</a>
@@ -289,7 +289,7 @@
 						<button class="navbar-toggler menu_toggle_btn" type="button" data-target="#navbarSupportedContent"><i class="uil uil-bars"></i></button>
 						<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
 							<ul class="navbar-nav main_nav align-self-stretch">
-								<li class="nav-item"><a href="index.php" class="nav-link active" title="Home">Início</a></li>
+								<li class="nav-item"><a href="index.php" class="nav-link" title="Home">Início</a></li>
 								<li class="nav-item"><a href="shop_grid.php?new_id=1" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
 								<li class="nav-item"><a href="shop_grid.php?destaque=2" class="nav-link" title="Featured Products">Produtos em Destaque</a></li>
 								<li class="nav-item">

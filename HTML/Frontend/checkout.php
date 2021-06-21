@@ -472,7 +472,7 @@
 						<button class="navbar-toggler menu_toggle_btn" type="button" data-target="#navbarSupportedContent"><i class="uil uil-bars"></i></button>
 						<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
 							<ul class="navbar-nav main_nav align-self-stretch">
-								<li class="nav-item"><a href="index.php" class="nav-link active" title="Home">Início</a></li>
+								<li class="nav-item"><a href="index.php" class="nav-link" title="Home">Início</a></li>
 								<li class="nav-item"><a href="shop_grid.php?new_id=1" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
 								<li class="nav-item"><a href="shop_grid.php?destaque=2" class="nav-link" title="Featured Products">Produtos em Destaque</a></li>
 								<li class="nav-item">
@@ -524,6 +524,7 @@
                 </div>
             </div>
         </div>
+<form action="checkoutt.php" method="GET">        
         <div class="all-product-grid">
             <div class="container">
                 <div class="row">
@@ -555,7 +556,7 @@
                                                                                                        
                                                                     ?>                                                               
                                                                                                                                       
-                                                                    <?php echo" <li> <a href='checkout.php?id=".$r_end['id']."'>".$r_end['tipo']."</a> </li>" ?>                                                                
+                                                                    <?php echo" <li> <a href='checkout.php?id_end=".$r_end['id']."'>".$r_end['tipo']."</a> </li>" ?>                                                                
                                                                
                                                                 <?php
                                                                     };
@@ -566,38 +567,38 @@
                                                                 </div>
                                                         <div class="address-fieldset">
                                                             <div class="row">
-                                                                
+                                                            <input type="hidden" name="id_end" value="<?php echo $r_end['id']?>" > </input>
                                                                 <div class="col-lg-6 col-md-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label">CEP</label>
-                                                                       <?php if(isset($r_endereco['cep'])){ echo "<input name='cep' readonly type='tel' placeholder='' value='".$r_endereco['cep']."' class='form-control input-md'  required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md'  required=''>";};    ?>
+                                                                       <?php if(isset($r_endereco['cep'])){ echo "<input  readonly type='tel' placeholder='' value='".$r_endereco['cep']."' class='form-control input-md'  required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md'  required=''>";};    ?>
                                                                     </div>
 																</div>
                                                                 <div class="col-lg-12 col-md-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label">Bairro</label>
-                                                                        <?php if(isset($r_endereco['bairro'])){ echo "<input name='cep' readonly type='tel' placeholder='' value='".$r_endereco['bairro']."' class='form-control input-md'  required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md' required=''>";};    ?>                                                                    </div>
+                                                                        <?php if(isset($r_endereco['bairro'])){ echo "<input  readonly type='tel' placeholder='' value='".$r_endereco['bairro']."' class='form-control input-md'  required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md' required=''>";};    ?>                                                                    </div>
                                                                 </div>
 																<div class="col-lg-6 col-md-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label">Cidade</label>
-                                                                        <?php if(isset($r_endereco['cidade'])){ echo "<input name='cep' readonly type='tel' placeholder='' value='".$r_endereco['cidade']."' class='form-control input-md'  required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md'  required=''>";};    ?>                                                                    </div>
+                                                                        <?php if(isset($r_endereco['cidade'])){ echo "<input  readonly type='tel' placeholder='' value='".$r_endereco['cidade']."' class='form-control input-md'  required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md'  required=''>";};    ?>                                                                    </div>
                                                                 </div>
                                                                 <div class="col-lg-12 col-md-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label">Rua / Avenida</label>
-                                                                        <?php if(isset($r_endereco['rua'])){echo "<input id='street' name='street' readonly type='text' placeholder='' value='".$r_endereco['rua']."' class='form-control input-md'>";}else{echo "<input id='street' name='street' readonly type='text' placeholder=' ' class='form-control input-md'>";}?>
+                                                                        <?php if(isset($r_endereco['rua'])){echo "<input id='street'  readonly type='text' placeholder='' value='".$r_endereco['rua']."' class='form-control input-md'>";}else{echo "<input id='street' name='street' readonly type='text' placeholder=' ' class='form-control input-md'>";}?>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label">Número</label>
-                                                                        <?php if(isset($r_endereco['numero'])){ echo "<input name='cep' readonly type='tel' placeholder='' value='".$r_endereco['numero']."' class='form-control input-md'  required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md'  required=''>";};    ?>                                                                    </div>
+                                                                        <?php if(isset($r_endereco['numero'])){ echo "<input  readonly type='tel' placeholder='' value='".$r_endereco['numero']."' class='form-control input-md'  required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md'  required=''>";};    ?>                                                                    </div>
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-12">
                                                                     <div class="form-group">
                                                                         <label class="control-label">Complemento / Ponto de Referência</label>
-                                                                        <?php if(isset($r_endereco['complemento'])){ echo "<input name='cep' readonly type='tel' placeholder='' value='".$r_endereco['complemento']."' class='form-control input-md' required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md' required=''>";};    ?>                                                                    </div>
+                                                                        <?php if(isset($r_endereco['complemento'])){ echo "<input  readonly type='tel' placeholder='' value='".$r_endereco['complemento']."' class='form-control input-md' required=''>"; } else{ echo"<input name='cep' readonly type='tel' placeholder='' class='form-control input-md' required=''>";};    ?>                                                                    </div>
                                                                 </div>
 
                                                                 <div class="col-lg-12 col-md-12">
@@ -758,7 +759,7 @@
                                                             <div class="col-lg-12">
                                                                 <div class="pymnt_title">
                                                                     <h4>Dinheiro na entrega</h4>
-                                                                    <p>Pedidos acima de R$150 não pagam taxa de entrega.</p>
+                                                                    <p>Pedidos acima de R$100 não pagam taxa de entrega.</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -795,7 +796,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <a href="#" class="next-btn16 hover-btn">Finalizar Pedido</a>
+                                                    <button type="submit" class="next-btn16 hover-btn">Finalizar Pedido</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -804,6 +805,7 @@
                             </div>
                         </div>
                     </div>
+                    </form>
                     <div class="col-lg-4 col-md-5">
                         <div class="pdpt-bg mt-0">
                             <div class="pdpt-title">
