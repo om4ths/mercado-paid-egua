@@ -46,8 +46,8 @@ echo "<br>Metodo de pagamento: <br>".$pagamento;
 echo "<br><br><br>";
 
 
-    $query = "INSERT INTO pedidos (pedido_id,   produto_id ,   cliente_id ,   quantidade , total_produtos, valor_total_pro,  valor_pedido ,   metodo_pagamento , data_entrega, hora_entrega)
-                        VALUES ( '$id_pedido', '$id_produto', '$id_cliente', '$quantidade', '$total_prod',  '$valor_total',  '$desconto',     '$pagamento',    '$data_entrega', '$hora_entrega')";
+$query = "INSERT INTO pedidos (pedido_id,   produto_id ,   cliente_id ,   quantidade , total_produtos, valor_total_pro,  valor_pedido ,   metodo_pagamento , data_entrega, hora_entrega)
+                    VALUES ( '$id_pedido', '$id_produto', '$id_cliente', '$quantidade', '$total_prod',  '$valor_total',  '$desconto',     '$pagamento',    '$data_entrega', '$hora_entrega')";
 
 
     //$insert = mysqli_query($conexao,$query);
@@ -56,6 +56,9 @@ echo "<br><br><br>";
     echo "<br><br><br>";
 
 endforeach;
+
+header("Location: /mercado-paid-egua/HTML/frontend/order_placed.php?id_f_p=".$id_pedido."");
+
 }else{
     $_SESSION['msg_check'] = "<script language='javascript' type='text/javascript'>
     alert('Carrinho sem produtos!');</script>";
