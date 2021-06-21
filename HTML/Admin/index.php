@@ -134,10 +134,10 @@ include('php/dados_pedidos.php');
 														<td>
 															<span class="badge-item badge-status"><?php echo $r_orders['ped_status'] ?></span>
 														</td>
-														<td>$90</td>
+														<td><?php echo $r_orders['valor_total_pro'] ?></td>
 														<td class="action-btns">
-															<a href="order_view.php" class="views-btn"><i class="fas fa-eye"></i></a>
-															<a href="order_edit.php" class="edit-btn"><i class="fas fa-edit"></i></a>
+															<a href="order_view.php?pedido_id=<?php echo $r_orders['pedido_id'] ?>" class="views-btn"><i class="fas fa-eye"></i></a>
+															<a href="order_edit.php?pedido_id=<?php echo $r_orders['pedido_id'] ?>" class="edit-btn"><i class="fas fa-edit"></i></a>
 														</td>
 													</tr>
 													

@@ -18,8 +18,8 @@ if($_GET['id_end']){
 $id_end = $_GET['id_end'];
 
 $valor_total = number_format($totalCfrete, 2, ',', '.');
-$frete = $frete ;
-$valor_total_desc = number_format($totaldesc, 2, ',', '.');
+$frete = $frete; //falta
+$valor_total_desc = number_format($totaldesc, 2, ',', '.'); //falta
 $total_prod = number_format($totalCarts, 2, ',', '.');
 
 
@@ -30,10 +30,12 @@ $data_entrega = implode('-', array_reverse(explode('/', $data_entrega)));
 $id_produto = $result['id'];
 $quantidade = $result['quantity'];
 $desconto = $result['discount'];
+$valor_p_s_desc= $result['discount2'];
 
 
-$query = "INSERT INTO pedidos (pedido_id,  ped_status, produto_id ,   cliente_id ,   quantidade , total_produtos, valor_total_pro,  valor_pedido ,   metodo_pagamento , data_entrega, hora_entrega, id_endereco)
-                    VALUES ( '$id_pedido','$status_p' ,'$id_produto', '$id_cliente', '$quantidade', '$total_prod',  '$valor_total',  '$desconto',     '$pagamento',    '$data_entrega', '$hora_entrega', '$id_end')";
+
+$query = "INSERT INTO pedidos (pedido_id,  ped_status, produto_id ,   cliente_id , valor_frete, valor_total_desconto , valor_sem_desconto , quantidade , total_produtos, valor_total_pro,  valor_pedido ,   metodo_pagamento , data_entrega, hora_entrega, id_endereco)
+                    VALUES ( '$id_pedido','$status_p' ,'$id_produto', '$id_cliente', '$frete', '$valor_total_desc' , '$valor_p_s_desc' , '$quantidade', '$total_prod',  '$valor_total',  '$desconto',     '$pagamento',    '$data_entrega', '$hora_entrega', '$id_end')";
 
 
     $insert = mysqli_query($conexao,$query);
@@ -44,7 +46,7 @@ $query = "INSERT INTO pedidos (pedido_id,  ped_status, produto_id ,   cliente_id
 
 endforeach;
 
-header("Location: /mercado-paid-egua/HTML/frontend/order_placed.php?id_f_p=".$id_pedido."");
+//header("Location: /mercado-paid-egua/HTML/frontend/order_placed.php?id_f_p=".$id_pedido."");
 
 }else{
     $_SESSION['msg_check'] = "<script language='javascript' type='text/javascript'>

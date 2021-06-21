@@ -437,31 +437,46 @@ include("php/exibe_my_orders.php");
 					
 									?>
 
-
 									<div class="pdpt-bg">
 										<div class="pdpt-title">
-											<h6>Prazo de entrega 10 de maio, 15h00 - 18h00</h6>
+											<h6>Prazo de entrega <?php echo $r_ped['data_entrega'] ?>, <?php echo $r_ped['hora_entrega'] ?></h6>
 										</div> 
 										<div class="order-body10">
+
+										<?php
+
+										$ped_un = $r_ped['pedido_id'];
+										$select_pedidos_un = "SELECT * FROM pedidos, produtos WHERE pedidos.pedido_id = '$ped_un' AND produtos.pro_id = pedidos.produto_id";   
+										$array_pedidos_un = mysqli_query($conexao,$select_pedidos_un);
+										while($r_pedidos_unw = mysqli_fetch_array($array_pedidos_un)){
+											$r_pedidos_un[] = $r_pedidos_unw;
+											
+										
+										?>
+
 											<ul class="order-dtsll">
 												<li>
 													<div class="order-dt-img">
-														<img src="images/groceries.svg" alt="">
+														<img src="<?php echo limpa_link($r_pedidos_unw['pro_img']) ?>" alt="">
 													</div>
 												</li>
 												<li>
 													<div class="order-dt47">
-														<h4>Gambo - Ludhiana</h4>
+														<h4><?php echo $r_pedidos_unw['pro_nome'] ?></h4>
 														<p>Entregue</p>
-														<div class="order-title">2 Items <span data-inverted="" data-tooltip="2kg broccoli, 1kg Apple" data-position="top center">?</span></div>
+														<div class="order-title"><?php echo $r_pedidos_unw['quantidade'] ?> Items <span data-inverted=""  data-position="top center">?</span></div>
 													</div>
 												</li>
 											</ul>
+
+											<?php } ?>
+											
+											
 											<div class="total-dt">
 												<div class="total-checkout-group">
 													<div class="cart-total-dil">
 														<h4>Sub Total</h4>
-														<span>$25</span>
+														<span>R$<?php echo $r_ped['valor_total_pro'] ?></span>
 													</div>
 													<div class="cart-total-dil pt-3">
 														<h4>Taxas de entrega</h4>
@@ -470,7 +485,7 @@ include("php/exibe_my_orders.php");
 												</div>
 												<div class="main-total-cart">
 													<h2>Total</h2>
-													<span>$25</span>
+													<span>R$<?php echo $r_ped['valor_pedido'] ?></span>
 												</div>
 											</div>
 											<div class="track-order">
