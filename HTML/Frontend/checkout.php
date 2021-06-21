@@ -425,7 +425,7 @@
 				<div class="header_right">
 					<ul>
 						<li>
-							<a href="#" class="offer-link"><i class="uil uil-phone-alt"></i>1800-000-000</a>
+							<a href="#" class="offer-link"><i class="uil uil-phone-alt"></i>(91)9 8283-2055</a>
 						</li>
 						<li>
 							<a href="faq.php" class="offer-link"><i class="uil uil-question-circle"></i>Ajuda</a>
@@ -758,7 +758,7 @@
                                                             <div class="col-lg-12">
                                                                 <div class="pymnt_title">
                                                                     <h4>Dinheiro na entrega</h4>
-                                                                    <p>Pedidos acima de R$10 não pagam taxa de entrega.</p>
+                                                                    <p>Pedidos acima de R$150 não pagam taxa de entrega.</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -768,64 +768,27 @@
                                                             <div class="col-lg-12">
                                                                 <div class="pymnt_title mb-4">
                                                                     <h4>Cartão de Crédito / Débito</h4>
+																	<h5>O pagamento com o cartão será feito ao receber suas compras.<br>O entregador irá levar a maquineta</h5>
+
+
+																	<p>Pedidos acima de R$150 não pagam taxa de entrega.</p>
+
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-6">
                                                                 <div class="form-group mt-1">
-                                                                    <label class="control-label">Nome do titular*</label>
-                                                                    <div class="ui search focus">
-                                                                        <div class="ui left icon input swdh11 swdh19">
-                                                                            <input class="prompt srch_explore" type="text" name="holdername" value="" id="holder[name]" required="" maxlength="64" placeholder="Nome do Titular">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-6">
-                                                                <div class="form-group mt-1">
-                                                                    <label class="control-label">Número do Cartão*</label>
-                                                                    <div class="ui search focus">
-                                                                        <div class="ui left icon input swdh11 swdh19">
-                                                                            <input class="prompt srch_explore" type="text" name="cardnumber" value="" id="card[number]" required="" maxlength="64" placeholder="Número do Cartão">
-                                                                        </div>
-                                                                    </div>
+                                                                   
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-4">
                                                                 <div class="form-group mt-1">
-                                                                    <label class="control-label">Mês de Vencimento*</label>
-                                                                    <select class="ui fluid search dropdown form-dropdown" name="card[expire-month]">
-																		<option value="">Mês</option>
-																		<option value="1">Janeiro</option>
-																		<option value="2">Fevereiro</option>
-																		<option value="3">Março</option>
-																		<option value="4">Abril</option>
-																		<option value="5">Maio</option>
-																		<option value="6">Junho</option>
-																		<option value="7">Julho</option>
-																		<option value="8">Agosto</option>
-																		<option value="9">Setembro</option>
-																		<option value="10">Outubro</option>
-																		<option value="11">Novembro</option>
-																		<option value="12">Dezembro</option>
-																	  </select>
+                                                                   
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-4">
                                                                 <div class="form-group mt-1">
-                                                                    <label class="control-label">Ano de Vencimento*</label>
                                                                     <div class="ui search focus">
                                                                         <div class="ui left icon input swdh11 swdh19">
-                                                                            <input class="prompt srch_explore" type="text" name="card[expire-year]" maxlength="4" placeholder="Ano">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-4">
-                                                                <div class="form-group mt-1">
-                                                                    <label class="control-label">CVV*</label>
-                                                                    <div class="ui search focus">
-                                                                        <div class="ui left icon input swdh11 swdh19">
-                                                                            <input class="prompt srch_explore" name="card[cvc]" maxlength="3" placeholder="CVV">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -901,9 +864,7 @@
                                 <i class="uil uil-padlock"></i>Check-out Seguro
                             </div>
                         </div>
-                        <a href="#" class="promo-link45">Você tem um cupom de desconto?</a>
                         <div class="checkout-safety-alerts">
-                            <p><i class="uil uil-sync"></i>100% Garantia de Substituição</p>
                             <p><i class="uil uil-check-square"></i>100% Produtos Genuínos</p>
                             <p><i class="uil uil-shield-check"></i>Pagamento Seguro</p>
                         </div>
