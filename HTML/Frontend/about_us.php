@@ -159,10 +159,17 @@ include('php/dados_cliente.php');
 	</div>
 	<!-- pesquisar produtos fim-->
 	<!-- Carrinho sidebar inicio-->
+
 	<div class="bs-canvas bs-canvas-left position-fixed bg-cart h-100">
-	<?php if($resultsCarts) { ?>
+	<?php
+	
+	if($resultsCarts) { ?>
 		<div class="bs-canvas-header side-cart-header p-3 ">
-			<div class="d-inline-block  main-cart-title">Meu Carrinho <span>(2 Itens)</span></div>
+			<?php if($cont_itens > 1) { ?>
+			<div class="d-inline-block  main-cart-title">Meu Carrinho <span>(<?php echo $cont_itens ?> Itens)</span></div>
+			<?php }else{ ?>
+			<div class="d-inline-block  main-cart-title">Meu Carrinho <span>(<?php echo $cont_itens ?> Item)</span></div>
+			<?php } ?>
 			<button type="button" class="bs-canvas-close close" aria-label="Close"><i class="uil uil-multiply"></i></button>
 		</div>
 		<div class="bs-canvas-body">
@@ -172,15 +179,19 @@ include('php/dados_cliente.php');
 					<span>R$<?php echo number_format($totalCarts, 2, ',', '.')?></span>
 				</div>
 				<div class="cart-total-dil pt-2">
-					<h4>Taxas de entrega</h4>
-					<span>R$5</span>
+					<h4>Taxa de entrega</h4>
+					<span>R$<?php echo $frete ?></span>
 				</div>
 			</div>
 			<div class="side-cart-items">
 
 <!-- INICIO EXIBIR ITENS NO CARRINHO -->  
 
-			<?php foreach($resultsCarts as $result) : ?>
+			<?php foreach($resultsCarts as $result) : 
+				
+			
+
+				?>
 
 				<div class="cart-item">
 					<div class="cart-product-img">
@@ -217,7 +228,7 @@ include('php/dados_cliente.php');
 				<span>R$<?php echo number_format($totalCfrete, 2, ',', '.')?></span>
 			</div>
 			<div class="checkout-cart">
-				<a href="#" class="cart-checkout-btn hover-btn">Finalizar</a>
+				<a href="checkout.php" class="cart-checkout-btn hover-btn">Finalizar</a>
 			</div>
 		</div>
 		<?php }else { ?>
@@ -230,31 +241,33 @@ include('php/dados_cliente.php');
 			<div class="cart-top-total">
 				<div class="cart-total-dil">
 					<h4>Mercado Pai D'égua</h4>
-					<span>R$0</span>
+					<span>R$<?php echo number_format($totalCarts, 2, ',', '.')?></span>
 				</div>
 				<div class="cart-total-dil pt-2">
 					<h4>Taxas de entrega</h4>
-					<span>R$0</span>
+					<span>R$<?php echo $frete ?></span>
 				</div>
 			</div>
 		</div>
 			<div class="bs-canvas-footer">
 			<div class="cart-total-dil saving-total ">
 				<h4>Total Economizado</h4>
-				<span>R$0</span>
+				<span>R$<?php echo number_format($totaldesc, 2, ',', '.')?></span>
 			</div>
 			<div class="main-total-cart">
 				<h2>Total</h2>
-				<span>R$0</span>
+				<span>R$<?php echo number_format($totalCfrete, 2, ',', '.')?></span>
 			</div>
 			<div class="checkout-cart">
-				<a href="#" class="cart-checkout-btn hover-btn">Finalizar</a>
+				<a href="checkout.php" class="cart-checkout-btn hover-btn">Finalizar</a>
 			</div>
 		</div>	
 
 			<?php } ?>
 
 	</div>
+
+
 
 	<!-- Carrnho sidebar fim-->
 	<!-- Header Start -->
