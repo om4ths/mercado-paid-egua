@@ -172,7 +172,8 @@
 	<!-- pesquisar produtos fim-->
 	<!-- Carrinho sidebar inicio-->
 	<div class="bs-canvas bs-canvas-left position-fixed bg-cart h-100">
-		<div class="bs-canvas-header side-cart-header p-3 ">
+		
+        <div class="bs-canvas-header side-cart-header p-3 ">
 			<div class="d-inline-block  main-cart-title">Meu Carrinho <span>(2 Itens)</span></div>
 			<button type="button" class="bs-canvas-close close" aria-label="Close"><i class="uil uil-multiply"></i></button>
 		</div>
@@ -194,7 +195,6 @@
 						<img src="images/product/img-1.jpg" alt="">
 						<div class="offer-badge">6% OFF</div>
 					</div>
-                    <!-- comeco -->
 					<div class="cart-text">
 						<h4>Nome do Produto Aqui</h4>
 						<div class="cart-radio">
@@ -279,6 +279,7 @@
 				<a href="#" class="cart-checkout-btn hover-btn">Finalizar</a>
 			</div>
 		</div>
+
 	</div>
 	<!-- Carrnho sidebar fim-->
 	<!-- Header Start -->
@@ -363,7 +364,7 @@
 							<ul class="navbar-nav main_nav align-self-stretch">
 								<li class="nav-item"><a href="index.php" class="nav-link active" title="Home">Início</a></li>
 								<li class="nav-item"><a href="shop_grid.php?new_id=1" class="nav-link new_item" title="New Products">Novos Produtos</a></li>
-								<li class="nav-item"><a href="shop_grid.php?destaque=2" class="nav-link" title="Featured Products">Produtos em Destaque</a></li>
+								<li class="nav-item"><a href="shop_grid.php?destaque=2" class="nav-link" title="Featured Products">Produtos em Destaques</a></li>
 								<li class="nav-item">
 									<div class="ui icon top left dropdown nav__menu">
 										<a class="nav-link" title="Pages">Mais <i class="uil uil-angle-down"></i></a>
@@ -542,26 +543,6 @@
                                     </a>
                                     <div class="cart-text">
                                         <?php echo "<h4>".$r_pro_cat['pro_nome']."</h4>" ?>
-                                        <div class="cart-radio">
-                                            <ul class="kggrm-now">
-                                                <li>
-                                                    <input type="radio" id="k1" name="cart1">
-                                                    <label for="k1">0.50</label>
-                                                </li>
-                                                <li>
-                                                    <input type="radio" id="k2" name="cart1">
-                                                    <label for="k2">1kg</label>
-                                                </li>
-                                                <li>
-                                                    <input type="radio" id="k3" name="cart1">
-                                                    <label for="k3">2kg</label>
-                                                </li>
-                                                <li>
-                                                    <input type="radio" id="k4" name="cart1">
-                                                    <label for="k4">3kg</label>
-                                                </li>
-                                            </ul>
-                                        </div>
                                         <div class="qty-group">
                                             <div class="quantity buttons_added">
                                                 <input type="button" value="-" class="minus minus-btn">
