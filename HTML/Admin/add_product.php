@@ -1,8 +1,6 @@
 <?php 
 		include('php/exibe_categoria.php');
 		include('php/conexao.php');
-		include('php/add_produto.php');
-
 	?>
 
 <!DOCTYPE html>
@@ -16,6 +14,24 @@
 	<title>Mercado Pai D'égua - admin</title>
 	<link href="css/styles.css" rel="stylesheet">
 	<link href="css/admin-style.css" rel="stylesheet">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$(p_valor).mask("999.999.990,00", {reverse: true})
+
+	})
+	</script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$(p_desconto).mask("999.999.990,00", {reverse: true})
+
+	})
+	</script>
+
+
+
+
 
 	<!-- Vendor Stylesheets -->
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -133,11 +149,11 @@
 											</div>
 											<div class="form-group">
 												<label class="form-label">Preço*</label>
-												<input type="text" class="form-control" data-mask="000000000" name="p_valor" placeholder="R$0">
+												<input type="text" class="form-control" id="p_valor" data-mask="000000000" name="p_valor" placeholder="R$0">
 											</div>
 											<div class="form-group">
 												<label class="form-label">Preço com desconto*</label>
-												<input type="text" class="form-control" name="p_desconto" placeholder="R$0">
+												<input type="text" class="form-control" id="p_desconto" name="p_desconto" placeholder="R$0">
 											</div>
 											<div class="form-group">
 												<label class="form-label">Status*</label>
@@ -187,10 +203,11 @@
 		
 		<!-- Javascripts -->
 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+
 
 		<script src="js/preview-img.js"></script>
 
-        <script src="js/jquery-3.4.1.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
 		
