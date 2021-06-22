@@ -1,6 +1,5 @@
 ﻿<?php
 
-
 	include('php/verificar_login.php');
 	include('php/func.php');
 	include('php/exibe_categoria_index.php');
@@ -9,6 +8,29 @@
 	include("php/carrinho.php");
 
 ?>
+
+<!-- O template veio com um monte de bibliotecas, algumas coisas de bootstrap, jquery já baixadas 
+e arquivos que são até úteis caso quiséssemos utilizar como base. Porém a maioria não foi usada e 
+apagamos alguns ou tiramos da página pq só ocupava espaço. 
+
+Todas as funções do backend foram criadas em php, praticamente tudo que está no site é funcional ou 
+está linkado e nada disso tinha no template.
+
+E o front precisou acompanhar todas essas alterações, então foi todo readaptado pra receber o php e
+algumas gambiarras kkkk. Algumas Modals foram feitas com bootstrap, e outras, como a modal de adicionar 
+foto de perfil, foi com apenas css/html, js puro e usando o Canvas do html5. Algumas páginas novas foram
+criadas também. 
+
+Backend: Jonatas e Carlos Daniel
+
+Frontend: Matheus Siqueira, Charles e Iago Davi
+
+Gerente: Wellington
+
+--> 
+
+
+
 
 <!DOCTYPE html>
 <html lang="pt_BR">
@@ -26,7 +48,7 @@
 	<!--  Icones -->
 	<link rel="icon" type="image/png" href="images/logo-1.png">
 
-	<!-- Stylesheets -->
+	<!-- css principais  -->
 	<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<link href='vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
 	<link href="css/style.css" rel="stylesheet">
@@ -45,7 +67,7 @@
 
 <body>
 
-	<!-- modelo das categorias-->
+	<!-- modal das  categorias-->
 	<div id="category_model" class="header-cate-model main-gambo-model modal fade" tabindex="-1" role="dialog" aria-modal="false">
 		<div class="modal-dialog category-area" role="document">
 			<div class="category-area-inner">
@@ -215,7 +237,7 @@
 	</div>
 
 	<!-- Carrnho sidebar fim-->
-	<!-- Header Start -->
+	<!-- Header inicio -->
 	<header class="header clearfix">
 		<div class="top-header-group">
 			<div class="top-header">
@@ -332,7 +354,7 @@
 			</div>
 		</div>
 	</header>
-	<!-- Header End -->
+	<!-- Header fim -->
 	<!-- Body Start -->
 	<div class="wrapper">
 		<!-- Offers Carrosel Start 
@@ -426,8 +448,8 @@
 				</div>
 			</div>
 		</div>
-		 Offers  Carrosel End -->
-		<!-- Categories Start -->
+		 Ofertas Carrosel End -->
+		<!-- Categorias Start -->
 		<div class="section145">
 			<div class="container">
 				<div class="row">
@@ -464,8 +486,8 @@
 				</div>
 			</div>
 		</div>
-		<!-- Categories End -->
-		<!-- Featured Products Start -->
+		<!-- Categories Fim -->
+		<!-- Destaque Produtos Start -->
 		<div class="section145">
 			<div class="container">
 				<div class="row">
@@ -547,7 +569,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- Featured Products End -->
+		<!-- Destqaue Produtos End -->
 		<!-- Best Values Offers Start -->
 		<!--<div class="section145">
 			<div class="container">
@@ -598,7 +620,7 @@
 		</div>
 		 Fim das OFERTAS -->
 		
-		<!-- New Products Start -->
+		<!-- Novos Produtos Start -->
 		<div class="section145">
 			<div class="container">
 				<div class="row">
@@ -734,10 +756,10 @@
 						<div class="col-lg-3 col-md-6 col-sm-6">
 						<div class="second-row-item">
 							
-						<div class="main_logo-footer" id="logo">
-					<img src="images/logo.png" alt="">
-					<img class="logo-inverse" src="images/dark-logo.png" alt="">
-				</div>
+							<div class="main_logo-footer" id="logo">
+						<img src="images/logo.png" alt="">
+						<img class="logo-inverse" src="images/dark-logo.png" alt="">
+					</div>
 
 
 					</div>
