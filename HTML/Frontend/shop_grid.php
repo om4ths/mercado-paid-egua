@@ -454,12 +454,16 @@
 									<?php } ?>
 
                                     <div class="qty-cart">
-                                        <div class="quantity buttons_added">
-                                            <input type="button" value="-" class="minus minus-btn">
-                                            <input type="number" step="1" name="quantity" value="1" class="input-text qty text">
-                                            <input type="button" value="+" class="plus plus-btn">
-                                        </div>
-                                        <span class="cart-icon"><i class="uil uil-shopping-cart-alt"></i></span>
+									<form action="php/carrinho.php" method="GET">
+											<div class="quantity buttons_added">
+											<input type="button" value="-" class="minus minus-btn">
+												<input type="number" step="1" name="quant" value="1" class="input-text qty text">
+												<input type="button" value="+" class="plus plus-btn">
+											</div>
+											<input type="hidden" name="acao" value="add"></input>
+											<input type="hidden" name="id" value="<?php echo $r_cat_pro['pro_id']?>"></input>
+											<button type="submit" class="cart-icon" style="display:contents;" ><i class="uil uil-shopping-cart-alt"></i></button>
+											</form>
                                     </div>
                                 </div>
                             </div>
