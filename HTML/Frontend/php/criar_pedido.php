@@ -40,11 +40,16 @@ $query = "INSERT INTO pedidos (pedido_id,  ped_status, produto_id ,   cliente_id
 
     $insert = mysqli_query($conexao,$query);
 
-    echo $query;
-    echo $insert;
-    echo "<br><br><br>";
+    
+     
 
 endforeach;
+
+$id_p = 1;
+    while ($id_p <= 1000) {
+      $id_p += 1;  
+    unset($_SESSION['carrinho'][$id_p]);
+}
 
 header("Location: /mercado-paid-egua/HTML/frontend/order_placed.php?id_f_p=".$id_pedido."");
 

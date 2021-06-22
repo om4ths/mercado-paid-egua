@@ -85,6 +85,11 @@ include('php/dados_pedidos.php');
                 <main>
                     <div class="container-fluid">
                         <h2 class="mt-30 page-title">Painel de Controle</h2>
+						<?php
+							if(isset($_SESSION['msg_o'])){
+							echo $_SESSION['msg_o'];	
+							unset($_SESSION['msg_o']);											
+						}?>
                         <ol class="breadcrumb mb-30">
                             <li class="breadcrumb-item active">Painel</li>
                         </ol>
