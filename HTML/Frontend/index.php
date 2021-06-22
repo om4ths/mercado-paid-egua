@@ -161,7 +161,9 @@ Gerente: Wellington
 			
 
 				?>
-
+				<?php
+				if($result['discount'] != 0){
+				?>
 				<div class="cart-item">
 					<div class="cart-product-img">
 						<img src="<?php echo limpa_link($result['image'])?>" alt="Erro ao carregar imagem!">
@@ -180,7 +182,27 @@ Gerente: Wellington
 						<a href="php/carrinho.php?acao=del&id=<?php echo $result['id']?>" type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></a>
 					</div>
 				</div>
-				
+				<?php }else{ ?>
+
+					<div class="cart-item">
+					<div class="cart-product-img">
+						<img src="<?php echo limpa_link($result['image'])?>" alt="Erro ao carregar imagem!">
+					</div>
+					<div class="cart-text">
+						<h4><?php echo $result['name']?></h4>
+						<div class="qty-group">
+							<div class="quantity buttons_added">								
+								<input type="number" step="1" name="quantity" value="<?php echo $result['quantity']?>" class="input-text qty text">								
+							</div>
+							<div class="cart-item-price">R$<?php echo number_format($result['price'], 2, ',', '.')?></div>
+						</div>
+						<a href="php/carrinho.php?acao=del&id=<?php echo $result['id']?>" type="button" class="cart-close-btn"><i class="uil uil-multiply"></i></a>
+					</div>
+				</div>
+
+				<?php } ?>
+
+
 			<?php endforeach;?>
 
 <!-- FIM EXIBIR ITENS NO CARRINHO -->
