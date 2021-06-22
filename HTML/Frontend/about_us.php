@@ -413,7 +413,7 @@ include('php/dados_cliente.php');
 								<div class="item">
 									<div class="team-item">
 										<div class="team-img">
-											<img src="images/team/matheus.jpg" alt="">
+											<img src="images/team/chavoso.png" alt="">
 										</div>
 										<h4>Matheus Siqueira</h4>
 										<span>Dev Frontend</span>
@@ -463,10 +463,23 @@ include('php/dados_cliente.php');
 										</ul>
 									</div>
 								</div>
+								<div class="item">
+									<div class="team-item">
+										<div class="team-img">
+											<img src="images/team/chavoso.png" alt="">
+										</div>
+										<h4>Matheus Siqueira</h4>
+										<span>Dev Frontend</span>
+										<ul class="team-social">
+											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
+											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
+										</ul>
+									</div>
+								</div>
 									<div class="item">
 									<div class="team-item">
 										<div class="team-img">
-											<img src="images/team/charles.jpg" alt="">
+											<img src="images/team/charleschave.jpg" alt="">
 										</div>
 										<h4>Charles Correa</h4>
 										<span>Dev Frontend</span>
