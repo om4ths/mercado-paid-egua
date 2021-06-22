@@ -413,13 +413,15 @@ include('php/dados_cliente.php');
 								<div class="item">
 									<div class="team-item">
 										<div class="team-img">
-											<img src="images/team/chavoso.png" alt="">
+											<img src="images/team/matheus.jpg" alt="">
 										</div>
 										<h4>Matheus Siqueira</h4>
 										<span>Dev Frontend</span>
 										<ul class="team-social">
-											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
-											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
+											<li><a href="https://www.facebook.com/matheus.batista.7106670" target="_blank" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
+											<li><a href="https://www.linkedin.com/in/matheus-siqueira-72a789143/" target="_blank" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
+											<li><a href="https://github.com/om4ths" class="scl-btn hover-btn" target="_blank" ><i class="fab fa-github"></i></a></li>
+
 										</ul>
 									</div>
 								</div>
@@ -432,8 +434,8 @@ include('php/dados_cliente.php');
 										<h4>Wellington Sena</h4>
 										<span>Gerente de Projetos</span>
 										<ul class="team-social">
-											<li><a href="https://www.facebook.com/matheus.batista.7106670" target="_blank" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
-											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
+											<li><a href="https://www.facebook.com/wellex" target="_blank" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
+											<li><a href="https://www.linkedin.com/in/wellington-sena-95ab5451/" target="_blank" class="scl-btn hover-btn" target="_blank" ><i class="fab fa-linkedin-in"></i></a></li>
 										</ul>
 									</div>
 								</div>
@@ -446,7 +448,9 @@ include('php/dados_cliente.php');
 										<span>Dev Backend</span>
 										<ul class="team-social">
 											<li><a href="https://www.facebook.com/profile.php?id=100014015853220" target="_blank" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
-											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
+											<li><a href="https://www.linkedin.com/in/carlos-daniel-4902171a2/" class="scl-btn hover-btn" target="_blank" ><i class="fab fa-linkedin-in"></i></a></li>
+											<li><a href="https://github.com/c-daniel-alves" target="_blank" class="scl-btn hover-btn"><i class="fab fa-github"></i></a></li>
+
 										</ul>
 									</div>
 								</div>
@@ -459,33 +463,24 @@ include('php/dados_cliente.php');
 										<span>Dev Backend</span>
 										<ul class="team-social">
 											<li><a href="https://www.facebook.com/jonatas.alves.984/photos_by" target="_blank" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
-											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
+											<li><a href="https://www.linkedin.com/in/jonatasasr/" target="_blank" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
+											<li><a href="https://github.com/Jonatasasr" target="_blank" class="scl-btn hover-btn"><i class="fab fa-github"></i></a></li>
+
 										</ul>
 									</div>
 								</div>
-								<div class="item">
-									<div class="team-item">
-										<div class="team-img">
-											<img src="images/team/chavoso.png" alt="">
-										</div>
-										<h4>Matheus Siqueira</h4>
-										<span>Dev Frontend</span>
-										<ul class="team-social">
-											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
-											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
-										</ul>
-									</div>
-								</div>
+								
 									<div class="item">
 									<div class="team-item">
 										<div class="team-img">
-											<img src="images/team/charleschave.jpg" alt="">
+											<img src="images/team/charles.jpg" alt="">
 										</div>
 										<h4>Charles Correa</h4>
 										<span>Dev Frontend</span>
 										<ul class="team-social">
-											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
-											<li><a href="#" class="scl-btn hover-btn"><i class="fab fa-linkedin-in"></i></a></li>
+											<li><a href="https://www.facebook.com/charles.correa.393" target="_blank" class="scl-btn hover-btn"><i class="fab fa-facebook-f"></i></a></li>
+											<li><a href="https://github.com/charles-correa-11" target="_blank" class="scl-btn hover-btn"><i class="fab fa-github"></i></a></li>
+
 										</ul>
 										</div>
 									</div>
