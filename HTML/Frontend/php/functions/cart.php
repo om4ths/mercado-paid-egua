@@ -37,6 +37,12 @@ function getContentCart($pdo) {
 
 		foreach($products as $product) {
 
+			if($product['pro_desconto'] <= 0 ){
+				$com_desc = $cart[$product['pro_id']] * $product['pro_valor'];
+			}
+			else
+			{$com_desc = $cart[$product['pro_id']] * $product['pro_valor_venda'];}
+
 			$results[] = array(
 							  'id' => $product['pro_id'],
 							  'name' => $product['pro_nome'],
@@ -46,7 +52,7 @@ function getContentCart($pdo) {
 							  'discount' => $product['pro_desconto'],
 							  'discount2' => $cart[$product['pro_id']] * $product['pro_valor'],
 							  'quantity' => $cart[$product['pro_id']],
-							  'subtotal' => $cart[$product['pro_id']] * $product['pro_valor_venda'],
+							  'subtotal' => $com_desc,
 						);
 		}
 	}
