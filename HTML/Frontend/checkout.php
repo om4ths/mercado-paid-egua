@@ -805,22 +805,18 @@
                             </div>
 							
                             <div class="total-checkout-group">
-                                <div class="cart-total-dil">
-                                    <h4>Mercado Pai D'égua</h4>
-                                    <span>R$15</span>
-                                </div>
                                 <div class="cart-total-dil pt-3">
                                     <h4>Taxas de entrega</h4>
-                                    <span>R$1</span>
+                                    <span>R$<?php echo $frete ?></span>
                                 </div>
                             </div>
                             <div class="cart-total-dil saving-total ">
                                 <h4>Total Economizado</h4>
-                                <span>R$3</span>
+                                <span>R$<?php echo number_format($totaldesc, 2, ',', '.')?></span>
                             </div>
                             <div class="main-total-cart">
                                 <h2>Total</h2>
-                                <span>R$16</span>
+                                <span><?php echo number_format($totalCfrete, 2, ',', '.')?></span>
                             </div>
                             <div class="payment-secure">
                                 <i class="uil uil-padlock"></i>Check-out Seguro

@@ -14,6 +14,10 @@
 		$array_view_end = mysqli_query($conexao,$select_view_end);
 		$r_view_end = mysqli_fetch_array($array_view_end);
 
+		$select_view_client = "SELECT * FROM `clientes` WHERE cliente_id = '$view_telefone'";   
+		$array_view_client = mysqli_query($conexao,$select_view_client);
+		$r_view_client = mysqli_fetch_array($array_view_client);
+
 	/*	
 		$r_view_end['bairro'];
 		$r_view_end['rua'];		
