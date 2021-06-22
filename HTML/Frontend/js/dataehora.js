@@ -1,3 +1,7 @@
+//pegar data e hora do system do user para usar na hora
+// de fazer o pedido
+//porem não foi usada
+
 var dia = new Date();
 var mes = new Date();
 var ano = new Date();
