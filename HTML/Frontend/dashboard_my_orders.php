@@ -479,7 +479,7 @@ include("php/exibe_my_orders.php");
 													</div>
 													<div class="cart-total-dil pt-3">
 														<h4>Taxas de entrega</h4>
-														<span>Gratis</span>
+														<span>R$<?php echo $r_ped['valor_frete'] ?></span>
 													</div>
 												</div>
 												<div class="main-total-cart">

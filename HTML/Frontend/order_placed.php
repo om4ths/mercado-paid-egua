@@ -430,7 +430,7 @@
                                     <div class="st-hm">Fique em casa<i class="uil uil-smile"></i></div>
                                 </div>
                                 <div class="placed-bottom-dt">
-                                    O pagamento de <span>R$<?php echo 	number_format($r_view_pedido['total_produtos'], 2, ',', '.') ?></span> será feito quando o entregador chegar com o seu pedido.
+                                    O pagamento de <span>R$<?php echo 	number_format($r_view_pedido['total_produtos'] + $r_view_pedido['valor_frete'], 2, ',', '.') ?></span> será feito quando o entregador chegar com o seu pedido.
                                 </div>
                             </div>
                         </div>
