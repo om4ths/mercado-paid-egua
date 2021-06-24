@@ -44,21 +44,21 @@ Gerente: Wellington
 	<title>Mercado Pai D'égua - Início </title>
 
 	<!--  Icones -->
-	<link rel="icon" type="image/png" href="HTML/Frontend/images/logo-1.png">
+	<link rel="icon" type="image/png" href="images/logo-1.png">
 
 	<!-- css principais  -->
 	<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<link href='vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
-	<link href="HTML/Frontend/css/style.css" rel="stylesheet">
-	<link href="HTML/Frontend/css/responsive.css" rel="stylesheet">
-	<link href="HTML/Frontend/css/night-mode.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+	<link href="css/night-mode.css" rel="stylesheet">
 
 	<!-- CSS -->
-	<link href="HTML/Frontend/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-	<link href="HTML/Frontend/vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
-	<link href="HTML/Frontend/vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
-	<link href="HTML/Frontend/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="HTML/Frontend/vendor/semantic/semantic.min.css">
+	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+	<link href="vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
+	<link href="vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="vendor/semantic/semantic.min.css">
 
 
 </head>
